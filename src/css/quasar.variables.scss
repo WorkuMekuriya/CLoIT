@@ -12,18 +12,36 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary   : #1976D2;
-$secondary : #26A69A;
-$accent    : #9C27B0;
+// Primary Colors
+$primary-arcticblue: #253BFF;
+$primary-limegreen: #B0F644;
 
-$dark      : #1D1D1D;
-$dark-page : #121212;
+// Shades of Arctic Blue
+$arctic-blue-25: #F4f5ff;
+$arctic-blue-50: #eaecff;
+$arctic-blue-100: #d3d8ff;
+$arctic-blue-200: #b8bfff;
+$arctic-blue-300: #8e9aff;
+$arctic-blue-400: #6473ff;
+$arctic-blue-500: #4c53ff;
+$arctic-blue-600: #253bff;
+$arctic-blue-700: #2030e2;
+$arctic-blue-800: #1d2cb6;
+$arctic-blue-900: #162282;
+$arctic-blue-950: #131953;
 
-$positive  : #21BA45;
-$negative  : #C10015;
-$info      : #31CCEC;
-$warning   : #F2C037;
-
+// Shades of Limegreen
+$limegreen-50: #F6FEE7;
+$limegreen-100: #EBFBCC;
+$limegreen-200: #D7F89E;
+$limegreen-300: #BBF662;
+$limegreen-400: #9FF443;
+$limegreen-500: #72D909;
+$limegreen-600: #56AE02;
+$limegreen-700: #418407;
+$limegreen-800: #37680C;
+$limegreen-900: #2F5710;
+$limegreen-950: #153102;
 
 // Typography variables
 
