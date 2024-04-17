@@ -1,6 +1,8 @@
 <template>
   <q-page class="">
+    <h1 class="display-6">CLoIT</h1>
   </q-page>
+
 </template>
 
 <script>
@@ -10,3 +12,6 @@ export default defineComponent({
   name: 'IndexPage'
 })
 </script>
+<style lang="scss" scoped>
+
+</style>

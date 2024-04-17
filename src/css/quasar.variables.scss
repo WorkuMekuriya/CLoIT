@@ -23,3 +23,190 @@ $positive  : #21BA45;
 $negative  : #C10015;
 $info      : #31CCEC;
 $warning   : #F2C037;
+
+
+// Typography variables
+
+//TITLE
+$display-06: (
+  'font-size': 60px,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing':'-4%'
+);
+
+$display-05: (
+  'font-size': 3.000em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing':'-4%'
+);
+
+$display-04: (
+  'font-size': 2.250em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing':'-4%'
+);
+
+$display-03: (
+  'font-size': 2.000em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing':'-4%'
+);
+
+$display-02: (
+  'font-size': 1.750em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing':'-4%'
+);
+
+$display-01: (
+  'font-size': 1.500em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing':'-4%'
+);
+
+$headline: (
+  'font-size': 1.250em,
+  'font-weight': 700,
+  'line-height': 1.5em,
+  'letter-spacing':'-4%'
+);
+
+$subhead-02: (
+  'font-size': 0.875em,
+  'font-weight': 500,
+  'line-height': 1.5em,
+  'letter-spacing':'-2%'
+);
+$subhead-02-bold: (
+  'font-size': 0.875em,
+  'font-weight': 700,
+  'line-height': 1.5em,
+  'letter-spacing':'-2%'
+);
+$subhead-03: (
+  'font-size': 1.000em,
+  'font-weight': 500,
+  'line-height': 1.5em,
+  'letter-spacing':'-2%'
+);
+$subhead-03-bold: (
+  'font-size': 1.000em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing':'-4%'
+);
+$subhead-04: (
+  'font-size': 1.125em,
+  'font-weight': 500,
+  'line-height': 1.5em,
+  'letter-spacing':'-4%'
+);
+$subhead-04-bold: (
+  'font-size': 1.125em,
+  'font-weight': 700,
+  'line-height': 1.5em,
+  'letter-spacing':'-4%'
+);
+
+//BODY
+$body-03: (
+  'font-size': 1.125em,
+  'font-weight': 400,
+  'line-height': 1.5em,
+  'letter-spacing':'-2%'
+);
+$body-02: (
+  'font-size': 1.000em,
+  'font-weight': 400,
+  'line-height': 1.5em,
+  'letter-spacing':'-2%'
+);
+$body-01: (
+  'font-size': 0.875em,
+  'font-weight': 400,
+  'line-height': 1.5em,
+  'letter-spacing':'-2%'
+);
+
+// LABELS
+$label-04-bold: (
+  'font-size': 1.125em,
+  'font-weight': 700,
+  'line-height': 1.125em,
+  'letter-spacing':'-2%'
+);
+$label-04-medium: (
+  'font-size': 1.125em,
+  'font-weight': 500,
+  'line-height': 1.125em,
+  'letter-spacing':'-2%'
+);
+$label-04: (
+  'font-size': 1.125em,
+  'font-weight': 400,
+  'line-height': 1.125em,
+  'letter-spacing':'-2%'
+);
+
+$label-03-bold: (
+  'font-size': 1.000em,
+  'font-weight': 700,
+  'line-height': 1.000em,
+  'letter-spacing':'-2%'
+);
+$label-03-medium: (
+  'font-size': 1.000em,
+  'font-weight': 500,
+  'line-height': 1.000em,
+  'letter-spacing':'-2%'
+);
+$label-03: (
+  'font-size': 1.000em,
+  'font-weight': 400,
+  'line-height': 1.000em,
+  'letter-spacing':'-2%'
+);
+
+$label-02-bold: (
+  'font-size': 0.875em,
+  'font-weight': 700,
+  'line-height': 0.875em,
+  'letter-spacing':'-2%'
+);
+$label-02-medium: (
+  'font-size': 0.875em,
+  'font-weight': 500,
+  'line-height': 0.875em,
+  'letter-spacing':'-2%'
+);
+$label-02: (
+  'font-size': 0.875em,
+  'font-weight': 400,
+  'line-height': 0.875em,
+  'letter-spacing':'-2%'
+);
+
+$label-01-bold: (
+  'font-size': 0.750em,
+  'font-weight': 700,
+  'line-height': 0.750,
+  'letter-spacing':'-2%'
+);
+$label-01-medium: (
+  'font-size': 0.750em,
+  'font-weight': 500,
+  'line-height': 0.750,
+  'letter-spacing':'-2%'
+);
+$label-01: (
+  'font-size': 0.750em,
+  'font-weight': 400,
+  'line-height': 0.750,
+  'letter-spacing':'-2%'
+);
