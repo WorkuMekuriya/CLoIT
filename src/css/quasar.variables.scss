@@ -13,11 +13,11 @@
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
 // Primary Colors
-$primary-arcticblue: #253BFF;
-$primary-limegreen: #B0F644;
+$primary-arcticblue: #253bff;
+$primary-limegreen: #b0f644;
 
 // Shades of Arctic Blue
-$arctic-blue-25: #F4f5ff;
+$arctic-blue-25: #f4f5ff;
 $arctic-blue-50: #eaecff;
 $arctic-blue-100: #d3d8ff;
 $arctic-blue-200: #b8bfff;
@@ -31,16 +31,16 @@ $arctic-blue-900: #162282;
 $arctic-blue-950: #131953;
 
 // Shades of Limegreen
-$limegreen-50: #F6FEE7;
-$limegreen-100: #EBFBCC;
-$limegreen-200: #D7F89E;
-$limegreen-300: #BBF662;
-$limegreen-400: #9FF443;
-$limegreen-500: #72D909;
-$limegreen-600: #56AE02;
+$limegreen-50: #f6fee7;
+$limegreen-100: #ebfbcc;
+$limegreen-200: #d7f89e;
+$limegreen-300: #bbf662;
+$limegreen-400: #9ff443;
+$limegreen-500: #72d909;
+$limegreen-600: #56ae02;
 $limegreen-700: #418407;
-$limegreen-800: #37680C;
-$limegreen-900: #2F5710;
+$limegreen-800: #37680c;
+$limegreen-900: #2f5710;
 $limegreen-950: #153102;
 
 // Red shades
@@ -64,86 +64,86 @@ $display-06: (
   'font-size': 60px,
   'font-weight': 700,
   'line-height': 1.25em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 
 $display-05: (
-  'font-size': 3.000em,
+  'font-size': 3em,
   'font-weight': 700,
   'line-height': 1.25em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 
 $display-04: (
-  'font-size': 2.250em,
+  'font-size': 2.25em,
   'font-weight': 700,
   'line-height': 1.25em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 
 $display-03: (
-  'font-size': 2.000em,
+  'font-size': 2em,
   'font-weight': 700,
   'line-height': 1.25em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 
 $display-02: (
-  'font-size': 1.750em,
+  'font-size': 1.75em,
   'font-weight': 700,
   'line-height': 1.25em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 
 $display-01: (
-  'font-size': 1.500em,
+  'font-size': 1.5em,
   'font-weight': 700,
   'line-height': 1.25em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 
 $headline: (
-  'font-size': 1.250em,
+  'font-size': 1.25em,
   'font-weight': 700,
   'line-height': 1.5em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 
 $subhead-02: (
   'font-size': 0.875em,
   'font-weight': 500,
   'line-height': 1.5em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 $subhead-02-bold: (
   'font-size': 0.875em,
   'font-weight': 700,
   'line-height': 1.5em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 $subhead-03: (
-  'font-size': 1.000em,
+  'font-size': 1em,
   'font-weight': 500,
   'line-height': 1.5em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 $subhead-03-bold: (
-  'font-size': 1.000em,
+  'font-size': 1em,
   'font-weight': 700,
   'line-height': 1.25em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 $subhead-04: (
   'font-size': 1.125em,
   'font-weight': 500,
   'line-height': 1.5em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 $subhead-04-bold: (
   'font-size': 1.125em,
   'font-weight': 700,
   'line-height': 1.5em,
-  'letter-spacing':'-4%'
+  'letter-spacing': '-4%',
 );
 
 //BODY
@@ -151,19 +151,19 @@ $body-03: (
   'font-size': 1.125em,
   'font-weight': 400,
   'line-height': 1.5em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 $body-02: (
-  'font-size': 1.000em,
+  'font-size': 1em,
   'font-weight': 400,
   'line-height': 1.5em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 $body-01: (
   'font-size': 0.875em,
   'font-weight': 400,
   'line-height': 1.5em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 
 // LABELS
@@ -171,74 +171,74 @@ $label-04-bold: (
   'font-size': 1.125em,
   'font-weight': 700,
   'line-height': 1.125em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 $label-04-medium: (
   'font-size': 1.125em,
   'font-weight': 500,
   'line-height': 1.125em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 $label-04: (
   'font-size': 1.125em,
   'font-weight': 400,
   'line-height': 1.125em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 
 $label-03-bold: (
-  'font-size': 1.000em,
+  'font-size': 1em,
   'font-weight': 700,
-  'line-height': 1.000em,
-  'letter-spacing':'-2%'
+  'line-height': 1em,
+  'letter-spacing': '-2%',
 );
 $label-03-medium: (
-  'font-size': 1.000em,
+  'font-size': 1em,
   'font-weight': 500,
-  'line-height': 1.000em,
-  'letter-spacing':'-2%'
+  'line-height': 1em,
+  'letter-spacing': '-2%',
 );
 $label-03: (
-  'font-size': 1.000em,
+  'font-size': 1em,
   'font-weight': 400,
-  'line-height': 1.000em,
-  'letter-spacing':'-2%'
+  'line-height': 1em,
+  'letter-spacing': '-2%',
 );
 
 $label-02-bold: (
   'font-size': 0.875em,
   'font-weight': 700,
   'line-height': 0.875em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 $label-02-medium: (
   'font-size': 0.875em,
   'font-weight': 500,
   'line-height': 0.875em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 $label-02: (
   'font-size': 0.875em,
   'font-weight': 400,
   'line-height': 0.875em,
-  'letter-spacing':'-2%'
+  'letter-spacing': '-2%',
 );
 
 $label-01-bold: (
-  'font-size': 0.750em,
+  'font-size': 0.75em,
   'font-weight': 700,
-  'line-height': 0.750,
-  'letter-spacing':'-2%'
+  'line-height': 0.75,
+  'letter-spacing': '-2%',
 );
 $label-01-medium: (
-  'font-size': 0.750em,
+  'font-size': 0.75em,
   'font-weight': 500,
-  'line-height': 0.750,
-  'letter-spacing':'-2%'
+  'line-height': 0.75,
+  'letter-spacing': '-2%',
 );
 $label-01: (
-  'font-size': 0.750em,
+  'font-size': 0.75em,
   'font-weight': 400,
-  'line-height': 0.750,
-  'letter-spacing':'-2%'
+  'line-height': 0.75,
+  'letter-spacing': '-2%',
 );
