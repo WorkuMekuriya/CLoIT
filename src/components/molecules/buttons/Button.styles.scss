@@ -75,6 +75,11 @@ $small-screen-max-width: 768px;
   @extend .bg-bluegray-200, .text-bluegray-900;
 
 }
+.circular-button.disabled {
+  @extend .bg-bluegray-200, .text-bluegray-900;
+
+}
+
 
 /* CSS properties for primary button */
 .button-primary {

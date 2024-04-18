@@ -1,8 +1,8 @@
 <template>
   <q-page class="">
     <h1 class="headline text-limegreen-900 text-center">CLoIT</h1>
-    <RoundedButton type="Destructive" :isLoading="false" label="Button" :rightIcon="false" :buttonDisabled="false"/>
-    <CircularButton type="TertiaryWhite" />
+    <RoundedButton type="Destructive" :isLoading="false" label="Button" :rightIcon="false" :buttonDisabled="true"/>
+    <CircularButton type="TertiaryWhite" :buttonDisabled="true" />
   </q-page>
 </template>
 
