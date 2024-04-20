@@ -1,13 +1,20 @@
 <template>
-
-   <div class="flex justify-center">
-    <q-btn :disable="buttonDisabled" :ripple="false" class="circular-button" :class="buttonClass" icon="east"  unelevated>
+  <div class="flex justify-center">
+    <q-btn
+      :disable="buttonDisabled"
+      :ripple="false"
+      class="circular-button"
+      :class="buttonClass"
+      icon="east"
+      unelevated
+      @click="emitClicked"
+    >
     </q-btn>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed } from 'vue'
 const buttonClasses = {
   Primary: 'button-primary',
   Secondary: 'button-secondary',
@@ -16,23 +23,26 @@ const buttonClasses = {
   TertiaryTonal: 'button-tertiary-tonal',
   Destructive: 'button-destructive',
   // Add more button types here if needed
-};
+}
 const props = defineProps({
   type: {
     type: String,
-    default: 'Primary'
+    default: 'Primary',
   },
   buttonDisabled: {
     type: Boolean,
-    default: false
-  }
-});
-
+    default: false,
+  },
+})
 
 const buttonClass = computed(() => {
   // Set additional CSS classes based on type
-   return buttonClasses[props.type] || buttonClasses['Primary'];
-});
+  return buttonClasses[props.type] || buttonClasses['Primary']
+})
+// Method to emit the 'clicked' event
+const emitClicked = () => {
+  emits('clicked')
+}
 </script>
 
 <style lang="scss" scoped>
