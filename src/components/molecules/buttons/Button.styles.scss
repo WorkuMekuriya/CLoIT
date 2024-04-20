@@ -88,7 +88,7 @@ $small-screen-max-width: 768px;
     @extend .bg-arcticblue-900;
   }
 
-  &:focus {
+  &:focus-visible {
     box-shadow: $primary-shadow;
   }
 }
@@ -117,7 +117,7 @@ $small-screen-max-width: 768px;
     @extend .bg-bluegray-700;
   }
 
-  &:focus {
+  &:focus-visible {
     box-shadow: $secondary-shadow;
   }
 }

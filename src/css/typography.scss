@@ -1,6 +1,10 @@
 // Import Quasar's SCSS variables file
 @import '../css/quasar.variables.scss';
 
+p {
+  margin: 0px;
+}
+
 // Define classes for typography variables
 .display-6 {
   font-size: map-get($display-06, 'font-size');

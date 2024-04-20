@@ -15,8 +15,11 @@
       :buttonDisabled="false"
       class="q-mt-4"
     />
-    <div class="flex justify-center">
+    <!-- <div class="flex justify-center">
       <TextField class="textfield" />
+    </div> -->
+        <div class="flex justify-center q-pt-8">
+      <TextArea class="textfield" />
     </div>
   </q-page>
 </template>
@@ -25,10 +28,14 @@
 import RoundedButton from '../components/molecules/buttons/ConditionalStyleRoundedButton.vue'
 import CircularButton from '../components/molecules/buttons/ConditionalStyledCircularButton.vue'
 import TextField from '../components/molecules/fields/textfield/TextField.vue'
+import TextArea from '../components/molecules/fields/textarea/TextArea.vue'
 </script>
 
 <style lang="scss" scoped>
 .textfield {
   width: 300px;
+  input{
+    font-size: 60px;
+  }
 }
 </style>
