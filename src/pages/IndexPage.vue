@@ -27,8 +27,8 @@
 <script setup>
 import RoundedButton from '../components/molecules/buttons/ConditionalStyleRoundedButton.vue'
 import CircularButton from '../components/molecules/buttons/ConditionalStyledCircularButton.vue'
-import TextField from '../components/molecules/fields/textfield/TextField.vue'
-import TextArea from '../components/molecules/fields/textarea/TextArea.vue'
+import TextField from '../components/molecules/form-components/fields/textfield/TextField.vue'
+import TextArea from '../components/molecules/form-components/fields/textarea/TextArea.vue'
 </script>
 
 <style lang="scss" scoped>
