@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document provides an overview of the button components available in the project. There are two types of buttons: Rounded Buttons and Circular (Arrow) Buttons.
+This document provides an overview of the molecule components available in the project.
 
 ## Rounded Button
 
