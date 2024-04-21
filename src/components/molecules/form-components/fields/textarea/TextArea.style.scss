@@ -55,8 +55,7 @@ $textarea-min-height: 128px;
   padding-bottom: 28px;
 
   // Inputted text
-  :deep .q-field__native,
-  .q-field__input {
+  :deep(.q-field__native, .q-field__input) {
     @extend .label-16, .text-bluegray-900;
   }
 
