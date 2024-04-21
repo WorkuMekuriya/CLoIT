@@ -71,9 +71,6 @@ const buttonDisabled = ref(false)
 ### Props
 
 - **type**: Specifies the type of the button. Possible values are the same as for the rounded button.
-- **leftIcon**: Specifies the name of the left icon.
-- **rightIcon**: Indicates whether the right icon should be displayed. Default value is `false`.
-- **label**: Specifies the text content of the button.
 - **isLoading**: Indicates whether the button is in a loading state. Default value is `false`.
 - **buttonDisabled**: Indicates whether the button is disabled. Default value is `false`.
 
