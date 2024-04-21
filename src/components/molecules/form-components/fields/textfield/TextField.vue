@@ -42,7 +42,7 @@ const inputValue = ref('')
 const props = defineProps({
   type: {
     type: String,
-    default: 'Primary',
+    default: 'WhiteBg',
   },
   label: {
     type: String,
@@ -97,16 +97,11 @@ const setDisable = computed(() => {
   if (props.disable) return 'textfield-disabled-bg'
   else return ''
 })
-const { emit } = defineEmits(['input']);
 
-
-const textareaClass = computed(() => {
-  if (!props.destructive && !props.disable) {
-    return textareaClasses[props.type] || textareaClasses['Primary']
-  } else {
-    return '';
-  }
-});
+const emitInput = () => {
+  emit('input', inputValue.value)
+}
+const { emit } = defineEmits(['input'])
 </script>
 
 <style lang="scss" scoped>

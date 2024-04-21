@@ -15,19 +15,11 @@ $textarea-min-height: 128px;
 
 .textarea-disabled-bg {
   @extend .bg-bluegray-200;
-
-  ::v-deep .q-icon {
-    @extend .text-bluegray-600;
-  }
 }
 
 .textarea-destructive {
   @extend .bg-red-50, .text-red-500;
   border: 1px solid $red-500;
-
-  ::v-deep .q-icon {
-    @extend .text-red-500;
-  }
 }
 
 .textarea-container {
@@ -63,7 +55,7 @@ $textarea-min-height: 128px;
   padding-bottom: 28px;
 
   // Inputted text
-  ::v-deep .q-field__native,
+  :deep .q-field__native,
   .q-field__input {
     @extend .label-16, .text-bluegray-900;
   }

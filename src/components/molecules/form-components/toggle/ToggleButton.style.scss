@@ -1,0 +1,137 @@
+@import '../../../../css/app.scss';
+
+$toggle-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
+
+.toggle-button {
+  :deep(.q-toggle__track) {
+    height: 24px;
+    width: 40px;
+    border-radius: 32px;
+  }
+  :deep(.q-toggle__label) {
+    @extend .text-bluegray-600, .label-14-bold;
+    margin-top: 8px;
+    margin-left: 10px;
+  }
+  :deep(.q-toggle__thumb) {
+    @extend .text-white;
+    margin-top: 4.6px;
+    margin-left: 4px;
+    -webkit-tap-highlight-color: transparent;
+
+    &:before,
+    &:after {
+      box-shadow: none;
+    }
+  }
+
+  &:focus-visible {
+    :deep(.q-toggle__track) {
+      box-shadow: $toggle-shadow;
+    }
+  }
+  // truthy vlaue
+  :deep(.q-toggle__inner--truthy .q-toggle__track) {
+    @extend .text-arcticblue-600;
+    opacity: 1;
+  }
+
+  &:hover {
+    :deep(.q-toggle__inner--truthy .q-toggle__track) {
+      @extend .text-arcticblue-800;
+    }
+  }
+
+  &:active {
+    :deep(.q-toggle__inner--truthy .q-toggle__track) {
+      @extend .text-arcticblue-900;
+    }
+  }
+
+  // falsy vlaue
+  :deep(.q-toggle__inner--falsy .q-toggle__track) {
+    opacity: 1;
+    @extend .text-bluegray-200;
+  }
+
+  &:hover {
+    :deep(.q-toggle__inner--falsy .q-toggle__track) {
+      @extend .text-bluegray-300;
+    }
+  }
+
+  &:active {
+    :deep(.q-toggle__inner--falsy .q-toggle__track) {
+      @extend .text-bluegray-300;
+    }
+  }
+}
+
+.toggle-button.disabled {
+  :deep(.q-toggle__track) {
+    height: 24px;
+    width: 40px;
+    border-radius: 32px;
+  }
+  :deep(.q-toggle__label) {
+    @extend .text-bluegray-600, .label-14-bold;
+    margin-top: 8px;
+    margin-left: 10px;
+  }
+  :deep(.q-toggle__thumb) {
+    @extend .text-bluegray-500;
+    margin-top: 4.6px;
+    margin-left: 4px;
+    -webkit-tap-highlight-color: transparent;
+
+    &:before,
+    &:after {
+      box-shadow: none;
+      @extend .bg-bluegray-500;
+    }
+  }
+
+  &:focus-visible {
+    :deep(.q-toggle__track) {
+      box-shadow: $toggle-shadow;
+    }
+  }
+
+  // truthy vlaue
+  :deep(.q-toggle__inner--truthy .q-toggle__track) {
+    @extend .text-bluegray-200;
+    opacity: 1;
+  }
+
+  &:hover {
+    :deep(.q-toggle__inner--truthy .q-toggle__track) {
+      @extend .text-bluegray-200;
+    }
+  }
+
+  &:active {
+    :deep(.q-toggle__inner--truthy .q-toggle__track) {
+      @extend .text-bluegray-200;
+    }
+  }
+
+  // falsy vlaue
+  :deep(.q-toggle__inner--falsy .q-toggle__track) {
+    opacity: 1;
+    @extend .text-bluegray-200;
+  }
+
+  &:hover {
+    :deep(.q-toggle__inner--falsy .q-toggle__track) {
+      @extend .text-bluegray-200;
+    }
+  }
+
+  &:active {
+    :deep(.q-toggle__inner--falsy .q-toggle__track) {
+      @extend .text-bluegray-200;
+    }
+  }
+}
+
+// disabled

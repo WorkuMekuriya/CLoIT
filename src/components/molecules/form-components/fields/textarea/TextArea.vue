@@ -15,7 +15,9 @@
         @input="emitInput"
       >
       </q-input>
-      <div class="textarea-counter">{{ characterCount }} / {{ maxCharacters }}</div>
+      <div class="textarea-counter">
+        {{ characterCount }} / {{ maxCharacters }}
+      </div>
     </div>
     <div class="flex" :class="bottomRightDescriptionPosition">
       <p v-if="bottomLeftDescription" class="textarea-description">
@@ -36,9 +38,9 @@ const textareaClasses = {
   WhiteBg: 'textarea-white-bg',
 }
 
-const maxCharacters = 500; // Set your maximum character limit here
+const maxCharacters = 500 // Set your maximum character limit here
 
-const inputValue = ref('');
+const inputValue = ref('')
 
 const props = defineProps({
   type: {
@@ -51,7 +53,7 @@ const props = defineProps({
   },
   placeholder: {
     type: String,
-    default: 'Placeholder Text'
+    default: 'Placeholder Text',
   },
   bottomLeftDescription: {
     type: String,
@@ -69,41 +71,39 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-});
+})
 
 const emitInput = () => {
-  emit('input', inputValue.value);
+  emit('input', inputValue.value)
 }
 
-const { emit } = defineEmits(['input']);
-
+const { emit } = defineEmits(['input'])
 
 const textareaClass = computed(() => {
   if (!props.destructive && !props.disable) {
     return textareaClasses[props.type] || textareaClasses['Primary']
   } else {
-    return '';
+    return ''
   }
-});
+})
 
 const bottomRightDescriptionPosition = computed(() => {
-  return props.bottomLeftDescription ? 'justify-between' : 'justify-end';
-});
+  return props.bottomLeftDescription ? 'justify-between' : 'justify-end'
+})
 
 const setDestructive = computed(() => {
-  return !props.disable ? (props.destructive ? 'textarea-destructive' : '') : '';
-});
+  return !props.disable ? (props.destructive ? 'textarea-destructive' : '') : ''
+})
 
 const setDisable = computed(() => {
-  return props.disable ? 'textarea-disabled-bg' : '';
-});
+  return props.disable ? 'textarea-disabled-bg' : ''
+})
 
 const characterCount = computed(() => {
-  return inputValue.value.length;
-});
+  return inputValue.value.length
+})
 </script>
 
 <style lang="scss" scoped>
 @import 'TextArea.style.scss';
 </style>
-

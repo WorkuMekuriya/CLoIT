@@ -15,16 +15,20 @@
       :buttonDisabled="false"
       class="q-mt-4"
     />
-    <!-- <div class="flex justify-center">
+    <div class="flex justify-center">
       <TextField class="textfield" />
-    </div> -->
-        <div class="flex justify-center q-pt-8">
+    </div>
+    <div class="flex justify-center q-pt-8">
       <TextArea class="textfield" />
+    </div>
+    <div class="flex justify-center q-pt-8">
+      <ToggleButton />
     </div>
   </q-page>
 </template>
 
 <script setup>
+import ToggleButton from '../components/molecules/form-components/toggle/ToggleButton.vue'
 import RoundedButton from '../components/molecules/buttons/ConditionalStyleRoundedButton.vue'
 import CircularButton from '../components/molecules/buttons/ConditionalStyledCircularButton.vue'
 import TextField from '../components/molecules/form-components/fields/textfield/TextField.vue'
@@ -34,7 +38,7 @@ import TextArea from '../components/molecules/form-components/fields/textarea/Te
 <style lang="scss" scoped>
 .textfield {
   width: 300px;
-  input{
+  input {
     font-size: 60px;
   }
 }
