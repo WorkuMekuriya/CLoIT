@@ -46,7 +46,7 @@ const buttonClasses = {
 const props = defineProps({
   type: {
     type: String,
-    default: 'Primary',
+    default: 'Secondary',
   },
   leftIcon: {
     type: String,
@@ -70,6 +70,8 @@ const props = defineProps({
   },
 })
 
+const emits = defineEmits(['clicked']); // Define the 'clicked' event
+
 const buttonClass = computed(() => {
   // Set additional CSS classes based on type
   return buttonClasses[props.type] || buttonClasses['Primary']
@@ -77,7 +79,7 @@ const buttonClass = computed(() => {
 
 // Method to emit the 'clicked' event
 const emitClicked = () => {
-  emits('clicked')
+  emits('clicked');
 }
 </script>
 

@@ -27,21 +27,22 @@ const buttonClasses = {
 const props = defineProps({
   type: {
     type: String,
-    default: 'Primary',
+    default: 'Secondary',
   },
   buttonDisabled: {
     type: Boolean,
     default: false,
   },
 })
+const emits = defineEmits(['clicked'])
 
 const buttonClass = computed(() => {
-  // Set additional CSS classes based on type
   return buttonClasses[props.type] || buttonClasses['Primary']
 })
+
 // Method to emit the 'clicked' event
 const emitClicked = () => {
-  emits('clicked')
+  emits('clicked');
 }
 </script>
 
