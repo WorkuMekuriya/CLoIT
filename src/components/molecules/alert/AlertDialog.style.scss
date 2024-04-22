@@ -1,0 +1,31 @@
+@import '../../../css/app.scss';
+
+.alert-dialog {
+  @extend .bg-bluegray-900;
+
+  .q-card {
+    @extend .bg-bluegray-900;
+    border-radius: 36px;
+
+    .left-icon {
+      margin-left: 5px;
+    }
+
+    .text-and-description {
+      margin-left: 17px;
+
+      .alert-text {
+        @extend .text-white, .label-16;
+      }
+
+      .description-text {
+        @extend .text-bluegray-300, .label-12;
+        margin-top: 4px;
+      }
+    }
+    .close-icon {
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+}

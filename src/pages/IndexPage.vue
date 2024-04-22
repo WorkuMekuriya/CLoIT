@@ -30,10 +30,16 @@
       <CheckboxButton />
     </div>
 
+    <div class="flex justify-center q-mb-md">
+      <AlertDialog :showAlert="showAlert" @close="showAlert = false" />
+    </div>
     <div class="flex justify-center">
       <RadioButton />
     </div>
-    <div class="flex justify-center"></div>
+    <div class="flex justify-center">
+      <AvatarButton/>
+    </div>
+
   </q-page>
 </template>
 
@@ -45,6 +51,12 @@ import RoundedButton from '../components/molecules/buttons/ConditionalStyleRound
 import CircularButton from '../components/molecules/buttons/ConditionalStyledCircularButton.vue'
 import TextField from '../components/molecules/form-components/fields/textfield/TextField.vue'
 import TextArea from '../components/molecules/form-components/fields/textarea/TextArea.vue'
+import AvatarButton from '../components/molecules/avatar/AvatarButton.vue'
+import AlertDialog from '../components/molecules/alert/AlertDialog.vue'
+
+import { ref } from 'vue'
+
+const showAlert = ref(true)
 </script>
 
 <style lang="scss" scoped>
