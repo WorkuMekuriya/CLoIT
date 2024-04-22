@@ -36,6 +36,8 @@ const buttonDisabled = ref(false)
 - **label**: Specifies the text content of the button.
 - **isLoading**: Indicates whether the button is in a loading state. Default value is `false`.
 - **buttonDisabled**: Indicates whether the button is disabled. Default value is `false`.
+- **leftIcon**: left icon.
+- **rightIcon**: right icon.
 
 ### Slots
 
@@ -290,4 +292,72 @@ The Toggle Button component allows users to switch between two states, typically
     // Handle toggle button value change
   }
 </script>
+```
+
+## Radio Button Component
+
+The Radio Button component allows users to select one option from a list of predefined options. It provides features such as custom styling, disabling options, and emitting events for selected option changes.
+
+### Usage
+
+The Radio Button component can be used to present a set of options to the user, allowing them to select a single option.
+
+### Example
+
+```vue
+<template>
+  <RadioButtons
+    :options="radioOptions"
+    v-model="selectedOption"
+    :disable="isDisabled"
+    :destructive="isDestructive"
+    @update:modelValue="handleOptionChange"
+  />
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const radioOptions = [
+  { value: 'line', label: 'Line' },
+  { value: 'rectangle', label: 'Rectangle' },
+]
+
+const selectedOption = ref('rectangle')
+const isDisabled = ref(false)
+const isDestructive = ref(false)
+
+const handleOptionChange = (value) => {
+  // Handle selected option change
+}
+</script>
+```
+
+### Props
+
+- **options**: An array of objects representing the available options. Each object should have `value` and `label` properties.
+- **value**: Specifies the currently selected option.
+- **disable**: Specifies whether the radio buttons are disabled. Default value is `true`.
+- **destructive**: Specifies whether the radio buttons are in a destructive state. Default value is `false`.
+
+### Events
+
+- **update:modelValue**: Triggered when the selected option changes. The new selected option value is passed as the event payload.
+
+### Styling
+
+The Radio Button component supports custom styling. You can modify the appearance by editing the associated SCSS file (`RadioButton.style.scss`).
+
+### Example
+
+```scss
+.radio-button {
+  .radio-destructive {
+    // Add custom styles for destructive state
+  }
+
+  .radio-disabled {
+    // Add custom styles for disabled state
+  }
+}
 ```

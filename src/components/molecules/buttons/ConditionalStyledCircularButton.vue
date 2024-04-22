@@ -42,7 +42,7 @@ const buttonClass = computed(() => {
 
 // Method to emit the 'clicked' event
 const emitClicked = () => {
-  emits('clicked');
+  emits('clicked')
 }
 </script>
 

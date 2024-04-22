@@ -42,7 +42,7 @@ const inputValue = ref('')
 const props = defineProps({
   type: {
     type: String,
-    default: 'WhiteBg',
+    default: 'Primary',
   },
   label: {
     type: String,

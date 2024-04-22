@@ -70,7 +70,7 @@ const props = defineProps({
   },
 })
 
-const emits = defineEmits(['clicked']); // Define the 'clicked' event
+const emits = defineEmits(['clicked']) // Define the 'clicked' event
 
 const buttonClass = computed(() => {
   // Set additional CSS classes based on type
@@ -79,7 +79,7 @@ const buttonClass = computed(() => {
 
 // Method to emit the 'clicked' event
 const emitClicked = () => {
-  emits('clicked');
+  emits('clicked')
 }
 </script>
 

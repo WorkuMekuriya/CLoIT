@@ -1,39 +1,46 @@
 <template>
-  <q-page class="">
-    <h1 class="headline text-limegreen-900 text-center">CLoIT</h1>
-    <!-- <RoundedButton
-      type="Destructive"
+  <q-page class="q-pa-md">
+    <h1 class="headline text-limegreen-900 text-center q-mb-md">CLoIT</h1>
+
+    <RoundedButton
+      type="TertiarySecondary"
       :isLoading="false"
       label="Button"
-      leftIcon="shower"
+      leftIcon="person"
       :rightIcon="false"
       :buttonDisabled="false"
+      class="q-mb-md"
     />
 
-    <CircularButton
-      type="TertiaryWhite"
-      :buttonDisabled="false"
-      class="q-mt-4"
-    />
-    <div class="flex justify-center">
+    <CircularButton type="Secondary" :buttonDisabled="false" class="q-mb-md" />
+
+    <div class="flex justify-center q-mb-md">
       <TextField class="textfield" />
     </div>
-    <div class="flex justify-center q-pt-8">
+
+    <div class="flex justify-center q-mb-md">
       <TextArea class="textfield" />
-    </div> -->
-    <div class="flex justify-center q-pt-8">
+    </div>
+
+    <div class="flex justify-center q-mb-md">
       <ToggleButton />
     </div>
-    <div class="flex justify-center">
+
+    <div class="flex justify-center q-mb-md">
       <CheckboxButton />
     </div>
 
+    <div class="flex justify-center">
+      <RadioButton />
+    </div>
+    <div class="flex justify-center"></div>
   </q-page>
 </template>
 
 <script setup>
 import ToggleButton from '../components/molecules/form-components/toggle/ToggleButton.vue'
 import CheckboxButton from '../components/molecules/form-components/checkbox/CheckboxButton.vue'
+import RadioButton from '../components/molecules/form-components/radio-button/RadioButton.vue'
 import RoundedButton from '../components/molecules/buttons/ConditionalStyleRoundedButton.vue'
 import CircularButton from '../components/molecules/buttons/ConditionalStyledCircularButton.vue'
 import TextField from '../components/molecules/form-components/fields/textfield/TextField.vue'
@@ -43,8 +50,5 @@ import TextArea from '../components/molecules/form-components/fields/textarea/Te
 <style lang="scss" scoped>
 .textfield {
   width: 300px;
-  input {
-    font-size: 60px;
-  }
 }
 </style>

@@ -3,7 +3,7 @@
     <q-toggle
       :disable="disable"
       class="toggle-button"
-      :modelValue="toggleValue"
+      v-model="selected"
       :label="label"
       @update:model-value="emitToggleChange"
     />
@@ -13,7 +13,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const internalToggleValue = ref(false)
+const selected = ref(null)
 
 const props = defineProps({
   label: {
@@ -26,12 +26,13 @@ const props = defineProps({
   },
   toggleValue: {
     type: Boolean,
-    default: false,
+    default: true,
   },
 })
+selected.value = props.toggleValue
 
 const emitToggleChange = (value) => {
-  internalToggleValue.value = value
+  toggleValue.value = value
 }
 
 const emit = defineEmits(['update:toggleValue'])
