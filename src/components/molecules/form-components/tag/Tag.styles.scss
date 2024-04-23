@@ -2,21 +2,20 @@
 
 // Define constants for the styles
 $padding: 15px;
-$sm-width: 75px;
 $sm-height: 28px;
-$md-width: 85px;
 $md-height: 34px;
-$lg-width: 95px;
+$lg-min-width: 65px;
+$md-min-width: 55px;
+$sm-min-width: 45px;
 $lg-height: 40px;
 
 // Font size for different sizes
-$sm-font-size: 0.7rem;
-$md-font-size: 0.8rem;
-$lg-font-size: 0.9rem;
 $dot-font-size: 0.9rem;
 
 $tag-border-radius: 20px;
-$tag-padding: 10px 16px 10px 16px;
+$dot-icon-padding: 0px 6px 4px 4px;
+$lg-tag-padding: 10px 16px 10px 16px;
+$sm-tag-padding: 4px 16px 4px 4px;
 
 // Define shared color pattern mixin
 @mixin tag-color($color-name) {
@@ -54,7 +53,7 @@ $tag-padding: 10px 16px 10px 16px;
     @extend .bg-yellow-50, .text-yellow-500;
   }
 
-  else {
+  @else {
     @extend .bg-bluegray-200, .text-black;
   }
 }
@@ -62,14 +61,13 @@ $tag-padding: 10px 16px 10px 16px;
 .q-chip {
   @extend .label-14-bold ;
   cursor: pointer;
-  padding: $tag-padding;
+  padding: $lg-tag-padding;
   border-radius: $tag-border-radius;
 }
 
 .dot-icon {
   font-size: $dot-font-size; // Set the default font size for the dot icon
-  padding: 4px;
-  padding-left: 0px;
+  padding: $dot-icon-padding;
 }
 
 // Define styles based on type
@@ -121,19 +119,23 @@ $tag-padding: 10px 16px 10px 16px;
 
 // Additional styles for sizes
 .q-chip--sm {
-  min-width: $sm-width;
+  @extend .label-12-bold ;
   height: $sm-height;
-  font-size: $sm-font-size;
+  min-width: $sm-min-width;
+  gap: 6px;
 }
 
 .q-chip--md {
-  min-width: $md-width;
+  @extend .label-12-bold ;
   height: $md-height;
-  font-size: $md-font-size;
+  min-width: $md-min-width;
+  padding: $sm-tag-padding;
 }
 
 .q-chip--lg {
-  min-width: $lg-width;
+  @extend .label-14-bold ;
   height: $lg-height;
-  font-size: $lg-font-size;
+  min-width: $lg-min-width;
+  padding: $lg-tag-padding;
+  gap: 4px;
 }
