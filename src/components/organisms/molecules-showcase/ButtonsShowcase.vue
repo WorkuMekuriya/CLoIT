@@ -101,9 +101,9 @@ const buttonGroups = [
   {
     title: 'Button Disabled',
     buttons: [
+      { component: RoundedButton, props: { type: 'Disabled', isLoading: false, label: 'Button', leftIcon: '', rightIcon: false, buttonDisabled: true } },
       { component: RoundedButton, props: { type: 'Disabled', isLoading: false, label: 'Button', leftIcon: 'home', rightIcon: false, buttonDisabled: true } },
-      { component: RoundedButton, props: { type: 'Disabled', isLoading: false, label: 'Button', leftIcon: '', rightIcon: false, buttonDisabled: true } },
-      { component: RoundedButton, props: { type: 'Disabled', isLoading: false, label: 'Button', leftIcon: '', rightIcon: false, buttonDisabled: true } },
+      { component: RoundedButton, props: { type: 'Disabled', isLoading: false, label: 'Button', leftIcon: '', rightIcon: true, buttonDisabled: true } },
       { component: RoundedButton, props: { type: 'Disabled', isLoading: false, label: 'Button', leftIcon: '', rightIcon: false, buttonDisabled: true, size: 'sm' } },
       { component: CircularButton, props: { type: 'Disabled', buttonDisabled: true } },
       { component: CircularButton, props: { type: 'Disabled', buttonDisabled: true, size: 'sm' } },
