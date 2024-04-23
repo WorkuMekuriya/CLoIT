@@ -1,4 +1,4 @@
-@import '../../../css/app.scss';
+@import '../../../../css/app.scss';
 
 // rounded Buttons
 $rounded-button-border-radius: 48px;
@@ -9,6 +9,7 @@ $rounded-icon-margin-left: 20px;
 $rounded-icon-left-max-size: 16px;
 $rounded-icon-margin-right: 12px;
 $rounded-button-height-small-screen: 38px; // media query size
+$rounded-button-padding: 0 32px;
 
 //circular buttons
 $circular-button-border-radius: 50px;
@@ -37,6 +38,7 @@ $small-screen-max-width: 768px;
   border-radius: $rounded-button-border-radius;
   min-width: $rounded-button-min-width;
   height: $rounded-button-height;
+    padding: $rounded-button-padding;
 
   .button-icon {
     font: $rounded-button-icon-size;

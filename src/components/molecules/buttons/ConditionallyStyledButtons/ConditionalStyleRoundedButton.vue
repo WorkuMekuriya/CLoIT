@@ -33,7 +33,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import Spinner from '../../../components/atoms/Icons/ButtonLoadingSpinner.vue'
+import Spinner from '../../../../components/atoms/Icons/ButtonLoadingSpinner.vue'
 const buttonClasses = {
   Primary: 'button-primary',
   Secondary: 'button-secondary',

@@ -1,0 +1,223 @@
+<template>
+  <q-page class="">
+    <h1 class="display-3 text-limegreen-900 text-center q-mb-md">Buttons</h1>
+    <div>
+      <p class="text-center display-1 q-pb-md">Button Primary</p>
+      <div class="flex justify-between q-mx-xl">
+        <RoundedButton
+          type="Primary"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="false"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="Primary"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="false"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="Primary"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="true"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="Primary"
+          :isLoading="true"
+          label="Button"
+          leftIcon=""
+          :rightIcon="true"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <CircularButton
+          type="Primary"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <CircularButton
+          type="Primary"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+      </div>
+    </div>
+    <div>
+      <p class="text-center display-1 q-py-md">Button Secondary</p>
+      <div class="flex justify-between q-mx-xl">
+        <RoundedButton
+          type="Secondary"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="false"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="Secondary"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="false"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="Secondary"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="true"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="Secondary"
+          :isLoading="true"
+          label="Button"
+          leftIcon=""
+          :rightIcon="true"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <CircularButton
+          type="Secondary"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <CircularButton
+          type="Secondary"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+      </div>
+    </div>
+     <div>
+      <p class="text-center display-1 q-py-md">Button Tertiary Lined</p>
+      <div class="flex justify-between q-mx-xl">
+        <RoundedButton
+          type="TertiaryLined"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="false"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="TertiaryLined"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="false"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="TertiaryLined"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="true"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="TertiaryLined"
+          :isLoading="true"
+          label="Button"
+          leftIcon=""
+          :rightIcon="true"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <CircularButton
+          type="TertiaryLined"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <CircularButton
+          type="TertiaryLined"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+      </div>
+    </div>
+     <div>
+      <p class="text-center display-1 q-py-md">Button Tertiary White</p>
+      <div class="flex justify-between q-mx-xl">
+        <RoundedButton
+          type="TertiaryWhite"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="false"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="TertiaryWhite"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="false"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="TertiaryWhite"
+          :isLoading="false"
+          label="Button"
+          leftIcon=""
+          :rightIcon="true"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <RoundedButton
+          type="TertiaryWhite"
+          :isLoading="true"
+          label="Button"
+          leftIcon=""
+          :rightIcon="true"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <CircularButton
+          type="TertiaryWhite"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+        <CircularButton
+          type="TertiaryWhite"
+          :buttonDisabled="false"
+          class="q-mb-md"
+        />
+      </div>
+    </div>
+  </q-page>
+</template>
+
+<script setup>
+import RoundedButton from '../../molecules/buttons/ConditionallyStyledButtons/ConditionalStyleRoundedButton.vue'
+import CircularButton from '../../molecules/buttons/ConditionallyStyledButtons/ConditionalStyledCircularButton.vue'
+import { ref } from 'vue'
+
+const showAlert = ref(true)
+</script>
+
+<style lang="scss" scoped>
+.textfield {
+  width: 300px;
+}
+</style>
