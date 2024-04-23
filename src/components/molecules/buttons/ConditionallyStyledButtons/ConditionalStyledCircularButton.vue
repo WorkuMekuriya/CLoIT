@@ -33,11 +33,20 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  size: {
+    type: String,
+    validator: (value) => ['sm', 'xl'].includes(value),
+    default: 'xl'
+  }
 })
 const emits = defineEmits(['clicked'])
 
 const buttonClass = computed(() => {
-  return buttonClasses[props.type] || buttonClasses['Primary']
+  let classList = [buttonClasses[props.type] || buttonClasses['Primary']]
+  if (props.size === 'sm') {
+    classList.push('small-size-button')
+  }
+  return classList.join(' ')
 })
 
 // Method to emit the 'clicked' event

@@ -6,7 +6,7 @@
         :ripple="false"
         :loading="isLoading"
         class="rounded-button"
-        :class="[buttonClass, { loading: isLoading }]"
+        :class="[buttonClass, { loading: isLoading }, { 'set-button-with-icon-width': leftIcon || rightIcon }]"
         unelevated
         no-caps
         @click="emitClicked"
@@ -68,13 +68,21 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+   size: {
+    type: String,
+    validator: (value) => ['sm', 'xl'].includes(value),
+    default: 'xl'
+  }
 })
 
 const emits = defineEmits(['clicked']) // Define the 'clicked' event
 
 const buttonClass = computed(() => {
-  // Set additional CSS classes based on type
-  return buttonClasses[props.type] || buttonClasses['Primary']
+  let classList = [buttonClasses[props.type] || buttonClasses['Primary']]
+  if (props.size === 'sm') {
+    classList.push('small-size-button')
+  }
+  return classList.join(' ')
 })
 
 // Method to emit the 'clicked' event
