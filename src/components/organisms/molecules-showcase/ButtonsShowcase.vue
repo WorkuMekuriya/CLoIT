@@ -1,5 +1,5 @@
 <template>
-  <q-page class="">
+<div>
     <h1 class="display-3 text-limegreen-900 text-center q-mb-md">Buttons</h1>
     <template v-for="(buttonGroup, index) in buttonGroups" :key="index">
       <div>
@@ -15,7 +15,7 @@
         </div>
       </div>
     </template>
-  </q-page>
+  </div>
 </template>
 
 <script setup>

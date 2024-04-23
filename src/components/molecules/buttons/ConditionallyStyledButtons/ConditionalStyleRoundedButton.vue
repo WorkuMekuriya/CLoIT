@@ -8,6 +8,7 @@
         class="rounded-button"
         :class="[buttonClass, { loading: isLoading }, { 'set-button-with-icon-width': leftIcon || rightIcon }]"
         unelevated
+        :push="false"
         no-caps
         @click="emitClicked"
       >
