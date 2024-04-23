@@ -26,7 +26,7 @@ const props = defineProps({
   },
   imageSrc: {
     type: String,
-    default: 'https://cdn.quasar.dev/img/avatar.png',
+    default: 'https://cdn.quasar.dev/logo-v2/svg/logo.svg',
   },
   size: {
     type: String,

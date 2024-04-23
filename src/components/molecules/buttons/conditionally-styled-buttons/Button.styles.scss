@@ -51,6 +51,8 @@ $small-screen-max-width: 768px;
 
   .right-icon {
     margin-left: $rounded-icon-margin-left;
+        max-width: $rounded-icon-left-max-size;
+          max-height: $rounded-icon-left-max-size;
   }
 
   .left-icon {

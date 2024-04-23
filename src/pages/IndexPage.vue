@@ -45,8 +45,6 @@ export default defineComponent({
 import ToggleButton from '../components/molecules/form-components/toggle/ToggleButton.vue'
 import CheckboxButton from '../components/molecules/form-components/checkbox/CheckboxButton.vue'
 import RadioButton from '../components/molecules/form-components/radio-button/RadioButton.vue'
-import RoundedButton from '../components/molecules/buttons/ConditionallyStyledButtons/ConditionalStyleRoundedButton.vue'
-import CircularButton from '../components/molecules/buttons/ConditionallyStyledButtons/ConditionalStyledCircularButton.vue'
 import TextField from '../components/molecules/form-components/fields/textfield/TextField.vue'
 import TextArea from '../components/molecules/form-components/fields/textarea/TextArea.vue'
 import AvatarButton from '../components/molecules/avatar/AvatarButton.vue'
