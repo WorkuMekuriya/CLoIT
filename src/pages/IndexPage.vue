@@ -2,7 +2,7 @@
   <q-page class="q-pa-md">
     <h1 class="headline text-limegreen-900 text-center q-mb-md">CLoIT</h1>
 
-
+<!--
     <div class="flex justify-center q-mb-md">
       <TextField class="textfield" />
     </div>
@@ -27,7 +27,7 @@
     </div>
     <div class="flex justify-center">
       <AvatarButton/>
-    </div>
+    </div> -->
        <div class="flex justify-center">
       <TabComponent/>
     </div>

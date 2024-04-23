@@ -3,6 +3,7 @@
     <ButtonsShowcase />
     <AvatarShowcase />
     <FormComponents />
+    <TabComponent />
   </q-page>
 </template>
 
@@ -10,6 +11,7 @@
 import ButtonsShowcase from '../../organisms/molecules-showcase/ButtonsShowcase.vue';
 import AvatarShowcase from '../../organisms/molecules-showcase/AvatarShowcase.vue'
 import FormComponents from '../../organisms/molecules-showcase/FormComponentsShowcase.vue'
+import TabComponent from '../../organisms/molecules-showcase/TabsShowcase.vue'
 import { ref } from 'vue'
 
 const showAlert = ref(true)

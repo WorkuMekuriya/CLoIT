@@ -1,22 +1,63 @@
 <template>
-  <div class="q-pa-md">
-    <div class="q-gutter-y-md" style="max-width: 400px">
-      <q-tabs v-model="tab" narrow-indicator dense align="justify">
-        <q-tab name="mails" icon="mail" label="Tab 1" />
-        <q-tab  name="alarms" icon="alarm" label="Tab 2" />
-        <q-tab  name="movies" icon="movie" label="Tab 3" />
+  <div>
+    <div :style="{ maxWidth: maxWidth }">
+      <q-tabs
+        :ripple="false"
+        v-model="tab"
+        narrow-indicator
+         inline-label
+        dense
+        align="justify"
+        :class="tabClass"
+
+      >
+        <q-tab
+          :ripple="false"
+          class="single-tab"
+          v-for="tabItem in tabs"
+          :key="tabItem.label"
+          :name="tabItem.label"
+          :label="tabItem.label"
+          :icon="props.type === 'circular' ? tabItem.icon : undefined"
+        >
+          <template #icon>
+            <q-icon :name="tabItem.icon" v-if="props.type === 'circular'" />
+          </template>
+        </q-tab>
       </q-tabs>
     </div>
   </div>
 </template>
-<script>
-import { ref } from 'vue'
 
-export default {
-  setup() {
-    return {
-      tab: ref('mails'),
-    }
+<script setup>
+import { ref, computed } from 'vue'
+
+const props = defineProps({
+  type: {
+    type: String,
+    validator: (value) => ['circular', 'linear'].includes(value),
+    default: 'circular',
   },
-}
+  tabs: {
+    type: Array,
+    default: () => [
+      { name: 'Tab 1', icon: 'mail', label: 'Tab 1' },
+      { name: 'Tab 2', icon: 'alarm', label: 'Tab 2' },
+    ],
+  },
+  maxWidth: {
+    type: String,
+    default: '400px',
+  },
+})
+
+const tab = ref(props.tabs[0].name)
+
+const tabClass = computed(() => {
+  return props.type === 'circular' ? 'circular-tab' : 'linear-tab'
+})
 </script>
+
+<style lang="scss" scoped>
+@import 'TabComponent.style.scss';
+</style>
