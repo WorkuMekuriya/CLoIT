@@ -60,10 +60,7 @@ $tag-padding: 10px 16px 10px 16px;
 }
 
 .q-chip {
-  font-weight: 700;
-  font-size: 14px;
-  font-family: 'Plus Jakarta Sans';
-  
+  @extend .label-14-bold ;
   cursor: pointer;
   padding: $tag-padding;
   border-radius: $tag-border-radius;
