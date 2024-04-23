@@ -28,10 +28,14 @@ const props = defineProps({
   },
   destructive: {
     type: Boolean,
-    default: true,
+    default: false,
   },
+  value: {
+    type: Boolean,
+    default: true
+  }
 })
-
+checked.value = props.value
 const checkboxClass = computed(() => {
   return {
     'checkbox-destructive': !props.disable && props.destructive,
