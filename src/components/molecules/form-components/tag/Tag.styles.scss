@@ -1,0 +1,142 @@
+@import '../../../../css/app.scss';
+
+// Define constants for the styles
+$padding: 15px;
+$sm-width: 75px;
+$sm-height: 28px;
+$md-width: 85px;
+$md-height: 34px;
+$lg-width: 95px;
+$lg-height: 40px;
+
+// Font size for different sizes
+$sm-font-size: 0.7rem;
+$md-font-size: 0.8rem;
+$lg-font-size: 0.9rem;
+$dot-font-size: 0.9rem;
+
+$tag-border-radius: 20px;
+$tag-padding: 10px 16px 10px 16px;
+
+// Define shared color pattern mixin
+@mixin tag-color($color-name) {
+  @if $color-name =='TagBlueTonal' {
+    @extend .bg-arcticblue-50, .text-arcticblue-600;
+  }
+
+  @else if ($color-name =='TagBlue') {
+    @extend .bg-arcticblue-600, .text-white;
+  }
+
+  @else if ($color-name =='TagGreen') {
+    @extend .bg-limegreen-400, .text-black;
+  }
+
+  @else if ($color-name =='TagGreenTonal') {
+    @extend .bg-limegreen-100;
+    color: green;
+  }
+
+  @else if ($color-name =='TagRed') {
+    @extend .bg-red-700, .text-white;
+
+  }
+
+  @else if ($color-name =='TagRedTonal') {
+    @extend .bg-red-50, .text-red-500;
+  }
+
+  @else if ($color-name =='TagYellow') {
+    @extend .bg-yellow-500, .text-white;
+  }
+
+  @else if ($color-name =='TagYellowTonal') {
+    @extend .bg-yellow-50, .text-yellow-500;
+  }
+
+  else {
+    @extend .bg-bluegray-200, .text-black;
+  }
+}
+
+.q-chip {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Plus Jakarta Sans';
+  
+  cursor: pointer;
+  padding: $tag-padding;
+  border-radius: $tag-border-radius;
+}
+
+.dot-icon {
+  font-size: $dot-font-size; // Set the default font size for the dot icon
+  padding: 4px;
+  padding-left: 0px;
+}
+
+// Define styles based on type
+.q-chip--TagDisabled {
+  @extend .text-black;
+  background-color: lightgray;
+}
+
+// Define styles based on type
+.q-chip--TagBlueTonal {
+  @include tag-color('TagBlueTonal');
+}
+
+.q-chip--TagBlue {
+  @include tag-color('TagBlue');
+}
+
+.q-chip--TagGreenTonal {
+  @include tag-color('TagGreenTonal');
+}
+
+.q-chip--TagGreen {
+  @include tag-color('TagGreen');
+}
+
+.q-chip--TagRedTonal {
+  @include tag-color('TagRedTonal');
+}
+
+.q-chip--TagRed {
+  @include tag-color('TagRed');
+}
+
+.q-chip--TagYellow {
+  @include tag-color('TagYellow');
+}
+
+.q-chip--TagYellowTonal {
+  @include tag-color('TagYellowTonal');
+}
+
+.q-chip--TagBlackTonal {
+  @include tag-color('TagBlackTonal');
+}
+
+.q-chip--TagBlack {
+  @include tag-color('TagBlack');
+}
+
+// Additional styles for sizes
+.q-chip--sm {
+  min-width: $sm-width;
+  height: $sm-height;
+  font-size: $sm-font-size;
+}
+
+.q-chip--md {
+  min-width: $md-width;
+  height: $md-height;
+  font-size: $md-font-size;
+}
+
+.q-chip--lg {
+  min-width: $lg-width;
+  height: $lg-height;
+  font-size: $lg-font-size;
+}
