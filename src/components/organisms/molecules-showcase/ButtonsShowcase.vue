@@ -19,8 +19,8 @@
 </template>
 
 <script setup>
-import RoundedButton from '../../molecules/buttons/ConditionallyStyledButtons/ConditionalStyleRoundedButton.vue'
-import CircularButton from '../../molecules/buttons/ConditionallyStyledButtons/ConditionalStyledCircularButton.vue'
+import RoundedButton from '../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
+import CircularButton from '../../molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
 import { ref } from 'vue'
 
 const showAlert = ref(true)
