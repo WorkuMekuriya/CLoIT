@@ -5,7 +5,7 @@ p {
   margin: 0px;
 }
 
-// Define classes for typography variables
+// Define classes for typography variables - Old
 .display-6 {
   font-size: map-get($display-06, 'font-size');
   font-weight: map-get($display-06, 'font-weight');
@@ -204,4 +204,190 @@ p {
   font-weight: map-get($label-01-bold, 'font-weight');
   line-height: map-get($label-01-bold, 'line-height');
   letter-spacing: map-get($label-01-bold, 'letter-spacing');
+}
+
+
+
+// Import Quasar's SCSS variables file
+@import '../css/quasar.variables.scss';
+
+p {
+  margin: 0px;
+
+  &.p-lg {
+    font-size: map-get($body-03, 'font-size');
+    font-weight: map-get($body-03, 'font-weight');
+    line-height: map-get($body-03, 'line-height');
+    letter-spacing: map-get($body-03, 'letter-spacing');
+  }
+
+  &.p-md {
+    font-size: map-get($body-02, 'font-size');
+    font-weight: map-get($body-02, 'font-weight');
+    line-height: map-get($body-02, 'line-height');
+    letter-spacing: map-get($body-02, 'letter-spacing');
+  }
+
+  &.p-sm {
+    font-size: map-get($body-01, 'font-size');
+    font-weight: map-get($body-01, 'font-weight');
+    line-height: map-get($body-01, 'line-height');
+    letter-spacing: map-get($body-01, 'letter-spacing');
+  }
+}
+
+// Import Quasar's SCSS variables file
+@import '../css/quasar.variables.scss';
+
+p {
+  margin: 0px;
+}
+
+// Define classes for typography variables - New
+.heading {
+  &-1 {
+    font-size: map-get($display-06, 'font-size');
+    font-weight: map-get($display-06, 'font-weight');
+    line-height: map-get($display-06, 'line-height');
+    letter-spacing: map-get($display-06, 'letter-spacing');
+  }
+
+  &-2 {
+    font-size: map-get($display-05, 'font-size');
+    font-weight: map-get($display-05, 'font-weight');
+    line-height: map-get($display-05, 'line-height');
+    letter-spacing: map-get($display-05, 'letter-spacing');
+  }
+
+  &-3 {
+    font-size: map-get($display-04, 'font-size');
+    font-weight: map-get($display-04, 'font-weight');
+    line-height: map-get($display-04, 'line-height');
+    letter-spacing: map-get($display-04, 'letter-spacing');
+  }
+
+  &-4 {
+    font-size: map-get($display-03, 'font-size');
+    font-weight: map-get($display-03, 'font-weight');
+    line-height: map-get($display-03, 'line-height');
+    letter-spacing: map-get($display-03, 'letter-spacing');
+  }
+
+  &-5 {
+    font-size: map-get($display-02, 'font-size');
+    font-weight: map-get($display-02, 'font-weight');
+    line-height: map-get($display-02, 'line-height');
+    letter-spacing: map-get($display-02, 'letter-spacing');
+  }
+
+  &-6 {
+    font-size: map-get($display-01, 'font-size');
+    font-weight: map-get($display-01, 'font-weight');
+    line-height: map-get($display-01, 'line-height');
+    letter-spacing: map-get($display-01, 'letter-spacing');
+  }
+}
+
+.p {
+  &-lg {
+    font-size: map-get($body-03, 'font-size');
+    font-weight: map-get($body-03, 'font-weight');
+    line-height: map-get($body-03, 'line-height');
+    letter-spacing: map-get($body-03, 'letter-spacing');
+  }
+
+  &-md {
+    font-size: map-get($body-02, 'font-size');
+    font-weight: map-get($body-02, 'font-weight');
+    line-height: map-get($body-02, 'line-height');
+    letter-spacing: map-get($body-02, 'letter-spacing');
+  }
+
+  &-sm {
+    font-size: map-get($body-01, 'font-size');
+    font-weight: map-get($body-01, 'font-weight');
+    line-height: map-get($body-01, 'line-height');
+    letter-spacing: map-get($body-01, 'letter-spacing');
+  }
+}
+
+.subH {
+  &-lg {
+    font-size: map-get($subhead-04, 'font-size');
+    font-weight: map-get($subhead-04, 'font-weight');
+    line-height: map-get($subhead-04, 'line-height');
+    letter-spacing: map-get($subhead-04, 'letter-spacing');
+  }
+
+  &-md {
+    font-size: map-get($subhead-03, 'font-size');
+    font-weight: map-get($subhead-03, 'font-weight');
+    line-height: map-get($subhead-03, 'line-height');
+    letter-spacing: map-get($subhead-03, 'letter-spacing');
+  }
+
+  &-sm {
+    font-size: map-get($subhead-02, 'font-size');
+    font-weight: map-get($subhead-02, 'font-weight');
+    line-height: map-get($subhead-02, 'line-height');
+    letter-spacing: map-get($subhead-02, 'letter-spacing');
+  }
+}
+
+.label {
+  &-lg {
+    font-size: map-get($label-04, 'font-size');
+    font-weight: map-get($label-04, 'font-weight');
+    line-height: map-get($label-04, 'line-height');
+    letter-spacing: map-get($label-04, 'letter-spacing');
+  }
+
+  &-md {
+    font-size: map-get($label-03, 'font-size');
+    font-weight: map-get($label-03, 'font-weight');
+    line-height: map-get($label-03, 'line-height');
+    letter-spacing: map-get($label-03, 'letter-spacing');
+  }
+
+  &-sm {
+    font-size: map-get($label-02, 'font-size');
+    font-weight: map-get($label-02, 'font-weight');
+    line-height: map-get($label-02, 'line-height');
+    letter-spacing: map-get($label-02, 'letter-spacing');
+  }
+
+  &-xs {
+    font-size: map-get($label-01, 'font-size');
+    font-weight: map-get($label-01, 'font-weight');
+    line-height: map-get($label-01, 'line-height');
+    letter-spacing: map-get($label-01, 'letter-spacing');
+  }
+
+  &-bold-lg {
+    font-size: map-get($label-04-bold, 'font-size');
+    font-weight: map-get($label-04-bold, 'font-weight');
+    line-height: map-get($label-04-bold, 'line-height');
+    letter-spacing: map-get($label-04-bold, 'letter-spacing');
+  }
+
+  &-bold-md {
+    font-size: map-get($label-03-bold, 'font-size');
+    font-weight: map-get($label-03-bold, 'font-weight');
+    line-height: map-get($label-03-bold, 'line-height');
+    letter-spacing: map-get($label-03-bold, 'letter-spacing');
+  }
+
+  &-bold-sm {
+    font-size: map-get($label-02-bold, 'font-size');
+    font-weight: map-get($label-02-bold, 'font-weight');
+    line-height: map-get($label-02-bold, 'line-height');
+    letter-spacing: map-get($label-02-bold, 'letter-spacing');
+  }
+
+  &-bold-xs {
+    font-size: map-get($label-01-bold, 'font-size');
+    font-weight: map-get($label-01-bold, 'font-weight');
+    line-height: map-get($label-01-bold, 'line-height');
+    letter-spacing: map-get($label-01-bold, 'letter-spacing');
+  }
 }
