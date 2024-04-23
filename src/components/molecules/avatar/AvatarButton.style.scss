@@ -1,0 +1,5 @@
+@import '../../../css/app.scss';
+
+.avatar-button {
+  @extend .text-arcticblue-500, .bg-arcticblue-100;
+}

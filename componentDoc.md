@@ -361,3 +361,86 @@ The Radio Button component supports custom styling. You can modify the appearanc
   }
 }
 ```
+
+# AvatarButton Component
+
+The `AvatarButton` component is a versatile avatar component that can render different types of avatars based on the provided props.
+
+## Props
+
+- **type**:
+  - Type: `String`
+  - Default: `'image'`
+  - Validator: `['image', 'icon', 'initial']`
+  - Description: Determines the type of content to render inside the avatar. Possible values are `'image'`, `'icon'`, and `'initial'`.
+
+- **imageSrc**:
+  - Type: `String`
+  - Default: `'https://cdn.quasar.dev/img/avatar.png'`
+  - Description: The URL of the image to display inside the avatar. This prop is only used when the `type` prop is set to `'image'`.
+
+- **size**:
+  - Type: `String`
+  - Default: `'xl'`
+  - Validator: `['sm', 'md', 'lg', 'xl']`
+  - Description: The size of the avatar. It accepts four predefined sizes: `'sm'` (32px), `'md'` (40px), `'lg'` (48px), and `'xl'` (64px).
+
+- **initials**:
+  - Type: `String`
+  - Default: `'J'`
+  - Description: The initials to display inside the avatar when the `type` prop is set to `'initial'`.
+
+## Usage
+
+The `AvatarButton` component is highly customizable and can be used in various scenarios. Here's how you can use it:
+
+```vue
+<template>
+  <AvatarButton type="image" :image-src="avatarImage" size="xl" />
+</template>
+
+<script setup>
+import AvatarButton from '@/components/common/AvatarButton.vue'
+
+const avatarImage = 'https://example.com/avatar.jpg'
+</script>
+```
+
+# AlertDialog Component
+
+The AlertDialog component is a customizable alert dialog that can display various types of alerts, such as standard, warning, success, or error messages. It provides flexibility in terms of styling, content, and positioning.
+
+## Usage
+
+```vue
+<template>
+  <AlertDialog
+    :showAlert="true"
+    :type="'Success'"
+    :alertText="'Alert text'"
+    :description="'Description'"
+    :position="'bottom'"
+  />
+</template>
+```
+
+## Props
+
+- `showAlert` (Boolean, default: `true`): Controls the visibility of the alert dialog.
+- `type` (String, default: `'Success'`): Specifies the type of alert. Valid values are `'Standard'`, `'Warning'`, `'Success'`, or `'Error'`.
+- `alertText` (String, default: `'Alert text'`): The main text content of the alert.
+- `description` (String, default: `'Description'`): Additional description or details accompanying the alert.
+- `position` (String, default: `'bottom'`): Determines the position of the alert dialog. Valid values are `'top'`, `'bottom'`, `'left'`, or `'right'`.
+
+## Icons
+
+The AlertDialog component dynamically selects an appropriate icon based on the specified `type` prop. Each type corresponds to a specific icon:
+
+- `'Standard'`
+- `'Warning'`:
+- `'Success'`
+- `'Error'`
+
+## Events
+- `close`: Emitted when the close icon within the alert dialog is clicked. This event can be used to handle actions when the alert is dismissed.
+
