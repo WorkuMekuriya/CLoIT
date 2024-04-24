@@ -15,11 +15,6 @@ $tooltip-border-radius: 4px;
     transition: $table-header-translation;
 }
 
-/* disabled state styling */
-.table-header.disabled-state {
-    @extend .text-bluegray-300;
-}
-
 /* Tooltip styling */
 .tooltip-class {
     @extend .text-black, .bg-white;
@@ -34,4 +29,12 @@ $tooltip-border-radius: 4px;
 /* Change icon color to black on hover */
 .table-header:hover .q-icon.q-ml-xs {
     @extend .text-black, .label-md;
+}
+
+/* disabled state styling */
+.table-header.disabled-state {
+    @extend .text-bluegray-300;
+    .q-icon.q-ml-xs {
+        @extend .text-bluegray-300, .label-md;
+    }
 }
