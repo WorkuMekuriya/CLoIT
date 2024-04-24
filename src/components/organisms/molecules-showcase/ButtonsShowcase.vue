@@ -1,9 +1,9 @@
 <template>
 <div>
-    <h1 class="display-3 text-limegreen-900 text-center q-mb-md">Buttons</h1>
+    <h1 class="heading-3 text-limegreen-900 text-center q-mb-md">Buttons</h1>
     <template v-for="(buttonGroup, index) in buttonGroups" :key="index">
       <div>
-        <p class="text-center display-1 q-py-md">{{ buttonGroup.title }}</p>
+        <p class="text-center heading-3 q-py-md">{{ buttonGroup.title }}</p>
         <div class="flex justify-between q-mx-xl">
           <template v-for="(button, buttonIndex) in buttonGroup.buttons" :key="buttonIndex">
             <component
