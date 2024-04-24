@@ -1,8 +1,7 @@
 <template>
   <q-page class="q-pa-md">
-    <h1 class="headline text-limegreen-900 text-center q-mb-md">CLoIT</h1>
+    <h1 class="heading-3 text-limegreen-900 text-center q-mb-md">CLoIT</h1>
 
-<!--
     <div class="flex justify-center q-mb-md">
       <TextField class="textfield" />
     </div>
@@ -26,12 +25,14 @@
       <RadioButton />
     </div>
     <div class="flex justify-center">
-      <AvatarButton/>
-    </div> -->
-       <div class="flex justify-center">
-      <TabComponent/>
+      <AvatarButton />
     </div>
-
+    <div class="flex justify-center q-mb-md">
+      <TabComponent />
+    </div>
+    <div class="flex justify-center">
+      <StandardButton />
+    </div>
   </q-page>
 </template>
 
@@ -50,6 +51,7 @@ import TextArea from '../components/molecules/form-components/fields/textarea/Te
 import AvatarButton from '../components/molecules/avatar/AvatarButton.vue'
 import AlertDialog from '../components/molecules/alert/AlertDialog.vue'
 import TabComponent from '../components/molecules/tabs/TabComponent.vue'
+import StandardButton from '../components/molecules/buttons/standard-buttons/StandardButtons.vue'
 import { ref } from 'vue'
 
 const showAlert = ref(true)
