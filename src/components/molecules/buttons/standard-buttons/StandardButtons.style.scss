@@ -1,0 +1,103 @@
+@import '../../../../css/app.scss';
+
+$standard-button-width: 162px;
+$standard-button_height: 52px;
+$standard-button-border-radius: 48px;
+$standard-button-border: 1px solid $bluegray-300;
+$left-icon-padding-right: 20px;
+$left-icon-margin-left: -30px;
+$right-icon-padding-left: 20px;
+$right-icon-margin-right: -30px;
+
+
+.standard-button.right-arrow {
+  @extend .label-sm-bold;
+  width: $standard-button-width;
+  height: $standard-button_height;
+  border-radius: 48px;
+  position: relative;
+  padding-right: 65px;
+
+  :deep(.on-left) {
+    display: none;
+  }
+
+  .arrow-icon {
+    position: absolute;
+    right: 4px;
+  }
+}
+
+.standard-button.left-arrow {
+  @extend .label-sm-bold;
+  width: $standard-button-width;
+  height: $standard-button_height;
+  border-radius: 48px;
+  position: relative;
+  padding-left: 65px;
+
+  :deep(.on-right) {
+    display: none;
+  }
+
+  .arrow-icon {
+    position: absolute;
+    left: 4px;
+  }
+}
+
+
+// Define shared property pattern mixin
+@mixin tag-property($property-name) {
+  @if $property-name =='button-arcticblue' {
+    @extend .bg-arcticblue-600, .text-white;
+  }
+
+  @else if ($property-name =='button-arcticblue-outline') {
+    @extend .bg-white, .text-bluegray-900;
+    border: $standard-button-border;
+  }
+
+  @else if ($property-name =='button-limegreen') {
+    @extend .bg-limegreen-400, .text-bluegray-900;
+  }
+
+  @else if ($property-name =='button-limegreen-outline') {
+    @extend .bg-white, .text-bluegray-900;
+    border: $standard-button-border;
+  }
+
+  @else if ($property-name =='button-bluegray') {
+    @extend .bg-bluegray-800, .text-white;
+  }
+
+  @else if ($property-name =='button-bluegray-outline') {
+    @extend .bg-bluegray-50, .text-bluegray-900;
+  }
+
+}
+
+
+// Define styles based on type
+.button-arcticblue {
+  @include tag-property('button-arcticblue');
+}
+
+.button-arcticblue.button-outlined {
+  @include tag-property('button-arcticblue-outline');
+}
+
+.button-limegreen {
+  @include tag-property('button-limegreen');
+}
+
+.button-limegreen.button-outlined {
+  @include tag-property('button-limegreen-outline');
+}
+.button-bluegray {
+  @include tag-property('button-bluegray');
+}
+
+.button-bluegray.button-outlined {
+  @include tag-property('button-bluegray-outline');
+}
