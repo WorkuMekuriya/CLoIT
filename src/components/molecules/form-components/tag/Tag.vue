@@ -24,7 +24,7 @@
                 v-if="icon && iconPosition === 'right'"
                 :name="icon"
                 :class="iconClass"
-                class="q-ml-xs"
+                class="q-ml-xs right-icon"
             />
         </q-chip>
     </div>

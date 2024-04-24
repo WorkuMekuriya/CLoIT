@@ -22,7 +22,7 @@ import TableHeader from '../../molecules/table/header/TableHeader.vue'
 
 const tableHeaderGroups = [
   {
-    title: 'Default',
+    title: 'Default / Hover',
     tableHeaders: [
       { component: TableHeader, props: { state: 'Default', label: 'Organizatoin Name', helpIcon: false, arrow: 'down'} },
       { component: TableHeader, props: { state: 'Default', label: 'Organizatoin Name', helpIcon: false, arrow: 'up'} },
