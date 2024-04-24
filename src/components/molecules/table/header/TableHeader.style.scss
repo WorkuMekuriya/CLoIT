@@ -8,7 +8,7 @@ $tooltip-border-radius: 4px;
 
 /* Base styles for the table header */
 .table-header {
-    @extend .label-12-bold, .text-bluegray-700;
+    @extend .label-xs-bold, .text-bluegray-700;
     align-items: center;
     cursor: pointer;
     padding: $table-header-padding;
@@ -28,10 +28,10 @@ $tooltip-border-radius: 4px;
 }
 
 .q-icon.q-ml-xs {
-    @extend .text-bluegray-500, .label-16;
+    @extend .text-bluegray-500, .label-md;
 }
 
 /* Change icon color to black on hover */
 .table-header:hover .q-icon.q-ml-xs {
-    @extend .text-black, .label-16;
+    @extend .text-black, .label-md;
 }

@@ -15,11 +15,11 @@
       margin-left: 17px;
 
       .alert-text {
-        @extend .text-white, .label-16;
+        @extend .text-white, .label-md;
       }
 
       .description-text {
-        @extend .text-bluegray-300, .label-12;
+        @extend .text-bluegray-300, .label-xs;
         margin-top: 4px;
       }
     }

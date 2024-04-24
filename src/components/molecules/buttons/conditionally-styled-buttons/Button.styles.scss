@@ -5,12 +5,12 @@ $rounded-button-border-radius: 48px;
 $rounded-button-min-width: 110px;
 $rounded-button-height: 52px;
 $rounded-button-icon-size: 10px;
-$rounded-icon-margin-left: 20px;
+$rounded-icon-margin-left: 19px;
 $rounded-icon-left-max-size: 16px;
 $rounded-icon-margin-right: 12px;
 $rounded-button-height-small-screen: 38px; // media query size
 $rounded-button-padding: 0 32px;
-$rounded-button-width-with-icon: 156px;
+$rounded-button-width-with-icon: 146px;
 
 
 //circular buttons
@@ -107,7 +107,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for primary button */
 .button-primary {
-  @extend .bg-arcticblue, .label-14-bold, .text-white;
+  @extend .bg-arcticblue, .label-sm-bold, .text-white;
 
   &:hover {
     @extend .bg-arcticblue-800;
@@ -139,7 +139,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Secondary Button  */
 .button-secondary {
-  @extend .bg-bluegray-800, .label-14-bold, .text-white;
+  @extend .bg-bluegray-800, .label-sm-bold, .text-white;
 
   &:hover {
     @extend .bg-bluegray-600;
@@ -170,7 +170,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Tertiary Button Lined*/
 .button-tertiary-lined {
-  @extend .bg-white, .label-14-bold, .text-bluegray-600;
+  @extend .bg-white, .label-sm-bold, .text-bluegray-600;
   border: $tertiary-lined-border;
 
   &:hover {
@@ -201,7 +201,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Tertiary Button White*/
 .button-tertiary-white {
-  @extend .bg-white, .label-14-bold, .text-arcticblue-600;
+  @extend .bg-white, .label-md-bold, .text-arcticblue-600;
 
   &:hover {
     @extend .bg-arcticblue-50;
@@ -231,7 +231,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Tertiary Button Tonal*/
 .button-tertiary-tonal {
-  @extend .bg-bluegray-50, .label-14-bold, .text-bluegray-600;
+  @extend .bg-bluegray-50, .label-md-bold, .text-bluegray-600;
 
   &:hover {
     @extend .bg-bluegray-100;
@@ -261,7 +261,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Button Destructive*/
 .button-destructive {
-  @extend .bg-red-400, .label-14-bold, .text-white;
+  @extend .bg-red-400, .label-md-bold, .text-white;
 
   &:hover {
     @extend .bg-red-500;

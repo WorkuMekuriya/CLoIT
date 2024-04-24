@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="display-3 text-limegreen-900 text-center q-mb-md q-container">
+    <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
       Avatar
     </h1>
     <div class="flex justify-center">
