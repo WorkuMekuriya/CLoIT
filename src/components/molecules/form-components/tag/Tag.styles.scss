@@ -1,0 +1,150 @@
+@import '../../../../css/app.scss';
+
+// Define constants for the styles
+$padding: 15px;
+$sm-height: 28px;
+$md-height: 34px;
+$lg-min-width: 65px;
+$md-min-width: 55px;
+$sm-min-width: 45px;
+$lg-height: 40px;
+
+// Font size for different sizes
+$dot-font-size: 0.9rem;
+
+$tag-border-radius: 20px;
+$icon-padding: 4px;
+$dot-icon-padding: 0px 4px 4px 0px;
+$lg-tag-padding: 10px 16px 10px 16px;
+$sm-tag-padding: 4px 16px 4px 4px;
+
+// Define shared color pattern mixin
+@mixin tag-color($color-name) {
+  @if $color-name =='TagBlueTonal' {
+    @extend .bg-arcticblue-50, .text-arcticblue-600;
+  }
+
+  @else if ($color-name =='TagBlue') {
+    @extend .bg-arcticblue-600, .text-white;
+  }
+
+  @else if ($color-name =='TagGreen') {
+    @extend .bg-limegreen-400, .text-black;
+  }
+
+  @else if ($color-name =='TagGreenTonal') {
+    @extend .bg-limegreen-100;
+    color: green;
+  }
+
+  @else if ($color-name =='TagRed') {
+    @extend .bg-red-700, .text-white;
+
+  }
+
+  @else if ($color-name =='TagRedTonal') {
+    @extend .bg-red-50, .text-red-500;
+  }
+
+  @else if ($color-name =='TagYellow') {
+    @extend .bg-yellow-500, .text-white;
+  }
+
+  @else if ($color-name =='TagYellowTonal') {
+    @extend .bg-yellow-50, .text-yellow-500;
+  }
+
+  @else {
+    @extend .bg-bluegray-200, .text-black;
+  }
+}
+
+.q-chip {
+  @extend .label-14-bold ;
+  cursor: pointer;
+  padding: $lg-tag-padding;
+  border-radius: $tag-border-radius;
+}
+
+.dot-icon {
+  font-size: $dot-font-size; // Set the default font size for the dot icon
+  padding: $dot-icon-padding;
+}
+
+// Define styles based on type
+.q-chip--TagDisabled {
+  @extend .text-black;
+  background-color: lightgray;
+}
+
+// Define styles based on type
+.q-chip--TagBlueTonal {
+  @include tag-color('TagBlueTonal');
+}
+
+.q-chip--TagBlue {
+  @include tag-color('TagBlue');
+}
+
+.q-chip--TagGreenTonal {
+  @include tag-color('TagGreenTonal');
+}
+
+.q-chip--TagGreen {
+  @include tag-color('TagGreen');
+}
+
+.q-chip--TagRedTonal {
+  @include tag-color('TagRedTonal');
+}
+
+.q-chip--TagRed {
+  @include tag-color('TagRed');
+}
+
+.q-chip--TagYellow {
+  @include tag-color('TagYellow');
+}
+
+.q-chip--TagYellowTonal {
+  @include tag-color('TagYellowTonal');
+}
+
+.q-chip--TagBlackTonal {
+  @include tag-color('TagBlackTonal');
+}
+
+.q-chip--TagBlack {
+  @include tag-color('TagBlack');
+}
+
+// Additional styles for sizes
+.q-chip--sm {
+  @extend .label-12-bold ;
+  height: $sm-height;
+  min-width: $sm-min-width;
+  gap: 6px;
+}
+
+.q-chip--md {
+  @extend .label-12-bold ;
+  height: $md-height;
+  min-width: $md-min-width;
+  padding: $sm-tag-padding;
+}
+
+.q-chip--lg {
+  @extend .label-14-bold ;
+  height: $lg-height;
+  min-width: $lg-min-width;
+  padding: $lg-tag-padding;
+  gap: 4px;
+}
+
+.q-ml-xs {
+  margin-left: 0px;
+}
+
+.right-icon {
+  margin-left: $icon-padding;
+}

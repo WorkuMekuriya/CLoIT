@@ -1,0 +1,290 @@
+@import '../../../../css/app.scss';
+
+// rounded Buttons
+$rounded-button-border-radius: 48px;
+$rounded-button-min-width: 110px;
+$rounded-button-height: 52px;
+$rounded-button-icon-size: 10px;
+$rounded-icon-margin-left: 20px;
+$rounded-icon-left-max-size: 16px;
+$rounded-icon-margin-right: 12px;
+$rounded-button-height-small-screen: 38px; // media query size
+$rounded-button-padding: 0 32px;
+$rounded-button-width-with-icon: 156px;
+
+
+//circular buttons
+$circular-button-border-radius: 50px;
+$circular-button-width: 48px;
+$circular-button-height: 48px;
+$circular-button-width-small-screen: 44px; // media query size
+$circular-button-height-small-screen: 44px; // media query size
+
+// shadow
+$primary-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
+$secondary-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.2);
+$tertiary-lined-shadow: 0px 0px 0px 4px rgba(37, 59, 255, 0.2);
+$tertiary-white-shadow: 0px 0px 0px 4px rgba(37, 59, 255, 0.2);
+$tertiary-tonal-shadow: 0px 0px 0px 4px rgba(37, 59, 255, 0.2);
+$destructive-shadow: 0px 0px 0px 4px rgba(255, 82, 38, 0.3);
+
+
+// button borders
+$tertiary-lined-border: 1px solid $bluegray-300;
+$tertiary-white-border: 1px solid $bluegray-300;
+
+//media queries for different screen sizes
+$small-screen-max-width: 768px;
+
+
+
+// Applies For all Rounded buttons
+.rounded-button {
+  border-radius: $rounded-button-border-radius;
+  min-width: $rounded-button-min-width;
+  height: $rounded-button-height;
+  padding: $rounded-button-padding;
+
+  .button-icon {
+    font: $rounded-button-icon-size;
+  }
+
+  .right-icon {
+    margin-left: $rounded-icon-margin-left;
+        max-width: $rounded-icon-left-max-size;
+          max-height: $rounded-icon-left-max-size;
+  }
+
+  .left-icon {
+    margin-right: $rounded-icon-margin-right;
+    max-width: $rounded-icon-left-max-size;
+    max-height: $rounded-icon-left-max-size;
+  }
+
+  @media screen and (max-width: $small-screen-max-width) {
+    height: $rounded-button-height-small-screen;
+  }
+}
+
+.rounded-button.small-size-button {
+  height: $rounded-button-height-small-screen;
+}
+
+.rounded-button.set-button-with-icon-width {
+  width: $rounded-button-width-with-icon;
+}
+
+// Applies For all Circular buttons
+.circular-button {
+  border-radius: $circular-button-border-radius;
+  width: $circular-button-width;
+  height: $circular-button-height;
+
+  @media screen and (max-width: $small-screen-max-width) {
+    width: $circular-button-width-small-screen;
+    height: $circular-button-height-small-screen;
+  }
+
+  :deep(.q-btn.btn--no-hover .q-focus-helper) {
+    display: none;
+  }
+}
+
+//
+.circular-button.small-size-button {
+  border-radius: $circular-button-border-radius ;
+  width: $circular-button-width-small-screen;
+  height: $circular-button-height-small-screen;
+}
+
+.rounded-button.disabled {
+  @extend .bg-bluegray-200, .text-bluegray-900;
+}
+
+.circular-button.disabled {
+  @extend .bg-bluegray-200, .text-bluegray-900;
+}
+
+/* CSS properties for primary button */
+.button-primary {
+  @extend .bg-arcticblue, .label-14-bold, .text-white;
+
+  &:hover {
+    @extend .bg-arcticblue-800;
+  }
+
+  &:active {
+    @extend .bg-arcticblue-900;
+  }
+
+  &:focus-visible {
+    @extend .bg-arcticblue;
+    box-shadow: $primary-shadow;
+  }
+}
+
+/* primary button loading spinner*/
+.button-primary.loading {
+  @extend .bg-arcticblue-200, .text-arcticblue-600;
+
+  &:hover {
+    @extend .bg-arcticblue-200;
+    ;
+  }
+
+  &:active {
+    @extend .bg-arcticblue-200;
+  }
+}
+
+/* CSS properties for Secondary Button  */
+.button-secondary {
+  @extend .bg-bluegray-800, .label-14-bold, .text-white;
+
+  &:hover {
+    @extend .bg-bluegray-600;
+  }
+
+  &:active {
+    @extend .bg-bluegray-700;
+  }
+
+  &:focus-visible {
+    @extend .bg-bluegray-800;
+    box-shadow: $secondary-shadow;
+  }
+}
+
+/* secondary button loading spinner*/
+.button-secondary.loading {
+  @extend .bg-bluegray-500, .text-white;
+
+  &:hover {
+    @extend .bg-bluegray-500;
+  }
+
+  &:active {
+    @extend .bg-bluegray-500;
+  }
+}
+
+/* CSS properties for Tertiary Button Lined*/
+.button-tertiary-lined {
+  @extend .bg-white, .label-14-bold, .text-bluegray-600;
+  border: $tertiary-lined-border;
+
+  &:hover {
+    @extend .bg-bluegray-50;
+  }
+
+  &:active {
+    @extend .bg-bluegray-200;
+  }
+
+  &:focus-visible {
+    box-shadow: $tertiary-lined-shadow;
+  }
+}
+
+/* tertiary button lined loading spinner */
+.button-tertiary-lined.loading {
+  @extend .bg-bluegray-50, .text-bluegray-600;
+
+  &:hover {
+    @extend .bg-bluegray-50;
+  }
+
+  &:active {
+    @extend .bg-bluegray-50;
+  }
+}
+
+/* CSS properties for Tertiary Button White*/
+.button-tertiary-white {
+  @extend .bg-white, .label-14-bold, .text-arcticblue-600;
+
+  &:hover {
+    @extend .bg-arcticblue-50;
+  }
+
+  &:active {
+    @extend .bg-arcticblue-200;
+  }
+
+  &:focus-visible {
+    box-shadow: $tertiary-white-shadow;
+  }
+}
+
+/* tertiary button white loading spinner */
+.button-tertiary-white.loading {
+  @extend .bg-white, .text-arcticblue-600;
+
+  &:hover {
+    @extend .bg-white;
+  }
+
+  &:active {
+    @extend .bg-white;
+  }
+}
+
+/* CSS properties for Tertiary Button Tonal*/
+.button-tertiary-tonal {
+  @extend .bg-bluegray-50, .label-14-bold, .text-bluegray-600;
+
+  &:hover {
+    @extend .bg-bluegray-100;
+  }
+
+  &:active {
+    @extend .bg-bluegray-200;
+  }
+
+  &:focus-visible {
+    box-shadow: $tertiary-tonal-shadow;
+  }
+}
+
+/* tertiary button white loading spinner */
+.button-tertiary-tonal.loading {
+  @extend .bg-bluegray-50, .text-bluegray-600;
+
+  &:hover {
+    @extend .bg-bluegray-50;
+  }
+
+  &:active {
+    @extend .bg-bluegray-50;
+  }
+}
+
+/* CSS properties for Button Destructive*/
+.button-destructive {
+  @extend .bg-red-400, .label-14-bold, .text-white;
+
+  &:hover {
+    @extend .bg-red-500;
+  }
+
+  &:active {
+    @extend .bg-red-700;
+  }
+
+  &:focus-visible {
+    box-shadow: $destructive-shadow;
+  }
+}
+
+/* tertiary button white loading spinner */
+.button-destructive.loading {
+  @extend .bg-red-700, .text-white;
+
+  &:hover {
+    @extend .bg-red-700;
+  }
+
+  &:active {
+    @extend .bg-red-700;
+  }
+}

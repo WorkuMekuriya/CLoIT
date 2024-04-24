@@ -1,0 +1,259 @@
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass/SCSS variables found in Quasar's source Sass/SCSS files.
+
+// Check documentation for full list of Quasar variables
+
+// Your own variables (that are declared here) and Quasar's own
+// ones will be available out of the box in your .vue/.scss/.sass files
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+
+// Primary Colors
+$primary-arcticblue: #253bff;
+$primary-limegreen: #b0f644;
+
+// Shades of Arctic Blue
+$arctic-blue-25: #f4f5ff;
+$arctic-blue-50: #eaecff;
+$arctic-blue-100: #d3d8ff;
+$arctic-blue-200: #b8bfff;
+$arctic-blue-300: #8e9aff;
+$arctic-blue-400: #6473ff;
+$arctic-blue-500: #4c53ff;
+$arctic-blue-600: #253bff;
+$arctic-blue-700: #2030e2;
+$arctic-blue-800: #1d2cb6;
+$arctic-blue-900: #162282;
+$arctic-blue-950: #131953;
+
+// Shades of Limegreen
+$limegreen-50: #f6fee7;
+$limegreen-100: #ebfbcc;
+$limegreen-200: #d7f89e;
+$limegreen-300: #bbf662;
+$limegreen-400: #9ff443;
+$limegreen-500: #72d909;
+$limegreen-600: #56ae02;
+$limegreen-700: #418407;
+$limegreen-800: #37680c;
+$limegreen-900: #2f5710;
+$limegreen-950: #153102;
+
+// Red shades
+$red-50: #fff0f0;
+$red-100: #ffdddd;
+$red-200: #ffc0c0;
+$red-400: #ff5757;
+$red-500: #ff2323;
+$red-700: #d70000;
+
+// Yellow shades
+$yellow-50: #fefde8;
+$yellow-200: #fff889;
+$yellow-300: #ffec42;
+$yellow-500: #ecc206;
+
+//Black & White
+$black: #000000;
+$white: #ffffff;
+
+//Blue
+$bluegray-50: #f9fafb;
+$bluegray-100: #f2f4f7;
+$bluegray-200: #eaecf0;
+$bluegray-300: #d0d5dd;
+$bluegray-500: #667085;
+$bluegray-600: #475467;
+$bluegray-700: #344054;
+$bluegray-800: #1d2939;
+$bluegray-900: #101828;
+
+// Typography variables
+
+//TITLE
+$display-06: (
+  'font-size': 60px,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing': '-4%',
+);
+
+$display-05: (
+  'font-size': 3em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing': '-4%',
+);
+
+$display-04: (
+  'font-size': 2.25em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing': '-4%',
+);
+
+$display-03: (
+  'font-size': 2em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing': '-4%',
+);
+
+$display-02: (
+  'font-size': 1.75em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing': '-4%',
+);
+
+$display-01: (
+  'font-size': 1.5em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing': '-4%',
+);
+
+$headline: (
+  'font-size': 1.25em,
+  'font-weight': 700,
+  'line-height': 1.5em,
+  'letter-spacing': '-4%',
+);
+
+$subhead-02: (
+  'font-size': 0.875em,
+  'font-weight': 500,
+  'line-height': 1.5em,
+  'letter-spacing': '-2%',
+);
+$subhead-02-bold: (
+  'font-size': 0.875em,
+  'font-weight': 700,
+  'line-height': 1.5em,
+  'letter-spacing': '-2%',
+);
+$subhead-03: (
+  'font-size': 1em,
+  'font-weight': 500,
+  'line-height': 1.5em,
+  'letter-spacing': '-2%',
+);
+$subhead-03-bold: (
+  'font-size': 1em,
+  'font-weight': 700,
+  'line-height': 1.25em,
+  'letter-spacing': '-4%',
+);
+$subhead-04: (
+  'font-size': 1.125em,
+  'font-weight': 500,
+  'line-height': 1.5em,
+  'letter-spacing': '-4%',
+);
+$subhead-04-bold: (
+  'font-size': 1.125em,
+  'font-weight': 700,
+  'line-height': 1.5em,
+  'letter-spacing': '-4%',
+);
+
+//BODY
+$body-03: (
+  'font-size': 1.125em,
+  'font-weight': 400,
+  'line-height': 1.5em,
+  'letter-spacing': '-2%',
+);
+$body-02: (
+  'font-size': 1em,
+  'font-weight': 400,
+  'line-height': 1.5em,
+  'letter-spacing': '-2%',
+);
+$body-01: (
+  'font-size': 0.875em,
+  'font-weight': 400,
+  'line-height': 1.5em,
+  'letter-spacing': '-2%',
+);
+
+// LABELS
+$label-04-bold: (
+  'font-size': 1.125em,
+  'font-weight': 700,
+  'line-height': 1.125em,
+  'letter-spacing': '-2%',
+);
+$label-04-medium: (
+  'font-size': 1.125em,
+  'font-weight': 500,
+  'line-height': 1.125em,
+  'letter-spacing': '-2%',
+);
+$label-04: (
+  'font-size': 1.125em,
+  'font-weight': 400,
+  'line-height': 1.125em,
+  'letter-spacing': '-2%',
+);
+
+$label-03-bold: (
+  'font-size': 1em,
+  'font-weight': 700,
+  'line-height': 1em,
+  'letter-spacing': '-2%',
+);
+$label-03-medium: (
+  'font-size': 1em,
+  'font-weight': 500,
+  'line-height': 1em,
+  'letter-spacing': '-2%',
+);
+$label-03: (
+  'font-size': 1em,
+  'font-weight': 400,
+  'line-height': 1em,
+  'letter-spacing': '-2%',
+);
+
+$label-02-bold: (
+  'font-size': 0.875em,
+  'font-weight': 700,
+  'line-height': 0.875em,
+  'letter-spacing': '-2%',
+);
+$label-02-medium: (
+  'font-size': 0.875em,
+  'font-weight': 500,
+  'line-height': 0.875em,
+  'letter-spacing': '-2%',
+);
+$label-02: (
+  'font-size': 0.875em,
+  'font-weight': 400,
+  'line-height': 0.875em,
+  'letter-spacing': '-2%',
+);
+
+$label-01-bold: (
+  'font-size': 0.75em,
+  'font-weight': 700,
+  'line-height': 0.75,
+  'letter-spacing': '-2%',
+);
+$label-01-medium: (
+  'font-size': 0.75em,
+  'font-weight': 500,
+  'line-height': 0.75,
+  'letter-spacing': '-2%',
+);
+$label-01: (
+  'font-size': 0.75em,
+  'font-weight': 400,
+  'line-height': 0.75,
+  'letter-spacing': '-2%',
+);

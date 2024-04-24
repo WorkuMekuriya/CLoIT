@@ -1,0 +1,145 @@
+@import '../../../../css/app.scss';
+
+$border: 1px solid currentColor;
+$checkbox-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
+
+.checkbox-button {
+  :deep(.q-checkbox__label) {
+    @extend .text-bluegray-600, .label-14-bold;
+    margin-top: 12px;
+    margin-left: 20px;
+  }
+
+  :deep(.q-checkbox__bg) {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: $border;
+  }
+
+  :deep(.q-checkbox__inner--indet .q-checkbox__bg) {
+    @extend .bg-arcticblue-600;
+  }
+
+  :deep(.q-checkbox__inner--truthy .q-checkbox__bg) {
+    @extend .bg-arcticblue-600;
+  }
+
+  :deep(.q-checkbox__svg) {
+    top: 3px;
+    right: 0px;
+    bottom: 0;
+    left: 3.5px;
+    width: 70% !important;
+    height: 70% !important;
+  }
+
+  &:hover {
+    :deep(.q-checkbox__inner--indet .q-checkbox__bg) {
+      @extend .bg-arcticblue-800;
+    }
+
+    :deep(.q-checkbox__inner--truthy .q-checkbox__bg) {
+      @extend .bg-arcticblue-800;
+    }
+
+    :deep(.q-checkbox__inner--falsy .q-checkbox__bg) {
+      @extend .text-arcticblue-600;
+    }
+  }
+
+  &:active {
+    :deep(.q-checkbox__inner--indet .q-checkbox__bg) {
+      @extend .bg-arcticblue-900;
+    }
+
+    :deep(.q-checkbox__inner--truthy .q-checkbox__bg) {
+      @extend .bg-arcticblue-900;
+    }
+
+    :deep(.q-checkbox__inner--falsy .q-checkbox__bg) {
+      @extend .text-arcticblue-900;
+    }
+  }
+}
+
+.checkbox-button .checkbox-destructive {
+  :deep(.q-checkbox__label) {
+    @extend .text-bluegray-600, .label-14-bold;
+    margin-top: 12px;
+    margin-left: 20px;
+  }
+
+  :deep(.q-checkbox__bg) {
+    @extend .text-red-500;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: $border;
+  }
+
+  :deep(.q-checkbox__inner--indet .q-checkbox__bg) {
+    @extend .bg-red-500;
+  }
+
+  :deep(.q-checkbox__inner--truthy .q-checkbox__bg) {
+    @extend .bg-red-500;
+  }
+  &:hover {
+    :deep(.q-checkbox__inner--falsy .q-checkbox__bg) {
+      @extend .text-red-500;
+    }
+  }
+  :deep(.q-checkbox__svg) {
+    top: 3px;
+    right: 0px;
+    bottom: 0;
+    left: 3.5px;
+    width: 70% !important;
+    height: 70% !important;
+  }
+}
+
+.checkbox-button .disabled {
+  :deep(.q-checkbox__label) {
+    @extend .text-bluegray-600, .label-14-bold;
+    margin-top: 12px;
+    margin-left: 20px;
+  }
+
+  opacity: 1 !important;
+
+  :deep(.q-checkbox__bg) {
+    @extend .text-bluegray-500;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: $border;
+    opacity: 1;
+  }
+
+  :deep(.q-checkbox__inner--indet .q-checkbox__bg) {
+    @extend .bg-bluegray-200, .text-bluegray-200;
+
+    path {
+      @extend .text-bluegray-500;
+    }
+  }
+
+  :deep(.q-checkbox__inner--truthy .q-checkbox__bg) {
+    @extend .bg-bluegray-200;
+
+    path {
+      @extend .text-bluegray-500;
+    }
+  }
+
+  :deep(.q-checkbox__svg) {
+    top: 3px;
+    right: 0px;
+    bottom: 0;
+    left: 3.5px;
+    width: 70% !important;
+    height: 70% !important;
+  }
+}

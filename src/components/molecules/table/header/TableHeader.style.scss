@@ -1,0 +1,37 @@
+@import '../../../../css/app.scss';
+
+// table header
+$table-header-padding: 8px;
+$table-header-translation: background-color 0.3s;
+$tooltip-border-radius: 4px;
+$tooltip-border-radius: 4px;
+
+/* Base styles for the table header */
+.table-header {
+    @extend .label-12-bold, .text-bluegray-700;
+    align-items: center;
+    cursor: pointer;
+    padding: $table-header-padding;
+    transition: $table-header-translation;
+}
+
+/* disabled state styling */
+.table-header.disabled-state {
+    @extend .text-bluegray-300;
+}
+
+/* Tooltip styling */
+.tooltip-class {
+    @extend .text-black, .bg-white;
+    padding: $table-header-padding;
+    border-radius: $tooltip-border-radius;
+}
+
+.q-icon.q-ml-xs {
+    @extend .text-bluegray-500, .label-16;
+}
+
+/* Change icon color to black on hover */
+.table-header:hover .q-icon.q-ml-xs {
+    @extend .text-black, .label-16;
+}

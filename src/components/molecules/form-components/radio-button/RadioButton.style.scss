@@ -1,0 +1,129 @@
+@import '../../../../css/app.scss';
+
+$radio-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
+
+.radio-button {
+  :deep(.q-radio__bg) {
+    border-radius: 50%;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &:focus-visible {
+    .q-radio__bg {
+      box-shadow: $radio-shadow;
+      -webkit-tap-highlight-color: $radio-shadow;
+    }
+  }
+  :deep(.q-radio__label) {
+    @extend .text-bluegray-600, .label-14-bold;
+  }
+  :deep(.q-radio__inner--truthy .q-radio__bg) {
+    @extend .text-arcticblue-600;
+  }
+
+  :deep(.q-radio__inner--truthy) {
+    &:hover {
+      .q-radio__bg {
+        @extend .text-arcticblue-800;
+      }
+    }
+
+    &:active {
+      .q-radio__bg {
+        @extend .text-arcticblue-900;
+      }
+    }
+  }
+
+  :deep(.q-radio__inner--falsy) {
+    &:hover {
+      @extend .text-arcticblue-800;
+    }
+
+    &:active {
+      @extend .text-arcticblue-900;
+    }
+  }
+}
+.radio-button .radio-destructive {
+  :deep(.q-radio__bg) {
+    @extend .text-red-500;
+    border-radius: 50%;
+    border: none;
+  }
+
+  :deep(.q-radio__label) {
+    @extend .text-bluegray-600, .label-14-bold;
+  }
+
+  :deep(.q-radio__inner--truthy .q-radio__bg) {
+    @extend .text-red-500;
+  }
+
+  :deep(.q-radio__inner--truthy) {
+    &:hover {
+      .q-radio__bg {
+        @extend .text-red-500;
+      }
+    }
+
+    &:active {
+      .q-radio__bg {
+        @extend .text-red-500;
+      }
+    }
+  }
+
+  :deep(.q-radio__inner--falsy) {
+    &:hover {
+      @extend .text-red-500;
+    }
+
+    &:active {
+      @extend .text-red-500;
+    }
+  }
+}
+.radio-button .radio-disabled {
+  :deep(.q-radio__bg) {
+    @extend .text-bluegray-500, .bg-bluegray-200;
+    border-radius: 50%;
+    border: none;
+  }
+
+  :deep(.q-radio__label) {
+    @extend .text-bluegray-600, .label-14-bold;
+  }
+
+  :deep(.q-radio__inner--truthy .q-radio__bg) {
+    @extend .text-bluegray-500;
+  }
+
+  :deep(.q-radio__inner--truthy .q-radio__check) {
+    color: $bluegray-500;
+  }
+  :deep(.q-radio__inner--truthy) {
+    &:hover {
+      .q-radio__bg {
+        @extend .text-bluegray-500;
+      }
+    }
+
+    &:active {
+      .q-radio__bg {
+        @extend .text-bluegray-500;
+      }
+    }
+  }
+
+  :deep(.q-radio__inner--falsy) {
+    &:hover {
+      @extend .text-bluegray-500;
+    }
+
+    &:active {
+      @extend .text-bluegray-500;
+    }
+  }
+}

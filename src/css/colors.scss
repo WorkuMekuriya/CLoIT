@@ -1,0 +1,361 @@
+// Import Quasar's SCSS variables file
+@import '../css/quasar.variables.scss';
+
+.text-arcticblue {
+  color: $primary-arcticblue;
+}
+
+.text-limegreen {
+  color: $primary-limegreen;
+}
+.bg-arcticblue {
+  background-color: $primary-arcticblue;
+}
+
+.bg-limegreen {
+  background-color: $primary-limegreen;
+}
+.text-white {
+  color: $white;
+}
+.text-black {
+  color: $black;
+}
+.bg-white {
+  background-color: $white;
+}
+
+.bg-black {
+  background-color: $black;
+}
+.text-arcticblue-25 {
+  color: $arctic-blue-25;
+}
+
+.text-arcticblue-50 {
+  color: $arctic-blue-50;
+}
+
+.text-arcticblue-100 {
+  color: $arctic-blue-100;
+}
+
+.text-arcticblue-200 {
+  color: $arctic-blue-200;
+}
+
+.text-arcticblue-300 {
+  color: $arctic-blue-300;
+}
+
+.text-arcticblue-400 {
+  color: $arctic-blue-400;
+}
+
+.text-arcticblue-500 {
+  color: $arctic-blue-500;
+}
+
+.text-arcticblue-600 {
+  color: $arctic-blue-600;
+}
+
+.text-arcticblue-700 {
+  color: $arctic-blue-700;
+}
+
+.text-arcticblue-800 {
+  color: $arctic-blue-800;
+}
+
+.text-arcticblue-900 {
+  color: $arctic-blue-900;
+}
+
+.text-arcticblue-950 {
+  color: $arctic-blue-950;
+}
+
+.text-limegreen-50 {
+  color: $limegreen-50;
+}
+
+.text-limegreen-100 {
+  color: $limegreen-100;
+}
+
+.text-limegreen-200 {
+  color: $limegreen-200;
+}
+
+.text-limegreen-300 {
+  color: $limegreen-300;
+}
+
+.text-limegreen-400 {
+  color: $limegreen-400;
+}
+
+.text-limegreen-500 {
+  color: $limegreen-500;
+}
+
+.text-limegreen-600 {
+  color: $limegreen-600;
+}
+
+.text-limegreen-700 {
+  color: $limegreen-700;
+}
+
+.text-limegreen-800 {
+  color: $limegreen-800;
+}
+
+.text-limegreen-900 {
+  color: $limegreen-900;
+}
+
+.text-limegreen-950 {
+  color: $limegreen-950;
+}
+
+.bg-arcticblue {
+  background-color: $primary-arcticblue;
+}
+
+.bg-limegreen {
+  background-color: $primary-limegreen;
+}
+
+.bg-arcticblue-25 {
+  background-color: $arctic-blue-25;
+}
+
+.bg-arcticblue-50 {
+  background-color: $arctic-blue-50;
+}
+
+.bg-arcticblue-100 {
+  background-color: $arctic-blue-100;
+}
+
+.bg-arcticblue-200 {
+  background-color: $arctic-blue-200;
+}
+
+.bg-arcticblue-300 {
+  background-color: $arctic-blue-300;
+}
+
+.bg-arcticblue-400 {
+  background-color: $arctic-blue-400;
+}
+
+.bg-arcticblue-500 {
+  background-color: $arctic-blue-500;
+}
+
+.bg-arcticblue-600 {
+  background-color: $arctic-blue-600;
+}
+
+.bg-arcticblue-700 {
+  background-color: $arctic-blue-700;
+}
+
+.bg-arcticblue-800 {
+  background-color: $arctic-blue-800;
+}
+
+.bg-arcticblue-900 {
+  background-color: $arctic-blue-900;
+}
+
+.bg-arcticblue-950 {
+  background-color: $arctic-blue-950;
+}
+
+.bg-limegreen-50 {
+  background-color: $limegreen-50;
+}
+
+.bg-limegreen-100 {
+  background-color: $limegreen-100;
+}
+
+.bg-limegreen-200 {
+  background-color: $limegreen-200;
+}
+
+.bg-limegreen-300 {
+  background-color: $limegreen-300;
+}
+
+.bg-limegreen-400 {
+  background-color: $limegreen-400;
+}
+
+.bg-limegreen-500 {
+  background-color: $limegreen-500;
+}
+
+.bg-limegreen-600 {
+  background-color: $limegreen-600;
+}
+
+.bg-limegreen-700 {
+  background-color: $limegreen-700;
+}
+
+.bg-limegreen-800 {
+  background-color: $limegreen-800;
+}
+
+.bg-limegreen-900 {
+  background-color: $limegreen-900;
+}
+
+.bg-limegreen-950 {
+  background-color: $limegreen-950;
+}
+
+// Atomic CSS utility classes for text colors
+.text-red-50 {
+  color: $red-50;
+}
+
+.text-red-100 {
+  color: $red-100;
+}
+
+.text-red-200 {
+  color: $red-200;
+}
+
+.text-red-400 {
+  color: $red-400;
+}
+
+.text-red-500 {
+  color: $red-500;
+}
+
+.text-red-700 {
+  color: $red-700;
+}
+
+.text-yellow-50 {
+  color: $yellow-50;
+}
+
+.text-yellow-200 {
+  color: $yellow-200;
+}
+
+.text-yellow-300 {
+  color: $yellow-300;
+}
+
+.text-yellow-500 {
+  color: $yellow-500;
+}
+
+// Atomic CSS utility classes for red shades
+.bg-red-50 {
+  background-color: $red-50;
+}
+
+.bg-red-100 {
+  background-color: $red-100;
+}
+
+.bg-red-200 {
+  background-color: $red-200;
+}
+
+.bg-red-400 {
+  background-color: $red-400;
+}
+
+.bg-red-500 {
+  background-color: $red-500;
+}
+
+.bg-red-700 {
+  background-color: $red-700;
+}
+
+// Atomic CSS utility classes for yellow shades
+.bg-yellow-50 {
+  background-color: $yellow-50;
+}
+
+.bg-yellow-200 {
+  background-color: $yellow-200;
+}
+
+.bg-yellow-300 {
+  background-color: $yellow-300;
+}
+
+.bg-yellow-500 {
+  background-color: $yellow-500;
+}
+
+.bg-bluegray-50 {
+  background-color: $bluegray-50;
+}
+.bg-bluegray-100 {
+  background-color: $bluegray-100;
+}
+.bg-bluegray-200 {
+  background-color: $bluegray-200;
+}
+.bg-bluegray-300 {
+  background-color: $bluegray-300;
+}
+.bg-bluegray-500 {
+  background-color: $bluegray-500;
+}
+.bg-bluegray-600 {
+  background-color: $bluegray-600;
+}
+.bg-bluegray-700 {
+  background-color: $bluegray-700;
+}
+.bg-bluegray-800 {
+  background-color: $bluegray-800;
+}
+
+.bg-bluegray-900 {
+  background-color: $bluegray-900;
+}
+
+.text-bluegray-50 {
+  color: $bluegray-50;
+}
+.text-bluegray-100 {
+  color: $bluegray-100;
+}
+.text-bluegray-200 {
+  color: $bluegray-200;
+}
+.text-bluegray-300 {
+  color: $bluegray-300;
+}
+.text-bluegray-500 {
+  color: $bluegray-500;
+}
+.text-bluegray-600 {
+  color: $bluegray-600;
+}
+.text-bluegray-700 {
+  color: $bluegray-700;
+}
+.text-bluegray-800 {
+  color: $bluegray-800;
+}
+.text-bluegray-900 {
+  color: $bluegray-900;
+}
