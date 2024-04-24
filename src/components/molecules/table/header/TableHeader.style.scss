@@ -8,7 +8,7 @@ $tooltip-border-radius: 4px;
 
 /* Base styles for the table header */
 .table-header {
-    @extend .label-12-bold;
+    @extend .label-xs-bold;
     align-items: center;
     cursor: pointer;
     padding: $table-header-padding;

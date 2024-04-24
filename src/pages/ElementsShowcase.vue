@@ -1,6 +1,6 @@
 <template>
     <q-page class="">
-    <h1 class="display-1 text-limegreen-900 text-center">Molecules Showcase</h1>
+    <h1 class="heading-1 text-limegreen-900 text-center">Molecules Showcase</h1>
     <MoleculesShowcase />
   </q-page>
 </template>

@@ -73,187 +73,189 @@ $bluegray-800: #1d2939;
 $bluegray-900: #101828;
 
 // Typography variables
-
-//TITLE
-$display-06: (
-  'font-size': 60px,
+// TITLE
+$heading-1: (
+  'font-size': 3.750em,
   'font-weight': 700,
   'line-height': 1.25em,
   'letter-spacing': '-4%',
 );
 
-$display-05: (
+$heading-2: (
   'font-size': 3em,
   'font-weight': 700,
   'line-height': 1.25em,
   'letter-spacing': '-4%',
 );
 
-$display-04: (
+$heading-3: (
   'font-size': 2.25em,
   'font-weight': 700,
   'line-height': 1.25em,
   'letter-spacing': '-4%',
 );
 
-$display-03: (
+$heading-4: (
   'font-size': 2em,
   'font-weight': 700,
   'line-height': 1.25em,
   'letter-spacing': '-4%',
 );
 
-$display-02: (
+$heading-5: (
   'font-size': 1.75em,
   'font-weight': 700,
   'line-height': 1.25em,
   'letter-spacing': '-4%',
 );
 
-$display-01: (
+$heading-6: (
   'font-size': 1.5em,
   'font-weight': 700,
   'line-height': 1.25em,
   'letter-spacing': '-4%',
 );
 
-$headline: (
+$heading: (
   'font-size': 1.25em,
   'font-weight': 700,
   'line-height': 1.5em,
   'letter-spacing': '-4%',
 );
 
-$subhead-02: (
-  'font-size': 0.875em,
-  'font-weight': 500,
-  'line-height': 1.5em,
-  'letter-spacing': '-2%',
-);
-$subhead-02-bold: (
-  'font-size': 0.875em,
+
+
+$subH-lg-bold: (
+  'font-size': 1.125em,
   'font-weight': 700,
   'line-height': 1.5em,
-  'letter-spacing': '-2%',
+  'letter-spacing': '-4%',
 );
-$subhead-03: (
-  'font-size': 1em,
+$subH-lg-med: (
+  'font-size': 1.125em,
   'font-weight': 500,
   'line-height': 1.5em,
-  'letter-spacing': '-2%',
+  'letter-spacing': '-4%',
 );
-$subhead-03-bold: (
+$subH-md-bold: (
   'font-size': 1em,
   'font-weight': 700,
   'line-height': 1.25em,
-  'letter-spacing': '-4%',
+  'letter-spacing': '-2%',
 );
-$subhead-04: (
-  'font-size': 1.125em,
+$subH-md-med: (
+  'font-size': 1em,
   'font-weight': 500,
-  'line-height': 1.5em,
-  'letter-spacing': '-4%',
-);
-$subhead-04-bold: (
-  'font-size': 1.125em,
-  'font-weight': 700,
-  'line-height': 1.5em,
-  'letter-spacing': '-4%',
-);
-
-//BODY
-$body-03: (
-  'font-size': 1.125em,
-  'font-weight': 400,
   'line-height': 1.5em,
   'letter-spacing': '-2%',
 );
-$body-02: (
+$subH-sm-bold: (
+  'font-size': 0.875em,
+  'font-weight': 700,
+  'line-height': 1.5em,
+  'letter-spacing': '-2%',
+);
+$subH-sm-med: (
+  'font-size': 0.875em,
+  'font-weight': 500,
+  'line-height': 1.5em,
+  'letter-spacing': '-2%',
+);
+
+
+// BODY
+$p-lg: (
+  'font-size': 1.125em,
+  'font-weight': 400,
+  'line-height': 1.5em,
+  'letter-spacing': '-4%',
+);
+$p-md: (
   'font-size': 1em,
   'font-weight': 400,
   'line-height': 1.5em,
   'letter-spacing': '-2%',
 );
-$body-01: (
+$p-sm: (
   'font-size': 0.875em,
   'font-weight': 400,
   'line-height': 1.5em,
   'letter-spacing': '-2%',
 );
 
-// LABELS
-$label-04-bold: (
+// Bold Labels
+$label-lg-bold: (
   'font-size': 1.125em,
   'font-weight': 700,
-  'line-height': 1.125em,
-  'letter-spacing': '-2%',
+  'line-height': 1em,
+  'letter-spacing': '-4%',
 );
-$label-04-medium: (
+$label-lg-med: (
   'font-size': 1.125em,
   'font-weight': 500,
-  'line-height': 1.125em,
-  'letter-spacing': '-2%',
+  'line-height': 1em,
+  'letter-spacing': '-4%',
 );
-$label-04: (
+$label-lg: (
   'font-size': 1.125em,
   'font-weight': 400,
-  'line-height': 1.125em,
-  'letter-spacing': '-2%',
+  'line-height': 1em,
+  'letter-spacing': '-4%',
 );
 
-$label-03-bold: (
+$label-md-bold: (
   'font-size': 1em,
   'font-weight': 700,
   'line-height': 1em,
   'letter-spacing': '-2%',
 );
-$label-03-medium: (
+$label-md-med: (
   'font-size': 1em,
   'font-weight': 500,
   'line-height': 1em,
   'letter-spacing': '-2%',
 );
-$label-03: (
+$label-md: (
   'font-size': 1em,
   'font-weight': 400,
   'line-height': 1em,
   'letter-spacing': '-2%',
 );
 
-$label-02-bold: (
+$label-sm-bold: (
   'font-size': 0.875em,
   'font-weight': 700,
-  'line-height': 0.875em,
+  'line-height': 1em,
   'letter-spacing': '-2%',
 );
-$label-02-medium: (
+$label-sm-med: (
   'font-size': 0.875em,
   'font-weight': 500,
-  'line-height': 0.875em,
+  'line-height': 1em,
   'letter-spacing': '-2%',
 );
-$label-02: (
+$label-sm: (
   'font-size': 0.875em,
   'font-weight': 400,
-  'line-height': 0.875em,
+  'line-height': 1em,
   'letter-spacing': '-2%',
 );
 
-$label-01-bold: (
+$label-xs-bold: (
   'font-size': 0.75em,
   'font-weight': 700,
-  'line-height': 0.75,
+  'line-height': 1em,
   'letter-spacing': '-2%',
 );
-$label-01-medium: (
+$label-xs-med: (
   'font-size': 0.75em,
   'font-weight': 500,
-  'line-height': 0.75,
+  'line-height': 1em,
   'letter-spacing': '-2%',
 );
-$label-01: (
+$label-xs: (
   'font-size': 0.75em,
   'font-weight': 400,
-  'line-height': 0.75,
+  'line-height': 1em,
   'letter-spacing': '-2%',
 );

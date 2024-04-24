@@ -28,11 +28,11 @@ $textfield-height: 52px;
   }
 }
 .textfield-label {
-  @extend .label-14, .text-bluegray-500;
+  @extend .label-sm, .text-bluegray-500;
 }
 
 .textfield-description {
-  @extend .label-14, .text-bluegray-500;
+  @extend .label-sm, .text-bluegray-500;
   margin-top: 11px;
 }
 
@@ -44,7 +44,7 @@ $textfield-height: 52px;
 
   // Inputted text
   :deep(.q-field__native, .q-field__input) {
-    @extend .label-16, .text-bluegray-900;
+    @extend .label-md, .text-bluegray-900;
   }
   &:focus {
     box-shadow: $textfield-shadow !important;
