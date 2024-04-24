@@ -2,7 +2,7 @@
   <div>
     <!-- Text Field -->
     <div>
-      <h1 class="display-3 text-limegreen-900 text-center q-mb-md q-container">
+      <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
         Text Fields
       </h1>
       <div class="flex justify-between q-mx-xl q-my-md">
@@ -100,7 +100,7 @@
     </div>
     <!-- Text Area -->
     <div>
-      <h1 class="display-3 text-limegreen-900 text-center q-mb-md q-container">
+      <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
         Text Area
       </h1>
       <div class="flex justify-center q-mb-md">
@@ -122,7 +122,7 @@
     </div>
     <!-- Radio Button -->
     <div>
-        <h1 class="display-3 text-limegreen-900 text-center q-mb-md q-container">
+        <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
         Radio Button
       </h1>
          <div class="flex justify-center q-mx-xl q-my-md">
@@ -139,7 +139,7 @@
     </div>
        <!-- Toggle Button -->
     <div>
-        <h1 class="display-3 text-limegreen-900 text-center q-mb-md q-container">
+        <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
         Toggle Button
       </h1>
          <div class="flex justify-center q-mx-xl q-my-md">
@@ -156,7 +156,7 @@
     </div>
 <!-- Check Box Button -->
         <div>
-        <h1 class="display-3 text-limegreen-900 text-center q-mb-md q-container">
+        <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
         Checkbox Button
       </h1>
          <div class="flex justify-center q-mx-xl q-my-md">

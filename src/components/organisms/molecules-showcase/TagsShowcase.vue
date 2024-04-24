@@ -1,6 +1,6 @@
 <template>
   <div class="q-mb-xl">
-      <h1 class="display-3 text-limegreen-900 text-center">Tag</h1>
+      <h1 class="heading-3 text-limegreen-900 text-center">Tag</h1>
       <template v-for="(tagGroup, index) in tagGroups" :key="index">
         <div>
           <p class="text-center display-1 q-py-md">{{ tagGroup.title }}</p>

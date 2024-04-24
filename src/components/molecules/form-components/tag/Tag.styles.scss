@@ -60,7 +60,7 @@ $sm-tag-padding: 4px 16px 4px 4px;
 }
 
 .q-chip {
-  @extend .label-14-bold ;
+  @extend .label-sm-bold ;
   cursor: pointer;
   padding: $lg-tag-padding;
   border-radius: $tag-border-radius;
@@ -120,21 +120,21 @@ $sm-tag-padding: 4px 16px 4px 4px;
 
 // Additional styles for sizes
 .q-chip--sm {
-  @extend .label-12-bold ;
+  @extend .label-xs-bold ;
   height: $sm-height;
   min-width: $sm-min-width;
   gap: 6px;
 }
 
 .q-chip--md {
-  @extend .label-12-bold ;
+  @extend .label-xs-bold ;
   height: $md-height;
   min-width: $md-min-width;
   padding: $sm-tag-padding;
 }
 
 .q-chip--lg {
-  @extend .label-14-bold ;
+  @extend .label-xs-bold ;
   height: $lg-height;
   min-width: $lg-min-width;
   padding: $lg-tag-padding;

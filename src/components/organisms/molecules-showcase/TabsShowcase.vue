@@ -1,6 +1,6 @@
 <template>
   <div class="q-mb-xl">
-    <h1 class="display-3 text-limegreen-900 text-center q-mx-md q-container">
+    <h1 class="heading-3 text-limegreen-900 text-center q-mx-md q-container">
       Tab Component
     </h1>
     <div class="flex justify-center">

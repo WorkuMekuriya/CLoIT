@@ -16,7 +16,7 @@ $radio-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
     }
   }
   :deep(.q-radio__label) {
-    @extend .text-bluegray-600, .label-14-bold;
+    @extend .text-bluegray-600, .label-sm-bold;
   }
   :deep(.q-radio__inner--truthy .q-radio__bg) {
     @extend .text-arcticblue-600;
@@ -54,7 +54,7 @@ $radio-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
   }
 
   :deep(.q-radio__label) {
-    @extend .text-bluegray-600, .label-14-bold;
+    @extend .text-bluegray-600, .label-sm-bold;
   }
 
   :deep(.q-radio__inner--truthy .q-radio__bg) {
@@ -93,7 +93,7 @@ $radio-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
   }
 
   :deep(.q-radio__label) {
-    @extend .text-bluegray-600, .label-14-bold;
+    @extend .text-bluegray-600, .label-sm-bold;
   }
 
   :deep(.q-radio__inner--truthy .q-radio__bg) {
