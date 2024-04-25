@@ -1,10 +1,14 @@
+
+<style lang="scss" scoped>
+@import 'TextField.style.scss';
+</style>
 <template>
   <div>
     <p v-if="label" class="textfield-label">{{ label }}</p>
     <q-input
       v-model="inputValue"
       class="textfield-primary"
-      :class="[textFieldClass, setDestructive, setDisable]"
+      :class="[textFieldClass, setDestructive, setDisable, removeIconSpace]"
       borderless
       no-error-icon
       :disable="disable"
@@ -95,6 +99,11 @@ const setDestructive = computed(() => {
 })
 const setDisable = computed(() => {
   if (props.disable) return 'textfield-disabled-bg'
+  else return ''
+})
+const removeIconSpace = computed(() => {
+  if (!props.iconLeft)
+    return 'remove-icon-left-space'
   else return ''
 })
 

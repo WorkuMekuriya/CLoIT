@@ -45,8 +45,18 @@ $textfield-height: 52px;
   // Inputted text
   :deep(.q-field__native, .q-field__input) {
     @extend .label-md, .text-bluegray-900;
+    height: 52px;
   }
   &:focus {
     box-shadow: $textfield-shadow !important;
   }
+        :deep(.q-field__marginal) {
+          height: 52px !important;
+        }
+
 }
+.textfield-primary.remove-icon-left-space{
+    :deep(.q-field__marginal) {
+      display: none !important;
+    }
+  }
