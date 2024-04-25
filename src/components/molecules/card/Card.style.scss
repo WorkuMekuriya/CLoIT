@@ -1,0 +1,155 @@
+@import '../../../css/app.scss';
+
+$lg-card-header-height: 174px;
+$lg-card-header-width: 389px;
+
+$md-card-header-height: 118px;
+$md-card-header-width: 288px;
+
+$sm-card-header-height: 68px;
+$sm-card-header-width: 187px;
+
+$card-header-padding: 12px 12px 24px 24px;
+
+$card-container-radius: 36px;
+$sm-card-container-radius: 24px;
+
+$card-footer-text: 317px;
+
+$card-padding: 16px;
+$card-padding-small: 12px;
+
+
+$check-box-container: 52px;
+
+.card-container {
+    border-radius: $card-container-radius;
+    cursor: pointer;
+    box-shadow: none;
+    border: .5px solid lightgray;
+}
+
+.card-header,
+.footer-text,
+.header-title,
+.card-price,
+.card-description {
+    transition: color 0.3s ease-in-out;
+}
+
+.selected-state {
+    @extend .bg-arcticblue;
+}
+
+.selected-state .card-title,
+.selected-state .card-description,
+.selected-state .card-price,
+.selected-state .card-subscription {
+    @extend .text-white;
+}
+
+.card-header {
+    display: flex;
+    width: $lg-card-header-width;
+    height: $lg-card-header-height;
+    padding: $card-header-padding;
+}
+
+.md-card-header {
+    height: $md-card-header-height;
+    width: $md-card-header-width;
+}
+
+.sm-card-header {
+    height: $sm-card-header-height;
+    width: $sm-card-header-width;
+}
+
+.md-card-container {
+    @extend .text-black;
+    border-radius: $sm-card-container-radius;
+}
+
+.q-card.card-container.selected-state.sm-card-container {
+    @extend .bg-arcticblue-25;
+    border-color: blue;
+    border-width: 1px;
+}
+
+.md-card-footer {
+    width: 252px !important;
+}
+
+.sm-card-footer {
+    width: 151px !important;
+}
+
+.unselected-state {
+    @extend .bg-white;
+}
+
+.check-box {
+    display: flex;
+    border-radius: 100%;
+    border: 0.5px solid lightgray;
+    width: $check-box-container;
+    height: $check-box-container;
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: var(--Blue-Gray-300, #D0D5DD);
+    align-items: center;
+    justify-content: center;
+}
+
+.selected-check-box {
+    @extend .bg-limegreen-400;
+}
+
+.sm-selected-check-box {
+    @extend .bg-arcticblue, .text-white;
+}
+
+.card-footer {
+    display: flex;
+    width: auto;
+    align-items: flex-end;
+    gap: $card-padding;
+    padding: $card-header-padding;
+}
+
+.header-title {
+    display: flex;
+    padding-top: $card-padding-small;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--8, 8px);
+    flex: 1 0 0;
+}
+
+.footer-text {
+    display: flex;
+    width: $card-footer-text;
+    padding-right: $card-padding;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.card-title {
+    @extend .heading-6, .text-bluegray-800;
+}
+
+.card-description {
+    @extend .label-md, .text-black;
+}
+
+.card-price {
+    @extend .heading-6;
+}
+
+.card-subscription {
+    @extend .label-xs, .text-bluegray-500;
+}
+
+.check-box.selected-check-box.sm-selected-check-box {
+    @extend .bg-arcticblue-600;
+}
