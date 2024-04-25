@@ -45,6 +45,58 @@ $textfield-height: 52px;
   // Inputted text
   :deep(.q-field__native, .q-field__input) {
     @extend .label-md, .text-bluegray-900;
+  }
+  &:focus {
+    box-shadow: $textfield-shadow !important;
+  }
+}
+@import '../../../../../css/app.scss';
+
+$textfield-border-radius: 16px;
+$textfield-padding: 0px 16px;
+$textfield-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
+$textfield-height: 52px;
+
+.textfield-primary-bg {
+  @extend .bg-bluegray-50;
+}
+
+.textfield-white-bg {
+  @extend .bg-white;
+}
+
+.textfield-disabled-bg {
+  @extend .bg-bluegray-200;
+  :deep(.q-icon) {
+    @extend .text-bluegray-600;
+  }
+}
+
+.textfield-destructive {
+  @extend .bg-red-50, .text-red-500;
+  border: 1px solid $red-500;
+  :deep(.q-icon) {
+    @extend .text-red-500;
+  }
+}
+.textfield-label {
+  @extend .label-sm, .text-bluegray-500;
+}
+
+.textfield-description {
+  @extend .label-sm, .text-bluegray-500;
+  margin-top: 11px;
+}
+
+.textfield-primary {
+  margin-top: 9px;
+  border-radius: $textfield-border-radius;
+  padding: $textfield-padding;
+  height: $textfield-height;
+
+  // Inputted text
+  :deep(.q-field__native, .q-field__input) {
+    @extend .label-md, .text-bluegray-900;
     height: 52px;
   }
   &:focus {
