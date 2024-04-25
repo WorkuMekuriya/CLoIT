@@ -34,15 +34,21 @@ $right-icon-margin-right: -30px;
   height: $standard-button-height;
   border-radius: 48px;
   position: relative;
-  padding-left: 60px;
-
-  :deep(.on-right) {
-    display: none;
-  }
+  padding-left: 50px;
 
   .arrow-icon {
     position: absolute;
     left: 4px;
+  }
+}
+.standard-button.no-left-icon {
+    :deep(.on-left) {
+      display: none;
+    }
+}
+.standard-button.no-right-icon {
+  :deep(.on-right) {
+    display: none;
   }
 }
 

@@ -1,0 +1,7 @@
+@import '../../.../../../../../../css/app.scss';
+
+$header-height: 92px;
+.service-application-header{
+  @extend .bg-white, .text-bluegray-900;
+  height: $header-height;
+}
