@@ -1,7 +1,7 @@
 @import '../../../../css/app.scss';
 
 $standard-button-width: 162px;
-$standard-button_height: 52px;
+$standard-button-height: 52px;
 $standard-button-border-radius: 48px;
 $standard-button-border: 1px solid $bluegray-300;
 $left-icon-padding-right: 20px;
@@ -16,7 +16,7 @@ $right-icon-margin-right: -30px;
   height: $standard-button_height;
   border-radius: 48px;
   position: relative;
-  padding-right: 65px;
+  padding-right: 60px;
 
   :deep(.on-left) {
     display: none;
@@ -31,10 +31,10 @@ $right-icon-margin-right: -30px;
 .standard-button.left-arrow {
   @extend .label-sm-bold;
   width: $standard-button-width;
-  height: $standard-button_height;
+  height: $standard-button-height;
   border-radius: 48px;
   position: relative;
-  padding-left: 65px;
+  padding-left: 60px;
 
   :deep(.on-right) {
     display: none;

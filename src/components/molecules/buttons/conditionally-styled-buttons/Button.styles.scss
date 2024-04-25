@@ -9,14 +9,14 @@ $rounded-icon-margin-left: 19px;
 $rounded-icon-left-max-size: 16px;
 $rounded-icon-margin-right: 12px;
 $rounded-button-height-small-screen: 38px; // media query size
-$rounded-button-padding: 0 32px;
+$rounded-button-padding: 0 31px;
 $rounded-button-width-with-icon: 146px;
 
 
 //circular buttons
 $circular-button-border-radius: 50px;
-$circular-button-width: 48px;
-$circular-button-height: 48px;
+$circular-button-width: 52px;
+$circular-button-height: 52px;
 $circular-button-width-small-screen: 44px; // media query size
 $circular-button-height-small-screen: 44px; // media query size
 
@@ -40,6 +40,7 @@ $small-screen-max-width: 768px;
 
 // Applies For all Rounded buttons
 .rounded-button {
+  @extend .label-sm-bold;
   border-radius: $rounded-button-border-radius;
   min-width: $rounded-button-min-width;
   height: $rounded-button-height;
@@ -70,6 +71,9 @@ $small-screen-max-width: 768px;
   height: $rounded-button-height-small-screen;
 }
 
+.rounded-button.set-button-with-icon-width {
+  width: $rounded-button-width-with-icon;
+}
 .rounded-button.set-button-with-icon-width {
   width: $rounded-button-width-with-icon;
 }
@@ -107,7 +111,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for primary button */
 .button-primary {
-  @extend .bg-arcticblue, .label-sm-bold, .text-white;
+  @extend .bg-arcticblue, .text-white;
 
   &:hover {
     @extend .bg-arcticblue-800;
@@ -126,6 +130,7 @@ $small-screen-max-width: 768px;
 /* primary button loading spinner*/
 .button-primary.loading {
   @extend .bg-arcticblue-200, .text-arcticblue-600;
+  width: 147px;
 
   &:hover {
     @extend .bg-arcticblue-200;
@@ -139,7 +144,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Secondary Button  */
 .button-secondary {
-  @extend .bg-bluegray-800, .label-sm-bold, .text-white;
+  @extend .bg-bluegray-800, .text-white;
 
   &:hover {
     @extend .bg-bluegray-600;
@@ -158,7 +163,7 @@ $small-screen-max-width: 768px;
 /* secondary button loading spinner*/
 .button-secondary.loading {
   @extend .bg-bluegray-500, .text-white;
-
+  width: 147px;
   &:hover {
     @extend .bg-bluegray-500;
   }
@@ -170,7 +175,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Tertiary Button Lined*/
 .button-tertiary-lined {
-  @extend .bg-white, .label-sm-bold, .text-bluegray-600;
+  @extend .bg-white, .text-bluegray-600;
   border: $tertiary-lined-border;
 
   &:hover {
@@ -189,7 +194,7 @@ $small-screen-max-width: 768px;
 /* tertiary button lined loading spinner */
 .button-tertiary-lined.loading {
   @extend .bg-bluegray-50, .text-bluegray-600;
-
+  width: 147px;
   &:hover {
     @extend .bg-bluegray-50;
   }
@@ -201,7 +206,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Tertiary Button White*/
 .button-tertiary-white {
-  @extend .bg-white, .label-md-bold, .text-arcticblue-600;
+  @extend .bg-white, .text-arcticblue-600;
 
   &:hover {
     @extend .bg-arcticblue-50;
@@ -219,7 +224,7 @@ $small-screen-max-width: 768px;
 /* tertiary button white loading spinner */
 .button-tertiary-white.loading {
   @extend .bg-white, .text-arcticblue-600;
-
+  width: 147px;
   &:hover {
     @extend .bg-white;
   }
@@ -231,7 +236,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Tertiary Button Tonal*/
 .button-tertiary-tonal {
-  @extend .bg-bluegray-50, .label-md-bold, .text-bluegray-600;
+  @extend .bg-bluegray-50, .text-bluegray-600;
 
   &:hover {
     @extend .bg-bluegray-100;
@@ -249,7 +254,7 @@ $small-screen-max-width: 768px;
 /* tertiary button white loading spinner */
 .button-tertiary-tonal.loading {
   @extend .bg-bluegray-50, .text-bluegray-600;
-
+  width: 147px;
   &:hover {
     @extend .bg-bluegray-50;
   }
@@ -261,7 +266,7 @@ $small-screen-max-width: 768px;
 
 /* CSS properties for Button Destructive*/
 .button-destructive {
-  @extend .bg-red-400, .label-md-bold, .text-white;
+  @extend .bg-red-400, .text-white;
 
   &:hover {
     @extend .bg-red-500;
@@ -279,7 +284,7 @@ $small-screen-max-width: 768px;
 /* tertiary button white loading spinner */
 .button-destructive.loading {
   @extend .bg-red-700, .text-white;
-
+  width: 147px;
   &:hover {
     @extend .bg-red-700;
   }
