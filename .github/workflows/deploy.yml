@@ -10,11 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -30,13 +25,6 @@ jobs:
             
             # Pull changes from master
             git pull
-          
-            # Install dependencies using Yarn
-            yarn install
-            
-            # Manage services
-            echo "Managing services"
             
             # Stop and start PM2
-            echo('pm2 restarting')
             sudo pm2 restart quasar-app

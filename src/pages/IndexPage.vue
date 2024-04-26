@@ -1,6 +1,25 @@
 <template>
   <q-page class="q-pa-md">
     <h1 class="heading-3 text-limegreen-900 text-center q-mb-md">CLoIT</h1>
+    <div class="flex justify-center" style="background-color: black;">
+      <LiItem 
+        :label="'Portal & Help Desk'" 
+        :price="'$ {}'" 
+      />
+    </div>
+    <div class="flex justify-center q-mb-lg" style="background-color: black;">
+      <LiItem 
+        :label="'Portal & Help Desk'" 
+        :price="'$ {}'" 
+      />
+    </div>
+    <div class="flex justify-center q-mb-md">
+      <Breadcrumb 
+        :primaryLable="'Terms & Conditions'"
+        :secondaryLable="'Terms & Conditions'"
+        :tertiaryLabel="'Terms & Conditions'"
+      />
+    </div>
 
     <div class="flex justify-center q-mb-md">
       <TextField class="textfield" />
@@ -52,6 +71,8 @@ import AvatarButton from '../components/molecules/avatar/AvatarButton.vue'
 import AlertDialog from '../components/molecules/alert/AlertDialog.vue'
 import TabComponent from '../components/molecules/tabs/TabComponent.vue'
 import StandardButton from '../components/molecules/buttons/standard-buttons/StandardButtons.vue'
+import Breadcrumb from '../components/molecules/breadcrumb/Breadcrumb.vue'
+import LiItem from '../components/molecules/li-item/LiItem.vue'
 import { ref } from 'vue'
 
 const showAlert = ref(true)

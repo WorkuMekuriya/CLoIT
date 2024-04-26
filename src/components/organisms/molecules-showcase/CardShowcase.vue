@@ -39,8 +39,7 @@ const cardGroups = [
             }
         }]
     },
-
-
+    
     {
         cards: [{
             component: Card,

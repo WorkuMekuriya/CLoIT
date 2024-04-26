@@ -1,0 +1,61 @@
+@import '../../../css/app.scss';
+
+$breadcrum-circle-padding: 12px;
+
+$breadcrum-circle-button-width: 24px;
+$breadcrum-circle-button-height: 24px;
+$breadcrum-circle-button-radius: 50px;
+$breadcrum-circle-button-margin-right: 12px;
+$breadcrum-circle-button-margin: 5px;
+
+$breadcrum-main-text-minheight: 184px;
+$breadcrum-main-text-maxheight: 284px;
+
+$breadcrum-circle-button-icon-width: 26px;
+$breadcrum-circle-button-icon-height: 26px;
+$breadcrum-circle-button-icon-margin: 5px;
+$breadcrum-circle-button-icon-radius: 50px;
+
+.li-item-container {
+    text-align: center;
+    justify-content: center;
+}
+
+.circle-button {
+    cursor: pointer;
+    width: $breadcrum-circle-button-width;
+    height: $breadcrum-circle-button-height;
+    margin: $breadcrum-circle-button-margin;
+    margin-right: $breadcrum-circle-button-margin-right;
+    padding: $breadcrum-circle-padding;
+    border-radius: $breadcrum-circle-button-radius;
+    border: 1px solid white;
+}
+
+.main-text {
+    @extend .label-sm, .text-white;
+    display: flex;
+    align-items: center;
+    min-width: $breadcrum-main-text-minheight;
+    max-width: $breadcrum-main-text-maxheight;
+}
+
+.price-text {
+    @extend .label-sm, .text-white;
+    display: flex;
+    align-items: center;
+    padding-left: $breadcrum-circle-padding;
+    padding-right: $breadcrum-circle-padding;
+}
+
+.circle-button-icon {
+    cursor: pointer;
+    width: $breadcrum-circle-button-icon-width;
+    height: $breadcrum-circle-button-icon-height;
+    margin: $breadcrum-circle-button-icon-margin;
+    border-radius: $breadcrum-circle-button-icon-radius;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
