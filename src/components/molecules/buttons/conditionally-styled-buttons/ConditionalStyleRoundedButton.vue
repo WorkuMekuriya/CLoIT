@@ -2,6 +2,7 @@
   <div class="flex justify-center">
     <div class="flex justify-center">
       <q-btn
+      :style="{ width: buttonWidth }"
         :disable="buttonDisabled"
         :ripple="false"
         :loading="isLoading"
@@ -68,6 +69,10 @@ const props = defineProps({
   buttonDisabled: {
     type: Boolean,
     default: false,
+  },
+  buttonWidth: {
+    type: String,
+    default: ''
   },
    size: {
     type: String,

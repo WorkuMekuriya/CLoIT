@@ -16,19 +16,13 @@
           v-if="type == 'ArcticBlue'"
           class="arrow-icon"
         />
-          <BlueGrayOutlinedIcon
-          v-if="type == 'BlueGray'"
-          class="arrow-icon"
-        />
+        <BlueGrayOutlinedIcon v-if="type == 'BlueGray'" class="arrow-icon" />
       </template>
       <template v-else>
         <ArcticBlueIcon v-if="type == 'ArcticBlue'" class="arrow-icon" />
 
         <LimeGreenIcon v-if="type == 'LimeGreen'" class="arrow-icon" />
-            <BlueGrayIcon
-          v-if="type == 'BlueGray'"
-          class="arrow-icon"
-        />
+        <BlueGrayIcon v-if="type == 'BlueGray'" class="arrow-icon" />
       </template>
     </q-btn>
   </div>
@@ -45,7 +39,7 @@ import LimeGreenIcon from '../../../../components/atoms/Icons/standard-buttons/L
 const buttonClasses = {
   ArcticBlue: 'button-arcticblue',
   LimeGreen: 'button-limegreen',
-  BlueGray: 'button-bluegray'
+  BlueGray: 'button-bluegray',
 }
 const props = defineProps({
   type: {
@@ -71,11 +65,11 @@ const props = defineProps({
   },
   leftIcon: {
     type: String,
-    default: 'home',
+    default: '',
   },
   rightIcon: {
     type: String,
-    default: 'home',
+    default: '',
   },
 })
 
@@ -89,6 +83,10 @@ const buttonClass = computed(() => {
   } else if (props.arrowDirection === 'Right') {
     classList.push('right-arrow')
   }
+  if (props.leftIcon == '') {
+    classList.push('no-left-icon')
+  }
+  if (props.rightIcon == '') classList.push('no-right-icon')
   return classList
 })
 </script>
