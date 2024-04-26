@@ -55,11 +55,12 @@
 
 <script>
 export default {
+    data() {
+        return {
+            isSelected: false
+        };
+    },
     props: {
-        isSelected: {
-            type: Boolean,
-            default: false,
-        },
         size: {
             type: String,
             default: 'lg',
@@ -84,9 +85,6 @@ export default {
     },
     methods: {
         toggleCardType() {
-            // Log to debug if method is being called
-            console.log("Card clicked!");
-
             // Toggle isSelected state
             this.isSelected = !this.isSelected;
             event.stopPropagation(); // Prevent event propagation
