@@ -10,7 +10,7 @@
       :type="navigationList.type"
     />
     <q-space />
-    <StandardButton :type="ctaButton.type" :label="ctaButton.label" :outlined="ctaButton.outlined" />
+    <StandardButton :type="ctaButton.type" :label="ctaButton.label" :outlined="ctaButton.outlined"  />
   </q-header>
 </template>
 <script setup>
