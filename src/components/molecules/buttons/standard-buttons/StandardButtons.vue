@@ -53,7 +53,7 @@ const props = defineProps({
   arrowDirection: {
     type: String,
     validator: (value) => ['Left', 'Right'].includes(value),
-    default: 'Left',
+    default: 'Right',
   },
   buttonDisabled: {
     type: Boolean,
