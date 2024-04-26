@@ -23,7 +23,6 @@ const cardGroups = [
                 description: '어쩌구저쩌구가 포함되어있습니다.',
                 price: '$ {}',
                 subscription: 'USD/mo',
-                isSelected: false,
                 size: 'lg'
             }
         },
@@ -34,7 +33,6 @@ const cardGroups = [
                 description: '어쩌구저쩌구가 포함되어있습니다.',
                 price: '$ {}',
                 subscription: 'USD/mo',
-                isSelected: true,
                 size: 'lg'
             }
         },]
@@ -47,7 +45,6 @@ const cardGroups = [
                 title: 'Portal & Help Desk',
                 description: '{Description}',
                 price: '1',
-                isSelected: false,
                 size: 'md'
             }
         },
@@ -57,7 +54,6 @@ const cardGroups = [
                 title: 'Portal & Help Desk',
                 description: '{Description}',
                 price: '1',
-                isSelected: true,
                 size: 'md'
             }
         },]
@@ -69,7 +65,6 @@ const cardGroups = [
             component: Card,
             props: {
                 title: 'Organization',
-                isSelected: false,
                 size: 'sm'
             }
         },
@@ -77,7 +72,6 @@ const cardGroups = [
             component: Card,
             props: {
                 title: 'Individual',
-                isSelected: true,
                 size: 'sm'
             }
         },]
