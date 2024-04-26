@@ -6,10 +6,12 @@
     <TabComponent />
     <TagComponent />
     <TableHeaderComponent />
+    <CardShowcase />
   </q-page>
 </template>
 
 <script setup>
+import CardShowcase from '../../organisms/molecules-showcase/CardShowcase.vue';
 import ButtonsShowcase from '../../organisms/molecules-showcase/ButtonsShowcase.vue';
 import AvatarShowcase from '../../organisms/molecules-showcase/AvatarShowcase.vue'
 import FormComponents from '../../organisms/molecules-showcase/FormComponentsShowcase.vue'
