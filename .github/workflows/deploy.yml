@@ -1,0 +1,36 @@
+name: CI/CD for EC2
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies with Yarn
+      run: yarn install
+
+    - name: Deploy to EC2
+      uses: appleboy/ssh-action@v0.1.17
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        port: 22
+        command: |
+          # Navigate to your application directory
+          cd CLoID
+          
+          # Pull the latest code
+          git pull origin master
+          
+          # Install dependencies using Yarn
+          yarn install
+          
+          # Restart the application using PM2
+          pm2 restart all
