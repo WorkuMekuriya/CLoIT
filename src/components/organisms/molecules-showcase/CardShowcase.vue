@@ -25,17 +25,7 @@ const cardGroups = [
                 subscription: 'USD/mo',
                 size: 'lg'
             }
-        },
-        {
-            component: Card,
-            props: {
-                title: 'Portal & Help Desk',
-                description: '어쩌구저쩌구가 포함되어있습니다.',
-                price: '$ {}',
-                subscription: 'USD/mo',
-                size: 'lg'
-            }
-        },]
+        }]
     },
 
     {
@@ -47,16 +37,7 @@ const cardGroups = [
                 price: '1',
                 size: 'md'
             }
-        },
-        {
-            component: Card,
-            props: {
-                title: 'Portal & Help Desk',
-                description: '{Description}',
-                price: '1',
-                size: 'md'
-            }
-        },]
+        }]
     },
 
 
@@ -67,14 +48,7 @@ const cardGroups = [
                 title: 'Organization',
                 size: 'sm'
             }
-        },
-        {
-            component: Card,
-            props: {
-                title: 'Individual',
-                size: 'sm'
-            }
-        },]
+        }]
     }
 ]
 </script>
