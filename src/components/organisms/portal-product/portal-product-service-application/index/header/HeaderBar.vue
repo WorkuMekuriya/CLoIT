@@ -21,8 +21,8 @@ const props = defineProps({
   middleNavigationList: {
     type: Array,
     default: () => [
-      { label: 'Products', width: '147px', type: 'TertiaryTonal' },
-      { label: 'Introduction', width: '125px', type: 'Secondary' },
+      { label: 'Introduction', width: '147px', type: 'TertiaryTonal' },
+      { label: 'Products', width: '125px', type: 'Secondary' },
       { label: '도입문의', width: '125px', type: 'TertiaryTonal' },
       { label: 'Help Center', width: '143px', type: 'TertiaryTonal' },
       { label: 'About Cloit', width: '140px', type: 'TertiaryTonal' },
