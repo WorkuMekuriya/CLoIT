@@ -24,13 +24,13 @@ jobs:
         port: 22
         command: |
           # Navigate to your application directory
-          cd CLoID
+          cd CLoID/
           
           # Pull the latest code
-          git pull origin master
+          git pull
           
           # Install dependencies using Yarn
-          yarn install
+          yarn
           
           # Restart the application using PM2
-          pm2 restart all
+          pm2 restart quasar-app
