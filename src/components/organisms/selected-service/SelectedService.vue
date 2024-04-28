@@ -1,6 +1,6 @@
 <template>
     <div class="selected-service-container">
-        <div class="flex justify-around q-mx-xl">
+        <div class="flex justify-around">
             <div class="">
                 <div class="selected-service-header-text">{{ headerText }}</div>
                 <div class="service-section">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="next-button-container">
-                    <RoundedButton type="Primary" label="Next : Option" :buttonDisabled="false" size="xl" />
+                    <RoundedButton @click="emitButtonClick" type="Primary" :label="label" :buttonDisabled="false" size="xl" buttonWidth="389px" />
                 </div>
             </div>
         </div>
@@ -44,12 +44,16 @@
 import LiItem from '../../molecules/li-item/LiItem.vue';
 import RoundedButton from '../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue';
 import TagComponent from '../../molecules/form-components/tag/Tag.vue';
-
+const emits = defineEmits(['emitButtonClick'])
 // Define props
 defineProps({
     headerText: {
         type: String,
-        default: 'Selected Service'
+        default: ''
+    },
+     label: {
+       type: String,
+      default: 'Next : Option'
     },
     products: {
         type: Array,
@@ -72,6 +76,11 @@ defineProps({
         default: '{}',
     }
 });
+
+// Method to emit the 'clicked' event
+const emitButtonClick = () => {
+  emits('emitButtonClick')
+}
 </script>
 
 <style lang="scss" scoped>

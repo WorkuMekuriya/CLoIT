@@ -1,10 +1,10 @@
 <template>
-  <q-footer class="service-application-footer flex items-center">
+  <div class="service-application-footer flex items-center">
     <p class="Logo label-sm-bold">Logo</p>
     <p class="copyright-text label-sm">{{ copyRightText }}</p>
     <q-space/>
     <q-icon v-for="(icon, index) in footerIconComponentNames" :key="index" :name="icon" class="footer-icon bg-bluegray-200 text-bluegray-900"></q-icon>
-  </q-footer>
+  </div>
 </template>
 <script setup>
 const props = defineProps({
