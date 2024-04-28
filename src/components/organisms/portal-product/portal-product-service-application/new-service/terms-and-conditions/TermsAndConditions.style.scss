@@ -1,0 +1,68 @@
+@import '../../../../../../css/app.scss';
+
+$terms-and-conditions-width: 754px;
+$border-radius: 36px;
+$horizontal-divider-border-bottom: 1px solid $bluegray-200;
+$check-box-container: 52px;
+
+.terms-and-conditions {
+  @extend .bg-bluegray-50, .text-bluegray-900;
+  width: $terms-and-conditions-width;
+  height: fit-content;
+  border-radius: $border-radius;
+
+  .agree-to-all {
+    height: 97px;
+    padding: 0px 24px;
+
+    .agree-to-all-text {
+      @extend .heading
+    }
+  }
+  .check-box {
+    display: flex;
+    border-radius: 100%;
+    border: 0.5px solid lightgray;
+    width: $check-box-container;
+    height: $check-box-container;
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: var(--Blue-Gray-300, #D0D5DD);
+    align-items: center;
+    justify-content: center;
+  }
+  .selected-check-box {
+    @extend .bg-limegreen-400;
+  }
+  .terms-and-conditions-content {
+
+    .terms-and-conditions-content-main {
+      padding: 0px 24px;
+      height: 82px;
+
+      &.last-content {
+        height: 99px;
+      }
+
+      .title-text-container {
+        p {
+          @extend .subH-lg-med;
+        }
+
+        .tag {
+          margin-left: 17px;
+        }
+      }
+    }
+  }
+  .horizontal-divider {
+    margin: 0px;
+    border-top: 0px;
+    border-bottom: $horizontal-divider-border-bottom;
+  }
+  .read{
+    @extend .label-md-med;
+    margin-right: 17px;
+    text-decoration: underline;
+  }
+}

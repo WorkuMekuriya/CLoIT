@@ -10,15 +10,21 @@ $right-icon-padding-left: 20px;
 $right-icon-margin-right: -30px;
 
 
-.standard-button.right-arrow {
+
+.standard-button {
   @extend .label-sm-bold;
   width: $standard-button-width;
   height: $standard-button_height;
   border-radius: 48px;
   position: relative;
-  padding-right: 60px;
-
-  :deep(.on-left) {
+  :deep(.q-icon){
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
+.standard-button.right-arrow {
+    padding-right: 60px;
+  :deep(.on-right) {
     display: none;
   }
 
@@ -29,17 +35,15 @@ $right-icon-margin-right: -30px;
 }
 
 .standard-button.left-arrow {
-  @extend .label-sm-bold;
-  width: $standard-button-width;
-  height: $standard-button-height;
-  border-radius: 48px;
-  position: relative;
   padding-left: 50px;
 
   .arrow-icon {
     position: absolute;
     left: 4px;
   }
+ :deep(.on-left) {
+          display: none;
+    }
 }
 .standard-button.no-left-icon {
     :deep(.on-left) {

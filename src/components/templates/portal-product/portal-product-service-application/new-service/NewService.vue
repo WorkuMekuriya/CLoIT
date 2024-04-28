@@ -1,7 +1,7 @@
 <template>
   <div class="new-service">
     <BreadCrumbHeader class="bread-crumb-header text-bluegray-900"  :step="step" />
-    <component :is="getStepComponent" />
+    <component @nextStep="handleNextStep" :is="getStepComponent" />
   </div>
 </template>
 <script setup>
@@ -27,6 +27,10 @@ const getStepComponent = computed(() => {
       return NewService5
   return NewService1
 })
+const handleNextStep = (index) => {
+  console.log("Next step:", index);
+  step.value = index
+}
 </script>
 <style lang="scss" scoped>
 @import 'NewService.style.scss';
