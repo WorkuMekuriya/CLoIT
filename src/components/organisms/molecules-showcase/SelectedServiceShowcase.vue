@@ -12,10 +12,8 @@
 </template>
 
 <script setup>
-import SelectedService from '../../organisms/selected-service/SelectedService.vue'
 import { ref } from 'vue'
-
-const showAlert = ref(true)
+import SelectedService from '../../organisms/selected-service/SelectedService.vue'
 
 const products = [{
   label: 'Portal & Help Desk',

@@ -85,7 +85,7 @@
             product-total="{}"
             total="{}"
             label="Next : Your Information"
-            @emitButtonClick="moveToStep3"
+            @emitButtonClick="moveToStep4"
           />
         </div>
       </div>
@@ -202,8 +202,8 @@ const getSelectedCard = (card) => {
 const emits = defineEmits(['nextStep']) // Define the 'clicked' event
 
 // Method to emit the 'clicked' event
-const moveToStep3 = () => {
-  emits('nextStep', 3)
+const moveToStep4 = () => {
+  emits('nextStep', 4)
 }
 </script>
 <style lang="scss" scoped>

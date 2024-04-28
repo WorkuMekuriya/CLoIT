@@ -8,7 +8,7 @@ $breadcrum-circle-button-radius: 50px;
 $breadcrum-circle-button-margin-right: 12px;
 $breadcrum-circle-button-margin: 5px;
 
-$breadcrum-main-text-minwidth: 184px;
+$breadcrum-main-text-minwidth: 214px;
 $breadcrum-main-text-maxwidth: 284px;
 
 $breadcrum-price-text-minwidth: 64px;
@@ -29,7 +29,7 @@ $breadcrum-circle-button-icon-radius: 50px;
     width: $breadcrum-circle-button-width;
     height: $breadcrum-circle-button-height;
     margin: $breadcrum-circle-button-margin;
-    // padding: $breadcrum-circle-padding;
+    margin-right: $breadcrum-circle-button-margin-right;
     border-radius: $breadcrum-circle-button-radius;
     border: 1px solid black;
 }
@@ -38,9 +38,9 @@ $breadcrum-circle-button-icon-radius: 50px;
     @extend .label-sm, .text-black;
     display: flex;
     align-items: center;
-    margin-left: $breadcrum-circle-button-margin-right;
-    min-width: $breadcrum-main-text-minwidth;
-    max-width: $breadcrum-main-text-maxwidth;
+    // min-width: $breadcrum-main-text-minwidth;
+    // max-width: $breadcrum-main-text-maxwidth;
+    width: 100%;
 }
 
 .price-text {

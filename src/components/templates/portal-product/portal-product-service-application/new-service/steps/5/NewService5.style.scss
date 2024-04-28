@@ -1,4 +1,4 @@
-@import '../../../css/app.scss';
+@import '../../../../../../../css/app.scss';
 
 // Define constants
 $selected-service-padding: 36px;
@@ -11,6 +11,11 @@ $total-section-padding-top: 8px;
 $total-section-padding-bottom: 24px;
 $next-button-container-padding-top: 16px;
 
+$breadcrum-circle-button-icon-width: 26px;
+$breadcrum-circle-button-icon-height: 26px;
+$breadcrum-circle-button-icon-margin: 5px;
+$breadcrum-circle-button-icon-radius: 50px;
+
 .selected-service-header-text {
     @extend .label-lg-bold, .text-bluegray-900;
     padding-bottom: $service-section-padding;
@@ -21,12 +26,28 @@ $next-button-container-padding-top: 16px;
     padding: $selected-service-padding;
 }
 
+.section-container {
+    margin-bottom: 60px;
+}
+
 .service-section {
     // Service section styles
     @extend .bg-bluegray-50, .text-black;
     border-radius: $service-section-border-radius;
     margin-top: $service-section-margin-top;
-    min-width: 389px;
+    // min-width: 389px;
+}
+
+.circle-button-icon {
+    cursor: pointer;
+    width: $breadcrum-circle-button-icon-width;
+    height: $breadcrum-circle-button-icon-height;
+    margin: $breadcrum-circle-button-icon-margin;
+    border-radius: $breadcrum-circle-button-icon-radius;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .options-section {
@@ -73,10 +94,6 @@ $next-button-container-padding-top: 16px;
         @extend .heading-4;
         font-weight: 800;
     }
-}
-
-.checkout-info {
-    // Checkout info styles
 }
 
 .next-button-container {

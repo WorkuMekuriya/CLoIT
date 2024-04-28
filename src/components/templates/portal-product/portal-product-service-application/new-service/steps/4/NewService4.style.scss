@@ -1,0 +1,68 @@
+@import '../../../../../../../css/app.scss';
+
+.grid-main-container {
+    display: grid;
+    margin: 24px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+}
+
+.section-container {
+    margin-bottom: 60px;
+}
+
+.card-container {
+    justify-content: flex-start;
+    margin-bottom: 60px;
+}
+
+.card-spacing {
+    margin-right: 16px;
+}
+
+.section-checkbox-title {
+    @extend .heading-6;
+}
+
+.checkbox-container {
+    margin-bottom: 36px;
+}
+
+.checkbox-spacing {
+    margin-left: 24px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+.textfield {
+    margin-top: 24px;
+}
+
+.section-title {
+    @extend .heading-6;
+    margin-bottom: 36px;
+}
+
+@media (min-width: 769px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-main-container {
+        grid-template-columns: 70% 30%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-main-container {
+        grid-template-columns: 60% 40%;
+    }
+}

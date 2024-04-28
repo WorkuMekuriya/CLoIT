@@ -4,7 +4,7 @@
             :style="{ backgroundColor: isButtonClicked ? 'black' : 'transparent' }" @click="handleButtonClick"></div>
         <div class="main-text">{{ label }}</div>
         <div class="price-text">{{ price }}</div>
-        <div class="circle-button-icon" @click="handleIconClick">
+        <div v-if="showRightButton" class="circle-button-icon" @click="handleIconClick">
             <q-icon :name="rightIcon" size="xs" />
         </div>
     </q-item>
@@ -22,6 +22,10 @@ export default {
         showLeftButton: {
             type: Boolean,
             default: false,
+        },
+        showRightButton: {
+            type: Boolean,
+            default: true,
         },
         label: {
             type: String,
