@@ -23,6 +23,7 @@ $card-padding-small: 12px;
 $check-box-container: 52px;
 
 .card-container {
+    width: fit-content;
     border-radius: $card-container-radius;
     cursor: pointer;
     box-shadow: none;
