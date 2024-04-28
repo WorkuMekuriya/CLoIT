@@ -1,14 +1,11 @@
 <template>
-    <q-item v-if="isVisible">
-        <div class="circle-button" :style="{ backgroundColor: isButtonClicked ? 'white' : 'transparent' }"
-            @click="handleButtonClick"></div>
+    <q-item v-if="isVisible" class="q-item-container">
+        <div v-if="showLeftButton" class="circle-button"
+            :style="{ backgroundColor: isButtonClicked ? 'black' : 'transparent' }" @click="handleButtonClick"></div>
         <div class="main-text">{{ label }}</div>
         <div class="price-text">{{ price }}</div>
         <div class="circle-button-icon" @click="handleIconClick">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M10.5 3.5L3.5 10.5M3.5 3.5L10.5 10.5" stroke="white" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
+            <q-icon :name="rightIcon" size="xs" />
         </div>
     </q-item>
 </template>
@@ -22,6 +19,10 @@ export default {
         };
     },
     props: {
+        showLeftButton: {
+            type: Boolean,
+            default: true,
+        },
         label: {
             type: String,
             default: '',
@@ -30,11 +31,19 @@ export default {
             type: String,
             default: '',
         },
+        rightIcon: {
+            type: String,
+            default: 'close',
+        },
     },
     methods: {
         // Handle the icon click event
         handleIconClick() {
-            this.isVisible = false; // Hide the component
+            if (this.rightIcon == 'close') {
+                this.isVisible = false;
+            } else {
+                this.$emit('handleRightIcon')
+            }
         },
 
         // Handle the circle button click event

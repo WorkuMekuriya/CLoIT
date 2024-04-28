@@ -8,8 +8,11 @@ $breadcrum-circle-button-radius: 50px;
 $breadcrum-circle-button-margin-right: 12px;
 $breadcrum-circle-button-margin: 5px;
 
-$breadcrum-main-text-minheight: 184px;
-$breadcrum-main-text-maxheight: 284px;
+$breadcrum-main-text-minwidth: 184px;
+$breadcrum-main-text-maxwidth: 284px;
+
+$breadcrum-price-text-minwidth: 64px;
+$breadcrum-price-text-maxwidth: 84px;
 
 $breadcrum-circle-button-icon-width: 26px;
 $breadcrum-circle-button-icon-height: 26px;
@@ -26,26 +29,28 @@ $breadcrum-circle-button-icon-radius: 50px;
     width: $breadcrum-circle-button-width;
     height: $breadcrum-circle-button-height;
     margin: $breadcrum-circle-button-margin;
-    margin-right: $breadcrum-circle-button-margin-right;
-    padding: $breadcrum-circle-padding;
+    // padding: $breadcrum-circle-padding;
     border-radius: $breadcrum-circle-button-radius;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 .main-text {
-    @extend .label-sm, .text-white;
+    @extend .label-sm, .text-black;
     display: flex;
     align-items: center;
-    min-width: $breadcrum-main-text-minheight;
-    max-width: $breadcrum-main-text-maxheight;
+    margin-left: $breadcrum-circle-button-margin-right;
+    min-width: $breadcrum-main-text-minwidth;
+    max-width: $breadcrum-main-text-maxwidth;
 }
 
 .price-text {
-    @extend .label-sm, .text-white;
+    @extend .label-sm, .text-black;
     display: flex;
     align-items: center;
     padding-left: $breadcrum-circle-padding;
     padding-right: $breadcrum-circle-padding;
+    width: $breadcrum-price-text-minwidth;
+    max-width: $breadcrum-price-text-maxwidth;
 }
 
 .circle-button-icon {
@@ -54,8 +59,14 @@ $breadcrum-circle-button-icon-radius: 50px;
     height: $breadcrum-circle-button-icon-height;
     margin: $breadcrum-circle-button-icon-margin;
     border-radius: $breadcrum-circle-button-icon-radius;
-    border: 1px solid white;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.q-item-container {
+    padding: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
 }

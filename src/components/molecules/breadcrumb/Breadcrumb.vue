@@ -21,10 +21,6 @@ export default {
             type: String,
             default: '',
         },
-        secondaryLable: {
-            type: String,
-            default: '',
-        },
         tertiaryLabel: {
             type: String,
             default: ''
