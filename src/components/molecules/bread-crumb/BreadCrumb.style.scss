@@ -1,0 +1,44 @@
+@import '../../../css/app.scss';
+
+.bread-crumb {
+  @extend .bg-bluegray-50, .label-md;
+  height: 52px;
+  width: fit-content;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 15px;
+  border-radius: 36px;
+  .hide-icon-on-the-first {
+    :deep(.q-breadcrumbs__el-icon) {
+      display: none;
+    }
+  }
+  :deep(.q-breadcrumbs__separator) {
+    display: none;
+  }
+  .active-step {
+    @extend .text-arcticblue-500, .label-md-bold;
+
+    :deep(.q-icon .q-breadcrumbs__el) {
+      @extend .text-bluegray-500;
+      text-decoration: none !important;
+    }
+    :deep(.q-icon:after) {
+      @extend .text-arcticblue-500;
+      content: '•';
+      padding-bottom: 7px;
+    }
+  }
+  .passed-step {
+    @extend .text-bluegray-500;
+
+    :deep(i) {
+      @extend .text-bluegray-500;
+      border: none !important ;
+    }
+  }
+  .non-active-step {
+    @extend .text-bluegray-500;
+  }
+}
+

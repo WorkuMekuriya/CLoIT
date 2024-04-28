@@ -1,0 +1,12 @@
+@import '../../../../../css/app.scss';
+
+.bread-crumb-header{
+  margin-top: 52px;
+  .close-icon{
+    @extend .bg-bluegray-50;
+    font-size: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+  }
+}
