@@ -10,6 +10,9 @@
     <div class="flex justify-center q-mb-lg">
       <LiItem :label="'Portal & Help Desk'" :price="'$ {}'" />
     </div>
+    <div class="flex justify-center q-mb-lg">
+      <BreadCrumbHeader class="bread-crumb-header text-bluegray-900" :step="step" />
+    </div>
     <div class="flex justify-center q-mb-md">
       <Breadcrumb :primaryLable="'Terms & Conditions'" :secondaryLable="'Terms & Conditions'"
         :tertiaryLabel="'Terms & Conditions'" />
@@ -18,6 +21,7 @@
 </template>
 
 <script setup>
+import BreadCrumbHeader from '../../molecules/bread-crumb/BreadCrumb.vue'
 import Breadcrumb from '../../molecules/breadcrumb/Breadcrumb.vue'
 import LiItem from '../../molecules/li-item/LiItem.vue'
 </script>

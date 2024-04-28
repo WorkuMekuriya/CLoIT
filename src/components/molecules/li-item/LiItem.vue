@@ -21,7 +21,7 @@ export default {
     props: {
         showLeftButton: {
             type: Boolean,
-            default: true,
+            default: false,
         },
         label: {
             type: String,
