@@ -7,6 +7,8 @@
     <TagComponent />
     <TableHeaderComponent />
     <CardShowcase />
+    <OtherStuffShowcase />
+    <SelectedServiceShowcase />
   </q-page>
 </template>
 
@@ -18,6 +20,8 @@ import FormComponents from '../../organisms/molecules-showcase/FormComponentsSho
 import TabComponent from '../../organisms/molecules-showcase/TabsShowcase.vue'
 import TagComponent from '../../organisms/molecules-showcase/TagsShowcase.vue'
 import TableHeaderComponent from '../../organisms/molecules-showcase/TableHeaderShowcase.vue'
+import OtherStuffShowcase from 'src/components/organisms/molecules-showcase/OtherStuffShowcase.vue';
+import SelectedServiceShowcase from '../../organisms/molecules-showcase/SelectedServiceShowcase.vue';
 import { ref } from 'vue'
 
 const showAlert = ref(true)
