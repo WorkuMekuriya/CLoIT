@@ -9,9 +9,17 @@
             </div>
         </template>
     </div>
+    <div class="q-mb-xl">
+        <h1 class="heading-3 text-limegreen-900 text-center">Multi Select Card</h1>
+        <div class="flex justify-center q-mx-xl q-mb-xl">
+            <Card v-for="(card, index) in infoCard" :key="index" :title="card.title" size="sm"
+                :selected="selectedIndex == index" :style="{ marginRight: '16px' }" @click="toggleSelect(index)" />
+        </div>
+    </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import Card from '../../molecules/card/Card.vue'
 
 const cardGroups = [
@@ -39,7 +47,7 @@ const cardGroups = [
             }
         }]
     },
-    
+
     {
         cards: [{
             component: Card,
@@ -50,6 +58,26 @@ const cardGroups = [
         }]
     }
 ]
+
+const infoCard = ref([
+    {
+        title: 'Individual',
+        size: 'sm'
+    },
+    {
+        title: 'Organization',
+        size: 'lg'
+    }
+]);
+
+// Define a reactive property to track the selected index
+const selectedIndex = ref(null);
+
+// Function to handle card selection
+function toggleSelect(index) {
+    selectedIndex.value = index;
+}
+
 </script>
 
 <style lang="scss" scoped>

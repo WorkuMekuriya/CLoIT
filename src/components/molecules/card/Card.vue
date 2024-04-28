@@ -1,6 +1,6 @@
 <template>
     <q-card class="card-container" @click="toggleCardType"
-        :class="{ 'selected-state': isSelected, 'unselected-state': !isSelected, 'sm-card-container': size == 'sm', 'md-card-container': size == 'md' }"
+        :class="{ 'selected-state': isCardSelected, 'unselected-state': !isCardSelected, 'sm-card-container': size == 'sm', 'md-card-container': size == 'md' }"
         style="border-radius: 36px;">
         <div class="card-header" :class="{ 'md-card-header': size == 'md', 'sm-card-header': size == 'sm' }">
             <div v-if="size == 'sm'" class="header-title"></div>
@@ -12,8 +12,8 @@
                 <div class="card-title" style="font-weight: normal;">{{ price }}</div>
             </div>
             <div class="check-box"
-                :class="{ 'selected-check-box': isSelected, 'sm-selected-check-box': size == 'sm' & isSelected }"
-                @click="toggleCardType">
+                :class="{ 'selected-check-box': isCardSelected, 'sm-selected-check-box': size == 'sm' & isCardSelected }"
+                @click="toggleCardType($event)">
                 <svg v-if="size == 'md' & !isSelected" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none">
                     <g clip-path="url(#clip0_393_6542)">
@@ -39,7 +39,7 @@
         </div>
         <div class="card-footer" :class="{ 'md-card-footer': size == 'md', 'sm-card-footer': size == 'sm' }">
             <div v-if="size == 'sm'" class="sm-header-title">
-                <div class="card-title" :style="{ color: isSelected ? '#253BFF' : '#98A2B3' }">{{ title }}</div>
+                <div class="card-title" :style="{ color: isCardSelected ? '#253BFF' : '#98A2B3' }">{{ title }}</div>
             </div>
             <div v-if="size == 'md'" class="header-title">
                 <div class="card-title">{{ title }}</div>
@@ -57,7 +57,7 @@
 export default {
     data() {
         return {
-            isSelected: false
+            isSelected: false // Internal state for single-card mode
         };
     },
     props: {
@@ -82,12 +82,39 @@ export default {
             type: String,
             default: '',
         },
+        selectedCards: {
+            type: Array,
+            default: null, // Optional prop for multiple-card mode
+        },
+        cardIndexOrId: {
+            type: [Number, String],
+            default: null, // Optional prop for multiple-card mode
+        },
+    },
+    computed: {
+        isCardSelected() {
+            // Determine if the card is selected
+            if (this.selectedCards && this.cardIndexOrId !== null) {
+                // If `selectedCards` and `cardIndexOrId` are provided, use them to determine selection state
+                return this.selectedCards.includes(this.cardIndexOrId);
+            } else {
+                // If `selectedCards` and `cardIndexOrId` are not provided, use the internal state
+                return this.isSelected;
+            }
+        },
     },
     methods: {
-        toggleCardType() {
-            // Toggle isSelected state
-            this.isSelected = !this.isSelected;
-            event.stopPropagation(); // Prevent event propagation
+        toggleCardType(event) {
+            // Prevent event propagation to parent components
+            event.stopPropagation();
+
+            if (this.selectedCards && this.cardIndexOrId !== null) {
+                // If `selectedCards` and `cardIndexOrId` are provided, emit an event to notify the parent component
+                this.$emit('toggle-card', this.cardIndexOrId);
+            } else {
+                // Otherwise, toggle the internal `isSelected` state for single-card mode
+                this.isSelected = !this.isSelected;
+            }
         },
     },
 };
