@@ -9,7 +9,7 @@
 </template>
 <script setup>
 import HeaderBar from '../../../../organisms/portal-product/portal-product-service-application/index/header/HeaderBar.vue'
-import FooterBar from '../../../../organisms/portal-product/portal-product-service-application/index/footer/FooterBar.vue';
+import FooterBar from '../../../../organisms/portal-product/footer/FooterBar.vue';
 import Landing from '../../../../organisms/portal-product/portal-product-service-application/index/landing/LandingContent.vue';
 </script>
 <style lang="scss" scoped>
