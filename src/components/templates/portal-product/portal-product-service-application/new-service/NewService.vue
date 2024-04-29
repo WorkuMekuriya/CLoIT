@@ -16,7 +16,7 @@ import NewService2 from '../new-service/steps/2/NewService2.vue'
 import NewService3 from '../new-service/steps/3/NewService3.vue'
 import NewService4 from '../new-service/steps/4/NewService4.vue'
 import NewService5 from '../new-service/steps/5/NewService5.vue'
-import FooterBar from '../../../../organisms/portal-product/portal-product-service-application/index/footer/FooterBar.vue';
+import FooterBar from '../../../../organisms/portal-product/footer/FooterBar.vue';
 
 const getStepComponent = computed(() => {
     if(step.value == 1)
