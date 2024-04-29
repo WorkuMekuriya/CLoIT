@@ -58,11 +58,11 @@ const props = defineProps({
   },
   bottomLeftDescription: {
     type: String,
-    default: 'Description',
+    default: '',
   },
   bottomRightDescription: {
     type: String,
-    default: 'Description',
+    default: '',
   },
   disable: {
     type: Boolean,
