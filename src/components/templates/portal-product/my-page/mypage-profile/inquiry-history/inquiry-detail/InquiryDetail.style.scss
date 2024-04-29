@@ -1,0 +1,109 @@
+@import '../../../../../../../css/app.scss';
+
+// Define variables for fixed values
+$margin-bottom-inquiry-title: 27px;
+$margin-bottom-description: 23px;
+$margin-bottom-attachment-label: 36px;
+$border-bottom-width-inquiry-item: 0.1px;
+$border-color-inquiry-item: lightgray;
+$font-weight-inquiry-title: 800;
+$font-size-inquiry-title: 32px;
+
+// Define color variables
+$attachment-background-color: #F2F4F7;
+$attachment-close-background-color: #D0D5DD;
+$attachment-close-icon-color: white;
+
+// Define dimension variables
+$attachment-width: 328px;
+$attachment-height: 34px;
+$attachment-padding: 4px 16px;
+$attachment-close-width: 26px;
+$attachment-close-height: 26px;
+$attachment-close-padding: 6px;
+
+// Define border-radius variables
+$attachment-border-radius: 24px;
+$attachment-close-border-radius: 50%;
+
+// Define margin variables
+$attachment-margin-top: 8px;
+$attachment-close-margin-right: 2px;
+
+.inquiry-title {
+    @extend .heading-6;
+    margin-bottom: $margin-bottom-inquiry-title;
+}
+
+// MyProfileInquiry.scss
+
+.my-profile-inquiry-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-profile-inquiry-title {
+    font-weight: $font-weight-inquiry-title;
+    font-size: $font-size-inquiry-title;
+}
+
+.inquiry-item {
+    margin-top: 35px;
+    width: 60%;
+    border-bottom-width: $border-bottom-width-inquiry-item;
+    border-color: $border-color-inquiry-item;
+    border-bottom-style: solid;
+}
+
+.inquiry-item .inquiry-title {
+    // Add any styles for the inquiry title here
+}
+
+.inquiry-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 39px;
+}
+
+.inquiry-description {
+    margin-bottom: $margin-bottom-description;
+}
+
+.attachment-label {
+    margin-bottom: $margin-bottom-attachment-label;
+}
+
+.attachment-label {
+    @extend .label-sm-bold;
+}
+
+.attachment-list {
+    margin-top: 24px;
+    margin-bottom: 36px;
+}
+
+/* Define styles for attachment-list container */
+.attachment-item-list {
+    display: flex;
+    width: $attachment-width;
+    border-radius: $attachment-border-radius;
+    height: $attachment-height;
+    background-color: $attachment-background-color;
+    padding: $attachment-padding;
+    margin-top: $attachment-margin-top;
+    justify-content: space-between;
+}
+
+/* Define styles for the inner div element */
+.attachment-close {
+    width: $attachment-close-width;
+    height: $attachment-close-height;
+    background-color: $attachment-close-background-color;
+    border-radius: $attachment-close-border-radius;
+    padding: $attachment-close-padding;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $attachment-close-margin-right;
+}

@@ -1,0 +1,75 @@
+@import '../../../../../../css/app.scss';
+
+// Define variables for common values.
+$profile-padding: 136px;
+$profile-margin-top: 60px;
+$title-font-weight: 800;
+$title-font-size: 32px;
+$name-font-weight: 800;
+$name-font-size: 28px;
+$name-margin-top: 36px;
+$organization-font-weight: 500;
+$organization-font-size: 18px;
+$button-padding: 8px;
+$button-margin-top: 8px;
+$image-dimensions: 128px;
+$profile-content-margin-top: 60px;
+
+// Adjust padding and margin values for the profile container using variables.
+.profile-container {
+    padding: 0 $profile-padding;
+}
+
+// Use variables for consistent margin values in profile options.
+.profile-options {
+    margin-top: $profile-margin-top;
+}
+
+// Use variables for header and title styles.
+.header,
+.title {
+    font-weight: $title-font-weight;
+    font-size: $title-font-size;
+}
+
+// Consistent flex layout styles for profile content.
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: $profile-content-margin-top;
+}
+
+// Improve clarity of image holder styles using variables.
+.image-holder {
+    width: $image-dimensions;
+    height: $image-dimensions;
+    background-color: black;
+    border-radius: 50%;
+}
+
+// Use variables for name styles.
+.name {
+    font-weight: $name-font-weight;
+    font-size: $name-font-size;
+    margin-top: $name-margin-top;
+}
+
+// Use consistent class name and variables for organization.
+.organization {
+    font-weight: $organization-font-weight;
+    font-size: $organization-font-size;
+}
+
+// Consistent margin and padding for button container using variables.
+.button-container {
+    margin-top: $button-margin-top;
+    padding: $button-padding;
+}
+
+// Use a comment to describe the purpose of justify-center and flex-center classes.
+.justify-center,
+.flex-center {
+    justify-content: left; // Consider changing to `justify-content: center` if applicable.
+}

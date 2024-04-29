@@ -1,0 +1,12 @@
+@import '../../../../../../css/app.scss';
+
+$gap-medium: 24px;
+
+// Grid container
+.grid-container {
+    display: grid;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap-medium;
+}

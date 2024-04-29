@@ -1,0 +1,61 @@
+@import '../../../../../../../css/app.scss';
+
+// Define variables for consistent numerical values.
+$add-icon-size: 52px;
+$container-margin-top: 36px;
+$card-height: 96px;
+$card-padding: 24px;
+$card-margin-bottom: 16px;
+$card-border-width: 0.1px;
+$card-border-radius: 36px;
+$label-width: 689px;
+$border-color: lightgray;
+
+.inquiry-container {
+    cursor: pointer;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    @extend .heading-4;
+}
+
+.add-icon-container {
+    width: $add-icon-size;
+    height: $add-icon-size;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    align-items: center;
+}
+
+.inquiries-container {
+    margin-top: $container-margin-top;
+}
+
+.inquiry-card {
+    height: $card-height;
+    display: flex;
+    padding: $card-padding;
+    margin-bottom: $card-margin-bottom;
+    justify-content: space-between;
+    align-items: center;
+    border: $card-border-width solid $border-color;
+    border-radius: $card-border-radius;
+}
+
+.inquiry-label {
+    @extend .heading-6;
+    width: $label-width;
+}
+
+.inquiry-date {
+    // Add styles for inquiry date if needed.
+    @extend .label-md;
+}
