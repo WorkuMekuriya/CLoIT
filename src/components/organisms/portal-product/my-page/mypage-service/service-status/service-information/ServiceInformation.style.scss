@@ -1,0 +1,67 @@
+@import '../../../../../../../css/app.scss';
+
+.service-information {
+  @extend .text-bluegray-900;
+  margin-top: 40px;
+
+  .header-text {
+    @extend .heading-6;
+  }
+
+  table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid $bluegray-200;
+    padding: 29px 16px;
+    /* Vertical padding of 16px */
+    text-align: left;
+  }
+
+  tr,
+  th {
+    padding: 29px 16px;
+  }
+
+  th:first-child,
+  td:first-child {
+    @extend .label-sm-bold;
+    border-left: none;
+    text-align: left;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: none;
+    text-align: left;
+  }
+
+  th {
+    width: 20%;
+    /* Equal width for all columns */
+  }
+
+  td {
+    width: 20%;
+    /* Equal width for all columns */
+    text-align: left;
+    /* Left text in td */
+  }
+
+  .date-container {
+    margin-top: 36px;
+
+    .date-title {
+      @extend .label-sm-bold;
+    }
+
+    .date {
+      @extend .p-sm;
+      margin-top: 8px
+    }
+  }
+  }

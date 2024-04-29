@@ -11,11 +11,17 @@ import PortalProductServiceApplicationNewService from 'pages/portal-product/prod
 
 // PortalProductServiceApplication
 import PortalProductMyPage from 'pages/portal-product/my-page/MyPage.vue'
-// sub pages
+
+// sub pages(Templates)
 import PortalProdctMyPageHelp from 'components/templates/portal-product/my-page/mypage-help/MyPageHelp.vue'
 import PortalProductMyPageNotice from 'components/templates/portal-product/my-page/mypage-notice/MyPageNotice.vue'
 import PortalProductMyPagePayment from 'components/templates/portal-product/my-page/mypage-payment/MyPagePayment.vue'
+
 import PortalProductMyPageServices from 'components/templates/portal-product/my-page/mypage-services/MyPageServices.vue'
+import PortalProductMyPageServiceActive from 'components/templates/portal-product/my-page/mypage-services/services-active/ServiceActive.vue'
+import PortalProductMyPageServicesInactive from 'components/templates/portal-product/my-page/mypage-services/services-inactive/ServiceInactive.vue'
+import PortalProductMyPageServicePending from 'components/templates/portal-product/my-page/mypage-services/services-pending/ServicePending.vue'
+import PortalProductMyPageServiceInactiveFull from 'components/templates/portal-product/my-page/mypage-services/services-inactive-full/ServiceInactiveFull.vue'
 import PortalProductMyPageProfile from 'components/templates/portal-product/my-page/mypage-profile/MyPageProfile.vue'
 
 const routes = [
@@ -74,9 +80,35 @@ const routes = [
         component: PortalProductMyPagePayment,
       },
       {
-        name: 'portal-products-my-page-services',
+        name: 'service-main',
         path: 'services',
-        component: PortalProductMyPageServices,
+        children: [
+          {
+            path: '',
+            name: 'portal-products-my-page-services',
+            component: PortalProductMyPageServices,
+          },
+          {
+            name: 'portal-products-my-page-services-active',
+            path: 'active',
+            component: PortalProductMyPageServiceActive,
+          },
+          {
+            name: 'portal-products-my-page-services-inactive',
+            path: 'inactive',
+            component: PortalProductMyPageServicesInactive,
+          },
+          {
+            name: 'portal-products-my-page-services-pending',
+            path: 'pending',
+            component: PortalProductMyPageServicePending,
+          },
+          {
+            name: 'portal-products-my-page-services-inactive-full',
+            path: 'inactive-full',
+            component: PortalProductMyPageServiceInactiveFull,
+          },
+        ],
       },
       {
         name: 'portal-products-my-page-profile',

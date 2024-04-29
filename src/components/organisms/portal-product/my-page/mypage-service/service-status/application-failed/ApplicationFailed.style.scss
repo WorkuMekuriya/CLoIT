@@ -1,0 +1,19 @@
+@import '../../../../../../../css/app.scss';
+
+.application-failed {
+  @extend .bg-bluegray-50;
+  width: 100%;
+  height: 239px;
+  border-radius: 36px;
+  padding: 36px;
+  .title{
+    @extend .heading-4;
+    margin-top: 24px;
+  }
+  .sub-title{
+    @extend .p-lg;
+  }
+     .sub-title-middle {
+      margin: 24px 0px;
+     }
+}
