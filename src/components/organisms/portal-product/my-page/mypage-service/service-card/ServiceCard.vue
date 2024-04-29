@@ -12,7 +12,7 @@
           <p class="date">{{ endDate }}</p>
         </div>
       </div>
-      <q-icon class="link-icon" name="north_east"></q-icon>
+      <q-icon class="link-icon cursor-pointer" name="north_east" @click="navigateToPage(to)"></q-icon>
     </div>
     <div class="services-container flex">
       <Tag :label="service" size="md" type="TagSkeleton" v-for="(service, index) in services" :key="index"  />
@@ -21,6 +21,8 @@
 </template>
 <script setup>
 import Tag from '../../../../../molecules/form-components/tag/Tag.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 defineProps({
   serviceText: {
     type: String,
@@ -50,7 +52,15 @@ defineProps({
     type: Array,
     default: () => ['Portal & Help Desk', 'Accredation', 'Sports Entries'],
   },
+  to: {
+    type: String,
+    default: ''
+  }
 })
+const navigateToPage = (routeName) => {
+  console.log(routeName)
+  router.push({ name: routeName })
+}
 </script>
 <style lang="scss" scoped>
 @import 'ServiceCard.style.scss';
