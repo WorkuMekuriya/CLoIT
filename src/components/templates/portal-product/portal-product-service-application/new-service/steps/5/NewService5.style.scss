@@ -11,11 +11,16 @@ $total-section-padding-top: 8px;
 $total-section-padding-bottom: 24px;
 $next-button-container-padding-top: 16px;
 
-$breadcrum-circle-button-icon-width: 26px;
+$breadcrum-circle-button-icon-width: 28px;
 $breadcrum-circle-button-icon-height: 26px;
 $breadcrum-circle-button-icon-margin: 5px;
 $breadcrum-circle-button-icon-radius: 50px;
 
+$header_font_size: 20px;
+$header_font_weight: bold;
+$total_text_font_weight: 800;
+
+// Use constants in style blocks
 .selected-service-header-text {
     @extend .label-lg-bold, .text-bluegray-900;
     padding-bottom: $service-section-padding;
@@ -35,7 +40,6 @@ $breadcrum-circle-button-icon-radius: 50px;
     @extend .bg-bluegray-50, .text-black;
     border-radius: $service-section-border-radius;
     margin-top: $service-section-margin-top;
-    // min-width: 389px;
 }
 
 .circle-button-icon {
@@ -64,8 +68,8 @@ $breadcrum-circle-button-icon-radius: 50px;
     justify-content: space-between;
 
     .header-text {
-        font-size: 20px;
-        font-weight: bold;
+        font-size: $header_font_size;
+        font-weight: $header_font_weight;
     }
 }
 
@@ -92,7 +96,7 @@ $breadcrum-circle-button-icon-radius: 50px;
 
     .total-text {
         @extend .heading-4;
-        font-weight: 800;
+        font-weight: $total_text_font_weight;
     }
 }
 

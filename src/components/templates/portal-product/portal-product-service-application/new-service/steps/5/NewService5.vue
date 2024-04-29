@@ -41,6 +41,13 @@
           </div>
         </div>
       </div>
+      <div style="margin-bottom: 60px;">
+        <div class="section-title">결제방식</div>
+        <div style="display: flex; justify-content: space-evenly;">
+          <Card v-for="(card, index) in paymentTypes" :key="index" :title="card" size="sm"
+            :selected="selectedInfoIndex === index" @click="toggleSelectInfo(index)" />
+        </div>
+      </div>
       <section v-if="showPaymentInfo" class="section-container q-mt-lg">
         <div class="section-title">정보입력</div>
         <div class="flex q-mb-lg q-mt-md">
@@ -51,16 +58,10 @@
         <TextField class="textfield" label="분납방법" placeholder="분납방법"
           bottomLeftDescription="적어주신 내용 확인 후 계약을 위해 연락드리도록 하겠습니다." bottomRightDescription="" />
       </section>
-      <div v-else style="margin-bottom: 60px;">
-        <div class="section-title">결제방식</div>
-        <div style="display: flex; justify-content: space-evenly;">
-          <Card v-for="(card, index) in paymentTypes" :key="index" :title="card" size="sm"
-            :selected="selectedInfoIndex === index" @click="toggleSelectInfo(index)" />
-        </div>
-      </div>
     </div>
   </div>
-  <RoundedButton @click="emitButtonClick" type="Primary" label="이대로 신청" buttonDisabled="false" size="xl" buttonWidth="228px" />
+  <RoundedButton @click="emitButtonClick" type="Primary" label="이대로 신청" buttonDisabled="false" size="xl"
+    buttonWidth="228px" />
 </template>
 
 <script setup>
@@ -110,11 +111,8 @@ defineProps({
 
 let showPaymentInfo = ref(false);
 const toggleSelectInfo = (index) => {
-  console.log(index)
   if (index == 1) {
     showPaymentInfo.value = true;
-  } else {
-    showPaymentInfo.value = false;
   }
 }
 
