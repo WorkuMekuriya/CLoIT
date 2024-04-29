@@ -1,0 +1,22 @@
+@import '../../../../../css/app.scss';
+
+.mypage-services{
+  @extend .text-bluegray-900;
+  .inditcator-text{
+    @extend .label-xs-med;
+    margin-bottom: 8px;
+  }
+  .add-button{
+  @extend  .bg-bluegray-800, .text-white;
+      border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+  }
+  .service-text{
+    margin-bottom: 16px;
+  }
+  .title-text{
+    @extend .heading-4;
+  }
+}

@@ -2,8 +2,9 @@
   <q-header class="service-application-header flex items-center">
     <p class="Logo label-lg-bold">LOGO</p>
     <q-space />
+    <q-icon class="notification-icon nav-icons" name="notifications_none"></q-icon>
     <StandardButton :type="ctaButton.type" :label="ctaButton.label" :outlined="ctaButton.outlined"  buttonWidth="200px" />
-    <q-icon name=""></q-icon>
+    <q-icon class="logout-icon nav-icons" name="logout"></q-icon>
   </q-header>
 </template>
 <script setup>

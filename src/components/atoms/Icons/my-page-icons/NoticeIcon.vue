@@ -1,6 +1,34 @@
 <template>
   <div>
     <svg
+      v-if="getActive"
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="48" height="48" rx="24" fill="#253BFF" />
+      <path
+        d="M21.3255 15.1242C20.2866 17.5461 20.134 19.9493 17.4578 21.8503L14.9327 23.3671C13.6564 24.1338 13.13 26.5005 14.398 28.5759C15.0858 29.8378 16.1743 30.605 17.0716 30.8551C17.97 31.1053 18.7335 31.3381 19.4727 32.0829L21.2103 34.0757C21.5258 34.437 22.1172 34.5397 22.5647 34.2813L24.1882 33.3437C24.6658 33.053 24.6436 32.5453 24.4479 32.2061L22.605 29.0087C24.0884 28.1514 27.7588 28.9885 29.5103 29.3021C30.3868 29.4573 30.9354 28.4797 30.4618 27.6599C28.0479 23.4797 23.2228 15.1213 23.2228 15.1213C22.698 14.2127 21.6743 14.3111 21.3255 15.1242Z"
+        fill="white"
+      />
+      <path
+        d="M27.0469 17.8594C28.79 18.7396 29.9121 20.8673 30.0081 22.9808"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+      <path
+        d="M28.0303 14.457C31.8096 16.3042 33.6993 20.0623 33.3808 23.7567"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+
+    <svg
+      v-else
       width="48"
       height="48"
       viewBox="0 0 48 48"
@@ -25,4 +53,13 @@
     </svg>
   </div>
 </template>
-<script></script>
+<script setup>
+import { computed } from 'vue'
+const props = defineProps({
+  active: {
+    type: Boolean,
+    default: false,
+  },
+})
+const getActive = computed(() => props.active)
+</script>
