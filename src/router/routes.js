@@ -8,6 +8,8 @@ import ElementsShowcase from 'pages/ElementsShowcase.vue'
 //PortalProductServiceApplication
 import PortalProductServiceApplicationIndex from 'pages/portal-product/product-portal-service-application/IndexPage.vue'
 import PortalProductServiceApplicationNewService from 'pages/portal-product/product-portal-service-application/NewService.vue'
+import PortalProductServiceApplicationNewServicePaymentInstallmentsDone from 'pages/portal-product/product-portal-service-application/NewServicePaymentInstallmentsDone.vue'
+import PortalProductServiceApplicationNewServicePaymentFullDone from 'pages/portal-product/product-portal-service-application/NewServicePaymentFullDone.vue'
 
 // PortalProductServiceApplication
 import PortalProductMyPage from 'pages/portal-product/my-page/MyPage.vue'
@@ -15,6 +17,8 @@ import PortalProductMyPage from 'pages/portal-product/my-page/MyPage.vue'
 // sub pages(Templates)
 import PortalProdctMyPageHelp from 'components/templates/portal-product/my-page/mypage-help/MyPageHelp.vue'
 import PortalProductMyPageNotice from 'components/templates/portal-product/my-page/mypage-notice/MyPageNotice.vue'
+import PortalProductMyPageNoticeDetail from 'components/templates/portal-product/my-page/mypage-notice/notice-detail/NoticeDetail.vue'
+
 import PortalProductMyPagePayment from 'components/templates/portal-product/my-page/mypage-payment/MyPagePayment.vue'
 
 import PortalProductMyPageServices from 'components/templates/portal-product/my-page/mypage-services/MyPageServices.vue'
@@ -58,6 +62,15 @@ const routes = [
         path: '',
         component: PortalProductServiceApplicationNewService,
       },
+      {
+        path: 'payment-full-done',
+        component: PortalProductServiceApplicationNewServicePaymentFullDone,
+      },
+      {
+        path: 'payment-installments-done',
+        component:
+          PortalProductServiceApplicationNewServicePaymentInstallmentsDone,
+      },
     ],
   },
   {
@@ -70,9 +83,20 @@ const routes = [
         component: PortalProdctMyPageHelp,
       },
       {
-        name: 'portal-products-my-page-notice',
+        name: 'notice-main',
         path: 'notice',
-        component: PortalProductMyPageNotice,
+        children: [
+          {
+            name: 'portal-products-my-page-notice',
+            path: '',
+            component: PortalProductMyPageNotice,
+          },
+          {
+            name: 'portal-products-my-page-notice-detail',
+            path: 'detail',
+            component: PortalProductMyPageNoticeDetail,
+          },
+        ],
       },
       {
         name: 'portal-products-my-page-payment',

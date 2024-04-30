@@ -1,16 +1,22 @@
 <template>
-  <q-header class="service-application-header flex items-center">
+  <q-header class="service-application-header flex items-center container">
     <p class="Logo label-lg-bold">LOGO</p>
     <q-space />
-    <ConditionalStyleRoundedButton
-      v-for="(navigationList, index) in middleNavigationList"
-      :key="index"
-      :width="navigationList.width"
-      :label="navigationList.label"
-      :type="navigationList.type"
-    />
+    <template v-if="showMiddleNavigation">
+      <ConditionalStyleRoundedButton
+        v-for="(navigationList, index) in middleNavigationList"
+        :key="index"
+        :width="navigationList.width"
+        :label="navigationList.label"
+        :type="navigationList.type"
+      />
+    </template>
     <q-space />
-    <StandardButton :type="ctaButton.type" :label="ctaButton.label" :outlined="ctaButton.outlined"  />
+    <StandardButton
+      :type="ctaButton.type"
+      :label="ctaButton.label"
+      :outlined="ctaButton.outlined"
+    />
   </q-header>
 </template>
 <script setup>
@@ -28,14 +34,19 @@ const props = defineProps({
       { label: 'About Cloit', width: '140px', type: 'TertiaryTonal' },
     ],
   },
-ctaButton: {
-  type: Object,
-  default: () => ({
-    type: 'BlueGray',
-    label: '서비스신청',
-    outlined: true
-  })
-}
+  ctaButton: {
+    type: Object,
+    default: () => ({
+      type: 'BlueGray',
+      label: '서비스신청',
+      outlined: true,
+      to: ''
+    }),
+  },
+  showMiddleNavigation: {
+    type: Boolean,
+    default: true,
+  },
 })
 </script>
 <style lang="scss" scoped>

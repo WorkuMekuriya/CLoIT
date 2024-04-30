@@ -1,0 +1,80 @@
+@import '../../../../../../css/app.scss';
+
+.payment-done {
+  @extend .bg-bluegray-50;
+  margin-top: 121px;
+  width: 592px;
+  height: 608px;
+  border-radius: 36px;
+}
+
+.installments-div {
+  padding-left: 36px;
+  padding-top: 36px;
+
+  .sub-text-2 {
+    @extend .p-lg;
+    margin-top: 24px;
+  }
+}
+
+.full-div {
+  padding-left: 36px;
+  padding-top: 36px;
+}
+
+.title {
+  @extend .heading-6;
+  margin: 24px 0px;
+}
+
+.sub-text {
+  @extend .p-lg;
+}
+
+.date-subdomain-container {
+  margin-top: 48px;
+  padding: 0px 12px;
+
+  .data-container {
+    @extend .bg-bluegray-100;
+    width: 280px;
+    height: 166px;
+    border-radius: 36px;
+    padding: 24px;
+  }
+}
+
+.value-container {
+  margin-top: 70px;
+}
+
+.service-application {
+  @extend .label-md-bold;
+}
+
+.service-application-value {
+  @extend .p-md;
+}
+
+.service-application-label {
+  margin-left: 10px;
+}
+
+.subdomain-container {
+  margin-top: 78px;
+}
+
+.subdomain-application {
+  @extend .label-md-bold;
+}
+
+.subdomain-value {
+  @extend .p-md;
+}
+
+.link-button-container {
+  margin-top: 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+}

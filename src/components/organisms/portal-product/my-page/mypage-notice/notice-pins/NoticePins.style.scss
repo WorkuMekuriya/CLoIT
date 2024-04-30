@@ -1,0 +1,16 @@
+@import '../../../../../../css/app.scss';
+
+.notice-pins {
+  padding: 12px 0px;
+  .pin {
+    @extend .label-lg-bold;
+    margin-right: 12px;
+  }
+
+  .title {
+    @extend .label-lg-bold;
+  }
+  .date {
+      @extend .label-sm;
+  }
+}
