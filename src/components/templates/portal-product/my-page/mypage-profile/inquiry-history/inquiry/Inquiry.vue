@@ -1,6 +1,6 @@
 <template>
     <div class="inquiry-container">
-        <div>My Profile > Inquiry</div>
+        <div>My Profile 〉Inquiry</div>
         <div class="header-container">
             <div class="header-title">Inquiry</div>
             <div class="add-icon-container" @click="newInquiry">
@@ -12,7 +12,7 @@
                 <Tag :type="inquiry.tagType" :label="inquiry.tag" :dot="false" size="md" />
                 <div class="inquiry-label">{{ inquiry.label }}</div>
                 <div class="inquiry-date">{{ inquiry.date }}</div>
-                <CircularButton type="TertiaryLined" :buttonDisabled="false" size="sm" :icon="home" />
+                <q-icon class="link-icon" name="north_east" />
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@ const newInquiry = () => {
 };
 
 const inquiries = ref([
-    { label: 'I want a refund', date: 'YYYY-MM-DD', tag: '신청함', tagType: 'TagDisabled' },
+    { label: 'I want a refund', date: 'YYYY-MM-DD', tag: '신청함', tagType: 'TagSkeletonTonal' },
     { label: 'Cannot validate AD card', date: 'YYYY-MM-DD', tag: '답변완료', tagType: 'TagBlue' },
     { label: 'Cannot validate AD card', date: 'YYYY-MM-DD', tag: '답변완료', tagType: 'TagBlue' },
     { label: 'Cannot validate AD card', date: 'YYYY-MM-DD', tag: '답변완료', tagType: 'TagBlue' },
