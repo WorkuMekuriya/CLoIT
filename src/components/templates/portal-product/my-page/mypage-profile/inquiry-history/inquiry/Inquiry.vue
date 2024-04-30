@@ -9,8 +9,10 @@
         </div>
         <div class="inquiries-container">
             <div v-for="(inquiry, index) in inquiries" :key="index" class="inquiry-card" @click="inquiryDetail">
-                <Tag :type="inquiry.tagType" :label="inquiry.tag" :dot="false" size="md" />
-                <div class="inquiry-label">{{ inquiry.label }}</div>
+                <div style="display: flex; align-items: center;">
+                    <Tag :type="inquiry.tagType" :label="inquiry.tag" :dot="false" size="md" />
+                    <div class="inquiry-label">{{ inquiry.label }}</div>
+                </div>
                 <div class="inquiry-date">{{ inquiry.date }}</div>
                 <q-icon class="link-icon" name="north_east" />
             </div>

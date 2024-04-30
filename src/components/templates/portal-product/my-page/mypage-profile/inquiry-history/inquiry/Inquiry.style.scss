@@ -13,6 +13,7 @@ $border-color: lightgray;
 
 .inquiry-container {
     cursor: pointer;
+    width: 996px;
 }
 
 .header-container {
@@ -36,7 +37,6 @@ $border-color: lightgray;
 }
 
 .inquiries-container {
-    width: 996px;
     margin-top: $container-margin-top;
 }
 
@@ -55,7 +55,7 @@ $border-color: lightgray;
 .inquiry-label {
     @extend .heading-6;
     font-weight: 800;
-    margin-left: 12px;
+    padding: 12px;
     margin-right: 12px;
     width: $label-width;
 }
