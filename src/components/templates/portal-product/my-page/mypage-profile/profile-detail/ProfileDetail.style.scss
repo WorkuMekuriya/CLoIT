@@ -73,3 +73,26 @@ $profile-content-margin-top: 60px;
 .flex-center {
     justify-content: left; // Consider changing to `justify-content: center` if applicable.
 }
+
+.profile-action-button {
+    @extend .label-md-bold;
+    width: 380px;
+    height: 68px;
+    cursor: pointer;
+    background-color: #F2F4F7;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    padding-left: 24px;
+}
+
+.link-icon {
+    @extend .text-bluegray-900, .bg-bluegray-300;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    border: 1px solid $bluegray-300;
+}

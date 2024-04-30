@@ -26,9 +26,9 @@ $border-color: lightgray;
 }
 
 .add-icon-container {
+    @extend .bg-bluegray-800;
     width: $add-icon-size;
     height: $add-icon-size;
-    background-color: black;
     display: flex;
     justify-content: center;
     border-radius: 100%;
@@ -36,6 +36,7 @@ $border-color: lightgray;
 }
 
 .inquiries-container {
+    width: 996px;
     margin-top: $container-margin-top;
 }
 
@@ -46,16 +47,32 @@ $border-color: lightgray;
     margin-bottom: $card-margin-bottom;
     justify-content: space-between;
     align-items: center;
+    background-color: #F9FAFB;
     border: $card-border-width solid $border-color;
     border-radius: $card-border-radius;
 }
 
 .inquiry-label {
     @extend .heading-6;
+    font-weight: 800;
+    margin-left: 12px;
+    margin-right: 12px;
     width: $label-width;
 }
 
 .inquiry-date {
     // Add styles for inquiry date if needed.
-    @extend .label-md;
+    // @extend .label-sm;
+    font-size: 15px;
+    width: 104px;
+    margin-right: 12px;
+}
+
+.link-icon {
+    @extend .text-bluegray-600, .bg-bluegray-50;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    border: 1px solid $bluegray-300;
 }
