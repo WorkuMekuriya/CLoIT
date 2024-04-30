@@ -1,0 +1,27 @@
+@import '../../../../../../../css/app.scss';
+
+
+.applicant-information {
+  @extend .text-bluegray-900;
+  margin-top: 40px;
+
+  .header-text {
+    @extend .heading-6;
+  }
+  .checkbox{
+    margin-top: -10px;
+    margin-left: 12px;
+  }
+  .date-container {
+    margin-top: 36px;
+    margin-bottom: 20px;
+  }
+    .date-title {
+      @extend .label-sm-bold;
+    }
+
+    .date {
+      @extend .p-sm;
+      margin-top: 8px
+    }
+}

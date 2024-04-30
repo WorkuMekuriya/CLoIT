@@ -1,0 +1,81 @@
+@import '../../../css/app.scss';
+
+// Define constants
+$selected-service-padding: 36px;
+$service-section-padding: 16px;
+$service-section-border-radius: 36px;
+$service-section-margin-top: 16px;
+$service-content-min-height: 135px;
+$tag-container-padding-top: 24px;
+$total-section-padding-top: 8px;
+$total-section-padding-bottom: 24px;
+$next-button-container-padding-top: 16px;
+
+.selected-service-header-text {
+    @extend .label-lg-bold, .text-bluegray-900;
+    padding-bottom: $service-section-padding;
+}
+
+.service-section-container {
+    // Card styles
+    padding: $selected-service-padding;
+}
+
+.service-section {
+    // Service section styles
+    @extend .bg-bluegray-50, .text-black;
+    border-radius: $service-section-border-radius;
+    margin-top: $service-section-margin-top;
+    min-width: 389px;
+}
+
+.options-section {
+    // Service section styles
+    @extend .bg-bluegray-100, .text-black;
+    border-radius: $service-section-border-radius;
+    padding: $selected-service-padding;
+}
+
+.service-header {
+    // Header styles
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+
+    .header-text {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.service-content {
+    // Content styles
+    min-height: $service-content-min-height;
+}
+
+.tag-container {
+    // Tag container styles
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-top: $tag-container-padding-top;
+}
+
+.total-section {
+    // Total section styles
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $total-section-padding-top;
+    padding-bottom: $total-section-padding-bottom;
+
+    .total-text {
+        @extend .heading-4;
+        font-weight: 800;
+    }
+}
+
+.next-button-container {
+    // Next button container styles
+    padding-top: $next-button-container-padding-top;
+}

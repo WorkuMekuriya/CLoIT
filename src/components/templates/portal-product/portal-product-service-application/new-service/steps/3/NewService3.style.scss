@@ -1,0 +1,26 @@
+@import '../../../../../../../css/app.scss';
+
+.select-options{
+  .select-text {
+    @extend .heading-6;
+  }
+
+  .selected-text {
+    @extend .heading-6;
+    padding-left: 36px;
+  }
+
+  .card-container {
+    margin-top: 16px;
+  }
+  .select-service-row {
+    margin-top: 28px;
+  }
+  .games-row{
+    margin-top: 70px;
+  }
+  .scale-row{
+        margin-top: 70px;
+  }
+
+}

@@ -1,0 +1,11 @@
+@import '../../../../css/app.scss';
+.page-container{
+  .side-bar {
+    height: 60vh;
+      .set-font-size {
+        @extend .text-arcticblue-600;
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+}

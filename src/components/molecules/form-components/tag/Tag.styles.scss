@@ -54,6 +54,12 @@ $sm-tag-padding: 4px 16px 4px 4px;
     @extend .bg-yellow-50, .text-yellow-500;
   }
 
+
+    @else if ($color-name =='TagSkeletonTonal') {
+      @extend  .text-bluegray-600;
+      background: transparent;
+      border: 1px solid $bluegray-300;
+    }
   @else {
     @extend .bg-bluegray-200, .text-black;
   }
@@ -117,6 +123,9 @@ $sm-tag-padding: 4px 16px 4px 4px;
 .q-chip--TagBlack {
   @include tag-color('TagBlack');
 }
+.q-chip--TagSkeletonTonal {
+  @include tag-color('TagSkeletonTonal');
+}
 
 // Additional styles for sizes
 .q-chip--sm {
@@ -130,7 +139,6 @@ $sm-tag-padding: 4px 16px 4px 4px;
   @extend .label-xs-bold ;
   height: $md-height;
   min-width: $md-min-width;
-  padding: $sm-tag-padding;
 }
 
 .q-chip--lg {

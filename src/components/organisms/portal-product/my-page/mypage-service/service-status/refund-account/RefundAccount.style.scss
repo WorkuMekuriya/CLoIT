@@ -1,0 +1,24 @@
+@import '../../../../../../../css/app.scss';
+
+
+.refund-account {
+  @extend .text-bluegray-900;
+  margin-top: 40px;
+
+  .header-text {
+    @extend .heading-6;
+  }
+
+  .date-container {
+    margin-top: 36px;
+
+    .date-title {
+      @extend .label-sm-bold;
+    }
+
+    .date {
+      @extend .p-sm;
+      margin-top: 8px
+    }
+  }
+}

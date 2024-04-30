@@ -1,0 +1,88 @@
+@import '../../../../../../../css/app.scss';
+
+// Initialize constants
+$margin-small: 24px;
+$margin-medium: 36px;
+$margin-large: 60px;
+$gap-small: 16px;
+$gap-medium: 24px;
+$grid-main-column-sm: 70% 30%;
+$grid-main-column-lg: 60% 40%;
+
+// Main grid container
+.grid-main-container {
+    display: grid;
+    margin: $margin-small;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $gap-small;
+}
+
+// Section container
+.section-container {
+    margin-bottom: $margin-large;
+}
+
+// Card container
+.card-container {
+    justify-content: flex-start;
+    margin-bottom: $margin-large;
+}
+
+// Card spacing
+.card-spacing {
+    margin-right: $gap-small;
+}
+
+// Section checkbox title
+.section-checkbox-title {
+    @extend .heading-6;
+}
+
+// Checkbox container
+.checkbox-container {
+    margin-bottom: $margin-medium;
+}
+
+// Checkbox spacing
+.checkbox-spacing {
+    margin-left: $margin-small;
+}
+
+// Grid container
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $gap-medium;
+}
+
+// Textfield margin
+.textfield {
+    margin-top: $margin-small;
+}
+
+// Section title
+.section-title {
+    @extend .heading-6;
+    margin-bottom: $margin-medium;
+}
+
+// Media queries
+@media (min-width: 769px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-main-container {
+        grid-template-columns: $grid-main-column-sm;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-main-container {
+        grid-template-columns: $grid-main-column-lg;
+    }
+}

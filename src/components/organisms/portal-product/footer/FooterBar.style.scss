@@ -1,0 +1,29 @@
+@import '../../../../css/app.scss';
+
+$footer-margin-bottom: 40px;
+$footer-margin-top: 120px;
+$footer-height: 76px;
+$footer-border-radius: 36px;
+
+.service-application-footer {
+  @extend .bg-bluegray-50, .text-bluegray-900;
+  margin-bottom: $footer-margin-bottom;
+  margin-top: $footer-margin-top;
+  height: $footer-height !important;
+  padding-left: 37px;
+  padding-right: 7px;
+  border-radius: $footer-border-radius;
+
+  .copyright-text {
+    margin-left: 18px;
+  }
+
+  .footer-icon {
+    font-size: 20px;
+    font-weight: 400;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+}

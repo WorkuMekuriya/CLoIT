@@ -1,0 +1,26 @@
+@import '../.../../../../../../css/app.scss';
+
+$header-height: 92px;
+
+.service-application-header {
+  @extend .bg-white, .text-bluegray-900;
+  height: $header-height;
+  position: static;
+  margin-bottom: 16px;
+
+  .nav-icons {
+    @extend .text-bluegray-600, .bg-bluegray-50;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+
+  .logout-icon {
+    margin-left: 8px;
+  }
+
+  .notification-icon {
+    margin-right: 8px;
+  }
+}

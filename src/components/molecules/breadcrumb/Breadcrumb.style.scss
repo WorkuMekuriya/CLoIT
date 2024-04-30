@@ -1,0 +1,50 @@
+@import '../../../css/app.scss';
+
+$breadcrum-padding: 20px 20px 20px 20px;
+
+$breadcrum-dot-width: 12px;
+$breadcrum-dot-height: 12px;
+$breadcrum-dot-radius: 50px;
+$breadcrum-dot-margin-right: 12px;
+
+$breadcrum-sublabel-margin: 20px;
+
+$breadcrum-label-container-margin: 20px;
+
+
+.breadcrum-container {
+    flex-direction: row;
+    padding: $breadcrum-padding;
+}
+
+.breadcrum-dot {
+    @extend .bg-arcticblue;
+    width: $breadcrum-dot-width;
+    height: $breadcrum-dot-width;
+    border-radius: $breadcrum-dot-radius;
+    margin-right: $breadcrum-dot-margin-right;
+}
+
+.breadcrum-label-container {
+    @extend .text-bluegray-500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: $breadcrum-label-container-margin;
+}
+
+.breadcrum-label {
+    @extend .label-md, .text-arcticblue-600;
+    margin-right: 12px;
+}
+
+.breadcrum-sublabel {
+    @extend .label-md, .text-bluegray-500;
+    margin-top: $breadcrum-sublabel-margin;
+    margin-bottom: $breadcrum-sublabel-margin;
+}
+
+.breadcrum-stylish {
+    @extend .label-md, .text-bluegray-500;
+    text-decoration: .5px underline;
+}
