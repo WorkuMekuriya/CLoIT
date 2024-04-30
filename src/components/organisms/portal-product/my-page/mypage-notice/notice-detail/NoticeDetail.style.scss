@@ -1,0 +1,19 @@
+@import '../../../../../../css/app.scss';
+
+.notice-title {
+  margin-top: 16px;
+}
+
+.title-text {
+  @extend .heading-4;
+  margin-right: 16px;
+}
+
+.date {
+  @extend .label-sm, .text-bluegray-700;
+  margin: 16px 0px;
+}
+.full-notice{
+  @extend .p-md;
+  max-width: 590px;
+}

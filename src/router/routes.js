@@ -15,6 +15,8 @@ import PortalProductMyPage from 'pages/portal-product/my-page/MyPage.vue'
 // sub pages(Templates)
 import PortalProdctMyPageHelp from 'components/templates/portal-product/my-page/mypage-help/MyPageHelp.vue'
 import PortalProductMyPageNotice from 'components/templates/portal-product/my-page/mypage-notice/MyPageNotice.vue'
+import PortalProductMyPageNoticeDetail from 'components/templates/portal-product/my-page/mypage-notice/notice-detail/NoticeDetail.vue'
+
 import PortalProductMyPagePayment from 'components/templates/portal-product/my-page/mypage-payment/MyPagePayment.vue'
 
 import PortalProductMyPageServices from 'components/templates/portal-product/my-page/mypage-services/MyPageServices.vue'
@@ -70,9 +72,20 @@ const routes = [
         component: PortalProdctMyPageHelp,
       },
       {
-        name: 'portal-products-my-page-notice',
+        name: 'notice-main',
         path: 'notice',
-        component: PortalProductMyPageNotice,
+        children: [
+          {
+            name: 'portal-products-my-page-notice',
+            path: '',
+            component: PortalProductMyPageNotice,
+          },
+          {
+            name: 'portal-products-my-page-notice-detail',
+            path: 'detail',
+            component: PortalProductMyPageNoticeDetail,
+          },
+        ],
       },
       {
         name: 'portal-products-my-page-payment',

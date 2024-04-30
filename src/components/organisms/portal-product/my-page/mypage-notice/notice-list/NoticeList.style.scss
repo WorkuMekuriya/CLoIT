@@ -1,0 +1,21 @@
+@import '../../../../../../css/app.scss';
+
+.notice-list {
+  margin-top: 36px;
+  @extend .text-bluegray-900;
+
+  .title {
+    @extend .label-lg-bold;
+    margin-bottom: 8px;
+  }
+
+  .date {
+    @extend .label-sm;
+    margin-bottom: 16px;
+  }
+
+  .notice {
+    @extend .p-md;
+    padding-right: 36px;
+  }
+}
