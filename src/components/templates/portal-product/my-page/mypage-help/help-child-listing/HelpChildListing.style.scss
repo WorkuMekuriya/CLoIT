@@ -1,0 +1,16 @@
+@import '../../../../../../css/app.scss';
+
+// Header title styles
+.header-title {
+    @extend .heading-4;
+    margin-top: 12px;
+    margin-right: 499px;
+}
+
+.overview-box {
+    width: 321px;
+    height: 263px;
+    flex-shrink: 0;
+    margin-right: 16px;
+    background: var(--Blue-Gray-100, #F2F4F7);
+}

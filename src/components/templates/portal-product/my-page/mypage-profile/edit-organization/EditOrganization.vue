@@ -1,6 +1,10 @@
 <template>
     <div style="max-width: 80%;">
-        <div>My Profile 〉Edit Organization</div>
+        <div style="display: flex;">
+            <div style="color: gray; text-decoration: underline;">My Profile</div>
+            <div style="padding-left: 5px;"> 〉</div>
+            <span style="color: black; text-decoration: none !important;">Edit Organization</span>
+        </div>
         <div style="font-weight: 800; font-size: 32px;">Edit Organization</div>
         <div>
             <div class="grid-container">

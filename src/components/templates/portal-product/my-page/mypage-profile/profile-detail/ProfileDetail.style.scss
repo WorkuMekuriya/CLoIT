@@ -20,6 +20,19 @@ $profile-content-margin-top: 60px;
     padding: 0 $profile-padding;
 }
 
+.profile-avator {
+    width: 44px;
+    height: 44px;
+    background-color: #253BFF;
+    position: relative;
+    bottom: 44px;
+    left: 42px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // Use variables for consistent margin values in profile options.
 .profile-options {
     margin-top: $profile-margin-top;
@@ -43,29 +56,27 @@ $profile-content-margin-top: 60px;
 
 // Improve clarity of image holder styles using variables.
 .image-holder {
+    @extend .bg-bluegray-900;
     width: $image-dimensions;
     height: $image-dimensions;
-    background-color: black;
     border-radius: 50%;
 }
 
 // Use variables for name styles.
 .name {
-    font-weight: $name-font-weight;
-    font-size: $name-font-size;
-    margin-top: $name-margin-top;
+    @extend .heading-5;
+    font-weight: 800;
+    margin-bottom: 8px;
 }
 
 // Use consistent class name and variables for organization.
 .organization {
-    font-weight: $organization-font-weight;
-    font-size: $organization-font-size;
+    @extend.subH-lg-med, .text-bluegray-700;
 }
 
 // Consistent margin and padding for button container using variables.
 .button-container {
-    margin-top: $button-margin-top;
-    padding: $button-padding;
+    padding-bottom: $button-padding;
 }
 
 // Use a comment to describe the purpose of justify-center and flex-center classes.
@@ -93,6 +104,5 @@ $profile-content-margin-top: 60px;
     border-radius: 50%;
     width: 48px;
     height: 48px;
-    font-size: 20px;
-    border: 1px solid $bluegray-300;
+    border: .1px solid $bluegray-300;
 }

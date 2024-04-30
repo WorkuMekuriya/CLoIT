@@ -1,6 +1,10 @@
 <template>
     <div class="container">
-        <div class="breadcrumbs">My Profile 〉Edit Profile</div>
+        <div style="display: flex;">
+            <div style="color: gray; text-decoration: underline;">My Profile</div>
+            <div style="padding-left: 5px;"> 〉</div>
+            <span style="color: black; text-decoration: none !important;">Edit Profile</span>
+        </div>
         <div class="title">Edit Profile</div>
         <div class="grid-container">
             <div v-for="(field, index) in profileFields" :key="index" class="grid-item">

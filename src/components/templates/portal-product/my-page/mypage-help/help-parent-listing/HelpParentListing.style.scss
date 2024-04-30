@@ -1,0 +1,36 @@
+@import '../../../../../../css/app.scss';
+
+.header-title {
+    @extend .heading-4;
+    margin-top: 12px;
+}
+
+.container-listing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 995px;
+    height: 50px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 16px
+}
+
+.link-icon {
+    @extend .bg-arcticblue-600, .text-white;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    border: .1px solid #253BFF;
+}
+
+.subtitle {
+    @extend .p-lg, .text-bluegray-700;
+    font-weight: 400;
+}
+
+.listing-title {
+    @extend .label-lg;
+    font-weight: 500;
+    margin-top: 24px;
+}
