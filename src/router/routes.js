@@ -8,6 +8,8 @@ import ElementsShowcase from 'pages/ElementsShowcase.vue'
 //PortalProductServiceApplication
 import PortalProductServiceApplicationIndex from 'pages/portal-product/product-portal-service-application/IndexPage.vue'
 import PortalProductServiceApplicationNewService from 'pages/portal-product/product-portal-service-application/NewService.vue'
+import PortalProductServiceApplicationNewServicePaymentInstallmentsDone from 'pages/portal-product/product-portal-service-application/NewServicePaymentInstallmentsDone.vue'
+import PortalProductServiceApplicationNewServicePaymentFullDone from 'pages/portal-product/product-portal-service-application/NewServicePaymentFullDone.vue'
 
 // PortalProductServiceApplication
 import PortalProductMyPage from 'pages/portal-product/my-page/MyPage.vue'
@@ -59,6 +61,15 @@ const routes = [
       {
         path: '',
         component: PortalProductServiceApplicationNewService,
+      },
+      {
+        path: 'payment-full-done',
+        component: PortalProductServiceApplicationNewServicePaymentFullDone,
+      },
+      {
+        path: 'payment-installments-done',
+        component:
+          PortalProductServiceApplicationNewServicePaymentInstallmentsDone,
       },
     ],
   },
