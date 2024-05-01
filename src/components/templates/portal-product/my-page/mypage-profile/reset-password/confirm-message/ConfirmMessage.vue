@@ -5,7 +5,11 @@
   </div>
   <q-space />
   <div class="flex justify-center items-center">
-    <ConditionalStyleRoundedButton type="Primary" label="Save" buttonWidth="328px" />
+    <ConditionalStyleRoundedButton
+      type="Primary"
+      label="Save"
+      buttonWidth="328px"
+    />
   </div>
 </template>
 

@@ -10,8 +10,8 @@ $font-weight-inquiry-title: 800;
 $font-size-inquiry-title: 32px;
 
 // Define color variables
-$attachment-background-color: #F2F4F7;
-$attachment-close-background-color: #D0D5DD;
+$attachment-background-color: #f2f4f7;
+$attachment-close-background-color: #d0d5dd;
 $attachment-close-icon-color: white;
 
 // Define dimension variables
@@ -31,94 +31,94 @@ $attachment-margin-top: 8px;
 $attachment-close-margin-right: 2px;
 
 .inquiry-title {
-    @extend .heading-6;
-    margin-bottom: $margin-bottom-inquiry-title;
+  @extend .heading-6;
+  margin-bottom: $margin-bottom-inquiry-title;
 }
 
 // MyProfileInquiry.scss
 
 .my-profile-inquiry-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .my-profile-inquiry-title {
-    font-weight: $font-weight-inquiry-title;
-    font-size: $font-size-inquiry-title;
+  font-weight: $font-weight-inquiry-title;
+  font-size: $font-size-inquiry-title;
 }
 
 .inquiry-item {
-    margin-top: 35px;
-    width: 60%;
-    border-bottom-width: $border-bottom-width-inquiry-item;
-    border-color: $border-color-inquiry-item;
-    border-bottom-style: solid;
+  margin-top: 35px;
+  width: 60%;
+  border-bottom-width: $border-bottom-width-inquiry-item;
+  border-color: $border-color-inquiry-item;
+  border-bottom-style: solid;
 }
 
 .inquiry-details {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 39px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 39px;
 }
 
 .inquiry-description {
-    margin-bottom: $margin-bottom-description;
+  margin-bottom: $margin-bottom-description;
 }
 
 .attachment-label {
-    margin-bottom: $margin-bottom-attachment-label;
+  margin-bottom: $margin-bottom-attachment-label;
 }
 
 .attachment-label-font {
-    @extend .label-sm-bold;
-    padding-top: 8px;
+  @extend .label-sm-bold;
+  padding-top: 8px;
 }
 
 .attachment-list {
-    margin-top: 24px;
-    margin-bottom: 36px;
+  margin-top: 24px;
+  margin-bottom: 36px;
 }
 
 /* Define styles for attachment-list container */
 .attachment-item-list {
-    display: flex;
-    width: $attachment-width;
-    border-radius: $attachment-border-radius;
-    height: $attachment-height;
-    background-color: $attachment-background-color;
-    padding: $attachment-padding;
-    margin-top: $attachment-margin-top;
-    justify-content: space-between;
+  display: flex;
+  width: $attachment-width;
+  border-radius: $attachment-border-radius;
+  height: $attachment-height;
+  background-color: $attachment-background-color;
+  padding: $attachment-padding;
+  margin-top: $attachment-margin-top;
+  justify-content: space-between;
 }
 
 /* Define styles for the inner div element */
 .attachment-close {
-    width: $attachment-close-width;
-    height: $attachment-close-height;
-    background-color: $attachment-close-background-color;
-    border-radius: $attachment-close-border-radius;
-    padding: $attachment-close-padding;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: $attachment-close-margin-right;
+  width: $attachment-close-width;
+  height: $attachment-close-height;
+  background-color: $attachment-close-background-color;
+  border-radius: $attachment-close-border-radius;
+  padding: $attachment-close-padding;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: $attachment-close-margin-right;
 }
 
 .breadcrumb {
-    display: flex;
+  display: flex;
 }
 
 .help-center {
-    @extend .text-bluegray-500;
-    text-decoration: underline;
+  @extend .text-bluegray-500;
+  text-decoration: underline;
 }
 
 .breadcrumb-separator {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .breadcrumb-item {
-    @extend .text-bluegray-700;
-    text-decoration: none !important;
+  @extend .text-bluegray-700;
+  text-decoration: none !important;
 }

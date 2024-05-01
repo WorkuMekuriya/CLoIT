@@ -6,81 +6,80 @@ $padding-small: 12px;
 $padding-medium: 16px;
 $padding-large: 24px;
 $border-radius-circle: 50%;
-$color-arcticblue-600: #1E3A8A;
+$color-arcticblue-600: #1e3a8a;
 $height-container: 50px;
 $border-width: 0.1px;
 $padding-left: 5px;
 
 .header-title {
-    @extend .heading-4;
-    margin-top: $padding-small;
+  @extend .heading-4;
+  margin-top: $padding-small;
 }
 
 .container-listing {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: $height-container;
-    padding-top: $padding-small;
-    padding-bottom: $padding-small;
-    margin-bottom: $padding-medium;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $height-container;
+  padding-top: $padding-small;
+  padding-bottom: $padding-small;
+  margin-bottom: $padding-medium;
 }
 
 .link-icon {
-    @extend .bg-arcticblue-600, .text-white;
-    border-radius: $border-radius-circle;
-    width: 26px;
-    height: 26px;
-    border: $border-width solid $color-arcticblue-600;
+  @extend .bg-arcticblue-600, .text-white;
+  border-radius: $border-radius-circle;
+  width: 26px;
+  height: 26px;
+  border: $border-width solid $color-arcticblue-600;
 }
 
 .subtitle {
-    @extend .p-lg, .text-bluegray-700;
-    font-weight: 400;
+  @extend .p-lg, .text-bluegray-700;
+  font-weight: 400;
 }
 
 .listing-title {
-    @extend .label-lg;
-    font-weight: 500;
-    margin-top: $padding-large;
+  @extend .label-lg;
+  font-weight: 500;
+  margin-top: $padding-large;
 }
 
 .flex-container {
-    display: flex;
+  display: flex;
 }
 
 .help-center-link {
-    @extend .text-bluegray-500;
-    text-decoration: underline;
+  @extend .text-bluegray-500;
+  text-decoration: underline;
 }
 
 .separator {
-    padding-left: $padding-left;
+  padding-left: $padding-left;
 }
 
 .getting-started-link {
-    @extend .text-black;
-    text-decoration: none !important;
+  @extend .text-black;
+  text-decoration: none !important;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 // Media queries
 @media (max-width: 1023px) {
+  .header-container {
+    display: block;
+  }
 
-    .header-container {
-        display: block;
-    }
+  .header-title {
+    padding: $padding-small;
+  }
 
-    .header-title {
-        padding: $padding-small;
-    }
-
-    .subtitle {
-        padding: $padding-small;
-    }
+  .subtitle {
+    padding: $padding-small;
+  }
 }

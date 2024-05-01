@@ -17,92 +17,92 @@ $profile-content-margin-top: 60px;
 
 // Adjust padding and margin values for the profile container using variables.
 .profile-container {
-    padding: 0 $profile-padding;
+  padding: 0 $profile-padding;
 }
 
 .profile-avator {
-    width: 44px;
-    height: 44px;
-    background-color: #253BFF;
-    position: relative;
-    bottom: 44px;
-    left: 42px;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: #253bff;
+  position: relative;
+  bottom: 44px;
+  left: 42px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // Use variables for consistent margin values in profile options.
 .profile-options {
-    margin-top: $profile-margin-top;
+  margin-top: $profile-margin-top;
 }
 
 // Use variables for header and title styles.
 .header,
 .title {
-    font-weight: $title-font-weight;
-    font-size: $title-font-size;
+  font-weight: $title-font-weight;
+  font-size: $title-font-size;
 }
 
 // Consistent flex layout styles for profile content.
 .profile-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: $profile-content-margin-top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: $profile-content-margin-top;
 }
 
 // Improve clarity of image holder styles using variables.
 .image-holder {
-    @extend .bg-bluegray-900;
-    width: $image-dimensions;
-    height: $image-dimensions;
-    border-radius: 50%;
+  @extend .bg-bluegray-900;
+  width: $image-dimensions;
+  height: $image-dimensions;
+  border-radius: 50%;
 }
 
 // Use variables for name styles.
 .name {
-    @extend .heading-5;
-    font-weight: 800;
-    margin-bottom: 8px;
+  @extend .heading-5;
+  font-weight: 800;
+  margin-bottom: 8px;
 }
 
 // Use consistent class name and variables for organization.
 .organization {
-    @extend.subH-lg-med, .text-bluegray-700;
+  @extend.subh-lg-med, .text-bluegray-700;
 }
 
 // Consistent margin and padding for button container using variables.
 .button-container {
-    padding-bottom: $button-padding;
+  padding-bottom: $button-padding;
 }
 
 // Use a comment to describe the purpose of justify-center and flex-center classes.
 .justify-center,
 .flex-center {
-    justify-content: left; // Consider changing to `justify-content: center` if applicable.
+  justify-content: left; // Consider changing to `justify-content: center` if applicable.
 }
 
 .profile-action-button {
-    @extend .label-md-bold;
-    width: 380px;
-    height: 68px;
-    cursor: pointer;
-    background-color: #F2F4F7;
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-    padding-left: 24px;
+  @extend .label-md-bold;
+  width: 380px;
+  height: 68px;
+  cursor: pointer;
+  background-color: #f2f4f7;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  padding-left: 24px;
 }
 
 .link-icon {
-    @extend .text-bluegray-900, .bg-bluegray-300;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    border: .1px solid $bluegray-300;
+  @extend .text-bluegray-900, .bg-bluegray-300;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border: 0.1px solid $bluegray-300;
 }

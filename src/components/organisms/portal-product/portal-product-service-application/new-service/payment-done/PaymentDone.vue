@@ -36,7 +36,13 @@
       </div>
     </div>
     <div class="link-button-container">
-      <LinkButton class="q-mt-lg" v-if="type == 'Full'"  label="Dashboard" iconTextColor="text-white" iconBackgroundColor="bg-arcticblue-600" />
+      <LinkButton
+        class="q-mt-lg"
+        v-if="type == 'Full'"
+        label="Dashboard"
+        iconTextColor="text-white"
+        iconBackgroundColor="bg-arcticblue-600"
+      />
       <LinkButton class="q-mt-md" label="Help Center" />
     </div>
   </div>

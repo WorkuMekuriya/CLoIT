@@ -6,14 +6,14 @@
   height: 344px;
   border-radius: 36px;
   padding: 36px;
-  .title{
+  .title {
     @extend .heading-4;
     margin-top: 24px;
   }
-  .sub-title{
+  .sub-title {
     @extend .p-lg;
   }
-     .sub-title-middle {
-      margin: 24px 0px;
-     }
+  .sub-title-middle {
+    margin: 24px 0px;
+  }
 }

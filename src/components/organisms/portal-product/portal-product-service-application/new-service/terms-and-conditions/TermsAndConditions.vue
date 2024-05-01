@@ -2,11 +2,13 @@
   <div class="terms-and-conditions">
     <div class="agree-to-all flex justify-between items-center">
       <p class="agree-to-all-text">Agree to All</p>
-      <div class="check-box cursor-pointer"    :class="{'selected-check-box' : allSelected}">
+      <div
+        class="check-box cursor-pointer"
+        :class="{ 'selected-check-box': allSelected }"
+      >
         <svg
           v-if="!allSelected"
           @click="selectAllCheckboxes"
-
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -126,7 +128,7 @@ const toggleCheckbox = (index) => {
 
 // Read Policy
 const dialogStore = useDialogStore()
-const innerComponent = markRaw(TermsDialogInner);
+const innerComponent = markRaw(TermsDialogInner)
 const leftIcon = markRaw(AlertStandardIcon)
 const readPolicy = () => {
   console.log('read')

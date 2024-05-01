@@ -6,7 +6,7 @@
         <img :src="imageSrc" />
       </template>
       <template v-else-if="type === 'icon'">
-      <PersonIcon :size="size" />
+        <PersonIcon :size="size" />
       </template>
       <template v-else>
         <span>{{ initials }}</span>
@@ -37,7 +37,6 @@ const props = defineProps({
     type: String,
     default: 'J',
   },
-
 })
 
 const sizeMap = {
@@ -53,4 +52,3 @@ const avatarSize = computed(() => sizeMap[props.size])
 <style lang="scss" scoped>
 @import 'AvatarButton.style.scss';
 </style>
-

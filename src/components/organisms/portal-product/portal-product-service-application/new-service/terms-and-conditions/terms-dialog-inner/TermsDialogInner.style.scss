@@ -1,15 +1,15 @@
 @import '../../../../../../../css/app.scss';
-.terms-dialog-inner{
-  .content{
+.terms-dialog-inner {
+  .content {
     padding: 0px 26px;
     height: 507px;
     overflow-y: scroll;
   }
-  .title{
+  .title {
     @extend .heading-6;
     margin-bottom: 22px;
   }
-  .action{
+  .action {
     height: 85px;
   }
 }

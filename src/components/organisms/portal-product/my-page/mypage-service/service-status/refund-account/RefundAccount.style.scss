@@ -1,6 +1,5 @@
 @import '../../../../../../../css/app.scss';
 
-
 .refund-account {
   @extend .text-bluegray-900;
   margin-top: 40px;
@@ -18,7 +17,7 @@
 
     .date {
       @extend .p-sm;
-      margin-top: 8px
+      margin-top: 8px;
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-   <NewServiceFullDone />
+    <NewServiceFullDone />
   </div>
 </template>
 <script setup>

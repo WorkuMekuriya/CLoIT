@@ -369,17 +369,20 @@ The `AvatarButton` component is a versatile avatar component that can render dif
 ## Props
 
 - **type**:
+
   - Type: `String`
   - Default: `'image'`
   - Validator: `['image', 'icon', 'initial']`
   - Description: Determines the type of content to render inside the avatar. Possible values are `'image'`, `'icon'`, and `'initial'`.
 
 - **imageSrc**:
+
   - Type: `String`
   - Default: `'https://cdn.quasar.dev/img/avatar.png'`
   - Description: The URL of the image to display inside the avatar. This prop is only used when the `type` prop is set to `'image'`.
 
 - **size**:
+
   - Type: `String`
   - Default: `'xl'`
   - Validator: `['sm', 'md', 'lg', 'xl']`
@@ -442,5 +445,5 @@ The AlertDialog component dynamically selects an appropriate icon based on the s
 - `'Error'`
 
 ## Events
-- `close`: Emitted when the close icon within the alert dialog is clicked. This event can be used to handle actions when the alert is dismissed.
 
+- `close`: Emitted when the close icon within the alert dialog is clicked. This event can be used to handle actions when the alert is dismissed.

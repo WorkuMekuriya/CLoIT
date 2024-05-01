@@ -4,18 +4,28 @@
       <div>
         <div class="flex">
           <p class="service-text">{{ serviceText }}{{ serviceNumber }}</p>
-          <Tag class="first-tag"  size="md" :type="tagType" :label="tagLabel"/>
+          <Tag class="first-tag" size="md" :type="tagType" :label="tagLabel" />
         </div>
         <div class="flex date-container">
           <p class="date">{{ startDate }}</p>
-         ~
+          ~
           <p class="date">{{ endDate }}</p>
         </div>
       </div>
-      <q-icon class="link-icon cursor-pointer" name="north_east" @click="navigateToPage(to)"></q-icon>
+      <q-icon
+        class="link-icon cursor-pointer"
+        name="north_east"
+        @click="navigateToPage(to)"
+      ></q-icon>
     </div>
     <div class="services-container flex">
-      <Tag :label="service" size="md" type="TagSkeleton" v-for="(service, index) in services" :key="index"  />
+      <Tag
+        :label="service"
+        size="md"
+        type="TagSkeleton"
+        v-for="(service, index) in services"
+        :key="index"
+      />
     </div>
   </div>
 </template>
@@ -54,8 +64,8 @@ defineProps({
   },
   to: {
     type: String,
-    default: ''
-  }
+    default: '',
+  },
 })
 const navigateToPage = (routeName) => {
   console.log(routeName)

@@ -11,8 +11,8 @@
       'md-card-container': card.size == 'md',
     }"
     style="border-radius: 36px"
-    :style="{width:card.width, height: card.height}"
-    :key='index'
+    :style="{ width: card.width, height: card.height }"
+    :key="index"
   >
     <div
       class="card-header"
@@ -145,32 +145,38 @@ export default {
     },
   },
   methods: {
- toggleCardType(index, event) {
+    toggleCardType(index, event) {
       event.stopPropagation()
       if (this.isSingleSelect) {
         // If single select, reset the selected cards and add the new card
-        if (this.selectedCards.length === 1 && this.selectedCards[0] === index) {
-          this.selectedCards = [];
+        if (
+          this.selectedCards.length === 1 &&
+          this.selectedCards[0] === index
+        ) {
+          this.selectedCards = []
         } else {
-          this.selectedCards = [index];
+          this.selectedCards = [index]
         }
       } else {
         // If multi-select, add or remove the card from the selected cards
-        const cardIndex = this.selectedCards.indexOf(index);
+        const cardIndex = this.selectedCards.indexOf(index)
         if (cardIndex !== -1) {
           // If the card is already selected, remove it
-          this.selectedCards.splice(cardIndex, 1);
+          this.selectedCards.splice(cardIndex, 1)
         } else {
           // Otherwise, add it to the list of selected cards
-          this.selectedCards.push(index);
+          this.selectedCards.push(index)
         }
       }
       // Emit the updated selected cards array
-      this.$emit('card-clicked', this.selectedCards.map(i => this.cardList[i]));
+      this.$emit(
+        'card-clicked',
+        this.selectedCards.map((i) => this.cardList[i]),
+      )
     },
     // Method to check if a card is selected
     isCardSelected(index) {
-      return this.selectedCards.includes(index);
+      return this.selectedCards.includes(index)
     },
   },
 }

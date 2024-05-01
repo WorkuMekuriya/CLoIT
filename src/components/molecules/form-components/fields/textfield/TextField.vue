@@ -1,4 +1,3 @@
-
 <style lang="scss" scoped>
 @import 'TextField.style.scss';
 </style>
@@ -101,8 +100,7 @@ const setDisable = computed(() => {
   else return ''
 })
 const removeIconSpace = computed(() => {
-  if (!props.iconLeft)
-    return 'remove-icon-left-space'
+  if (!props.iconLeft) return 'remove-icon-left-space'
   else return ''
 })
 

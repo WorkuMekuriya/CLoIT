@@ -1,55 +1,15 @@
 @import '../../../css/app.scss';
 
-.linear-tab{
-.single-tab {
-  @extend .text-bluegray-200;
-  width: 125px;
-  padding: 0px;
-
-  &:active, &:hover {
-    @extend .text-arcticblue-600
-  }
-
-  .q-tab__content {
-    width: 100%;
-  }
-}
-
-.single-tab.q-tab--active {
-      @extend .text-arcticblue-600;
-    &:active,
-    &:hover {
-      @extend .text-arcticblue-600
-    }
-  }
-
-
-:deep(.q-tab--active .q-tab__indicator) {
-  width: 125px;
-  height: 4px;
-  border-radius: 4px 4px 0 0;
-}
-
-:deep(.q-tab__label) {
-  width: 125px;
-  @extend .text-bluegray-500;
-
-  &:active,
-  &:hover {
-    @extend .text-arcticblue-600
-  }
-
-}
-:deep(.q-tab__label .q-tab--active) {
-    @extend .text-arcticblue-600
-}
-}
-.circular-tab{
-.single-tab {
+.linear-tab {
+  .single-tab {
+    @extend .text-bluegray-200;
     width: 125px;
     padding: 0px;
-    border-radius: 46px;
-  @extend .text-bluegray-500, .bg-white;
+
+    &:active,
+    &:hover {
+      @extend .text-arcticblue-600;
+    }
 
     .q-tab__content {
       width: 100%;
@@ -57,20 +17,55 @@
   }
 
   .single-tab.q-tab--active {
-      @extend .bg-arcticblue-600, .text-white;
-    &:active {
-      @extend .bg-arcticblue-600
+    @extend .text-arcticblue-600;
+    &:active,
+    &:hover {
+      @extend .text-arcticblue-600;
     }
   }
-
 
   :deep(.q-tab--active .q-tab__indicator) {
-   display: none;
+    width: 125px;
+    height: 4px;
+    border-radius: 4px 4px 0 0;
   }
-    .q-tab__content{
-      display: flex;
+
+  :deep(.q-tab__label) {
+    width: 125px;
+    @extend .text-bluegray-500;
+
+    &:active,
+    &:hover {
+      @extend .text-arcticblue-600;
     }
+  }
+  :deep(.q-tab__label .q-tab--active) {
+    @extend .text-arcticblue-600;
+  }
 }
+.circular-tab {
+  .single-tab {
+    width: 125px;
+    padding: 0px;
+    border-radius: 46px;
+    @extend .text-bluegray-500, .bg-white;
 
+    .q-tab__content {
+      width: 100%;
+    }
+  }
 
+  .single-tab.q-tab--active {
+    @extend .bg-arcticblue-600, .text-white;
+    &:active {
+      @extend .bg-arcticblue-600;
+    }
+  }
 
+  :deep(.q-tab--active .q-tab__indicator) {
+    display: none;
+  }
+  .q-tab__content {
+    display: flex;
+  }
+}

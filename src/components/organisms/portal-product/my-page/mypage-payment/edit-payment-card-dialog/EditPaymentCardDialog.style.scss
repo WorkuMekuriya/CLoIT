@@ -1,14 +1,14 @@
 @import '../../../../../../css/app.scss';
 
-.edit-payment-container{
+.edit-payment-container {
   padding: 0px 36px;
-  .textfield{
+  .textfield {
     margin-top: 18px;
   }
-  .save-button{
+  .save-button {
     height: 98px;
   }
-  .title{
+  .title {
     @extend .text-bluegray-900, .heading-6;
   }
 }

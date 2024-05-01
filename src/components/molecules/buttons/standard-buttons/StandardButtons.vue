@@ -9,7 +9,7 @@
       :icon-right="rightIcon"
       :label="label"
       no-caps
-            :style="{ width: buttonWidth }"
+      :style="{ width: buttonWidth }"
     >
       <template v-if="outlined">
         <LimeGreenOutlinedIcon v-if="type == 'LimeGreen'" class="arrow-icon" />
@@ -74,8 +74,8 @@ const props = defineProps({
   },
   buttonWidth: {
     type: String,
-    default: ''
-  }
+    default: '',
+  },
 })
 
 const buttonClass = computed(() => {

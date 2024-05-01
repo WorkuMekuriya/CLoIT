@@ -20,53 +20,34 @@ $sm-tag-padding: 4px 16px 4px 4px;
 
 // Define shared color pattern mixin
 @mixin tag-color($color-name) {
-  @if $color-name =='TagBlueTonal' {
+  @if $color-name == 'TagBlueTonal' {
     @extend .bg-arcticblue-50, .text-arcticblue-600;
-  }
-
-  @else if ($color-name =='TagBlue') {
+  } @else if ($color-name == 'TagBlue') {
     @extend .bg-arcticblue-600, .text-white;
-  }
-
-  @else if ($color-name =='TagGreen') {
+  } @else if ($color-name == 'TagGreen') {
     @extend .bg-limegreen-400, .text-black;
-  }
-
-  @else if ($color-name =='TagGreenTonal') {
+  } @else if ($color-name == 'TagGreenTonal') {
     @extend .bg-limegreen-100;
     color: green;
-  }
-
-  @else if ($color-name =='TagRed') {
+  } @else if ($color-name == 'TagRed') {
     @extend .bg-red-700, .text-white;
-
-  }
-
-  @else if ($color-name =='TagRedTonal') {
+  } @else if ($color-name == 'TagRedTonal') {
     @extend .bg-red-50, .text-red-500;
-  }
-
-  @else if ($color-name =='TagYellow') {
+  } @else if ($color-name == 'TagYellow') {
     @extend .bg-yellow-500, .text-white;
-  }
-
-  @else if ($color-name =='TagYellowTonal') {
+  } @else if ($color-name == 'TagYellowTonal') {
     @extend .bg-yellow-50, .text-yellow-500;
-  }
-
-
-    @else if ($color-name =='TagSkeletonTonal') {
-      @extend  .text-bluegray-600;
-      background: transparent;
-      border: 1px solid $bluegray-300;
-    }
-  @else {
+  } @else if ($color-name == 'TagSkeletonTonal') {
+    @extend .text-bluegray-600;
+    background: transparent;
+    border: 1px solid $bluegray-300;
+  } @else {
     @extend .bg-bluegray-200, .text-black;
   }
 }
 
 .q-chip {
-  @extend .label-sm-bold ;
+  @extend .label-sm-bold;
   cursor: pointer;
   padding: $lg-tag-padding;
   border-radius: $tag-border-radius;
@@ -129,20 +110,20 @@ $sm-tag-padding: 4px 16px 4px 4px;
 
 // Additional styles for sizes
 .q-chip--sm {
-  @extend .label-xs-bold ;
+  @extend .label-xs-bold;
   height: $sm-height;
   min-width: $sm-min-width;
   gap: 6px;
 }
 
 .q-chip--md {
-  @extend .label-xs-bold ;
+  @extend .label-xs-bold;
   height: $md-height;
   min-width: $md-min-width;
 }
 
 .q-chip--lg {
-  @extend .label-xs-bold ;
+  @extend .label-xs-bold;
   height: $lg-height;
   min-width: $lg-min-width;
   padding: $lg-tag-padding;

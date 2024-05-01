@@ -6,22 +6,22 @@ $margin-bottom-medium: 24px;
 
 // Grid container
 .grid-container {
-    display: grid;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $gap-medium;
+  display: grid;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap-medium;
 }
 
 // Media queries
 @media (max-width: 1023px) {
-    .grid-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .title {
-    @extend .heading-4, .text-bluegray-900;
-    margin-top: $margin-top-medium;
-    margin-bottom: $margin-bottom-medium;
+  @extend .heading-4, .text-bluegray-900;
+  margin-top: $margin-top-medium;
+  margin-bottom: $margin-bottom-medium;
 }

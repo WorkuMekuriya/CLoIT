@@ -1,16 +1,15 @@
 @import '../../../../../../css/app.scss';
 
 .landing-content {
-.icon-container{
-  margin-top: 36px;
-}
+  .icon-container {
+    margin-top: 36px;
+  }
   .icon:first-child {
     @extend .bg-arcticblue-600, .text-white;
   }
 
   .icon {
-    @extend .bg-bluegray-50,
-    .text-bluegray-500;
+    @extend .bg-bluegray-50, .text-bluegray-500;
     width: 52px;
     height: 52px;
     font-size: 20px;

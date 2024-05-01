@@ -25,11 +25,7 @@
     />
 
     <!-- Display arrow icon -->
-    <q-icon
-      v-if="arrow"
-      :name="arrowIcon"
-      class="q-ml-xs"
-    />
+    <q-icon v-if="arrow" :name="arrowIcon" class="q-ml-xs" />
   </div>
 </template>
 
@@ -40,48 +36,48 @@ export default {
     // State of the header ('Default', 'Hover', 'Disabled')
     state: {
       type: String,
-      default: 'Default'
+      default: 'Default',
     },
     // Label text
     label: {
       type: String,
-      required: true
+      required: true,
     },
     // Help icon flag
     helpIcon: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // arrow type ('down' or 'up')
     arrow: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     // Class for the state
     stateClass() {
       switch (this.state) {
         case 'Hover':
-          return 'hover-state';
+          return 'hover-state'
         case 'Disabled':
-          return 'disabled-state';
+          return 'disabled-state'
         default:
-          return '';
+          return ''
       }
     },
     // Determine the arrow icon based on the 'arrow' prop
     arrowIcon() {
-      return this.arrow === 'up' ? 'arrow_upward' : 'arrow_downward';
-    }
+      return this.arrow === 'up' ? 'arrow_upward' : 'arrow_downward'
+    },
   },
   methods: {
     handleClick() {
       // Emit a click event when the component is clicked
-      this.$emit('click');
-    }
-  }
-};
+      this.$emit('click')
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

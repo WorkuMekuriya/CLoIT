@@ -1,6 +1,6 @@
 // In your useDialogStore definition
 
-import { defineStore } from 'pinia';
+import { defineStore } from 'pinia'
 
 export const useDialogStore = defineStore('dialog', {
   state: () => ({
@@ -12,23 +12,23 @@ export const useDialogStore = defineStore('dialog', {
   }),
   actions: {
     openDialog() {
-      this.layout = true;
+      this.layout = true
     },
     closeDialog() {
-      this.layout = false;
+      this.layout = false
     },
     setDialogWidth(width) {
       console.log(width)
-      this.dialogWidth = width;
+      this.dialogWidth = width
     },
     setDialogHeight(height) {
-      this.dialogHeight = height;
+      this.dialogHeight = height
     },
     setLeftIconComponent(leftIcon) {
-      this.leftIconComponent = leftIcon;
+      this.leftIconComponent = leftIcon
     },
     setInnerComponent(inner) {
-      this.innerComponent = inner;
+      this.innerComponent = inner
     },
   },
-});
+})

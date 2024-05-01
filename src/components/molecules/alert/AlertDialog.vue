@@ -1,6 +1,18 @@
 <template>
-  <q-dialog class="alert-dialog" v-model="getShowAlert" seamless :position="position">
-    <q-card class="alert-dialog-card flex items-center" :style="{ width: setWidth, height: setheight, bottom: position == 'bottom' ?  '10px' : ''}" >
+  <q-dialog
+    class="alert-dialog"
+    v-model="getShowAlert"
+    seamless
+    :position="position"
+  >
+    <q-card
+      class="alert-dialog-card flex items-center"
+      :style="{
+        width: setWidth,
+        height: setheight,
+        bottom: position == 'bottom' ? '10px' : '',
+      }"
+    >
       <component class="left-icon" :is="getAlertIconComponent" />
       <div class="text-and-description">
         <p class="alert-text">{{ alertText }}</p>
@@ -24,7 +36,8 @@ const props = defineProps({
   type: {
     type: String,
     default: 'Success',
-    validator: (value) => ['Standard', 'Warning', 'Success', 'Error'].includes(value),
+    validator: (value) =>
+      ['Standard', 'Warning', 'Success', 'Error'].includes(value),
   },
   showAlert: {
     type: Boolean,
@@ -32,11 +45,11 @@ const props = defineProps({
   },
   setWidth: {
     type: String,
-    default: '361px'
+    default: '361px',
   },
   setheight: {
     type: String,
-    default: '56px'
+    default: '56px',
   },
   alertText: {
     type: String,
@@ -44,7 +57,7 @@ const props = defineProps({
   },
   description: {
     type: String,
-    default: 'Description'
+    default: 'Description',
   },
   position: {
     type: String,

@@ -26,21 +26,21 @@
 const props = defineProps({
   totalPrice: {
     type: String,
-    default: '20'
+    default: '20',
   },
   paymentMethod: {
     type: String,
-    default: '분납'
+    default: '분납',
   },
   installmentMethod: {
     type: String,
-    default: '4등분하여 3개월에 한번씩 지급'
+    default: '4등분하여 3개월에 한번씩 지급',
   },
   lastPayment: {
     type: String,
-    default: '-'
-  }
-});
+    default: '-',
+  },
+})
 </script>
 
 <style scoped>

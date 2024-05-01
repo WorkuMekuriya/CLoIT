@@ -16,7 +16,7 @@ $check-box-container: 52px;
     padding: 0px 24px;
 
     .agree-to-all-text {
-      @extend .heading
+      @extend .heading;
     }
   }
   .check-box {
@@ -27,7 +27,7 @@ $check-box-container: 52px;
     height: $check-box-container;
     flex-shrink: 0;
     stroke-width: 1px;
-    stroke: var(--Blue-Gray-300, #D0D5DD);
+    stroke: var(--Blue-Gray-300, #d0d5dd);
     align-items: center;
     justify-content: center;
   }
@@ -35,7 +35,6 @@ $check-box-container: 52px;
     @extend .bg-limegreen-400;
   }
   .terms-and-conditions-content {
-
     .terms-and-conditions-content-main {
       padding: 0px 24px;
       height: 82px;
@@ -60,7 +59,7 @@ $check-box-container: 52px;
     border-top: 0px;
     border-bottom: $horizontal-divider-border-bottom;
   }
-  .read{
+  .read {
     @extend .label-md-med;
     margin-right: 17px;
     text-decoration: underline;

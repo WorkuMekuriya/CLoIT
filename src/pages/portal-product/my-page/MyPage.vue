@@ -4,5 +4,5 @@
   </q-layout>
 </template>
 <script setup>
-import MyPageTemplate from '../../../components/templates/portal-product/my-page/MyPage.vue';
+import MyPageTemplate from '../../../components/templates/portal-product/my-page/MyPage.vue'
 </script>

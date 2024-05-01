@@ -40,7 +40,7 @@ const props = defineProps({
       type: 'BlueGray',
       label: '서비스신청',
       outlined: true,
-      to: ''
+      to: '',
     }),
   },
   showMiddleNavigation: {

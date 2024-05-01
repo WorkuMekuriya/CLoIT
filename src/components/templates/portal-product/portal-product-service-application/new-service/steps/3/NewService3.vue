@@ -20,7 +20,7 @@
               <p class="select-text">규모</p>
               <div class="select-service-row">
                 <div class="flex card-container">
-                            <Card :cardList="scale" />
+                  <Card :cardList="scale" />
                 </div>
               </div>
             </div>
@@ -32,9 +32,7 @@
               <p class="select-text">Games</p>
               <div class="row select-service-row">
                 <div class="flex card-container">
-                  <Card
-                    :cardList="games"
-                  />
+                  <Card :cardList="games" />
                 </div>
               </div>
             </div>
@@ -105,7 +103,7 @@ const scale = [
     description: '',
     price: 'Free',
     subscription: 'USD/mo',
-        size: 'lg',
+    size: 'lg',
     width: '389px',
     height: '240px',
   },
@@ -114,7 +112,7 @@ const scale = [
     description: '',
     price: '$ 10,000',
     subscription: 'USD/mo',
-        size: 'lg',
+    size: 'lg',
     width: '389px',
     height: '240px',
   },
@@ -123,7 +121,7 @@ const scale = [
     description: '',
     price: '$ 30,000',
     subscription: 'USD/mo',
-        size: 'lg',
+    size: 'lg',
     width: '389px',
     height: '240px',
   },
@@ -132,7 +130,7 @@ const scale = [
     description: '',
     price: '$ 70,000',
     subscription: 'USD/mo',
-        size: 'lg',
+    size: 'lg',
     width: '389px',
     height: '240px',
   },
@@ -143,7 +141,7 @@ const games = [
     description: '',
     price: 'Free',
     subscription: 'USD/mo',
-        size: 'lg',
+    size: 'lg',
     width: '389px',
     height: '240px',
   },
@@ -152,7 +150,7 @@ const games = [
     description: '',
     price: '$ 10,000',
     subscription: 'USD/mo',
-        size: 'lg',
+    size: 'lg',
     width: '389px',
     height: '240px',
   },
@@ -161,7 +159,7 @@ const games = [
     description: '',
     price: '$ 20,000',
     subscription: 'USD/mo',
-        size: 'lg',
+    size: 'lg',
     width: '389px',
     height: '240px',
   },
@@ -170,7 +168,7 @@ const games = [
     description: '',
     price: '$ 30,000',
     subscription: 'USD/mo',
-        size: 'lg',
+    size: 'lg',
     width: '389px',
     height: '240px',
   },

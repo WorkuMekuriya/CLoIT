@@ -2,7 +2,7 @@
   <div>
     <div class="notice-pins flex justify-between">
       <div class="flex items-center">
-        <PinIcon class="pin"/>
+        <PinIcon class="pin" />
         <p class="title">{{ title }}</p>
       </div>
       <p class="date">{{ date }}</p>
@@ -16,12 +16,12 @@ import PinIcon from '../../../../../atoms/Icons/my-page-icons/PinIcon.vue'
 const props = defineProps({
   title: {
     type: String,
-    default: '서비스점검 안내'
+    default: '서비스점검 안내',
   },
   date: {
     type: String,
-    default: 'YYYY-MM-DD'
-  }
+    default: 'YYYY-MM-DD',
+  },
 })
 </script>
 

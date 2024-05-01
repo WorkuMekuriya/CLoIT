@@ -9,9 +9,9 @@
 </template>
 <script setup>
 import HeaderBar from '../../../../organisms/portal-product/portal-product-service-application/index/header/HeaderBar.vue'
-import FooterBar from '../../../../organisms/portal-product/footer/FooterBar.vue';
-import Landing from '../../../../organisms/portal-product/portal-product-service-application/index/landing/LandingContent.vue';
+import FooterBar from '../../../../organisms/portal-product/footer/FooterBar.vue'
+import Landing from '../../../../organisms/portal-product/portal-product-service-application/index/landing/LandingContent.vue'
 </script>
 <style lang="scss" scoped>
-@import 'IndexTemplate.style.scss'
+@import 'IndexTemplate.style.scss';
 </style>

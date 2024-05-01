@@ -2,12 +2,16 @@
   <div class="flex justify-center">
     <div class="flex justify-center">
       <q-btn
-      :style="{ width: buttonWidth }"
+        :style="{ width: buttonWidth }"
         :disable="buttonDisabled"
         :ripple="false"
         :loading="isLoading"
         class="rounded-button"
-        :class="[buttonClass, { loading: isLoading }, { 'set-button-with-icon-width': leftIcon || rightIcon }]"
+        :class="[
+          buttonClass,
+          { loading: isLoading },
+          { 'set-button-with-icon-width': leftIcon || rightIcon },
+        ]"
         unelevated
         :push="false"
         no-caps
@@ -72,13 +76,13 @@ const props = defineProps({
   },
   buttonWidth: {
     type: String,
-    default: ''
+    default: '',
   },
-   size: {
+  size: {
     type: String,
     validator: (value) => ['sm', 'xl'].includes(value),
-    default: 'xl'
-  }
+    default: 'xl',
+  },
 })
 
 const emits = defineEmits(['clicked']) // Define the 'clicked' event

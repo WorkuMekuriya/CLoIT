@@ -11,83 +11,83 @@ $grid-main-column-lg: 60% 40%;
 
 // Main grid container
 .grid-main-container {
-    display: grid;
-    margin: $margin-small;
-    grid-template-columns: repeat(1, 1fr);
-    gap: $gap-small;
+  display: grid;
+  margin: $margin-small;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $gap-small;
 }
 
 // Section container
 .section-container {
-    margin-bottom: $margin-large;
+  margin-bottom: $margin-large;
 }
 
 // Card container
 .card-container {
-    justify-content: flex-start;
-    margin-bottom: $margin-large;
+  justify-content: flex-start;
+  margin-bottom: $margin-large;
 }
 
 .card-list-container {
-    display: flex;
-    margin-bottom: $margin-medium;
+  display: flex;
+  margin-bottom: $margin-medium;
 }
 
 // Card spacing
 .card-spacing {
-    margin-right: $gap-small;
+  margin-right: $gap-small;
 }
 
 // Section checkbox title
 .section-checkbox-title {
-    @extend .heading-6;
+  @extend .heading-6;
 }
 
 // Checkbox container
 .checkbox-container {
-    margin-bottom: $margin-medium;
+  margin-bottom: $margin-medium;
 }
 
 // Checkbox spacing
 .checkbox-spacing {
-    margin-left: $margin-small;
+  margin-left: $margin-small;
 }
 
 // Grid container
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: $gap-medium;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $gap-medium;
 }
 
 // Textfield margin
 .textfield {
-    margin-top: $margin-small;
+  margin-top: $margin-small;
 }
 
 // Section title
 .section-title {
-    @extend .heading-6;
-    margin-bottom: $margin-medium;
+  @extend .heading-6;
+  margin-bottom: $margin-medium;
 }
 
 // Media queries
 @media (min-width: 769px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .grid-main-container {
-        grid-template-columns: $grid-main-column-sm;
-    }
+  .grid-main-container {
+    grid-template-columns: $grid-main-column-sm;
+  }
 }
 
 @media (min-width: 1280px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .grid-main-container {
-        grid-template-columns: $grid-main-column-lg;
-    }
+  .grid-main-container {
+    grid-template-columns: $grid-main-column-lg;
+  }
 }

@@ -5,7 +5,7 @@
     </h1>
     <div class="flex justify-center">
       <TabComponent />
-        <TabComponent type="linear" class="q-mx-lg" />
+      <TabComponent type="linear" class="q-mx-lg" />
     </div>
   </div>
 </template>

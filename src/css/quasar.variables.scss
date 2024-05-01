@@ -72,12 +72,10 @@ $bluegray-700: #344054;
 $bluegray-800: #1d2939;
 $bluegray-900: #101828;
 
-
-
 // Typography variables
 // TITLE
 $heading-1: (
-  'font-size': 3.750rem,
+  'font-size': 3.75rem,
   'font-weight': 700,
   'line-height': 1.25rem,
   'letter-spacing': '-4%',
@@ -125,8 +123,6 @@ $heading: (
   'letter-spacing': '-4%',
 );
 
-
-
 $subH-lg-bold: (
   'font-size': 1.125rem,
   'font-weight': 700,
@@ -163,7 +159,6 @@ $subH-sm-med: (
   'line-height': 1.5rem,
   'letter-spacing': '-2%',
 );
-
 
 // BODY
 $p-lg: (

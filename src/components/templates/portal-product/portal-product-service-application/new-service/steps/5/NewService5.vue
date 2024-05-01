@@ -106,7 +106,7 @@
     buttonWidth="228px"
     @click="addPaymentMethod"
   />
-  <DialogComponent/>
+  <DialogComponent />
 </template>
 
 <script setup>
@@ -191,8 +191,7 @@ let showPaymentInfo = ref(false)
 const toggleSelectInfo = (card) => {
   if (card[0].title == 'Credit/Debit Card') {
     showPaymentInfo.value = true
-  }
-  else showPaymentInfo.value = false
+  } else showPaymentInfo.value = false
 }
 
 const productList = [
@@ -230,22 +229,21 @@ const leftIconCard = markRaw(EditCreditIcon)
 const leftIconStripe = markRaw(AlertStandardIcon)
 const addPaymentMethod = () => {
   if (showPaymentInfo.value) {
-      // Pass DialogComponent properties to store
-  dialogStore.setInnerComponent(creditCardComponent)
-  dialogStore.setDialogWidth('524px')
-  dialogStore.setDialogHeight('768px')
-  dialogStore.setLeftIconComponent(leftIconCard)
+    // Pass DialogComponent properties to store
+    dialogStore.setInnerComponent(creditCardComponent)
+    dialogStore.setDialogWidth('524px')
+    dialogStore.setDialogHeight('768px')
+    dialogStore.setLeftIconComponent(leftIconCard)
 
-  dialogStore.openDialog()
-  }
-  else if (!showPaymentInfo.value) {
-           // Pass DialogComponent properties to store
-  dialogStore.setInnerComponent(stripeComponent)
-  dialogStore.setDialogWidth('400px')
-  dialogStore.setDialogHeight('353px')
-  dialogStore.setLeftIconComponent(leftIconStripe)
+    dialogStore.openDialog()
+  } else if (!showPaymentInfo.value) {
+    // Pass DialogComponent properties to store
+    dialogStore.setInnerComponent(stripeComponent)
+    dialogStore.setDialogWidth('400px')
+    dialogStore.setDialogHeight('353px')
+    dialogStore.setLeftIconComponent(leftIconStripe)
 
-  dialogStore.openDialog()
+    dialogStore.openDialog()
   }
 }
 </script>

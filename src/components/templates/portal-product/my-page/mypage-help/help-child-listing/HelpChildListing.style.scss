@@ -6,82 +6,82 @@ $margin-bottom-medium: 38px;
 
 // Header title styles
 .header-title {
-    @extend .heading-4;
-    margin-top: 12px;
+  @extend .heading-4;
+  margin-top: 12px;
 }
 
 .overview-box {
-    height: 263px;
-    flex-shrink: 0;
-    margin-right: 16px;
-    background: var(--Blue-Gray-100, #F2F4F7);
+  height: 263px;
+  flex-shrink: 0;
+  margin-right: 16px;
+  background: var(--Blue-Gray-100, #f2f4f7);
 }
 
 .description-text {
-    margin-top: 24px;
-    max-width: 590px;
-    font-size: 16px;
-    font-weight: 400;
+  margin-top: 24px;
+  max-width: 590px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .card-container {
-    display: flex;
-    margin-top: 24px;
-    margin-bottom: 60px;
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 60px;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .grid-container {
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $gap-medium;
-    margin-top: $margin-bottom-medium;
-    margin-bottom: $margin-bottom-medium;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap-medium;
+  margin-top: $margin-bottom-medium;
+  margin-bottom: $margin-bottom-medium;
 }
 
 // Media queries
 @media (max-width: 1438px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Media queries
 @media (max-width: 1023px) {
-    .grid-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    .header-container {
-        display: block;
-    }
+  .header-container {
+    display: block;
+  }
 
-    .header-title {
-        padding-top: 12px;
-        padding-bottom: 12px;
-    }
+  .header-title {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
 
 .breadcrumb {
-    display: flex;
+  display: flex;
 }
 
 .help-center {
-    @extend .text-bluegray-500;
-    text-decoration: underline;
+  @extend .text-bluegray-500;
+  text-decoration: underline;
 }
 
 .breadcrumb-separator {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .breadcrumb-item {
-    @extend .text-bluegray-700;
-    text-decoration: none !important;
+  @extend .text-bluegray-700;
+  text-decoration: none !important;
 }

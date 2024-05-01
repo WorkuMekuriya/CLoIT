@@ -56,7 +56,7 @@ defineProps({
 })
 // Dialog Component
 const dialogStore = useDialogStore()
-const innerComponent = markRaw(EditPaymentCardDialog);
+const innerComponent = markRaw(EditPaymentCardDialog)
 const leftIcon = markRaw(EditCreditIcon)
 const editCard = () => {
   console.log('read')
@@ -68,7 +68,6 @@ const editCard = () => {
 
   dialogStore.openDialog()
 }
-
 </script>
 
 <style lang="scss" scoped>

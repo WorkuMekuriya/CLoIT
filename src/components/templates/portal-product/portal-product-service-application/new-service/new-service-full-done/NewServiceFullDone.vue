@@ -1,11 +1,14 @@
 <template>
   <div class="container">
-    <HeaderBar :showMiddleNavigation="false" :ctaButton="{label: 'My Page', outlined: true, type: 'BlueGray'}" />
+    <HeaderBar
+      :showMiddleNavigation="false"
+      :ctaButton="{ label: 'My Page', outlined: true, type: 'BlueGray' }"
+    />
     <div class="flex justify-center">
-          <PaymentDone  />
+      <PaymentDone />
     </div>
     <FooterBar />
-</div>
+  </div>
 </template>
 
 <script setup>

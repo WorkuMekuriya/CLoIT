@@ -36,12 +36,12 @@ const props = defineProps({
   size: {
     type: String,
     validator: (value) => ['sm', 'xl'].includes(value),
-    default: 'xl'
+    default: 'xl',
   },
   icon: {
     type: String,
-    default: 'east'
-  }
+    default: 'east',
+  },
 })
 const emits = defineEmits(['clicked'])
 

@@ -16,7 +16,6 @@ $lg-breakpoint: 1920px;
 }
 
 @media (min-width: $xs-breakpoint) {
-
   .container,
   .container-sm {
     max-width: 540px;
@@ -24,7 +23,6 @@ $lg-breakpoint: 1920px;
 }
 
 @media (min-width: $sm-breakpoint) {
-
   .container,
   .container-sm,
   .container-md {
@@ -33,7 +31,6 @@ $lg-breakpoint: 1920px;
 }
 
 @media (min-width: $md-breakpoint) {
-
   .container,
   .container-sm,
   .container-md,
@@ -43,7 +40,6 @@ $lg-breakpoint: 1920px;
 }
 
 @media (min-width: $lg-breakpoint) {
-
   .container,
   .container-sm,
   .container-md,

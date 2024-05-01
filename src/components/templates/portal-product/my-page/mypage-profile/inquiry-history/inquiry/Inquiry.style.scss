@@ -11,82 +11,82 @@ $card-border-radius: 36px;
 $border-color: lightgray;
 
 .inquiry-container {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-title {
-    @extend .heading-4;
+  @extend .heading-4;
 }
 
 .add-icon-container {
-    @extend .bg-bluegray-800;
-    width: $add-icon-size;
-    height: $add-icon-size;
-    display: flex;
-    justify-content: center;
-    border-radius: 100%;
-    align-items: center;
+  @extend .bg-bluegray-800;
+  width: $add-icon-size;
+  height: $add-icon-size;
+  display: flex;
+  justify-content: center;
+  border-radius: 100%;
+  align-items: center;
 }
 
 .inquiries-container {
-    margin-top: $container-margin-top;
+  margin-top: $container-margin-top;
 }
 
 .inquiry-card {
-    height: $card-height;
-    display: flex;
-    padding: $card-padding;
-    margin-bottom: $card-margin-bottom;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F9FAFB;
-    border: $card-border-width solid $border-color;
-    border-radius: $card-border-radius;
+  height: $card-height;
+  display: flex;
+  padding: $card-padding;
+  margin-bottom: $card-margin-bottom;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fafb;
+  border: $card-border-width solid $border-color;
+  border-radius: $card-border-radius;
 }
 
 .inquiry-label {
-    @extend .heading-6;
-    font-weight: 800;
-    padding: 12px;
-    margin-right: 12px;
+  @extend .heading-6;
+  font-weight: 800;
+  padding: 12px;
+  margin-right: 12px;
 }
 
 .inquiry-date {
-    // @extend .label-md;
-    font-size: 15px;
-    width: 104px;
-    margin-right: 12px;
+  // @extend .label-md;
+  font-size: 15px;
+  width: 104px;
+  margin-right: 12px;
 }
 
 .link-icon {
-    @extend .text-bluegray-600, .bg-bluegray-50;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
-    border: 1px solid $bluegray-300;
+  @extend .text-bluegray-600, .bg-bluegray-50;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  border: 1px solid $bluegray-300;
 }
 
 .breadcrumb {
-    display: flex;
+  display: flex;
 }
 
 .help-center {
-    @extend .text-bluegray-500;
-    text-decoration: underline;
+  @extend .text-bluegray-500;
+  text-decoration: underline;
 }
 
 .breadcrumb-separator {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .breadcrumb-item {
-    @extend .text-bluegray-700;
-    text-decoration: none !important;
+  @extend .text-bluegray-700;
+  text-decoration: none !important;
 }

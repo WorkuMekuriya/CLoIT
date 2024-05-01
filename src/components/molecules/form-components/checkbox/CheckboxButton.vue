@@ -32,8 +32,8 @@ const props = defineProps({
   },
   value: {
     type: Boolean,
-    default: true
-  }
+    default: true,
+  },
 })
 checked.value = props.value
 const checkboxClass = computed(() => {

@@ -5,11 +5,10 @@
         v-for="(component, index) in components"
         :key="index"
         :label="component.label"
-        :class="[hasStep(index),hideIconOnFirstStep(index)]"
+        :class="[hasStep(index), hideIconOnFirstStep(index)]"
         :icon="component.icon"
       ></q-breadcrumbs-el>
     </q-breadcrumbs>
-
   </div>
 </template>
 <script setup>
@@ -38,7 +37,7 @@ const hasStep = (index) => {
   } else return 'non-active-step'
 }
 const hideIconOnFirstStep = (index) => {
-    if (index === 0) {
+  if (index === 0) {
     return 'hide-icon-on-the-first'
   }
 }

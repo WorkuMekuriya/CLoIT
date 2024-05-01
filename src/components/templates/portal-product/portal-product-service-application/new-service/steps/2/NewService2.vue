@@ -14,7 +14,11 @@
               />
             </div>
           </div>
-          <LinkButton  labelTypology="subH-md-med" backgroundColor="bg-bluegray-100" class="link-button" />
+          <LinkButton
+            labelTypology="subH-md-med"
+            backgroundColor="bg-bluegray-100"
+            class="link-button"
+          />
         </div>
       </div>
       <div class="col-4">

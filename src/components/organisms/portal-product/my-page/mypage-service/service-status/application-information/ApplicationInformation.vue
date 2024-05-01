@@ -18,12 +18,12 @@
 const props = defineProps({
   startDate: {
     type: String,
-    default: '2024-03-11'
+    default: '2024-03-11',
   },
   endDate: {
     type: String,
-    default: '2024-03-11'
-  }
+    default: '2024-03-11',
+  },
 })
 </script>
 

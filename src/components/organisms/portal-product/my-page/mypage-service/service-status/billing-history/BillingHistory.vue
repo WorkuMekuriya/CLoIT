@@ -20,7 +20,13 @@
           <td>{{ payment.actualPaymentDate }}</td>
           <td>{{ payment.paymentMethod }}</td>
           <td>{{ payment.paymentType }}</td>
-          <td><Tag size="sm" :type="payment.status.type" :label="payment.status.label"/></td>
+          <td>
+            <Tag
+              size="sm"
+              :type="payment.status.type"
+              :label="payment.status.label"
+            />
+          </td>
           <td>{{ payment.amount }}</td>
         </tr>
       </tbody>
@@ -40,7 +46,7 @@ const props = defineProps({
         actualPaymentDate: '2024-04-01',
         paymentMethod: 'Bank Transfer',
         paymentType: '분납',
-        status: { type: 'TagRedTonal', label: '입금필요'},
+        status: { type: 'TagRedTonal', label: '입금필요' },
         amount: '12.000',
       },
       {
@@ -49,7 +55,7 @@ const props = defineProps({
         actualPaymentDate: '2024-04-01',
         paymentMethod: 'Credit Card',
         paymentType: '분납',
-        status: { type: 'TagBlueTonal', label: '결제됨'},
+        status: { type: 'TagBlueTonal', label: '결제됨' },
         amount: '12.000',
       },
     ],

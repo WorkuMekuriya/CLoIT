@@ -23,16 +23,30 @@
         <p class="text-center heading-3 q-py-md">{{ buttonGroup.title }}</p>
         <div class="flex justify-between q-mx-xl">
           <!-- Iterate through the buttons in the group -->
-          <template v-for="(button, buttonIndex) in buttonGroup.buttons" :key="buttonIndex">
+          <template
+            v-for="(button, buttonIndex) in buttonGroup.buttons"
+            :key="buttonIndex"
+          >
             <!-- Render button with outlined: false -->
-            <StandardButton v-if="!button.props.outlined" v-bind="button.props" class="q-mb-md" />
+            <StandardButton
+              v-if="!button.props.outlined"
+              v-bind="button.props"
+              class="q-mb-md"
+            />
           </template>
         </div>
         <div class="flex justify-between q-mx-xl">
           <!-- Iterate through the buttons in the group -->
-          <template v-for="(button, buttonIndex) in buttonGroup.buttons" :key="buttonIndex">
+          <template
+            v-for="(button, buttonIndex) in buttonGroup.buttons"
+            :key="buttonIndex"
+          >
             <!-- Render button with outlined: true -->
-            <StandardButton v-if="button.props.outlined" v-bind="button.props" class="q-mb-md" />
+            <StandardButton
+              v-if="button.props.outlined"
+              v-bind="button.props"
+              class="q-mb-md"
+            />
           </template>
         </div>
       </div>
@@ -566,7 +580,7 @@ const standardButtonGroups = [
           rightIcon: 'home',
         },
       },
-            {
+      {
         props: {
           type: 'LimeGreen',
           outlined: false,
@@ -606,7 +620,7 @@ const standardButtonGroups = [
           rightIcon: 'home',
         },
       },
-            {
+      {
         props: {
           type: 'BlueGray',
           outlined: false,

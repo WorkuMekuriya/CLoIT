@@ -8,33 +8,33 @@ $tooltip-border-radius: 4px;
 
 /* Base styles for the table header */
 .table-header {
-    @extend .label-xs-bold, .text-bluegray-700;
-    align-items: center;
-    cursor: pointer;
-    padding: $table-header-padding;
-    transition: $table-header-translation;
+  @extend .label-xs-bold, .text-bluegray-700;
+  align-items: center;
+  cursor: pointer;
+  padding: $table-header-padding;
+  transition: $table-header-translation;
 }
 
 /* Tooltip styling */
 .tooltip-class {
-    @extend .text-black, .bg-white;
-    padding: $table-header-padding;
-    border-radius: $tooltip-border-radius;
+  @extend .text-black, .bg-white;
+  padding: $table-header-padding;
+  border-radius: $tooltip-border-radius;
 }
 
 .q-icon.q-ml-xs {
-    @extend .text-bluegray-500, .label-md;
+  @extend .text-bluegray-500, .label-md;
 }
 
 /* Change icon color to black on hover */
 .table-header:hover .q-icon.q-ml-xs {
-    @extend .text-black, .label-md;
+  @extend .text-black, .label-md;
 }
 
 /* disabled state styling */
 .table-header.disabled-state {
-    @extend .text-bluegray-300;
-    .q-icon.q-ml-xs {
-        @extend .text-bluegray-300, .label-md;
-    }
+  @extend .text-bluegray-300;
+  .q-icon.q-ml-xs {
+    @extend .text-bluegray-300, .label-md;
+  }
 }

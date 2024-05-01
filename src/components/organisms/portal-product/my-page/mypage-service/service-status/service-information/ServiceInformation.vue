@@ -36,7 +36,7 @@
       </div>
     </div>
     <LinkButton
-    v-if="hasAddProductOrChageOptionsButton"
+      v-if="hasAddProductOrChageOptionsButton"
       buttonHeight="76px"
       labelTypology="heading-6"
       textColor="text-white"

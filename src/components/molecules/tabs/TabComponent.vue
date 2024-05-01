@@ -5,11 +5,10 @@
         :ripple="false"
         v-model="tab"
         narrow-indicator
-         inline-label
+        inline-label
         dense
         align="justify"
         :class="tabClass"
-
       >
         <q-tab
           :ripple="false"

@@ -9,21 +9,19 @@ $left-icon-margin-left: -30px;
 $right-icon-padding-left: 20px;
 $right-icon-margin-right: -30px;
 
-
-
 .standard-button {
   @extend .label-sm-bold;
   width: $standard-button-width;
   height: $standard-button_height;
   border-radius: 48px;
   position: relative;
-  :deep(.q-icon){
+  :deep(.q-icon) {
     font-weight: 400;
     font-size: 20px;
   }
 }
 .standard-button.right-arrow {
-    padding-right: 60px;
+  padding-right: 60px;
   :deep(.on-right) {
     display: none;
   }
@@ -41,14 +39,14 @@ $right-icon-margin-right: -30px;
     position: absolute;
     left: 4px;
   }
- :deep(.on-left) {
-          display: none;
-    }
+  :deep(.on-left) {
+    display: none;
+  }
 }
 .standard-button.no-left-icon {
-    :deep(.on-left) {
-      display: none;
-    }
+  :deep(.on-left) {
+    display: none;
+  }
 }
 .standard-button.no-right-icon {
   :deep(.on-right) {
@@ -56,37 +54,24 @@ $right-icon-margin-right: -30px;
   }
 }
 
-
 // Define shared property pattern mixin
 @mixin tag-property($property-name) {
-  @if $property-name =='button-arcticblue' {
+  @if $property-name == 'button-arcticblue' {
     @extend .bg-arcticblue-600, .text-white;
-  }
-
-  @else if ($property-name =='button-arcticblue-outline') {
+  } @else if ($property-name == 'button-arcticblue-outline') {
     @extend .bg-white, .text-bluegray-900;
     border: $standard-button-border;
-  }
-
-  @else if ($property-name =='button-limegreen') {
+  } @else if ($property-name == 'button-limegreen') {
     @extend .bg-limegreen-400, .text-bluegray-900;
-  }
-
-  @else if ($property-name =='button-limegreen-outline') {
+  } @else if ($property-name == 'button-limegreen-outline') {
     @extend .bg-white, .text-bluegray-900;
     border: $standard-button-border;
-  }
-
-  @else if ($property-name =='button-bluegray') {
+  } @else if ($property-name == 'button-bluegray') {
     @extend .bg-bluegray-800, .text-white;
-  }
-
-  @else if ($property-name =='button-bluegray-outline') {
+  } @else if ($property-name == 'button-bluegray-outline') {
     @extend .bg-bluegray-50, .text-bluegray-900;
   }
-
 }
-
 
 // Define styles based on type
 .button-arcticblue {

@@ -4,18 +4,29 @@
       Other Stuffs
     </h1>
     <div class="flex justify-center">
-      <LiItem :showLeftButton="false" :rightIcon="'chevron_right'" :label="'Portal & Help Desk'" :price="'$ {}'"
-        @handleRightIcon="console.log('Clicked')" />
+      <LiItem
+        :showLeftButton="false"
+        :rightIcon="'chevron_right'"
+        :label="'Portal & Help Desk'"
+        :price="'$ {}'"
+        @handleRightIcon="console.log('Clicked')"
+      />
     </div>
     <div class="flex justify-center q-mb-lg">
       <LiItem :label="'Portal & Help Desk'" :price="'$ {}'" />
     </div>
     <div class="flex justify-center q-mb-lg">
-      <BreadCrumbHeader class="bread-crumb-header text-bluegray-900" :step="step" />
+      <BreadCrumbHeader
+        class="bread-crumb-header text-bluegray-900"
+        :step="step"
+      />
     </div>
     <div class="flex justify-center q-mb-md">
-      <Breadcrumb :primaryLable="'Terms & Conditions'" :secondaryLable="'Terms & Conditions'"
-        :tertiaryLabel="'Terms & Conditions'" />
+      <Breadcrumb
+        :primaryLable="'Terms & Conditions'"
+        :secondaryLable="'Terms & Conditions'"
+        :tertiaryLabel="'Terms & Conditions'"
+      />
     </div>
   </div>
 </template>

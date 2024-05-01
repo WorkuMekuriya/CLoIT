@@ -1,7 +1,12 @@
 <template>
   <div class="landing-content">
     <div class="icon-container flex justify-center">
-      <q-icon v-for="(icon, index) in icons" :key="index" :name="icon.name" class="icon"></q-icon>
+      <q-icon
+        v-for="(icon, index) in icons"
+        :key="index"
+        :name="icon.name"
+        class="icon"
+      ></q-icon>
     </div>
     <p class="title text-center">Products</p>
     <p class="sub-title text-center">

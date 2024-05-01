@@ -106,14 +106,13 @@
       <div class="flex justify-center q-mb-md">
         <TextArea class="textfield" />
         <TextArea
-
           class="textfield q-mx-md"
           bottomLeftDescription="Description"
           bottomRightDescription="Description"
         />
-        <TextArea class="textfield"   :destructive="true" />
+        <TextArea class="textfield" :destructive="true" />
         <TextArea
-        :destructive="true"
+          :destructive="true"
           class="textfield q-mx-md"
           bottomLeftDescription="Description"
           bottomRightDescription="Description"
@@ -122,52 +121,52 @@
     </div>
     <!-- Radio Button -->
     <div>
-        <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
+      <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
         Radio Button
       </h1>
-         <div class="flex justify-center q-mx-xl q-my-md">
+      <div class="flex justify-center q-mx-xl q-my-md">
         <div class="flex justify-center q-mb-md">
-           <RadioButton />
+          <RadioButton />
         </div>
         <div class="flex justify-center q-mb-md">
-             <RadioButton :destructive="true" />
+          <RadioButton :destructive="true" />
         </div>
         <div class="flex justify-center q-mb-md">
-            <RadioButton :disable="true" />
+          <RadioButton :disable="true" />
         </div>
       </div>
     </div>
-       <!-- Toggle Button -->
+    <!-- Toggle Button -->
     <div>
-        <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
+      <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
         Toggle Button
       </h1>
-         <div class="flex justify-center q-mx-xl q-my-md">
+      <div class="flex justify-center q-mx-xl q-my-md">
         <div class="flex justify-center q-mb-md">
-           <ToggleButton />
-        </div>
-           <div class="flex justify-center q-mb-md">
-           <ToggleButton :toggleValue="false" />
+          <ToggleButton />
         </div>
         <div class="flex justify-center q-mb-md">
-             <ToggleButton :destructive="true" :disable="true" />
+          <ToggleButton :toggleValue="false" />
+        </div>
+        <div class="flex justify-center q-mb-md">
+          <ToggleButton :destructive="true" :disable="true" />
         </div>
       </div>
     </div>
-<!-- Check Box Button -->
-        <div>
-        <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
+    <!-- Check Box Button -->
+    <div>
+      <h1 class="heading-3 text-limegreen-900 text-center q-mb-md q-container">
         Checkbox Button
       </h1>
-         <div class="flex justify-center q-mx-xl q-my-md">
+      <div class="flex justify-center q-mx-xl q-my-md">
         <div class="flex justify-center q-mb-md">
-           <CheckboxButton :value="true" />
-        </div>
-           <div class="flex justify-center q-mb-md">
-           <CheckboxButton :destructive="true"  :value="false"  />
+          <CheckboxButton :value="true" />
         </div>
         <div class="flex justify-center q-mb-md">
-             <CheckboxButton :value="null" :disable="true" />
+          <CheckboxButton :destructive="true" :value="false" />
+        </div>
+        <div class="flex justify-center q-mb-md">
+          <CheckboxButton :value="null" :disable="true" />
         </div>
       </div>
     </div>

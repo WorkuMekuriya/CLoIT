@@ -1,6 +1,6 @@
 @import '../../../../../../../css/app.scss';
 
-.select-options{
+.select-options {
   .select-text {
     @extend .heading-6;
   }
@@ -17,11 +17,10 @@
   .select-service-row {
     margin-top: 28px;
   }
-  .games-row{
+  .games-row {
     margin-top: 70px;
   }
-  .scale-row{
-        margin-top: 70px;
+  .scale-row {
+    margin-top: 70px;
   }
-
 }

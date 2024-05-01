@@ -12,7 +12,6 @@ $rounded-button-height-small-screen: 38px; // media query size
 $rounded-button-padding: 0 31px;
 $rounded-button-width-with-icon: 146px;
 
-
 //circular buttons
 $circular-button-border-radius: 50px;
 $circular-button-width: 52px;
@@ -28,15 +27,12 @@ $tertiary-white-shadow: 0px 0px 0px 4px rgba(37, 59, 255, 0.2);
 $tertiary-tonal-shadow: 0px 0px 0px 4px rgba(37, 59, 255, 0.2);
 $destructive-shadow: 0px 0px 0px 4px rgba(255, 82, 38, 0.3);
 
-
 // button borders
 $tertiary-lined-border: 1px solid $bluegray-300;
 $tertiary-white-border: 1px solid $bluegray-300;
 
 //media queries for different screen sizes
 $small-screen-max-width: 768px;
-
-
 
 // Applies For all Rounded buttons
 .rounded-button {
@@ -52,8 +48,8 @@ $small-screen-max-width: 768px;
 
   .right-icon {
     margin-left: $rounded-icon-margin-left;
-        max-width: $rounded-icon-left-max-size;
-          max-height: $rounded-icon-left-max-size;
+    max-width: $rounded-icon-left-max-size;
+    max-height: $rounded-icon-left-max-size;
   }
 
   .left-icon {
@@ -96,7 +92,7 @@ $small-screen-max-width: 768px;
 
 //
 .circular-button.small-size-button {
-  border-radius: $circular-button-border-radius ;
+  border-radius: $circular-button-border-radius;
   width: $circular-button-width-small-screen;
   height: $circular-button-height-small-screen;
 }
@@ -134,7 +130,6 @@ $small-screen-max-width: 768px;
 
   &:hover {
     @extend .bg-arcticblue-200;
-    ;
   }
 
   &:active {

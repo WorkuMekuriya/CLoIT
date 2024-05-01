@@ -10,13 +10,13 @@
         <AvatarButton class="q-my-md" type="image" size="md" />
         <AvatarButton class="q-my-md" type="image" size="sm" />
       </div>
-        <div class="flex items-center column q-px-lg">
+      <div class="flex items-center column q-px-lg">
         <AvatarButton class="q-my-md" type="initials" size="xl" />
         <AvatarButton class="q-my-md" type="initials" size="lg" />
         <AvatarButton class="q-my-md" type="initials" size="md" />
         <AvatarButton class="q-my-md" type="initials" size="sm" />
       </div>
-        <div class="flex items-center column">
+      <div class="flex items-center column">
         <AvatarButton class="q-my-md" type="icon" size="xl" />
         <AvatarButton class="q-my-md" type="icon" size="lg" />
         <AvatarButton class="q-my-md" type="icon" size="md" />

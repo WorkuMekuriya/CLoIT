@@ -2,7 +2,7 @@
   <div>
     <HeaderBar />
     <div class="row page-container">
-     <SideBar class="col-2" />
+      <SideBar class="col-2" />
       <div class="col-10">
         <router-view />
       </div>
@@ -16,7 +16,6 @@ import HeaderBar from '../../../organisms/portal-product/my-page/header/HeaderBa
 import FooterBar from '../../../organisms/portal-product/footer/FooterBar.vue'
 import SideBar from '../../../organisms/portal-product/my-page/sidebar/SideBar.vue'
 </script>
-
 
 <style lang="scss" scoped>
 @import 'MyPage.style.scss';

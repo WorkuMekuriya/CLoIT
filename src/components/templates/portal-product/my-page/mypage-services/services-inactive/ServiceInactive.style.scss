@@ -35,9 +35,9 @@ $horizontal-divider-border-bottom: 1px solid $bluegray-200;
     @extend .heading-4;
     margin-right: 16px;
   }
-        .horizontal-divider {
-          margin: 36px 0px;
-          border-top: 0px;
-          border-bottom: $horizontal-divider-border-bottom;
-        }
+  .horizontal-divider {
+    margin: 36px 0px;
+    border-top: 0px;
+    border-bottom: $horizontal-divider-border-bottom;
+  }
 }

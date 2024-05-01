@@ -10,59 +10,59 @@ $font-weight-bold: 800;
 
 // Container styles.
 .container {
-    max-width: 80%;
+  max-width: 80%;
 }
 
 // Breadcrumbs styles.
 .breadcrumbs {
-    margin-bottom: $margin-bottom-small;
+  margin-bottom: $margin-bottom-small;
 }
 
 // Title styles.
 .title {
-    @extend .heading-4, .text-bluegray-900;
-    margin-top: $margin-top-medium;
-    margin-bottom: $margin-bottom-medium;
+  @extend .heading-4, .text-bluegray-900;
+  margin-top: $margin-top-medium;
+  margin-bottom: $margin-bottom-medium;
 }
 
 // Grid container styles.
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $gap-medium;
-    margin-bottom: $margin-bottom-medium;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap-medium;
+  margin-bottom: $margin-bottom-medium;
 }
 
 // Media queries
 @media (max-width: 1023px) {
-    .grid-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 // Button container styles.
 .button-container {
-    display: flex;
+  display: flex;
 }
 
 .parent-text {
-    @extend .text-bluegray-300;
+  @extend .text-bluegray-300;
 }
 
 .breadcrumb-container {
-    display: flex;
+  display: flex;
 }
 
 .breadcrumb-item {
-    @extend .text-bluegray-500;
-    text-decoration: underline;
+  @extend .text-bluegray-500;
+  text-decoration: underline;
 }
 
 .breadcrumb-link {
-    @extend .text-bluegray-700;
-    text-decoration: none !important;
+  @extend .text-bluegray-700;
+  text-decoration: none !important;
 }
 
 .breadcrumb-separator {
-    padding-left: 5px;
+  padding-left: 5px;
 }

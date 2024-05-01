@@ -1,6 +1,6 @@
 <template>
   <div>
- <NewServiceInstallmentsDone />
+    <NewServiceInstallmentsDone />
   </div>
 </template>
 <script setup>

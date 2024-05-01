@@ -19,7 +19,7 @@
     <ApplicantInformation />
     <hr class="horizontal-divider" />
     <ServiceInformation />
-        <hr class="horizontal-divider" />
+    <hr class="horizontal-divider" />
     <BillingInformation />
     <hr class="horizontal-divider" />
     <RefundAccount />

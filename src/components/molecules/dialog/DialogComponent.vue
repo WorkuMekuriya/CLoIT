@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md q-gutter-sm">
-      <q-dialog class="dialog-component" v-model="dialogOpen">
+    <q-dialog class="dialog-component" v-model="dialogOpen">
       <div
         class="bg-white dialog-component-container"
         :style="{ width: dialogWidth, maxHeight: dialogHeight }"
@@ -40,24 +40,24 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useDialogStore } from '../../../stores/dialog-store';
+import { computed } from 'vue'
+import { useDialogStore } from '../../../stores/dialog-store'
 
-const dialogStore = useDialogStore();
+const dialogStore = useDialogStore()
 
-const dialogOpen = computed(() => dialogStore.layout);
-const dialogWidth = computed(() => dialogStore.dialogWidth);
-const dialogHeight = computed(() => dialogStore.dialogHeight);
-const leftIconComponent = computed(() => dialogStore.leftIconComponent);
-const innerComponent = computed(() => dialogStore.innerComponent);
+const dialogOpen = computed(() => dialogStore.layout)
+const dialogWidth = computed(() => dialogStore.dialogWidth)
+const dialogHeight = computed(() => dialogStore.dialogHeight)
+const leftIconComponent = computed(() => dialogStore.leftIconComponent)
+const innerComponent = computed(() => dialogStore.innerComponent)
 
 const openDialog = () => {
-  dialogStore.openDialog();
-};
+  dialogStore.openDialog()
+}
 
 const closeDialog = () => {
-  dialogStore.closeDialog();
-};
+  dialogStore.closeDialog()
+}
 </script>
 
 <style lang="scss" scoped>

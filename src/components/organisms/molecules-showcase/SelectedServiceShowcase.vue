@@ -4,9 +4,13 @@
       Selected Service
     </h1>
     <div class="flex justify-center q-mt-xl">
-
-      <SelectedService :products="products" :options="options" options-total="{}" product-total="{}"
-        total="{}" />
+      <SelectedService
+        :products="products"
+        :options="options"
+        options-total="{}"
+        product-total="{}"
+        total="{}"
+      />
     </div>
   </div>
 </template>
@@ -15,46 +19,50 @@
 import { ref } from 'vue'
 import SelectedService from '../../organisms/selected-service/SelectedService.vue'
 
-const products = [{
-  label: 'Portal & Help Desk',
-  price: '${}/mo'
-},
-{
-  label: 'Portal & Help Desk',
-  price: '${}/mo'
-},
-{
-  label: 'Portal & Help Desk',
-  price: '${}/mo'
-},
-{
-  label: 'Portal & Help Desk',
-  price: '${}/mo'
-},
-{
-  label: 'Portal & Help Desk',
-  price: '${}/mo'
-},]
-const options = [{
-  label: '3 Months',
-  price: '+${}'
-},
-{
-  label: 'Portal & Help Desk',
-  price: '+${}'
-},
-{
-  label: 'Portal & Help Desk',
-  price: '+${}'
-},
-{
-  label: 'Portal & Help Desk',
-  price: '+${}'
-},
-{
-  label: 'Portal & Help Desk',
-  price: '+${}'
-},]
+const products = [
+  {
+    label: 'Portal & Help Desk',
+    price: '${}/mo',
+  },
+  {
+    label: 'Portal & Help Desk',
+    price: '${}/mo',
+  },
+  {
+    label: 'Portal & Help Desk',
+    price: '${}/mo',
+  },
+  {
+    label: 'Portal & Help Desk',
+    price: '${}/mo',
+  },
+  {
+    label: 'Portal & Help Desk',
+    price: '${}/mo',
+  },
+]
+const options = [
+  {
+    label: '3 Months',
+    price: '+${}',
+  },
+  {
+    label: 'Portal & Help Desk',
+    price: '+${}',
+  },
+  {
+    label: 'Portal & Help Desk',
+    price: '+${}',
+  },
+  {
+    label: 'Portal & Help Desk',
+    price: '+${}',
+  },
+  {
+    label: 'Portal & Help Desk',
+    price: '+${}',
+  },
+]
 </script>
 
 <style lang="scss" scoped>
