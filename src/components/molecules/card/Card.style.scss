@@ -23,11 +23,12 @@ $card-padding-small: 12px;
 $check-box-container: 52px;
 
 .card-container {
-    width: fit-content;
+    height: 240px;
     border-radius: $card-container-radius;
     cursor: pointer;
     box-shadow: none;
     border: .5px solid lightgray;
+    margin-right: 16px;
 }
 
 .card-header,
@@ -69,6 +70,11 @@ $check-box-container: 52px;
 .md-card-container {
     @extend .text-black;
     border-radius: $sm-card-container-radius;
+    height: 228px;
+}
+
+.sm-card-container {
+    height: 134px;
 }
 
 .q-card.card-container.selected-state.sm-card-container {

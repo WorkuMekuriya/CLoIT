@@ -28,6 +28,11 @@ $grid-main-column-lg: 60% 40%;
     margin-bottom: $margin-large;
 }
 
+.card-list-container {
+    display: flex;
+    margin-bottom: $margin-medium;
+}
+
 // Card spacing
 .card-spacing {
     margin-right: $gap-small;

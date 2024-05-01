@@ -22,7 +22,11 @@ $total_text_font_weight: 800;
 
 // Use constants in style blocks
 .selected-service-header-text {
-    @extend .label-lg-bold, .text-bluegray-900;
+    @extend .heading-6, .text-bluegray-900;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-bottom: $service-section-padding;
 }
 

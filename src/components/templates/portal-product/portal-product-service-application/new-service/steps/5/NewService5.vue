@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-around">
     <div class="">
-      <div class="selected-service-header-text">{{ headerText }}</div>
+      <div class="selected-service-header-text">Checkout</div>
       <div class="service-section">
         <div class="service-section-container" style="width: 794px">
           <div class="service-header">
@@ -44,16 +44,13 @@
       <div style="margin-bottom: 60px;">
         <div class="section-title">결제방식</div>
         <div style="display: flex; justify-content: space-evenly;">
-          <Card v-for="(card, index) in paymentTypes" :key="index" :title="card" size="sm"
-            :selected="selectedInfoIndex === index" @click="toggleSelectInfo(index)" />
+          <Card :card-list="paymentTypes" @click="toggleSelectInfo(index)" class="card-spacing" />
         </div>
       </div>
       <section v-if="showPaymentInfo" class="section-container q-mt-lg">
         <div class="section-title">정보입력</div>
         <div class="flex q-mb-lg q-mt-md">
-          <Card v-for="(card, index) in additionalInfoCard" :key="index" :title="card" size="sm"
-            :selected="selectedInfoIndex === index" @click="toggleSelectInfo(index)" class="card-spacing"
-            style="margin-right: 16px;" />
+          <Card :card-list="additionalInfoCard" @click="toggleSelectInfo(index)" class="card-spacing" />
         </div>
         <TextField class="textfield" label="분납방법" placeholder="분납방법"
           bottomLeftDescription="적어주신 내용 확인 후 계약을 위해 연락드리도록 하겠습니다." bottomRightDescription="" />
@@ -74,8 +71,24 @@ import RoundedButton from '../../../../../../molecules/buttons/conditionally-sty
 
 const emits = defineEmits(['emitButtonClick'])
 
-const additionalInfoCard = ref(['일시납', '분납']);
-const paymentTypes = ['Credit/Debit Card', 'Connect  Stripe', 'Connect PayPal']
+const paymentTypes = ref([{
+  title: 'Credit/Debit Card',
+  size: 'sm'
+}, {
+  title: 'Connect Stripe',
+  size: 'sm'
+}, {
+  title: 'Connect PayPal',
+  size: 'sm'
+}]);
+
+const additionalInfoCard = ref([{
+  title: '일시납',
+  size: 'sm'
+}, {
+  title: '분납',
+  size: 'sm'
+}]);
 
 // Define props
 defineProps({
