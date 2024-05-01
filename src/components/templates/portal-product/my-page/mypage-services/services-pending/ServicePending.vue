@@ -24,8 +24,8 @@
     <hr class="horizontal-divider" />
     <ApplicantInformation />
     <hr class="horizontal-divider" />
-    <ServiceInformation />
-            <hr class="horizontal-divider" />
+    <ServiceInformation :hasAddProductOrChageOptionsButton="false" />
+    <hr class="horizontal-divider" />
     <BillingInformation />
     <hr class="horizontal-divider" />
     <RefundAccount />

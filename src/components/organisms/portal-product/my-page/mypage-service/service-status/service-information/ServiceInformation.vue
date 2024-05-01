@@ -21,24 +21,38 @@
         </tr>
       </tbody>
     </table>
-   <div class="row date-container">
-    <div class="col-6">
-      <p class="date-title">규모</p>
-      <p class="date">{{ scale }}</p>
+    <div class="row date-container">
+      <div class="col-6">
+        <p class="date-title">규모</p>
+        <p class="date">{{ scale }}</p>
+      </div>
+      <div class="col-6">
+        <p class="date-title">Games</p>
+        <p class="date">{{ games }}</p>
+      </div>
+      <div class="col-6 q-mt-md">
+        <p class="date-title">접속주소</p>
+        <p class="date">cloit.com/{{ subDomain }}</p>
+      </div>
     </div>
-    <div class="col-6">
-      <p class="date-title">Games</p>
-      <p class="date">{{ games }}</p>
-    </div>
-    <div class="col-6 q-mt-md">
-      <p class="date-title">접속주소</p>
-      <p class="date">cloit.com/{{ subDomain }}</p>
-    </div>
-  </div>
+    <LinkButton
+    v-if="hasAddProductOrChageOptionsButton"
+      buttonHeight="76px"
+      labelTypology="heading-6"
+      textColor="text-white"
+      backgroundColor="bg-bluegray-900"
+      iconWidth="52px"
+      iconHeight="52px"
+      iconColor="text-bluegray-900"
+      iconBackgroundColor="bg-limegreen-400"
+      label="상품추가 혹은 옵션변경"
+      class="link-button"
+    />
   </div>
 </template>
 
 <script setup>
+import LinkButton from '../../../../../../molecules/buttons/link-button/LinkButton.vue'
 const props = defineProps({
   data: {
     type: Array,
@@ -59,18 +73,22 @@ const props = defineProps({
       },
     ],
   },
-    scale: {
+  scale: {
     type: String,
-    default: '50 People'
+    default: '50 People',
   },
   games: {
     type: String,
-    default: 'Up to 10 games'
+    default: 'Up to 10 games',
   },
   subDomain: {
     type: String,
-    default: '입력한Sub-Domain'
-  }
+    default: '입력한Sub-Domain',
+  },
+  hasAddProductOrChageOptionsButton: {
+    type: Boolean,
+    default: true,
+  },
 })
 </script>
 
