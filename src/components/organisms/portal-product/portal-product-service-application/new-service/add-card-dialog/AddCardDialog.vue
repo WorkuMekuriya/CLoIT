@@ -15,10 +15,10 @@
         <div class="col-12">
           <div class="row q-col-gutter-sm">
             <div class="col">
-              <TextField class="Expiry" label="Expiry" />
+              <TextField class="Expiry" placeholder="MM/YY" label="Expiry" />
             </div>
             <div class="col">
-              <TextField class="CVC" label="CVC" />
+              <TextField class="CVC" placeholder="CVC"  label="CVC" />
             </div>
           </div>
         </div>
