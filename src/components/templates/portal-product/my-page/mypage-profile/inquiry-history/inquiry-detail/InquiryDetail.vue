@@ -7,17 +7,17 @@
         <div class="inquiry-title">{{ inquiry.title }}</div>
         <div class="inquiry-details">
             <div>
-                <div class="attachment-label">문의 원하는 서비스</div>
+                <div class="attachment-label-font">문의 원하는 서비스</div>
                 <div>{{ inquiry.serviceName }}</div>
             </div>
             <div>
-                <div class="attachment-label">작성일자</div>
+                <div class="attachment-label-font">작성일자</div>
                 <div>{{ inquiry.date }}</div>
             </div>
         </div>
         <div class="inquiry-description">{{ inquiry.description }}</div>
 
-        <div class="attachment-label">Attached Files</div>
+        <div class="attachment-label attachment-label-font">Attached Files</div>
         <div class="attachment-list">
             <div v-for="(attachment, index) in ['attachment_name_1.pdf', 'attachment_name_2.png', 'attachment_name_3.mp4']"
                 :key="index" class="attachment-item-list">

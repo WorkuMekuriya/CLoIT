@@ -1,5 +1,5 @@
 <template>
-    <div style="">
+    <div class="content-container">
         <div style="display: flex;">
             <div style="color: gray; text-decoration: underline;">Help Center</div>
             <div style="padding-left: 5px;"> 〉</div>

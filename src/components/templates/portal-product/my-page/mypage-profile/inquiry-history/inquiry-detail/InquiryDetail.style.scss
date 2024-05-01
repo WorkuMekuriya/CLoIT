@@ -74,8 +74,9 @@ $attachment-close-margin-right: 2px;
     margin-bottom: $margin-bottom-attachment-label;
 }
 
-.attachment-label {
+.attachment-label-font {
     @extend .label-sm-bold;
+    padding-top: 8px;
 }
 
 .attachment-list {
