@@ -15,15 +15,15 @@
         <div class="col-12">
           <div class="row q-col-gutter-sm">
             <div class="col">
-              <TextField class="Expiry" label="Expiry" />
+              <TextField class="Expiry" placeholder="Expiry"  label="Expiry" />
             </div>
             <div class="col">
-              <TextField class="CVC" label="CVC" />
+              <TextField class="CVC" placeholder="CVC"  label="CVC" />
             </div>
           </div>
         </div>
         <div class="col-12">
-          <TextField class="textfield" label="Country" />
+          <TextField class="textfield"  label="Country" />
         </div>
       </div>
     </div>
