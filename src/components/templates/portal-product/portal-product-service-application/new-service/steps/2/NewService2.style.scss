@@ -10,9 +10,16 @@
 
   .card-container {
     margin-top: 16px;
+    gap: 16px;
   }
-
+    .card-spacing {
+      margin: 40px;
+    }
   .select-service-row {
     margin-top: 28px;
+  }
+  .link-button{
+    margin-top: 24px;
+    max-width: 390px;
   }
 }

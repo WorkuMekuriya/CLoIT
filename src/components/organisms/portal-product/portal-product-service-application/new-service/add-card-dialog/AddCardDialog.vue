@@ -1,5 +1,5 @@
 <template>
-  <div class="edit-payment-container">
+  <div class="add-payment-container">
     <div class="main">
       <p class="title">Credit / Debit Card</p>
       <div class="row">
@@ -30,7 +30,7 @@
     <div class="save-button flex justify-center items-center">
       <ConditionalStyleRoundedButton
         type="Primary"
-        label="Save"
+        label="Checkout"
         buttonWidth="452px"
       />
     </div>
@@ -40,6 +40,7 @@
 import ConditionalStyleRoundedButton from '../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import TextField from '../../../../../molecules/form-components/fields/textfield/TextField.vue'
 </script>
+
 <style lang="scss" scoped>
-@import 'EditPaymentCardDialog.style.scss';
+@import 'AddCardDialog.style.scss';
 </style>

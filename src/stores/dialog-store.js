@@ -18,6 +18,7 @@ export const useDialogStore = defineStore('dialog', {
       this.layout = false;
     },
     setDialogWidth(width) {
+      console.log(width)
       this.dialogWidth = width;
     },
     setDialogHeight(height) {

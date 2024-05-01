@@ -3,7 +3,7 @@
       <q-dialog class="dialog-component" v-model="dialogOpen">
       <div
         class="bg-white dialog-component-container"
-        :style="{ width: dialogWidth, height: dialogHeight }"
+        :style="{ width: dialogWidth, maxHeight: dialogHeight }"
       >
         <div class="dialog-component-header flex justify-between">
           <component v-if="leftIconComponent" :is="leftIconComponent" />

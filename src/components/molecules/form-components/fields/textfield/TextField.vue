@@ -84,7 +84,6 @@ const props = defineProps({
 const textFieldClass = computed(() => {
   // Set additional CSS classes based on type
   if (!props.error && !props.disable) {
-    console.log(textFieldClasses['Primary'])
     return textFieldClasses[props.type] || textFieldClasses['Primary']
   } else return ''
 })

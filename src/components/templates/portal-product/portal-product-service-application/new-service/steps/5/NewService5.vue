@@ -6,108 +6,173 @@
         <div class="service-section-container" style="width: 794px">
           <div class="service-header">
             <div class="header-text">Products</div>
-            <div class="header-text" style="display: flex;">+$ {{ productTotal }}
-              <div class="circle-button-icon" @click="collapsAccordion" style="margin-left: 12px;">
+            <div class="header-text" style="display: flex">
+              +$ {{ productTotal }}
+              <div
+                class="circle-button-icon"
+                @click="collapsAccordion"
+                style="margin-left: 12px"
+              >
                 <q-icon name="expand_more" size="xs" />
               </div>
             </div>
           </div>
-          <LiItem v-for="(product, index) in productList" :key="index" :label="product.label" :price="product.price"
-            :showLeftButton="product.isLeftIconVisble" :showRightButton="false" />
+          <LiItem
+            v-for="(product, index) in productList"
+            :key="index"
+            :label="product.label"
+            :price="product.price"
+            :showLeftButton="product.isLeftIconVisble"
+            :showRightButton="false"
+          />
         </div>
         <div class="options-section">
           <div class="service-header">
             <div class="header-text">Options</div>
             <div class="header-text">+$ {{ optionsTotal }}</div>
           </div>
-          <LiItem v-for="(item, index) in options" :key="index" :label="item.label" :price="item.price"
-            :showRightButton="false" :showLeftButton="true" />
+          <LiItem
+            v-for="(item, index) in options"
+            :key="index"
+            :label="item.label"
+            :price="item.price"
+            :showRightButton="false"
+            :showLeftButton="true"
+          />
         </div>
       </div>
-      <div class="options-section" style="margin-top: 16px;">
+      <div class="options-section" style="margin-top: 16px">
         <div class="service-header">
           <div class="header-text">Additional Discount</div>
           <div class="header-text">+$ {{ optionsTotal }}</div>
         </div>
-        <LiItem label="{}" price="+${}" :showRightButton="false" :showLeftButton="true" />
+        <LiItem
+          label="{}"
+          price="+${}"
+          :showRightButton="false"
+          :showLeftButton="true"
+        />
       </div>
 
-      <div class="options-section" style="margin-top: 16px; margin-bottom: 60px;">
+      <div
+        class="options-section"
+        style="margin-top: 16px; margin-bottom: 60px"
+      >
         <div class="total-section">
           <div class="total-text">Total</div>
-          <div style="display: flex;">
-            <TagComponent type='TagGreen' label='USD/mo' :dot="false" size='sm' />
-            <div class="total-text" style="margin-left: 16px;">$ {{ total }}</div>
+          <div style="display: flex">
+            <TagComponent
+              type="TagGreen"
+              label="USD/mo"
+              :dot="false"
+              size="sm"
+            />
+            <div class="total-text" style="margin-left: 16px">
+              $ {{ total }}
+            </div>
           </div>
         </div>
       </div>
-      <div style="margin-bottom: 60px;">
+      <div style="margin-bottom: 60px">
         <div class="section-title">결제방식</div>
-        <div style="display: flex; justify-content: space-evenly;">
-          <Card :card-list="paymentTypes" @click="toggleSelectInfo(index)" class="card-spacing" />
+        <div style="display: flex; justify-content: space-evenly">
+          <Card
+            :card-list="paymentTypes"
+            @card-clicked="toggleSelectInfo"
+            class="card-spacing"
+          />
         </div>
       </div>
       <section v-if="showPaymentInfo" class="section-container q-mt-lg">
         <div class="section-title">정보입력</div>
         <div class="flex q-mb-lg q-mt-md">
-          <Card :card-list="additionalInfoCard" @click="toggleSelectInfo(index)" class="card-spacing" />
+          <Card :card-list="additionalInfoCard" class="card-spacing" />
         </div>
-        <TextField class="textfield" label="분납방법" placeholder="분납방법"
-          bottomLeftDescription="적어주신 내용 확인 후 계약을 위해 연락드리도록 하겠습니다." bottomRightDescription="" />
+        <TextField
+          class="textfield"
+          label="분납방법"
+          placeholder="분납방법"
+          bottomLeftDescription="적어주신 내용 확인 후 계약을 위해 연락드리도록 하겠습니다."
+          bottomRightDescription=""
+        />
       </section>
     </div>
   </div>
-  <RoundedButton @click="emitButtonClick" type="Primary" label="이대로 신청" buttonDisabled="false" size="xl"
-    buttonWidth="228px" />
+  <RoundedButton
+    type="Primary"
+    label="이대로 신청"
+    :buttonDisabled="false"
+    size="xl"
+    buttonWidth="228px"
+    @click="addPaymentMethod"
+  />
+  <DialogComponent/>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import LiItem from '../../../../../../molecules/li-item/LiItem.vue';
-import Card from '../../../../../../molecules/card/Card.vue';
-import TagComponent from '../../../../../../molecules/form-components/tag/Tag.vue';
-import TextField from '../../../../../../molecules/form-components/fields/textfield/TextField.vue';
-import RoundedButton from '../../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue';
+import { ref } from 'vue'
+import LiItem from '../../../../../../molecules/li-item/LiItem.vue'
+import Card from '../../../../../../molecules/card/Card.vue'
+import TagComponent from '../../../../../../molecules/form-components/tag/Tag.vue'
+import TextField from '../../../../../../molecules/form-components/fields/textfield/TextField.vue'
+import RoundedButton from '../../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 
-const emits = defineEmits(['emitButtonClick'])
+// Dialog Imports
+import EditCreditIcon from '../../../../../../atoms/Icons/my-page-icons/EditCreditIcon.vue'
+import AlertStandardIcon from '../../../../../../atoms/Icons/alert-icons/AlertStandardIcon.vue'
+import AddCardDialog from '../../../../../../organisms/portal-product/portal-product-service-application/new-service/add-card-dialog/AddCardDialog.vue'
+import DialogComponent from '../../../../../../molecules/dialog/DialogComponent.vue'
+import StripeDialog from '../../../../../../organisms/portal-product/portal-product-service-application/new-service/stripe-dialog/StripeDialog.vue'
+import { useDialogStore } from '../../../../../../../stores/dialog-store.js'
+import { markRaw } from 'vue'
+const dialogStore = useDialogStore()
 
-const paymentTypes = ref([{
-  title: 'Credit/Debit Card',
-  size: 'sm'
-}, {
-  title: 'Connect Stripe',
-  size: 'sm'
-}, {
-  title: 'Connect PayPal',
-  size: 'sm'
-}]);
+const emits = defineEmits(['nextStep'])
 
-const additionalInfoCard = ref([{
-  title: '일시납',
-  size: 'sm'
-}, {
-  title: '분납',
-  size: 'sm'
-}]);
+const paymentTypes = ref([
+  {
+    title: 'Credit/Debit Card',
+    size: 'sm',
+  },
+  {
+    title: 'Connect Stripe',
+    size: 'sm',
+  },
+  {
+    title: 'Connect PayPal',
+    size: 'sm',
+  },
+])
+
+const additionalInfoCard = ref([
+  {
+    title: '일시납',
+    size: 'sm',
+  },
+  {
+    title: '분납',
+    size: 'sm',
+  },
+])
 
 // Define props
 defineProps({
   headerText: {
     type: String,
-    default: ''
+    default: '',
   },
   label: {
     type: String,
-    default: 'Next : Option'
+    default: 'Next : Option',
   },
   products: {
     type: Array,
     default: () => [],
   },
-  options: {
-    type: Array,
-    default: () => [],
-  },
+  // options: {
+  //   type: Array,
+  //   default: () => [],
+  // },
   productTotal: {
     type: String,
     default: '{}',
@@ -119,14 +184,15 @@ defineProps({
   total: {
     type: String,
     default: '{}',
-  }
-});
+  },
+})
 
-let showPaymentInfo = ref(false);
-const toggleSelectInfo = (index) => {
-  if (index == 1) {
-    showPaymentInfo.value = true;
+let showPaymentInfo = ref(false)
+const toggleSelectInfo = (card) => {
+  if (card[0].title == 'Credit/Debit Card') {
+    showPaymentInfo.value = true
   }
+  else showPaymentInfo.value = false
 }
 
 const productList = [
@@ -152,9 +218,35 @@ const options = [
   { label: '3 Games', price: '+${}' },
 ]
 
-const isProductVisible = true;
+const isProductVisible = true
 const collapsAccordion = () => {
-  isProductVisible = !isProductVisible;
+  isProductVisible = !isProductVisible
+}
+
+// Dialog Component - Credit Card / Debit Card
+const creditCardComponent = markRaw(AddCardDialog)
+const stripeComponent = markRaw(StripeDialog)
+const leftIconCard = markRaw(EditCreditIcon)
+const leftIconStripe = markRaw(AlertStandardIcon)
+const addPaymentMethod = () => {
+  if (showPaymentInfo.value) {
+      // Pass DialogComponent properties to store
+  dialogStore.setInnerComponent(creditCardComponent)
+  dialogStore.setDialogWidth('524px')
+  dialogStore.setDialogHeight('768px')
+  dialogStore.setLeftIconComponent(leftIconCard)
+
+  dialogStore.openDialog()
+  }
+  else if (!showPaymentInfo.value) {
+           // Pass DialogComponent properties to store
+  dialogStore.setInnerComponent(stripeComponent)
+  dialogStore.setDialogWidth('400px')
+  dialogStore.setDialogHeight('353px')
+  dialogStore.setLeftIconComponent(leftIconStripe)
+
+  dialogStore.openDialog()
+  }
 }
 </script>
 
