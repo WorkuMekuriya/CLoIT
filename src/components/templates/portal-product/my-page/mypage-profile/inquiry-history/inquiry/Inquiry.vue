@@ -1,6 +1,10 @@
 <template>
+    <div class="breadcrumb">
+        <div class="help-center">My Profile</div>
+        <div class="breadcrumb-separator"> 〉</div>
+        <span class="breadcrumb-item">Inquiry</span>
+    </div>
     <div class="inquiry-container">
-        <div>My Profile 〉Inquiry</div>
         <div class="header-container">
             <div class="header-title">Inquiry</div>
             <div class="add-icon-container" @click="newInquiry">
@@ -13,8 +17,10 @@
                     <Tag :type="inquiry.tagType" :label="inquiry.tag" :dot="false" size="md" />
                     <div class="inquiry-label">{{ inquiry.label }}</div>
                 </div>
-                <div class="inquiry-date">{{ inquiry.date }}</div>
-                <q-icon class="link-icon" name="north_east" />
+                <div class="header-container">
+                    <div class="inquiry-date">{{ inquiry.date }}</div>
+                    <q-icon class="link-icon" name="north_east" />
+                </div>
             </div>
         </div>
     </div>

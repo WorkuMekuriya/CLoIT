@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <div style="display: flex;">
-            <div style="color: gray; text-decoration: underline;">My Profile</div>
-            <div style="padding-left: 5px;"> 〉</div>
-            <span style="color: black; text-decoration: none !important;">Edit Profile</span>
+        <div class="breadcrumb-container">
+            <div class="breadcrumb-item">My Profile</div>
+            <div class="breadcrumb-separator"> 〉</div>
+            <span class="breadcrumb-item breadcrumb-link">Edit Profile</span>
         </div>
         <div class="title">Edit Profile</div>
         <div class="grid-container">

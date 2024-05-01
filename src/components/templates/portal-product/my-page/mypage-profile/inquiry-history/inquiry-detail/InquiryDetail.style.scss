@@ -56,10 +56,6 @@ $attachment-close-margin-right: 2px;
     border-bottom-style: solid;
 }
 
-.inquiry-item .inquiry-title {
-    // Add any styles for the inquiry title here
-}
-
 .inquiry-details {
     display: flex;
     justify-content: space-between;
@@ -107,4 +103,22 @@ $attachment-close-margin-right: 2px;
     align-items: center;
     justify-content: center;
     margin-right: $attachment-close-margin-right;
+}
+
+.breadcrumb {
+    display: flex;
+}
+
+.help-center {
+    @extend .text-bluegray-500;
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    padding-left: 5px;
+}
+
+.breadcrumb-item {
+    @extend .text-bluegray-700;
+    text-decoration: none !important;
 }

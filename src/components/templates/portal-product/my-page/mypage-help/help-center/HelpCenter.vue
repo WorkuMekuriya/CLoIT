@@ -1,5 +1,5 @@
 <template>
-    <div style="">
+    <div>
         <div class="help-center">Help Center</div>
         <div class="header-container">
             <div class="header-title">Help Center</div>

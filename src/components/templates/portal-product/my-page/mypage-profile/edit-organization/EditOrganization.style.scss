@@ -13,6 +13,13 @@ $margin-bottom-medium: 24px;
     gap: $gap-medium;
 }
 
+// Media queries
+@media (max-width: 1023px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .title {
     @extend .heading-4, .text-bluegray-900;
     margin-top: $margin-top-medium;

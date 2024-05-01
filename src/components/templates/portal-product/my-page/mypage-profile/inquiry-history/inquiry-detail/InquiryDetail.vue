@@ -1,5 +1,11 @@
 <template>
-    <div>My Profile 〉Inquiry 〉{Title}</div>
+    <div class="breadcrumb">
+        <div class="help-center">My Profile</div>
+        <div class="breadcrumb-separator"> 〉</div>
+        <span class="help-center">Inquiry</span>
+        <div class="breadcrumb-separator">〉</div>
+        <span class="breadcrumb-item">{Title}</span>
+    </div>
     <div class="my-profile-inquiry-container">
         <div class="my-profile-inquiry-title">1:1 문의</div>
     </div>

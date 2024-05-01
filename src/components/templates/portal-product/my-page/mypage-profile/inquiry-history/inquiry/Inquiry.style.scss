@@ -8,12 +8,10 @@ $card-padding: 24px;
 $card-margin-bottom: 16px;
 $card-border-width: 0.1px;
 $card-border-radius: 36px;
-$label-width: 689px;
 $border-color: lightgray;
 
 .inquiry-container {
     cursor: pointer;
-    width: 996px;
 }
 
 .header-container {
@@ -57,12 +55,10 @@ $border-color: lightgray;
     font-weight: 800;
     padding: 12px;
     margin-right: 12px;
-    width: $label-width;
 }
 
 .inquiry-date {
-    // Add styles for inquiry date if needed.
-    // @extend .label-sm;
+    // @extend .label-md;
     font-size: 15px;
     width: 104px;
     margin-right: 12px;
@@ -75,4 +71,22 @@ $border-color: lightgray;
     height: 48px;
     font-size: 20px;
     border: 1px solid $bluegray-300;
+}
+
+.breadcrumb {
+    display: flex;
+}
+
+.help-center {
+    @extend .text-bluegray-500;
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    padding-left: 5px;
+}
+
+.breadcrumb-item {
+    @extend .text-bluegray-700;
+    text-decoration: none !important;
 }
