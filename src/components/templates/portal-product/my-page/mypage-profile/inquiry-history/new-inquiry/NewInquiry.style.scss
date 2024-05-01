@@ -1,0 +1,47 @@
+@import '../../../../../../../css/app.scss';
+
+.textfield {
+  margin-bottom: 24px;
+}
+
+.textfield {
+  margin-bottom: 24px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-title {
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.form-container {
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+.submit-button-container {
+  display: flex;
+}
+
+.breadcrumb {
+  display: flex;
+}
+
+.help-center {
+  @extend .text-bluegray-500;
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  padding-left: 5px;
+}
+
+.breadcrumb-item {
+  @extend .text-bluegray-700;
+  text-decoration: none !important;
+}

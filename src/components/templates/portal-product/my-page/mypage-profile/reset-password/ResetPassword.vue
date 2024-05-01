@@ -76,7 +76,7 @@ const resetPassword = () => {
   // Pass DialogComponent properties to store
   dialogStore.setInnerComponent(innerComponent)
   dialogStore.setDialogWidth('400px')
-  dialogStore.setDialogHeight('338px')
+  dialogStore.setDialogHeight('438px')
   dialogStore.setLeftIconComponent(leftIcon)
 
   dialogStore.openDialog()

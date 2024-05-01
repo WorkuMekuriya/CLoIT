@@ -1,11 +1,15 @@
 <template>
-  <div>My Profile 〉Inquiry 〉New Inquiry</div>
-  <div
-    style="display: flex; justify-content: space-between; align-items: center"
-  >
-    <div style="font-weight: 800; font-size: 32px">Inquiry</div>
+  <div class="breadcrumb">
+    <div class="help-center">My Profile</div>
+    <div class="breadcrumb-separator">〉</div>
+    <span class="help-center">Inquiry</span>
+    <div class="breadcrumb-separator">〉</div>
+    <span class="breadcrumb-item">New Inquiry</span>
   </div>
-  <div style="margin-top: 36px; margin-bottom: 24px">
+  <div class="profile-header">
+    <div class="profile-title">Inquiry</div>
+  </div>
+  <div class="form-container">
     <div v-for="(field, index) in inquiryFields" :key="index">
       <TextField
         class="textfield"
@@ -13,9 +17,15 @@
         :placeholder="field.placeholder || field.name"
         :bottomLeftDescription="field.description"
       />
+      <TextArea
+        v-if="field.type == 'textarea'"
+        class="textfield"
+        :label="field.name"
+        :placeholder="field.placeholder || field.name"
+      />
     </div>
   </div>
-  <div style="display: flex">
+  <div class="submit-button-container">
     <RoundedButton
       type="Primary"
       :isLoading="false"
@@ -25,9 +35,11 @@
     />
   </div>
 </template>
+
 <script setup>
 import { ref } from 'vue'
 import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
+import TextArea from 'src/components/molecules/form-components/fields/textarea/TextArea.vue'
 import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 
 const inquiryFields = ref([
@@ -35,18 +47,21 @@ const inquiryFields = ref([
     name: '문의 원하는 서비스',
     placeholder: '{Service name list}',
     description: '',
+    type: 'dropdown',
   },
-  { name: 'Title', placeholder: '', description: '' },
+  { name: 'Title', placeholder: '', description: '', type: 'textfield' },
   {
     name: 'Content',
     placeholder:
       '자세히 적어주실 수록 빠르고 정확한 도움을 받으실 수 있습니다.',
     description: '',
+    type: 'textarea',
   },
   {
     name: 'Attach files',
     placeholder: 'Drag and drop files',
     description: '{File 크기나 확장자 제한에 대한 안내}',
+    type: 'attachment',
   },
 ])
 const emits = defineEmits(['nextInquiry']) // Define the 'clicked' event
@@ -62,7 +77,5 @@ const backInquiry = () => {
 </script>
 
 <style lang="scss" scoped>
-.textfield {
-  margin-bottom: 24px;
-}
+@import 'NewInquiry.style.scss';
 </style>

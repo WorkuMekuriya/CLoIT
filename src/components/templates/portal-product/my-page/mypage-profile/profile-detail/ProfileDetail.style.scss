@@ -71,7 +71,7 @@ $profile-content-margin-top: 60px;
 
 // Use consistent class name and variables for organization.
 .organization {
-  @extend.subh-lg-med, .text-bluegray-700;
+  @extend .subH-lg-med, .text-bluegray-700;
 }
 
 // Consistent margin and padding for button container using variables.

@@ -4,7 +4,7 @@
     <div class="description">Do you want to reset your password?</div>
   </div>
   <q-space />
-  <div class="flex justify-center items-center">
+  <div class="bottom-button">
     <ConditionalStyleRoundedButton
       type="Primary"
       label="Save"
