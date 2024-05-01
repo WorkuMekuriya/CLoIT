@@ -1,9 +1,9 @@
 <template>
     <div style="">
-        <div>Help Center</div>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="help-center">Help Center</div>
+        <div class="header-container">
             <div class="header-title">Help Center</div>
-            <div style="margin-right: 205px;">
+            <div>
                 <TextField class="textfield" bottomLeftDescription="" placeholder="Search..." bottomRightDescription=""
                     iconLeft="search" label="" iconRight="" style="width: 321px;" />
             </div>

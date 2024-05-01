@@ -1,20 +1,20 @@
 <template>
-    <div class="content-container">
-        <div style="display: flex;">
-            <div style="color: gray; text-decoration: underline;">Help Center</div>
-            <div style="padding-left: 5px;"> 〉</div>
-            <span style="color: black; text-decoration: none !important;">Getting Started</span>
-            <div style="padding-left: 5px;"> 〉</div>
-            <span style="color: black; text-decoration: none !important;">Overview</span>
+    <div>
+        <div class="breadcrumb">
+            <div class="help-center">Help Center</div>
+            <div class="breadcrumb-separator"> 〉</div>
+            <span class="help-center">Getting Started</span>
+            <div class="breadcrumb-separator">〉</div>
+            <span class="breadcrumb-item">Overview</span>
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="header-container">
             <div class="header-title">Overview</div>
-            <div style="">
+            <div>
                 <TextField class="textfield" bottomLeftDescription="" placeholder="Search..." bottomRightDescription=""
                     iconLeft="search" label="" iconRight="" style="width: 321px;" />
             </div>
         </div>
-        <div style="margin-top: 24px; width: 590px; font-size: 16px; font-weight: 400;">Lorem ipsum dolor sit amet
+        <div class="description-text">Lorem ipsum dolor sit amet
             consectetur. Leo interdum quam sit est enim. Morbi eget nibh cursus
             vitae tellus volutpat. Tempus massa vitae turpis non porttitor sed euismod at at. Fames in tortor vel at
             nullam. Sollicitudin sed semper eu nunc volutpat. Iaculis ornare elit feugiat tincidunt pharetra ut
@@ -31,14 +31,15 @@
             fames. Praesent vitae varius mauris consequat mi viverra gravida. Tempus in eget magna ornare molestie
             tristique.
         </div>
-        <div style="display: flex; margin-top: 24px; margin-bottom: 60px;">
-            <div v-for="(item, index) in [1, 2, 3]" :key="index" class="overview-box"></div>
+        <div class="grid-container">
+            <div v-for="(item, index) in listOfImages" :key="index" class="overview-box"></div>
         </div>
     </div>
 </template>
 
 <script setup>
 import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue';
+const listOfImages = [1, 2, 3]
 const emits = defineEmits(['nextStep']);
 
 const moveToStep = () => {

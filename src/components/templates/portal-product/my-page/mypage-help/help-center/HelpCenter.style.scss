@@ -6,16 +6,9 @@ $gap-medium: 16px;
 $margin-top-medium: 36px;
 $margin-bottom-medium: 38px;
 
-// Header title styles
-.header-title {
-    @extend .heading-4;
-    margin-top: 12px;
-}
-
 .grid-container {
     cursor: pointer;
     display: grid;
-    width: 995px;
     grid-template-columns: repeat(3, 1fr);
     gap: $gap-medium;
     margin-top: $margin-bottom-medium;
@@ -23,14 +16,14 @@ $margin-bottom-medium: 38px;
 }
 
 // Media queries
-@media (max-width: 1280px) {
+@media (max-width: 1438px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 // Media queries
-@media (max-width: 870px) {
+@media (max-width: 1023px) {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -42,7 +35,6 @@ $margin-bottom-medium: 38px;
 
 .cardlist-container {
     display: flex;
-    width: 321px;
     height: 228px;
     padding: 12px 12px 24px 24px;
     flex-direction: column;
@@ -91,33 +83,18 @@ $margin-bottom-medium: 38px;
     align-self: stretch;
 
     .title {
-        @extend .heading-6;
-        font-weight: 800px;
+        @extend .heading-6, .text-bluegray-800;
         align-self: stretch;
-
-        color: var(--Blue-Gray-900, #101828);
-
-        /* Heading/H6 */
-        font-family: "Plus Jakarta Sans";
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 125%;
-        /* 30px */
         letter-spacing: -0.96px;
 
     }
 
     .description {
+        @extend .p-md;
         color: var(--Blue-Gray-700, #344054);
-
-        /* P/md */
-        font-family: "Plus Jakarta Sans";
-        font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
-        /* 24px */
         letter-spacing: -0.32px;
     }
 }
@@ -128,4 +105,28 @@ $margin-bottom-medium: 38px;
     width: 48px;
     height: 48px;
     border: .1px solid $bluegray-300;
+}
+
+// Header title styles
+.header-title {
+    @extend .heading-4;
+    margin-top: 12px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Media queries
+@media (max-width: 1023px) {
+
+    .header-container {
+        display: block;
+    }
+
+    .header-title {
+        padding: 12px;
+    }
 }

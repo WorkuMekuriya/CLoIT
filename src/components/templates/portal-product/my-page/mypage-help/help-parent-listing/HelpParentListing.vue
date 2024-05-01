@@ -1,13 +1,13 @@
 <template>
-    <div style="">
-        <div style="display: flex;">
-            <div style="color: gray; text-decoration: underline;">Help Center</div>
-            <div style="padding-left: 5px;"> 〉</div>
-            <span style="color: black; text-decoration: none !important;">Getting Started</span>
+    <div>
+        <div class="flex-container">
+            <div class="help-center-link">Help Center</div>
+            <div class="separator">〉</div>
+            <span class="getting-started-link">Getting Started</span>
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="header-container">
             <div class="header-title">Getting Started</div>
-            <div style="margin-right: 205px;">
+            <div>
                 <TextField class="textfield" bottomLeftDescription="" placeholder="Search..." bottomRightDescription=""
                     iconLeft="search" label="" iconRight="" style="width: 321px;" />
             </div>
@@ -16,7 +16,6 @@
         <div v-for="(getStart, index) in getStartedList" :key="index" class="container-listing" @click="moveToStep">
             <div class="listing-title">{{ getStart }}</div>
             <q-icon class="link-icon cursor-pointer" name="north_east" size="12" />
-
         </div>
     </div>
 </template>
