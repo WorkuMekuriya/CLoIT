@@ -65,7 +65,7 @@
   </div>
 </template>
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import ConditionalStyleRoundedButton from '../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import LinkButton from '../../../../../../components/molecules/buttons/link-button/LinkButton.vue'
 import Card from '../../../../../molecules/card/Card.vue'

@@ -10,6 +10,7 @@
         dense
         align="justify"
         :class="tabClass"
+        :style="{ height: containerHeight }"
       >
         <q-tab
           :ripple="false"
@@ -18,11 +19,12 @@
           :key="tabItem.label"
           :name="tabItem.label"
           :label="tabItem.label"
-          :icon="props.type === 'circular' ? tabItem.icon : undefined"
+          :icon="props.type === 'circular' || 'circular-with-background' ? tabItem.icon : undefined"
           :class="[
             hasIcon(tabItem.icon),
             changeActiveTabColor(tabItem.tabColor),
           ]"
+          :style="{ height: innerTabHeight }"
           @click="emitTabChange(tabItem.label)"
         >
           <template #icon>
@@ -59,6 +61,10 @@ const props = defineProps({
   maxWidth: {
     type: String,
     default: '304px',
+  },
+  containerHeight: {
+    type: String,
+    default: '60px',
   },
 })
 const tab = ref(props.currentValue)

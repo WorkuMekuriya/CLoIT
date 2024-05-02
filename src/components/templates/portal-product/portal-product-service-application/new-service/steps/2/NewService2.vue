@@ -4,13 +4,30 @@
       <div class="col-8">
         <div class="select-service">
           <p class="select-text">Select Service</p>
-          <div class="select-service-row">
+          <div class="tab-component">
+            <TabComponent
+
+              :tabs="tabSelection"
+              type="circular-with-background"
+              :currentValue="currentTab"
+              @updateTab="setCurrentTabValue"
+              :maxWidth="'304px'"
+              containerHeight="60px"
+            />
+          </div>
+          <div v-if="currentTab == '대회관리'" class="select-service-row">
             <div class="flex card-container">
               <Card
                 :cardList="cards"
                 :isSingleSelect="false"
                 class="card-spacing"
                 @card-clicked="handleCardClicked"
+              />
+            </div>
+          </div>
+             <div v-if="currentTab == '경기 결과'" class="select-service-row">
+            <div class="flex card-container">
+              <EmptyCard
               />
             </div>
           </div>
@@ -38,9 +55,12 @@
   </div>
 </template>
 <script setup>
+import { ref } from 'vue'
 import LinkButton from '../../../../../../molecules/buttons/link-button/LinkButton.vue'
 import Card from '../../../../../../molecules/card/Card.vue'
 import SelectedService from '../../../../../../organisms/selected-service/SelectedService.vue'
+import TabComponent from '../../../../../../molecules/tabs/TabComponent.vue'
+import EmptyCard from '../../../../../../molecules/empty-card/EmptyCard.vue'
 const cards = [
   {
     title: 'Portal & Help Desk',
@@ -148,6 +168,17 @@ const emits = defineEmits(['nextStep']) // Define the 'clicked' event
 // Method to emit the 'clicked' event
 const moveToStep3 = () => {
   emits('nextStep', 3)
+}
+
+// Tab Selection
+const tabSelection = [
+  { icon: '', label: '대회관리', tabColor: 'bluegray' },
+  { icon: '', label: '경기 결과', tabColor: 'bluegray' },
+]
+let currentTab = ref('대회관리')
+
+const setCurrentTabValue = (value) => {
+  currentTab.value = value
 }
 </script>
 <style lang="scss" scoped>
