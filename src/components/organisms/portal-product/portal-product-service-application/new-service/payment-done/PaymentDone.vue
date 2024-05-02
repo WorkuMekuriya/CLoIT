@@ -21,14 +21,17 @@
       </p>
     </div>
     <div class="flex justify-between date-subdomain-container">
-      <div class="data-container">
+      <div v-if="!isSubDomainOnly" class="data-container">
         <p class="service-application">시스템 사용 개시일</p>
         <div class="flex items-center value-container">
           <p class="service-application-value">{{ serviceApplication }}</p>
           <Tag class="service-application-label" size="md" :label="tagLabel" />
         </div>
       </div>
-      <div class="data-container">
+      <div
+        class="data-container"
+        :style="{ width: isSubDomainOnly ? '568px' : '280px' }"
+      >
         <p class="subdomain-application">Sub-Domain 주소</p>
         <div class="flex items-center subdomain-container">
           <p class="subdomain-value">{{ subDomain }}</p>
@@ -42,6 +45,7 @@
         label="Dashboard"
         iconTextColor="text-white"
         iconBackgroundColor="bg-arcticblue-600"
+        iconColor="text-white"
       />
       <LinkButton class="q-mt-md" label="Help Center" />
     </div>
@@ -68,6 +72,10 @@ const props = defineProps({
   subDomain: {
     type: String,
     default: '/{입력한Sub-Domain}',
+  },
+  isSubDomainOnly: {
+    type: Boolean,
+    default: false,
   },
 })
 </script>

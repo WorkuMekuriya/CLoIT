@@ -1,0 +1,110 @@
+@import '../../../../../../../css/app.scss';
+
+// Define constants
+$selected-service-padding: 36px;
+$service-section-padding: 16px;
+$service-section-border-radius: 36px;
+$service-section-margin-top: 16px;
+$service-content-min-height: 135px;
+$tag-container-padding-top: 24px;
+$total-section-padding-top: 8px;
+$total-section-padding-bottom: 24px;
+$next-button-container-padding-top: 16px;
+
+$breadcrum-circle-button-icon-width: 28px;
+$breadcrum-circle-button-icon-height: 26px;
+$breadcrum-circle-button-icon-margin: 5px;
+$breadcrum-circle-button-icon-radius: 50px;
+
+$header_font_size: 20px;
+$header_font_weight: bold;
+$total_text_font_weight: 800;
+
+// Use constants in style blocks
+.selected-service-header-text {
+  @extend .heading-6, .text-bluegray-900;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: $service-section-padding;
+}
+
+.service-section-container {
+  // Card styles
+  padding: $selected-service-padding;
+}
+
+.section-container {
+  margin-bottom: 60px;
+}
+
+.service-section {
+  // Service section styles
+  @extend .bg-bluegray-50, .text-black;
+  border-radius: $service-section-border-radius;
+  margin-top: $service-section-margin-top;
+}
+
+.circle-button-icon {
+  cursor: pointer;
+  width: $breadcrum-circle-button-icon-width;
+  height: $breadcrum-circle-button-icon-height;
+  margin: $breadcrum-circle-button-icon-margin;
+  border-radius: $breadcrum-circle-button-icon-radius;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-section {
+  // Service section styles
+  @extend .bg-bluegray-100, .text-black;
+  border-radius: $service-section-border-radius;
+  padding: $selected-service-padding;
+}
+
+.service-header {
+  // Header styles
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  .header-text {
+    font-size: $header_font_size;
+    font-weight: $header_font_weight;
+  }
+}
+
+.service-content {
+  // Content styles
+  min-height: $service-content-min-height;
+}
+
+.tag-container {
+  // Tag container styles
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-top: $tag-container-padding-top;
+}
+
+.total-section {
+  // Total section styles
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $total-section-padding-top;
+  padding-bottom: $total-section-padding-bottom;
+
+  .total-text {
+    @extend .heading-4;
+    font-weight: $total_text_font_weight;
+  }
+}
+
+.next-button-container {
+  // Next button container styles
+  padding-top: $next-button-container-padding-top;
+}

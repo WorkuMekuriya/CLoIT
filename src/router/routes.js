@@ -8,8 +8,10 @@ import ElementsShowcase from 'pages/ElementsShowcase.vue'
 //PortalProductServiceApplication
 import PortalProductServiceApplicationIndex from 'pages/portal-product/product-portal-service-application/IndexPage.vue'
 import PortalProductServiceApplicationNewService from 'pages/portal-product/product-portal-service-application/NewService.vue'
+import PortalProductServiceApplicationAddService from 'pages/portal-product/product-portal-service-application/AddService.vue'
 import PortalProductServiceApplicationNewServicePaymentInstallmentsDone from 'pages/portal-product/product-portal-service-application/NewServicePaymentInstallmentsDone.vue'
 import PortalProductServiceApplicationNewServicePaymentFullDone from 'pages/portal-product/product-portal-service-application/NewServicePaymentFullDone.vue'
+import PortalProductServiceApplicationAddServicePaymentFullDone from 'pages/portal-product/product-portal-service-application/AddServicePaymentFullDone.vue'
 
 // PortalProductServiceApplication
 import PortalProductMyPage from 'pages/portal-product/my-page/MyPage.vue'
@@ -70,6 +72,21 @@ const routes = [
         path: 'payment-installments-done',
         component:
           PortalProductServiceApplicationNewServicePaymentInstallmentsDone,
+      },
+    ],
+  },
+  {
+    path: '/portal-products/add-service',
+    component: PortalProductServiceLayout,
+    children: [
+      {
+        path: '',
+        component: PortalProductServiceApplicationAddService,
+      },
+      {
+        name: 'payment-full-done',
+        path: '/portal-products/add-service/payment-full-done',
+        component: PortalProductServiceApplicationAddServicePaymentFullDone,
       },
     ],
   },

@@ -1,0 +1,43 @@
+@import '../../../../../../../css/app.scss';
+.select-service {
+  .select-text {
+    @extend .heading-6;
+    font-weight: 800;
+  }
+  .selected-text {
+    @extend .heading-6;
+    padding-left: 36px;
+  }
+
+  .card-container {
+    margin-top: 16px;
+    gap: 16px;
+  }
+  .card-spacing {
+    margin: 40px;
+  }
+  .select-service-row {
+    margin-top: 28px;
+  }
+  .link-button {
+    margin-top: 24px;
+    max-width: 390px;
+  }
+}
+
+.header-title {
+  @extend .heading-4;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.header-subtitle {
+  @extend .p-md, .text-bluegray-700;
+  font-weight: 400;
+  max-width: 535px;
+}
+
+.header-text-container {
+  display: block;
+  margin-bottom: 36px;
+}
