@@ -12,6 +12,15 @@
     <p class="sub-title text-center">
       원하는 서비스를 선택해 나만의 패키지를 구성할 수 있습니다
     </p>
+    <div class="flex justify-center tab-container">
+      <TabComponent
+        :tabs="tabSelection"
+        type="circular-with-background"
+        :currentValue="currentTab"
+        @updateTab="setCurrentTabValue"
+        :maxWidth="'304px'"
+      />
+    </div>
     <div class="flex card-container">
       <Card
         :cardList="productsCard"
@@ -34,9 +43,11 @@
   </div>
 </template>
 <script setup>
+import { ref, computed } from 'vue'
 import ConditionalStyleRoundedButton from '../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import LinkButton from '../../../../../../components/molecules/buttons/link-button/LinkButton.vue'
 import Card from '../../../../../molecules/card/Card.vue'
+import TabComponent from '../../../../../molecules/tabs/TabComponent.vue'
 const icons = [
   { name: 'panorama_fish_eye', background: '', iconColor: '' },
   { name: 'panorama_fish_eye', background: '', iconColor: '' },
@@ -111,6 +122,17 @@ const productsCard = [
     height: '228px',
   },
 ]
+
+// Tab Selection
+const tabSelection = [
+  { icon: '', label: '대회관리', tabColor: 'arcticblue' },
+  { icon: '', label: '경기 결과', tabColor: 'bluegray' },
+]
+let currentTab = ref('대회관리')
+
+const setCurrentTabValue = (value) => {
+  currentTab.value = value
+}
 </script>
 <style lang="scss" scoped>
 @import 'LandingContent.style.scss';

@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-md">
     <h1 class="heading-3 text-limegreen-900 text-center q-mb-md">CLoIT</h1>
-    <div class="flex justify-center q-mb-md">
+    <!-- <div class="flex justify-center q-mb-md">
       <TextField class="textfield" />
     </div>
 
@@ -25,13 +25,13 @@
     </div>
     <div class="flex justify-center">
       <AvatarButton />
+    </div> -->
+    <div class="flex justify-center q-y-lg">
+      <TabComponent maxWidth="304px" />
     </div>
-    <div class="flex justify-center q-mb-md">
-      <TabComponent />
-    </div>
-    <div class="flex justify-center">
+    <!-- <div class="flex justify-center">
       <StandardButton />
-    </div>
+    </div> -->
   </q-page>
 </template>
 

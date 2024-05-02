@@ -27,7 +27,6 @@
     margin-top: 36px;
   }
 
-
   .title {
     @extend .heading-3;
     margin-top: 60px;
@@ -42,7 +41,10 @@
     margin-top: 17px;
   }
 }
-    .link-button {
-      margin-top: 36px;
-      width: 390px;
-    }
+.link-button {
+  margin-top: 36px;
+  width: 390px;
+}
+.tab-container {
+  margin: 40px 0px;
+}
