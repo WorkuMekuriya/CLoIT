@@ -6,7 +6,6 @@
           <p class="select-text">Select Service</p>
           <div class="tab-component">
             <TabComponent
-
               :tabs="tabSelection"
               type="circular-with-background"
               :currentValue="currentTab"
@@ -25,10 +24,9 @@
               />
             </div>
           </div>
-             <div v-if="currentTab == '경기 결과'" class="select-service-row">
+          <div v-if="currentTab == '경기 결과'" class="select-service-row">
             <div class="flex card-container">
-              <EmptyCard
-              />
+              <EmptyCard />
             </div>
           </div>
           <LinkButton

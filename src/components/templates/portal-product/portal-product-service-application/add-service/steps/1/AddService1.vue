@@ -12,6 +12,17 @@
             </div>
           </div>
           <p class="select-text">추가할 서비스 선택</p>
+          <div class="tab-component">
+            <TabComponent
+              :tabs="tabSelection"
+              type="circular-with-background"
+              :currentValue="currentTab"
+              @updateTab="setCurrentTabValue"
+              :maxWidth="'304px'"
+              containerHeight="60px"
+            />
+          </div>
+
           <div class="select-service-row">
             <div class="flex card-container">
               <Card
@@ -46,8 +57,10 @@
   </div>
 </template>
 <script setup>
+import { ref } from 'vue'
 import LinkButton from '../../../../../../molecules/buttons/link-button/LinkButton.vue'
 import Card from '../../../../../../molecules/card/Card.vue'
+import TabComponent from '../../../../../../molecules/tabs/TabComponent.vue'
 import SelectedService from '../../../../../../organisms/selected-service/SelectedService.vue'
 const cards = [
   {
@@ -156,6 +169,15 @@ const emits = defineEmits(['nextStep']) // Define the 'clicked' event
 // Method to emit the 'clicked' event
 const moveToStep2 = () => {
   emits('nextStep', 2)
+}
+// Tab Selection
+const tabSelection = [
+  { icon: '', label: '대회관리', tabColor: 'bluegray' },
+  { icon: '', label: '경기 결과', tabColor: 'bluegray' },
+]
+let currentTab = ref('대회관리')
+const setCurrentTabValue = (value) => {
+  currentTab.value = value
 }
 </script>
 <style lang="scss" scoped>

@@ -1,0 +1,155 @@
+@import '../../../../css/app.scss';
+
+// Define variables
+$min-height: 84px;
+$max-width: 100%;
+$padding: 16px;
+$small-padding: 14px;
+$large-padding: 24px;
+$border-radius: 16px;
+$icon-diameter: 52px;
+$icon-border-width: 0.1rem;
+$background-color: #f9fafb;
+$border-color: #d0d5dd;
+$small-margin: 8px;
+$medium-margin: 24px;
+$margin: 16px;
+$font-size-md: 16px;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$bg-bluegray-50: bg-bluegray-50;
+
+.container {
+  min-height: $min-height;
+  max-width: $max-width;
+  padding: $padding;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  @extend .bg-arcticblue-600;
+  cursor: pointer;
+  height: $icon-diameter;
+  width: $icon-diameter;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container {
+  @extend .text-bluegray-900;
+  padding-left: $large-padding;
+  padding-right: $large-padding;
+}
+
+.right-section {
+  @extend .text-bluegray-900;
+  display: flex;
+  align-items: center;
+}
+
+.download-icon,
+.delete-icon {
+  cursor: pointer;
+  height: $icon-diameter;
+  width: $icon-diameter;
+  border-width: $icon-border-width;
+  border-style: solid;
+  border-color: $border-color;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-icon {
+  margin-left: $large-padding;
+}
+
+.delete-icon {
+  margin-left: $small-margin;
+}
+
+.icon-color {
+  @extend .text-bluegray-300;
+}
+
+.file-name {
+  @extend .label-md, .text-bluegray-900;
+  font-weight: $font-weight-400;
+}
+
+.file-date {
+  @extend .label-sm, .text-bluegray-700;
+  font-weight: $font-weight-400;
+}
+
+.file-size {
+  @extend .label-xs, .text-bluegray-700;
+  font-weight: $font-weight-500;
+}
+
+.container-sm {
+  height: 74px;
+  min-width: $max-width;
+  cursor: pointer;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $icon-diameter;
+  padding: $padding;
+  padding-top: $small-padding;
+  padding-bottom: $small-padding;
+  background-color: $background-color;
+  margin-top: $small-margin;
+  border-radius: $border-radius;
+}
+
+.sm-icon-container {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+.attachment-label {
+  @extend .label-sm, .text-bluegray-600;
+  font-weight: $font-weight-400;
+}
+
+.sm-file-name {
+  @extend .text-bluegray-900;
+  font-size: $font-size-md;
+  font-weight: $font-weight-400;
+  text-decoration: underline;
+}
+
+.content-container-lg {
+  @extend .bg-bluegray-50;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 180px;
+  padding: $padding;
+  padding-top: $small-padding;
+  padding-bottom: $small-padding;
+  border: 1px dashed $border-color;
+  margin-top: $small-margin;
+  margin-bottom: $small-margin;
+  border-radius: $border-radius;
+}
+
+.file-name {
+  @extend .label-md, .text-bluegray-300;
+  font-weight: $font-weight-400;
+}

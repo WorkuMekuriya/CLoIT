@@ -19,7 +19,11 @@
           :key="tabItem.label"
           :name="tabItem.label"
           :label="tabItem.label"
-          :icon="props.type === 'circular' || 'circular-with-background' ? tabItem.icon : undefined"
+          :icon="
+            props.type === 'circular' || 'circular-with-background'
+              ? tabItem.icon
+              : undefined
+          "
           :class="[
             hasIcon(tabItem.icon),
             changeActiveTabColor(tabItem.tabColor),

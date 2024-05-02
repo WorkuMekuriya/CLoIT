@@ -46,9 +46,9 @@
         </div>
       </div>
     </div>
-      <div v-if="currentTab == '경기 결과'">
+    <div v-if="currentTab == '경기 결과'">
       <div class="flex card-container">
-        <EmptyCard/>
+        <EmptyCard />
       </div>
       <div class="flex justify-center card-button">
         <ConditionalStyleRoundedButton type="Secondary" label="신청하기" />

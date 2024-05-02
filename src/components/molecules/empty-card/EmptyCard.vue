@@ -5,5 +5,5 @@
 </template>
 <script setup></script>
 <style lang="scss" scoped>
-@import 'EmptyCard.style.scss'
+@import 'EmptyCard.style.scss';
 </style>
