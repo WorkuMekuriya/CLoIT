@@ -1,6 +1,9 @@
 <template>
   <div class="landing-content">
-    <div class="icon-container flex justify-center">
+    <div
+      v-if="currentTab == '대회관리'"
+      class="icon-container flex justify-center"
+    >
       <q-icon
         v-for="(icon, index) in icons"
         :key="index"
@@ -12,6 +15,7 @@
     <p class="sub-title text-center">
       원하는 서비스를 선택해 나만의 패키지를 구성할 수 있습니다
     </p>
+
     <div class="flex justify-center tab-container">
       <TabComponent
         :tabs="tabSelection"
@@ -21,23 +25,41 @@
         :maxWidth="'304px'"
       />
     </div>
-    <div class="flex card-container">
-      <Card
-        :cardList="productsCard"
-        :isSingleSelect="false"
-        class="products-card"
-        size="md"
-      />
-    </div>
-    <div class="flex justify-center card-button">
-      <ConditionalStyleRoundedButton type="Primary" label="신청하기" />
-    </div>
-    <div class="flex justify-center">
-      <div class="link-button">
-        <LinkButton
-          labelTypology="subH-md-med"
-          backgroundColor="bg-bluegray-100"
+    <div v-if="currentTab == '대회관리'">
+      <div class="flex card-container">
+        <Card
+          :cardList="productsCard"
+          :isSingleSelect="false"
+          class="products-card"
+          size="md"
         />
+      </div>
+      <div class="flex justify-center card-button">
+        <ConditionalStyleRoundedButton type="Primary" label="신청하기" />
+      </div>
+      <div class="flex justify-center">
+        <div class="link-button">
+          <LinkButton
+            labelTypology="subH-md-med"
+            backgroundColor="bg-bluegray-100"
+          />
+        </div>
+      </div>
+    </div>
+      <div v-if="currentTab == '경기 결과'">
+      <div class="flex card-container">
+        <EmptyCard/>
+      </div>
+      <div class="flex justify-center card-button">
+        <ConditionalStyleRoundedButton type="Secondary" label="신청하기" />
+      </div>
+      <div class="flex justify-center">
+        <div class="link-button">
+          <LinkButton
+            labelTypology="subH-md-med"
+            backgroundColor="bg-bluegray-100"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -47,6 +69,7 @@ import { ref, computed } from 'vue'
 import ConditionalStyleRoundedButton from '../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import LinkButton from '../../../../../../components/molecules/buttons/link-button/LinkButton.vue'
 import Card from '../../../../../molecules/card/Card.vue'
+import EmptyCard from '../../../../../molecules/empty-card/EmptyCard.vue'
 import TabComponent from '../../../../../molecules/tabs/TabComponent.vue'
 const icons = [
   { name: 'panorama_fish_eye', background: '', iconColor: '' },
