@@ -6,11 +6,11 @@
 import { ref, computed } from 'vue'
 
 // Import the components used for different steps.
-import Inquiry from './inquiry/Inquiry.vue'
+import Inquiry from 'components/templates/portal-product/my-page/mypage-profile/inquiry-history/inquiry-list/InquiryList.vue'
 import NewInquiry from './new-inquiry/NewInquiry.vue'
 import InquiryDetail from './inquiry-detail/InquiryDetail.vue'
 
-// Initialize the inquiry ref with a starting value.
+// Initialize the inquiry-list ref with a starting value.
 const inquiry = ref(0)
 
 // Define a computed property that returns the component for the current step.
@@ -23,7 +23,7 @@ const currentStepComponent = computed(() => {
     case 2:
       return InquiryDetail
     default:
-      return Inquiry // This line is added to handle unexpected inquiry values.
+      return Inquiry // This line is added to handle unexpected inquiry-list values.
   }
 })
 

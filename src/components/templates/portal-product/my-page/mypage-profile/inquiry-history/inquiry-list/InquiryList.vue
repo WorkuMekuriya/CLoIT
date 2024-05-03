@@ -89,5 +89,5 @@ const inquiries = ref([
 </script>
 
 <style scoped lang="scss">
-@import 'Inquiry.style.scss';
+@import 'InquiryList.style';
 </style>

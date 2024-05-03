@@ -49,7 +49,7 @@ const profileRoutes = [
   { label: 'Edit my profile', route: '/edit-profile' },
   { label: 'Edit organization', route: '/edit-organization' },
   { label: 'Reset password', route: '/reset-password' },
-  { label: '1:1 문의내역', route: '/inquiry-history' },
+  { label: '1:1 문의내역', route: '/inquiry-list-history' },
 ]
 
 const emits = defineEmits(['nextStep'])
