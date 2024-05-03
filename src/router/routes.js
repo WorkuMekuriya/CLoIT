@@ -1,35 +1,3 @@
-// Layouts
-const ShowcaseLayout = () => import('layouts/ShowcaseLayout.vue');
-const PortalProductServiceLayout = () => import('layouts/PortalProductServiceLayout.vue');
-const ProductPortalMyPage = () => import('layouts/ProductPortalMyPage.vue');
-
-const ElementsShowcase = () => import('pages/ElementsShowcase.vue');
-
-//PortalProductServiceApplication
-const PortalProductServiceApplicationIndex = () => import('pages/portal-product/product-portal-service-application/IndexPage.vue');
-const PortalProductServiceApplicationNewService = () => import('pages/portal-product/product-portal-service-application/NewService.vue');
-const PortalProductServiceApplicationAddService = () => import('pages/portal-product/product-portal-service-application/AddService.vue');
-const PortalProductServiceApplicationNewServicePaymentInstallmentsDone = () => import('pages/portal-product/product-portal-service-application/NewServicePaymentInstallmentsDone.vue');
-const PortalProductServiceApplicationNewServicePaymentFullDone = () => import('pages/portal-product/product-portal-service-application/NewServicePaymentFullDone.vue');
-const PortalProductServiceApplicationAddServicePaymentFullDone = () => import('pages/portal-product/product-portal-service-application/AddServicePaymentFullDone.vue');
-
-// PortalProductServiceApplication
-const PortalProductMyPage = () => import('pages/portal-product/my-page/MyPage.vue');
-
-// sub pages(Templates)
-const PortalProdctMyPageHelp = () => import('components/templates/portal-product/my-page/mypage-help/MyPageHelp.vue');
-const PortalProductMyPageNotice = () => import('components/templates/portal-product/my-page/mypage-notice/MyPageNotice.vue');
-const PortalProductMyPageNoticeDetail = () => import('components/templates/portal-product/my-page/mypage-notice/notice-detail/NoticeDetail.vue');
-
-const PortalProductMyPagePayment = () => import('components/templates/portal-product/my-page/mypage-payment/MyPagePayment.vue');
-
-const PortalProductMyPageServices = () => import('components/templates/portal-product/my-page/mypage-services/MyPageServices.vue');
-const PortalProductMyPageServiceActive = () => import('components/templates/portal-product/my-page/mypage-services/services-active/ServiceActive.vue');
-const PortalProductMyPageServicesInactive = () => import('components/templates/portal-product/my-page/mypage-services/services-inactive/ServiceInactive.vue');
-const PortalProductMyPageServicePending = () => import('components/templates/portal-product/my-page/mypage-services/services-pending/ServicePending.vue');
-const PortalProductMyPageServiceInactiveFull = () => import('components/templates/portal-product/my-page/mypage-services/services-inactive-full/ServiceInactiveFull.vue');
-const PortalProductMyPageProfile = () => import('components/templates/portal-product/my-page/mypage-profile/MyPageProfile.vue');
-
 const routes = [
   {
     path: '/',
@@ -38,65 +6,65 @@ const routes = [
   },
   {
     path: '/showcase',
-    component: ShowcaseLayout,
+    component: () => import('layouts/ShowcaseLayout.vue'),
     children: [
       {
         path: '',
-        component: ElementsShowcase,
+        component: () => import('pages/ElementsShowcase.vue'),
       },
     ],
   },
   {
     path: '/portal-products/service-application',
-    component: PortalProductServiceLayout,
+    component: () => import('layouts/PortalProductServiceLayout.vue'),
     children: [
       {
         path: '',
-        component: PortalProductServiceApplicationIndex,
+        component: () => import('pages/portal-product/product-portal-service-application/IndexPage.vue'),
       },
     ],
   },
   {
     path: '/portal-products/new-service',
-    component: PortalProductServiceLayout,
+    component: () => import('layouts/PortalProductServiceLayout.vue'),
     children: [
       {
         path: '',
-        component: PortalProductServiceApplicationNewService,
+        component: () => import('pages/portal-product/product-portal-service-application/NewService.vue'),
       },
       {
         path: 'payment-full-done',
-        component: PortalProductServiceApplicationNewServicePaymentFullDone,
+        component: () => import('pages/portal-product/product-portal-service-application/NewServicePaymentFullDone.vue'),
       },
       {
         path: 'payment-installments-done',
-        component: PortalProductServiceApplicationNewServicePaymentInstallmentsDone,
+        component: () => import('pages/portal-product/product-portal-service-application/NewServicePaymentInstallmentsDone.vue'),
       },
     ],
   },
   {
     path: '/portal-products/add-service',
-    component: PortalProductServiceLayout,
+    component: () => import('layouts/PortalProductServiceLayout.vue'),
     children: [
       {
         path: '',
-        component: PortalProductServiceApplicationAddService,
+        component: () => import('pages/portal-product/product-portal-service-application/AddService.vue'),
       },
       {
         name: 'payment-full-done',
         path: '/portal-products/add-service/payment-full-done',
-        component: PortalProductServiceApplicationAddServicePaymentFullDone,
+        component: () => import('pages/portal-product/product-portal-service-application/AddServicePaymentFullDone.vue'),
       },
     ],
   },
   {
     path: '/portal-products/my-page',
-    component: PortalProductMyPage,
+    component: () => import('pages/portal-product/my-page/MyPage.vue'),
     children: [
       {
         name: 'portal-products-my-page-help',
         path: 'help',
-        component: PortalProdctMyPageHelp,
+        component: () => import('components/templates/portal-product/my-page/mypage-help/MyPageHelp.vue'),
       },
       {
         name: 'notice-main',
@@ -105,19 +73,19 @@ const routes = [
           {
             name: 'portal-products-my-page-notice',
             path: '',
-            component: PortalProductMyPageNotice,
+            component: () => import('components/templates/portal-product/my-page/mypage-notice/MyPageNotice.vue'),
           },
           {
             name: 'portal-products-my-page-notice-detail',
             path: 'detail',
-            component: PortalProductMyPageNoticeDetail,
+            component: () => import('components/templates/portal-product/my-page/mypage-notice/notice-detail/NoticeDetail.vue'),
           },
         ],
       },
       {
         name: 'portal-products-my-page-payment',
         path: 'payment',
-        component: PortalProductMyPagePayment,
+        component: () => import('components/templates/portal-product/my-page/mypage-payment/MyPagePayment.vue'),
       },
       {
         name: 'service-main',
@@ -126,34 +94,34 @@ const routes = [
           {
             path: '',
             name: 'portal-products-my-page-services',
-            component: PortalProductMyPageServices,
+            component: () => import('components/templates/portal-product/my-page/mypage-services/MyPageServices.vue'),
           },
           {
             name: 'portal-products-my-page-services-active',
             path: 'active',
-            component: PortalProductMyPageServiceActive,
+            component: () => import('components/templates/portal-product/my-page/mypage-services/services-active/ServiceActive.vue'),
           },
           {
             name: 'portal-products-my-page-services-inactive',
             path: 'inactive',
-            component: PortalProductMyPageServicesInactive,
+            component: () => import('components/templates/portal-product/my-page/mypage-services/services-inactive/ServiceInactive.vue'),
           },
           {
             name: 'portal-products-my-page-services-pending',
             path: 'pending',
-            component: PortalProductMyPageServicePending,
+            component: () => import('components/templates/portal-product/my-page/mypage-services/services-pending/ServicePending.vue'),
           },
           {
             name: 'portal-products-my-page-services-inactive-full',
             path: 'inactive-full',
-            component: PortalProductMyPageServiceInactiveFull,
+            component: () => import('components/templates/portal-product/my-page/mypage-services/services-inactive-full/ServiceInactiveFull.vue'),
           },
         ],
       },
       {
         name: 'portal-products-my-page-profile',
         path: 'profile',
-        component: PortalProductMyPageProfile,
+        component: () => import('components/templates/portal-product/my-page/mypage-profile/MyPageProfile.vue'),
       },
     ],
   },
