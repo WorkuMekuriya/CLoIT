@@ -7,7 +7,7 @@
         @click="navigateToPage(page.to)"
       >
         <component
-          class="set-font-size"
+          class="set-font-size cursor-pointer"
           :active="page.active.value"
           :is="page.icon"
         ></component>
@@ -17,7 +17,7 @@
 </template>
 <script setup>
 import { useRouter, onBeforeRouteUpdate } from 'vue-router'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import FlagIcon from '../../../../atoms/Icons/my-page-icons/FlagIcon.vue'
 import HelpIcon from '../../../../atoms/Icons/my-page-icons/HelpIcon.vue'
 import NoticeIcon from '../../../../atoms/Icons/my-page-icons/NoticeIcon.vue'
@@ -51,15 +51,20 @@ const pages = [
 ]
 
 const navigateToPage = (routeName) => {
-  console.log(routeName)
   router.push({ name: routeName })
 }
+const setActiveRoutes = () => {
+  const currentRouteName = router.currentRoute.value.name
 
-onBeforeRouteUpdate((to, from) => {
-  console.log('before')
   pages.forEach((page) => {
-    page.active.value = to.name === page.to
+    page.active.value = currentRouteName === page.to || currentRouteName.startsWith(page.to)
   })
+}
+onMounted(() => {
+  setActiveRoutes()
+})
+watch(router.currentRoute, () => {
+   setActiveRoutes()
 })
 </script>
 <style lang="scss" scoped>
