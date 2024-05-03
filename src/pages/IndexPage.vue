@@ -1,56 +1,17 @@
 <template>
   <q-page class="q-pa-md">
     <h1 class="heading-3 text-limegreen-900 text-center q-mb-md">CLoIT</h1>
-    <!-- <div class="flex justify-center q-mb-md">
-      <TextField class="textfield" />
-    </div>
-
-    <div class="flex justify-center q-mb-md">
-      <TextArea class="textfield" />
-    </div>
-
-    <div class="flex justify-center q-mb-md">
-      <ToggleButton />
-    </div>
-
-    <div class="flex justify-center q-mb-md">
-      <CheckboxButton />
-    </div>
-
-    <div class="flex justify-center q-mb-md">
-      <AlertDialog :showAlert="showAlert" @close="showAlert = false" />
-    </div>
-    <div class="flex justify-center">
-      <RadioButton />
-    </div>
-    <div class="flex justify-center">
-      <AvatarButton />
-    </div> -->
-    <div class="flex justify-center q-y-lg">
-      <TabComponent maxWidth="304px" />
-    </div>
-    <!-- <div class="flex justify-center">
-      <StandardButton />
-    </div> -->
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import FilePicker from 'src/components/molecules/form-components/file-picker/FilePicker.vue'
 export default defineComponent({
   name: 'IndexPage',
 })
 </script>
 <script setup>
-import ToggleButton from '../components/molecules/form-components/toggle/ToggleButton.vue'
-import CheckboxButton from '../components/molecules/form-components/checkbox/CheckboxButton.vue'
-import RadioButton from '../components/molecules/form-components/radio-button/RadioButton.vue'
-import TextField from '../components/molecules/form-components/fields/textfield/TextField.vue'
-import TextArea from '../components/molecules/form-components/fields/textarea/TextArea.vue'
-import AvatarButton from '../components/molecules/avatar/AvatarButton.vue'
-import AlertDialog from '../components/molecules/alert/AlertDialog.vue'
-import TabComponent from '../components/molecules/tabs/TabComponent.vue'
-import StandardButton from '../components/molecules/buttons/standard-buttons/StandardButtons.vue'
 import { ref } from 'vue'
 
 const showAlert = ref(true)
