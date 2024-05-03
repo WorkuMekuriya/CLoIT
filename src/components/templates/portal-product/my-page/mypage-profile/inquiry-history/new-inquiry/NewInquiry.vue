@@ -22,6 +22,7 @@
         class="textfield"
         :label="field.name"
         :placeholder="field.placeholder || field.name"
+        :height="field.height"
       />
       <TextField
         v-if="field.type == 'textfield'"
@@ -64,6 +65,7 @@ const inquiryFields = ref([
       '자세히 적어주실 수록 빠르고 정확한 도움을 받으실 수 있습니다.',
     description: '',
     type: 'textarea',
+    height: '338px'
   },
   {
     name: 'Attach files',

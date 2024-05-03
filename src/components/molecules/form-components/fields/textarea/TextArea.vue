@@ -13,6 +13,7 @@
         autogrow
         type="textarea"
         @input="emitInput"
+        :style="{height: height}"
       >
       </q-input>
       <div class="textarea-counter">
@@ -71,6 +72,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  height: {
+    type: String,
+    default: '128px'
+  }
 })
 
 const emitInput = () => {

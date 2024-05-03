@@ -22,8 +22,6 @@
         <div class="flex justify-center q-mb-md">
           <TextField
             class="textfield"
-            leftIcon="right"
-            rightIcon="right"
             bottomLeftDescription=""
             bottomRightDescription=""
             iconLeft="home"

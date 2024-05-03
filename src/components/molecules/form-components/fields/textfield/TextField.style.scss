@@ -55,7 +55,7 @@ $textfield-height: 52px;
   }
 }
 .textfield-primary.remove-icon-left-space {
-  :deep(.q-field__marginal) {
+  :deep(.q-field__prepend) {
     display: none !important;
   }
 }
