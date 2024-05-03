@@ -18,6 +18,7 @@ module.exports = configure(function (/* ctx */) {
       // include = [],
       // exclude = [],
       // rawOptions = {},
+      errors: true,
       configure: {
         extends: [
           'plugin:vue/vue3-essential',
