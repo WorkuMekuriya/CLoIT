@@ -17,7 +17,7 @@
           :label="field.name"
           :placeholder="field.placeholder || field.name"
           :bottomLeftDescription="field.description"
-          :rightIcon="field.rightIcon"
+          :iconRight="field.rightIcon"
         />
       </div>
     </div>

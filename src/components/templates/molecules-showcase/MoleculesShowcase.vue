@@ -8,6 +8,7 @@
     <TableHeaderComponent />
     <CardShowcase />
     <OtherStuffShowcase />
+    <FilePickerShowcase />
     <SelectedServiceShowcase />
   </q-page>
 </template>
@@ -22,6 +23,7 @@ import TagComponent from '../../organisms/molecules-showcase/TagsShowcase.vue'
 import TableHeaderComponent from '../../organisms/molecules-showcase/TableHeaderShowcase.vue'
 import OtherStuffShowcase from 'src/components/organisms/molecules-showcase/OtherStuffShowcase.vue'
 import SelectedServiceShowcase from '../../organisms/molecules-showcase/SelectedServiceShowcase.vue'
+import FilePickerShowcase from 'src/components/organisms/molecules-showcase/FilePickerShowcase.vue'
 import { ref } from 'vue'
 
 const showAlert = ref(true)
