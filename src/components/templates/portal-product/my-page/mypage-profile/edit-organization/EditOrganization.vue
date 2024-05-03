@@ -61,7 +61,10 @@
           :key="index"
           class="grid-item"
         >
+          <FilePicker v-if="form.type == 'filePicker'" type="sm" />
+
           <TextField
+            v-else
             class="textfield"
             :label="form.name"
             :placeholder="form.placeholder || form.name"
@@ -89,6 +92,7 @@
 import { ref } from 'vue'
 import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
+import FilePicker from 'src/components/molecules/form-components/file-picker/FilePicker.vue'
 
 const organizationInfo = ref([
   { name: 'Organization registration number', description: '' },
@@ -115,7 +119,11 @@ const organizationInfo_3 = ref([
   { name: 'Province', description: '' },
   { name: '', placeholder: 'Postal or ZIP Code', description: '' },
   { name: 'Contact', description: '' },
-  { name: 'Certificate for business registration', description: '' },
+  {
+    name: 'Certificate for business registration',
+    description: '',
+    type: 'filePicker',
+  },
 ])
 
 const emits = defineEmits(['nextStep']) // Define the 'clicked' event

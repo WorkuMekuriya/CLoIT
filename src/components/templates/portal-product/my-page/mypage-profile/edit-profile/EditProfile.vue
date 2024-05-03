@@ -17,6 +17,7 @@
           :label="field.name"
           :placeholder="field.placeholder || field.name"
           :bottomLeftDescription="field.description"
+          :rightIcon="field.rightIcon"
         />
       </div>
     </div>
@@ -43,7 +44,12 @@ const profileFields = ref([
   { name: 'Phone Number', placeholder: '', description: '' },
   { name: 'Email', placeholder: '', description: '' },
   { name: 'Nationality', placeholder: '', description: '' },
-  { name: 'Organization', placeholder: '', description: '' },
+  {
+    name: 'Organization',
+    placeholder: '',
+    description: '',
+    rightIcon: 'search',
+  },
   { name: 'Department', placeholder: '', description: '' },
   { name: 'Preferred Language', placeholder: '', description: '' },
 ])

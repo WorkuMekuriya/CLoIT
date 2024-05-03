@@ -11,17 +11,24 @@
   </div>
   <div class="form-container">
     <div v-for="(field, index) in inquiryFields" :key="index">
-      <TextField
-        class="textfield"
+      <FilePicker
+        v-if="field.type == 'filePicker'"
         :label="field.name"
-        :placeholder="field.placeholder || field.name"
-        :bottomLeftDescription="field.description"
+        :description="field.description"
+        type="lg"
       />
       <TextArea
         v-if="field.type == 'textarea'"
         class="textfield"
         :label="field.name"
         :placeholder="field.placeholder || field.name"
+      />
+      <TextField
+        v-if="field.type == 'textfield'"
+        class="textfield"
+        :label="field.name"
+        :placeholder="field.placeholder || field.name"
+        :bottomLeftDescription="field.description"
       />
     </div>
   </div>
@@ -41,6 +48,7 @@ import { ref } from 'vue'
 import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
 import TextArea from 'src/components/molecules/form-components/fields/textarea/TextArea.vue'
 import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
+import FilePicker from 'src/components/molecules/form-components/file-picker/FilePicker.vue'
 
 const inquiryFields = ref([
   {
@@ -61,7 +69,7 @@ const inquiryFields = ref([
     name: 'Attach files',
     placeholder: 'Drag and drop files',
     description: '{File 크기나 확장자 제한에 대한 안내}',
-    type: 'attachment',
+    type: 'filePicker',
   },
 ])
 const emits = defineEmits(['nextInquiry']) // Define the 'clicked' event
