@@ -1,0 +1,46 @@
+@import '../../../../css/app.scss';
+
+.select-description {
+  @extend .label-xs, .text-bluegray-600;
+  font-weight: 400;
+}
+
+.select-container {
+  @extend .bg-bluegray-50, .text-bluegray-900;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  border-radius: 36px;
+  padding: 7px;
+}
+.prepend-icon {
+  @extend .text-bluegray-600;
+  font-size: 20px;
+  font-weight: 100;
+  margin-left: 8px;
+}
+:deep(.q-field__prepend) {
+  padding: 0px;
+}
+:deep(.q-field__append) {
+  padding: 0px;
+}
+:deep(.q-select__dropdown-icon) {
+  @extend .text-bluegray-600;
+  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid $bluegray-300;
+  border-radius: 50%;
+  padding: 0px;
+}
+:deep(.q-field__native) {
+  display: flex;
+  justify-content: center;
+}
+:deep(.q-item--active) {
+  @extend .text-arcticblue-900, .label-md-bold;
+}
