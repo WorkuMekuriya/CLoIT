@@ -3,7 +3,7 @@
 </style>
 <template>
   <div>
-    <p v-if="label" class="textfield-label">{{ label }}</p>
+    <p v-if="label" class="textfield-label">{{ label }}<span class="text-red-500" v-if="required"> *</span></p>
     <q-input
       v-model="inputValue"
       class="textfield-primary"
@@ -54,6 +54,10 @@ const props = defineProps({
   placeholder: {
     type: String,
     default: 'Placeholder Text',
+  },
+  required: {
+    type: Boolean,
+    default: true
   },
   bottomLeftDescription: {
     type: String,
