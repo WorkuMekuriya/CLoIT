@@ -30,7 +30,7 @@
   </div>
 </template>
 <script setup>
-import Tag from '../../../../../molecules/form-components/tag/Tag.vue'
+import Tag from 'components/molecules/form-components/tag-component/TagComponent.vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 defineProps({

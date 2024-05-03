@@ -59,7 +59,7 @@
 <script setup>
 import { ref } from 'vue'
 import LinkButton from '../../../../../../molecules/buttons/link-button/LinkButton.vue'
-import Card from '../../../../../../molecules/card/Card.vue'
+import Card from 'components/molecules/card-component/CardComponent.vue'
 import TabComponent from '../../../../../../molecules/tabs/TabComponent.vue'
 import SelectedService from '../../../../../../organisms/selected-service/SelectedService.vue'
 const cards = [
@@ -160,9 +160,9 @@ const products = [
 ]
 const options = []
 const handleCardClicked = (index) => {
-  // Perform any actions you want in response to the card being clicked
+  // Perform any actions you want in response to the card-component being clicked
   console.log('Card clicked:', index)
-  // You can also call methods or update data in the parent component based on the card click
+  // You can also call methods or update data in the parent component based on the card-component click
 }
 const emits = defineEmits(['nextStep']) // Define the 'clicked' event
 

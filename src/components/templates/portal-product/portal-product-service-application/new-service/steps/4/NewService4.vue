@@ -168,7 +168,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import Card from '../../../../../../molecules/card/Card.vue'
+import Card from 'components/molecules/card-component/CardComponent.vue'
 import CheckboxButton from '../../../../../../molecules/form-components/checkbox/CheckboxButton.vue'
 import TextField from '../../../../../../molecules/form-components/fields/textfield/TextField.vue'
 import TextArea from '../../../../../../molecules/form-components/fields/textarea/TextArea.vue'

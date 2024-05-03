@@ -85,7 +85,7 @@
 </template>
 
 <script setup>
-import Tag from '../../../../../molecules/form-components/tag/Tag.vue'
+import Tag from 'components/molecules/form-components/tag-component/TagComponent.vue'
 import DialogComponent from '../../../../../molecules/dialog/DialogComponent.vue'
 import AlertStandardIcon from '../../../../../atoms/Icons/alert-icons/AlertStandardIcon.vue'
 import TermsDialogInner from '../terms-and-conditions/terms-dialog-inner/TermsDialogInner.vue'

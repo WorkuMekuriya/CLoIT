@@ -112,8 +112,8 @@
 <script setup>
 import { ref } from 'vue'
 import LiItem from '../../../../../../molecules/li-item/LiItem.vue'
-import Card from '../../../../../../molecules/card/Card.vue'
-import TagComponent from '../../../../../../molecules/form-components/tag/Tag.vue'
+import Card from 'components/molecules/card-component/CardComponent.vue'
+import TagComponent from 'components/molecules/form-components/tag-component/TagComponent.vue'
 import TextField from '../../../../../../molecules/form-components/fields/textfield/TextField.vue'
 import RoundedButton from '../../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 

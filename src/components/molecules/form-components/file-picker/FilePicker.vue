@@ -121,8 +121,8 @@
     <div class="attachment-label">{{ description }}</div>
   </div>
 </template>
-<script setup lang="ts">
-import { ref, defineEmits, type Ref } from 'vue'
+<script setup>
+import { ref, defineEmits } from 'vue'
 import { QFile } from 'quasar'
 
 // Define the emit function
@@ -148,32 +148,39 @@ const props = defineProps({
 })
 
 // Declare the file model and file reference
-const fileModel = ref<File | null>(null)
-const fileRef = ref<Ref<QFile>>(null)
+const fileModel = ref(null)
+const fileRef = ref(null)
 
 // Function to select a file
-function selectFile(): void {
+function selectFile() {
   fileRef.value?.pickFiles()
   emit('file', fileModel.value)
 }
 
 // Function to format file size
-function formatFileSize(bytes: number): string {
+function formatFileSize(bytes) {
   const KB = 1024
   const MB = KB * KB
   const GB = MB * KB
 
-  if (bytes < KB) return `${bytes} bytes`
-  if (bytes < MB) return `${(bytes / KB).toFixed(2)} KB`
-  if (bytes < GB) return `${(bytes / MB).toFixed(2)} MB`
+  if (bytes < KB) {
+    return `${bytes} bytes`
+  }
+  if (bytes < MB) {
+    return `${(bytes / KB).toFixed(2)} KB`
+  }
+  if (bytes < GB) {
+    return `${(bytes / MB).toFixed(2)} MB`
+  }
   return `${(bytes / GB).toFixed(2)} GB`
 }
 
 // Function to delete a file
-function deleteFile(): void {
+function deleteFile() {
   fileModel.value = null
 }
 </script>
+
 <style lang="scss" scoped>
 @import 'FilePicker.style.scss';
 </style>

@@ -57,14 +57,15 @@ const setActiveRoutes = () => {
   const currentRouteName = router.currentRoute.value.name
 
   pages.forEach((page) => {
-    page.active.value = currentRouteName === page.to || currentRouteName.startsWith(page.to)
+    page.active.value =
+      currentRouteName === page.to || currentRouteName.startsWith(page.to)
   })
 }
 onMounted(() => {
   setActiveRoutes()
 })
 watch(router.currentRoute, () => {
-   setActiveRoutes()
+  setActiveRoutes()
 })
 </script>
 <style lang="scss" scoped>

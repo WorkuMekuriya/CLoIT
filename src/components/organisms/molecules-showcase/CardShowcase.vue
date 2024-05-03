@@ -19,7 +19,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import Card from '../../molecules/card/Card.vue'
+import Card from 'components/molecules/card-component/CardComponent.vue'
 
 const cardGroups = [
   {
@@ -73,7 +73,7 @@ const infoCard = ref([
 // Define a reactive property to track the selected index
 const selectedIndex = ref(null)
 
-// Function to handle card selection
+// Function to handle card-component selection
 function toggleSelect(index) {
   selectedIndex.value = index
 }

@@ -68,7 +68,7 @@
 import { ref } from 'vue'
 import ConditionalStyleRoundedButton from '../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import LinkButton from '../../../../../../components/molecules/buttons/link-button/LinkButton.vue'
-import Card from '../../../../../molecules/card/Card.vue'
+import Card from 'components/molecules/card-component/CardComponent.vue'
 import EmptyCard from '../../../../../molecules/empty-card/EmptyCard.vue'
 import TabComponent from '../../../../../molecules/tabs/TabComponent.vue'
 const icons = [

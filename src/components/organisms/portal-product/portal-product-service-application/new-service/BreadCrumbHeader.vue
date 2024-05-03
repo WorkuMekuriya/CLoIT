@@ -6,7 +6,7 @@
   </div>
 </template>
 <script setup>
-import BreadCrumb from '../../../../molecules/bread-crumb/BreadCrumb.vue'
+import BreadCrumb from 'components/molecules/bread-crumb-header/BreadCrumbHeader.vue'
 const props = defineProps({
   step: {
     type: Number,

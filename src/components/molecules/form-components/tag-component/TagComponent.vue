@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'Tag',
+  name: 'TagComponent',
   props: {
     type: {
       type: String,
@@ -82,5 +82,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'Tag.styles.scss';
+@import 'TagComponent.styles';
 </style>

@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import Tag from '../../../../../molecules/form-components/tag/Tag.vue'
+import Tag from 'components/molecules/form-components/tag-component/TagComponent.vue'
 import EditIcon from '../../../../../atoms/Icons/my-page-icons/EditIcon.vue'
 import TrashIcon from '../../../../../atoms/Icons/my-page-icons/TrashIcon.vue'
 

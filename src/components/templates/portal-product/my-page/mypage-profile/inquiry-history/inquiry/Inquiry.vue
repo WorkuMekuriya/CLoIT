@@ -38,7 +38,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import Tag from 'src/components/molecules/form-components/tag/Tag.vue'
+import Tag from 'components/molecules/form-components/tag-component/TagComponent.vue'
 import CircularButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
 
 // Emit event to parent when the user wants to navigate to the next step.
@@ -62,25 +62,25 @@ const inquiries = ref([
     tagType: 'TagSkeletonTonal',
   },
   {
-    label: 'Cannot validate AD card',
+    label: 'Cannot validate AD card-component',
     date: 'YYYY-MM-DD',
     tag: '답변완료',
     tagType: 'TagBlue',
   },
   {
-    label: 'Cannot validate AD card',
+    label: 'Cannot validate AD card-component',
     date: 'YYYY-MM-DD',
     tag: '답변완료',
     tagType: 'TagBlue',
   },
   {
-    label: 'Cannot validate AD card',
+    label: 'Cannot validate AD card-component',
     date: 'YYYY-MM-DD',
     tag: '답변완료',
     tagType: 'TagBlue',
   },
   {
-    label: 'Cannot validate AD card',
+    label: 'Cannot validate AD card-component',
     date: 'YYYY-MM-DD',
     tag: '답변완료',
     tagType: 'TagBlue',

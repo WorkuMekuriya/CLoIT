@@ -57,7 +57,7 @@
   </div>
 </template>
 <script setup>
-import Card from '../../../../../../molecules/card/Card.vue'
+import Card from 'components/molecules/card-component/CardComponent.vue'
 import SelectedService from '../../../../../../organisms/selected-service/SelectedService.vue'
 const duration = [
   {

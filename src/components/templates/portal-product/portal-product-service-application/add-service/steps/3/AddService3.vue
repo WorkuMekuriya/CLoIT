@@ -89,7 +89,7 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 import LiItem from '../../../../../../molecules/li-item/LiItem.vue'
-import TagComponent from '../../../../../../molecules/form-components/tag/Tag.vue'
+import TagComponent from 'components/molecules/form-components/tag-component/TagComponent.vue'
 import RoundedButton from '../../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 
 const navigateToPage = (routeName) => {

@@ -32,8 +32,8 @@
 </template>
 
 <script setup>
-import BreadCrumbHeader from '../../molecules/bread-crumb/BreadCrumb.vue'
-import Breadcrumb from '../../molecules/breadcrumb/Breadcrumb.vue'
+import BreadCrumbHeader from 'components/molecules/bread-crumb-header/BreadCrumbHeader.vue'
+import Breadcrumb from 'components/molecules/bread-crumb/BreadCrumb.vue'
 import LiItem from '../../molecules/li-item/LiItem.vue'
 </script>
 

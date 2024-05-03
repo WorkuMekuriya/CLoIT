@@ -148,7 +148,7 @@ export default {
     toggleCardType(index, event) {
       event.stopPropagation()
       if (this.isSingleSelect) {
-        // If single select, reset the selected cards and add the new card
+        // If single select, reset the selected cards and add the new card-component
         if (
           this.selectedCards.length === 1 &&
           this.selectedCards[0] === index
@@ -158,10 +158,10 @@ export default {
           this.selectedCards = [index]
         }
       } else {
-        // If multi-select, add or remove the card from the selected cards
+        // If multi-select, add or remove the card-component from the selected cards
         const cardIndex = this.selectedCards.indexOf(index)
         if (cardIndex !== -1) {
-          // If the card is already selected, remove it
+          // If the card-component is already selected, remove it
           this.selectedCards.splice(cardIndex, 1)
         } else {
           // Otherwise, add it to the list of selected cards
@@ -170,11 +170,11 @@ export default {
       }
       // Emit the updated selected cards array
       this.$emit(
-        'card-clicked',
+        'card-component-clicked',
         this.selectedCards.map((i) => this.cardList[i]),
       )
     },
-    // Method to check if a card is selected
+    // Method to check if a card-component is selected
     isCardSelected(index) {
       return this.selectedCards.includes(index)
     },
@@ -183,5 +183,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'Card.style.scss';
+@import 'CardComponent.style';
 </style>

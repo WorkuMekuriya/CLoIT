@@ -6,7 +6,7 @@
   </div>
 </template>
 <script setup>
-import BreadCrumb from '../../../../molecules/bread-crumb/BreadCrumb.vue'
+import BreadCrumb from 'components/molecules/bread-crumb-header/BreadCrumbHeader.vue'
 const components = [
   { label: '추가할 서비스 선택', name: '', icon: 'chevron_right' },
   { label: 'Select Options', name: '', icon: 'chevron_right' },

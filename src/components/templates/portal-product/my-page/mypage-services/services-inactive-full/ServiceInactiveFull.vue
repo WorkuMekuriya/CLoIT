@@ -29,7 +29,7 @@
   </div>
 </template>
 <script setup>
-import Tag from '../../../../../molecules/form-components/tag/Tag.vue'
+import Tag from 'components/molecules/form-components/tag-component/TagComponent.vue'
 import DownloadIcon from '../../../../../atoms/Icons/my-page-icons/DownloadIcon.vue'
 import ApplicationFailed from '../../../../../organisms/portal-product/my-page/mypage-service/service-status/application-failed/ApplicationFailed.vue'
 import ApplicationInformation from '../../../../../organisms/portal-product/my-page/mypage-service/service-status/application-information/ApplicationInformation.vue'
