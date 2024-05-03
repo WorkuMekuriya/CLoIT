@@ -31,7 +31,13 @@
           :key="index"
           class="grid-item"
         >
+          <SelectDropdown
+            v-if="form.type === 'selectDropdown'"
+            :label="form.name"
+            :options="form.options"
+          />
           <TextField
+            v-else
             class="textfield"
             :label="form.name"
             :placeholder="form.placeholder || form.name"
@@ -61,10 +67,15 @@
           :key="index"
           class="grid-item"
         >
-          <FilePicker v-if="form.type == 'filePicker'" type="sm" />
+          <SelectDropdown
+            v-if="form.type === 'selectDropdown'"
+            :label="form.name"
+            :options="form.options"
+          />
+          <FilePicker v-if="form.type === 'filePicker'" type="sm" />
 
           <TextField
-            v-else
+            v-if="form.type === 'textfield'"
             class="textfield"
             :label="form.name"
             :placeholder="form.placeholder || form.name"
@@ -93,11 +104,34 @@ import { ref } from 'vue'
 import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
 import FilePicker from 'src/components/molecules/form-components/file-picker/FilePicker.vue'
+import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
 
 const organizationInfo = ref([
   { name: 'Organization registration number', description: '' },
   { name: 'Organization name', description: '' },
-  { name: 'Country', description: '' },
+  {
+    name: 'Country',
+    description: '',
+    type: 'selectDropdown',
+    options: [
+      {
+        label: 'South Korea',
+        value: 'south_korea',
+      },
+      {
+        label: 'United States',
+        value: 'united_states',
+      },
+      {
+        label: 'Ethiopia',
+        value: 'ethiopia',
+      },
+      {
+        label: 'Brazil',
+        value: 'brazil',
+      },
+    ],
+  },
   { name: 'Owner', description: '' },
 ])
 
@@ -116,9 +150,22 @@ const organizationInfo_2 = ref([
 ])
 
 const organizationInfo_3 = ref([
-  { name: 'Province', description: '' },
-  { name: '', placeholder: 'Postal or ZIP Code', description: '' },
-  { name: 'Contact', description: '' },
+  {
+    name: 'Province',
+    description: '',
+    type: 'selectDropdown',
+    options: [
+      { value: 'province', label: 'Province' },
+      { value: 'province 2', label: 'Province 2' },
+    ],
+  },
+  {
+    name: 'Postal or ZIP Code',
+    placeholder: 'Postal or ZIP Code',
+    type: 'textfield',
+    description: '',
+  },
+  { name: 'Contact', type: 'textfield', description: '' },
   {
     name: 'Certificate for business registration',
     description: '',

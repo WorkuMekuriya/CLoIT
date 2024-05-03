@@ -11,6 +11,12 @@
   </div>
   <div class="form-container">
     <div v-for="(field, index) in inquiryFields" :key="index">
+      <SelectDropdown
+        v-if="field.type === 'selectDropdown'"
+        :label="field.name"
+        :options="field.options"
+      />
+      <br v-if="field.type === 'selectDropdown'" />
       <FilePicker
         v-if="field.type == 'filePicker'"
         :label="field.name"
@@ -50,13 +56,15 @@ import TextField from 'src/components/molecules/form-components/fields/textfield
 import TextArea from 'src/components/molecules/form-components/fields/textarea/TextArea.vue'
 import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import FilePicker from 'src/components/molecules/form-components/file-picker/FilePicker.vue'
+import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
 
 const inquiryFields = ref([
   {
     name: '문의 원하는 서비스',
     placeholder: '{Service name list}',
     description: '',
-    type: 'dropdown',
+    type: 'selectDropdown',
+    options: [{ label: 'Service 1', value: 'service_1' }],
   },
   { name: 'Title', placeholder: '', description: '', type: 'textfield' },
   {

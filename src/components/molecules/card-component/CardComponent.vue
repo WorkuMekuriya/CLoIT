@@ -170,7 +170,7 @@ export default {
       }
       // Emit the updated selected cards array
       this.$emit(
-        'card-component-clicked',
+        'card-clicked',
         this.selectedCards.map((i) => this.cardList[i]),
       )
     },

@@ -12,7 +12,13 @@
         :key="index"
         class="grid-item"
       >
+        <SelectDropdown
+          v-if="field.type === 'selectDropdown'"
+          :label="field.name"
+          :options="field.options"
+        />
         <TextField
+          v-else
           class="textfield"
           :label="field.name"
           :placeholder="field.placeholder || field.name"
@@ -37,13 +43,32 @@
 import { ref } from 'vue'
 import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
+import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
 
 const profileFields = ref([
   { name: 'First Name', placeholder: '', description: '' },
   { name: 'Last Name', placeholder: '', description: '' },
   { name: 'Phone Number', placeholder: '', description: '' },
   { name: 'Email', placeholder: '', description: '' },
-  { name: 'Nationality', placeholder: '', description: '' },
+  {
+    name: 'Nationality',
+    description: '',
+    type: 'selectDropdown',
+    options: [
+      {
+        label: 'South Korean',
+        value: 'south_korean',
+      },
+      {
+        label: 'Ethiopian',
+        value: 'ethiopian',
+      },
+      {
+        label: 'American',
+        value: 'american',
+      },
+    ],
+  },
   {
     name: 'Organization',
     placeholder: '',

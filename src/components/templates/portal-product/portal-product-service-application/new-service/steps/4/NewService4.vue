@@ -29,7 +29,14 @@
               :key="index"
               class="grid-item"
             >
+              <br v-if="form.type === 'selectDropdown'" />
+              <SelectDropdown
+                v-if="form.type === 'selectDropdown'"
+                :label="form.name"
+                :options="form.options"
+              />
               <TextField
+                v-else
                 class="textfield"
                 :label="form.name"
                 :placeholder="form.name"
@@ -45,7 +52,14 @@
               :key="index"
               class="grid-item"
             >
+              <br v-if="form.type === 'selectDropdown'" />
+              <SelectDropdown
+                v-if="form.type === 'selectDropdown'"
+                :label="form.name"
+                :options="form.options"
+              />
               <TextField
+                v-else
                 class="textfield"
                 :label="form.name"
                 :placeholder="form.placeholder || form.name"
@@ -75,7 +89,14 @@
               :key="index"
               class="grid-item"
             >
+              <br v-if="form.type === 'selectDropdown'" />
+              <SelectDropdown
+                v-if="form.type === 'selectDropdown'"
+                :label="form.name"
+                :options="form.options"
+              />
               <TextField
+                v-else
                 class="textfield"
                 :label="form.name"
                 :placeholder="form.placeholder || form.name"
@@ -173,6 +194,7 @@ import CheckboxButton from '../../../../../../molecules/form-components/checkbox
 import TextField from '../../../../../../molecules/form-components/fields/textfield/TextField.vue'
 import TextArea from '../../../../../../molecules/form-components/fields/textarea/TextArea.vue'
 import SelectedService from '../../../../../../organisms/selected-service/SelectedService.vue'
+import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
 
 const products = ref([
   { label: 'Portal & Help Desk', price: '${}/mo' },
@@ -195,7 +217,25 @@ const informationForm = ref([
   { name: 'Last Name', description: '' },
   { name: 'Email', description: '' },
   { name: 'Phone Number', description: '' },
-  { name: 'Nationality', description: '' },
+  {
+    name: 'Nationality',
+    description: '',
+    type: 'selectDropdown',
+    options: [
+      {
+        label: 'South Korean',
+        value: 'south_korean',
+      },
+      {
+        label: 'Ethiopian',
+        value: 'ethiopian',
+      },
+      {
+        label: 'American',
+        value: 'american',
+      },
+    ],
+  },
   { name: 'Department', description: '' },
   {
     name: 'Preferred Language',
@@ -214,7 +254,29 @@ const refundAccountInfo = ref([
 const organizationInfo = ref([
   { name: 'Organization registration number', description: '' },
   { name: 'Organization name', description: '' },
-  { name: 'Country', description: '' },
+  {
+    name: 'Country',
+    description: '',
+    type: 'selectDropdown',
+    options: [
+      {
+        label: 'South Korea',
+        value: 'south_korea',
+      },
+      {
+        label: 'United States',
+        value: 'united_states',
+      },
+      {
+        label: 'Ethiopia',
+        value: 'ethiopia',
+      },
+      {
+        label: 'Brazil',
+        value: 'brazil',
+      },
+    ],
+  },
   { name: 'Owner', description: '' },
 ])
 
@@ -233,8 +295,20 @@ const organizationInfo_2 = ref([
 ])
 
 const organizationInfo_3 = ref([
-  { name: 'Province', description: '' },
-  { name: '', placeholder: 'Postal or ZIP Code', description: '' },
+  {
+    name: 'Province',
+    description: '',
+    type: 'selectDropdown',
+    options: [
+      { value: 'province', label: 'Province' },
+      { value: 'province 2', label: 'Province 2' },
+    ],
+  },
+  {
+    name: 'Postal or ZIP Code',
+    placeholder: 'Postal or ZIP Code',
+    description: '',
+  },
   { name: 'Contact', description: '' },
   { name: 'Certificate for business registration', description: '' },
   {
