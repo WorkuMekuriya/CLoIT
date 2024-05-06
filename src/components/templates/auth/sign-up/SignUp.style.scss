@@ -1,0 +1,62 @@
+@import '../../../../css/app.scss';
+
+// Global constants for layout and spacing
+$gap-medium: 24px;
+$margin-bottom-medium: 24px;
+$signupContainerWidth: 868px;
+$signupContainerPadding: 60px;
+$signupContainerBorderRadius: 24px;
+$signupHeaderFontFamily: 'Plus Jakarta', sans-serif;
+$signupHeaderFontSize: 32px;
+$signupHeaderFontWeight: 700;
+$signupHeaderTextAlign: center;
+$signupHeaderMarginBottom: 60px;
+$authHeight: 100vh;
+$authBackgroundColor: #f9fafb;
+$gridContainerColumns: repeat(2, 1fr);
+$gridContainerSingleColumn: repeat(1, 1fr);
+
+// Sign-up container styles
+.signup-container {
+  @extend .bg-white;
+  width: $signupContainerWidth;
+  border-radius: $signupContainerBorderRadius;
+  padding: $signupContainerPadding;
+  margin-bottom: $margin-bottom-medium;
+}
+
+// Sign-up header styles
+.signup-header {
+  font-family: $signupHeaderFontFamily;
+  font-size: $signupHeaderFontSize;
+  font-weight: $signupHeaderFontWeight;
+  text-align: $signupHeaderTextAlign;
+  margin-bottom: $signupHeaderMarginBottom;
+}
+
+// Form container styles
+.form-container {
+  margin-bottom: $signupHeaderMarginBottom;
+}
+
+// Authentication container styles
+.auth {
+  height: $authHeight;
+  background-color: $authBackgroundColor;
+}
+
+// Grid container styles
+.grid-container {
+  display: grid;
+  grid-template-columns: $gridContainerColumns;
+  gap: $gap-medium;
+  margin-top: $gap-medium;
+  margin-bottom: $margin-bottom-medium;
+}
+
+// Media query for responsiveness
+@media (max-width: 1023px) {
+  .grid-container {
+    grid-template-columns: $gridContainerSingleColumn;
+  }
+}

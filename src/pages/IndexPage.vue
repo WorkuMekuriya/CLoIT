@@ -1,24 +1,22 @@
 <template>
-  <q-page class="q-pa-md">
-    <h1 class="heading-3 text-limegreen-900 text-center q-mb-md">CLoIT</h1>
-  </q-page>
+  <component @nextStep="handleNextStep" :is="getStepComponent" />
 </template>
-
-<script>
-import { defineComponent } from 'vue'
-import FilePicker from 'src/components/molecules/form-components/file-picker/FilePicker.vue'
-export default defineComponent({
-  name: 'IndexPage',
-})
-</script>
 <script setup>
-import { ref } from 'vue'
+import SignIn from 'components/templates/auth/sign-in/SignIn.vue'
+import SignUp from 'components/templates/auth/sign-up/SignUp.vue'
+import ResetPassword from 'components/templates/auth/reset-password/ResetPassword.vue'
+import { computed, ref } from 'vue'
+import AccountVerification from 'components/templates/auth/account-verification/AccountVerification.vue'
+const step = ref(1)
 
-const showAlert = ref(true)
-</script>
-
-<style lang="scss" scoped>
-.textfield {
-  width: 300px;
+const getStepComponent = computed(() => {
+  if (step.value === 1) return SignIn
+  else if (step.value === 2) return SignUp
+  else if (step.value === 3) return ResetPassword
+  else if (step.value === 4) return AccountVerification
+  return SignUp
+})
+const handleNextStep = (index) => {
+  step.value = index
 }
-</style>
+</script>

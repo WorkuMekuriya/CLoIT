@@ -2,7 +2,32 @@ const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+    children: [
+      {
+        path: '',
+        name: '/',
+        component: () => import('pages/IndexPage.vue'),
+      },
+      {
+        path: 'signup',
+        name: '/signup',
+        component: () => import('components/templates/auth/sign-up/SignUp.vue'),
+      },
+      {
+        path: 'reset-password',
+        name: '/reset-password',
+        component: () =>
+          import('components/templates/auth/reset-password/ResetPassword.vue'),
+      },
+      {
+        path: 'account-verification',
+        name: '/account-verification',
+        component: () =>
+          import(
+            'components/templates/auth/account-verification/AccountVerification.vue'
+          ),
+      },
+    ],
   },
   {
     path: '/showcase',

@@ -1,0 +1,111 @@
+@import '../../../../css/app.scss';
+
+// Global constants for common styles
+$containerWidth: 361px;
+$containerPadding: 14px 16px;
+$containerMarginTop: 60px;
+$verificationLabelColor: #475467;
+$verificationLabelFontSize: 14px;
+$verificationInputWidth: 197px;
+$verificationIconMargin: 16px;
+$buttonMarginTop: 60px;
+$verificationContainerHeight: 52px;
+$verificationContainerBorderRadius: 16px;
+$authBackgroundColor: #f9fafb;
+$authHeight: 100vh;
+$resetContainerWidth: 481px;
+$resetContainerHeight: 602px;
+$resetContainerPadding: 60px;
+$resetContainerBorderRadius: 24px;
+$resetContainerMarginBottom: 28px;
+$resetHeaderFontFamily: 'Plus Jakarta', sans-serif;
+$resetHeaderFontSize: 32px;
+$resetHeaderFontWeight: 700;
+$resetHeaderTextAlign: center;
+$resetHeaderMarginBottom: 60px;
+$textFieldMarginTop: 24px;
+$footerButtonMarginTop: $buttonMarginTop;
+
+// Text field styles
+.textfield {
+  margin-top: $textFieldMarginTop;
+}
+
+// Reset container styles
+.reset-container {
+  @extend .bg-white;
+  width: $resetContainerWidth;
+  height: $resetContainerHeight;
+  border-radius: $resetContainerBorderRadius;
+  padding: $resetContainerPadding;
+  margin-bottom: $resetContainerMarginBottom;
+}
+
+// Reset header styles
+.reset-header {
+  font-family: $resetHeaderFontFamily;
+  font-size: $resetHeaderFontSize;
+  font-weight: $resetHeaderFontWeight;
+  text-align: $resetHeaderTextAlign;
+  margin-bottom: $resetHeaderMarginBottom;
+}
+
+// Auth container styles
+.auth {
+  height: $authHeight;
+  background-color: $authBackgroundColor;
+}
+
+// Verification code text styles
+.verification-code-text {
+  padding-top: 5px;
+  margin-left: 12px;
+}
+
+// Form container styles
+.form-container {
+  width: $containerWidth;
+  margin-top: $containerMarginTop;
+}
+
+// Verification code label styles
+.verification-code-label {
+  margin-bottom: 8px;
+  color: $verificationLabelColor;
+  font-size: $verificationLabelFontSize;
+  margin-top: $textFieldMarginTop;
+}
+
+// Verification code container styles
+.verification-code-container {
+  width: $containerWidth;
+  height: $verificationContainerHeight;
+  background-color: $authBackgroundColor;
+  border-radius: $verificationContainerBorderRadius;
+  padding: $containerPadding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Verification code input styles
+.verification-code-input {
+  width: $verificationInputWidth;
+}
+
+// Verification code icon styles
+.verification-code-icon {
+  font-weight: normal;
+  margin-right: $verificationIconMargin;
+}
+
+// Footer button styles
+.footer-buttons {
+  margin-top: $footerButtonMarginTop;
+}
+
+// Verification code row styles
+.verify-row {
+  display: flex;
+  align-items: end;
+}

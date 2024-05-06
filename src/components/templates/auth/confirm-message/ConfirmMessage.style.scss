@@ -1,0 +1,30 @@
+@import '../../../../css/app.scss';
+
+.main-container {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 24px;
+}
+
+.title {
+  @extend .heading-6;
+  font-weight: 800;
+}
+
+.save-button {
+  padding: 20px;
+}
+
+.description {
+  @extend .p-md;
+  margin-top: 12px;
+}
+
+.bottom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}

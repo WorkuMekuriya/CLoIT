@@ -1,0 +1,110 @@
+@import '../../../../css/app.scss';
+
+// Define global constants for common styles
+$containerWidth: 361px;
+$containerPadding: 14px 16px;
+$verificationLabelColor: #475467;
+$verificationLabelFontSize: 14px;
+$authHeight: 100vh;
+$authBackgroundColor: #f9fafb;
+$signinWidth: 470px;
+$signinBorderRadius: 24px;
+$signinPadding: 60px;
+$signinMarginBottom: 28px;
+$loginHeaderFontFamily: 'Plus Jakarta', sans-serif;
+$loginHeaderFontSize: 32px;
+$loginHeaderFontWeight: 700;
+$loginHeaderTextAlign: center;
+$loginHeaderMarginBottom: 60px;
+$loginBodyFormBorderRadius: 16px;
+$loginFooterPadding: 20%;
+$verificationCodeContainerHeight: 52px;
+$verificationCodeContainerBorderRadius: 16px;
+$verificationCodeContainerBorderColor: #ff2323;
+$verificationCodeContainerBorderWidth: 0.1px;
+$verificationCodeContainerDisplay: flex;
+$verificationCodeContainerAlignItems: center;
+$verificationCodeContainerJustifyContent: center;
+$errorTextColor: red;
+$hLineBorderColor: #f9fafb;
+$rememberMeFieldMarginTop: 12px;
+
+// Auth container styles
+.auth {
+  height: $authHeight;
+  background-color: $authBackgroundColor;
+}
+
+// Sign-in container styles
+.signin-container {
+  @extend .bg-white;
+  width: $signinWidth;
+  border-radius: $signinBorderRadius;
+  padding: $signinPadding;
+  margin-bottom: $signinMarginBottom;
+}
+
+// Login header styles
+.login-header {
+  font-family: $loginHeaderFontFamily;
+  font-size: $loginHeaderFontSize;
+  font-weight: $loginHeaderFontWeight;
+  text-align: $loginHeaderTextAlign;
+  margin-bottom: $loginHeaderMarginBottom;
+}
+
+// Login body form styles
+.login-body-form {
+  @extend .bg-bluegray-50;
+  border-radius: $loginBodyFormBorderRadius;
+}
+
+// Verification code text styles
+.verification-code-text {
+  padding-top: 5px;
+  margin-left: 12px;
+}
+
+// Login footer styles
+.login-footer {
+  @extend .text-arcticblue-600;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: underline;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: $loginFooterPadding;
+  padding-left: $loginFooterPadding;
+}
+
+// Verification code container styles
+.verification-code-container {
+  @extend .bg-red-50;
+  margin-top: $rememberMeFieldMarginTop;
+  height: $verificationCodeContainerHeight;
+  border-radius: $verificationCodeContainerBorderRadius;
+  padding: $containerPadding;
+  display: $verificationCodeContainerDisplay;
+  justify-content: $verificationCodeContainerJustifyContent;
+  align-items: $verificationCodeContainerAlignItems;
+  border: $verificationCodeContainerBorderWidth solid
+    $verificationCodeContainerBorderColor;
+}
+
+// Error text styles
+.error-text {
+  @extend .text-red-500;
+  color: $errorTextColor;
+}
+
+// Horizontal line styles
+.h-line {
+  border: 0.1px solid $hLineBorderColor;
+  border-top: 0;
+}
+
+// Remember-me field styles
+.remember-me-field {
+  margin-top: $rememberMeFieldMarginTop;
+}
