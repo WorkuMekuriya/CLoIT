@@ -86,10 +86,10 @@ import AuthHeader from 'components/organisms/auth-header/AuthHeader.vue'
 import ResetPasswordPlaceholder from 'components/atoms/Icons/my-page-icons/ResetPasswordPlaceholder.vue'
 import TextField from 'components/molecules/form-components/fields/textfield/TextField.vue'
 import CircularButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
-import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
+import RoundedButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import DialogComponent from 'components/molecules/dialog/DialogComponent.vue'
 import { markRaw } from 'vue'
-import ConfirmMessage from '../confirm-message/ConfirmMessage.vue'
+import ConfirmMessage from 'components/templates/auth/message/confirm-message/EmailConfirmMessage.vue'
 import ResetPasswordIcon from 'components/atoms/Icons/my-page-icons/ResetPasswordIcon.vue'
 import { useDialogStore } from 'stores/dialog-store'
 
@@ -97,7 +97,7 @@ const props = defineProps({})
 const emits = defineEmits(['nextStep'])
 
 const navigateTo = (routeName) => {
-  router.push({ name: routeName })
+  router.push({ path: routeName })
 }
 
 // Method to emit the 'clicked' event
@@ -124,5 +124,5 @@ const resetPassword = () => {
 }
 </script>
 <style lang="scss" scoped>
-@import 'AccountVerification.style.scss';
+@import 'AccountVerification.style';
 </style>

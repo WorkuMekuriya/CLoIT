@@ -31,6 +31,7 @@ const routes = [
   },
   {
     path: '/showcase',
+    name: '/showcase',
     component: () => import('layouts/ShowcaseLayout.vue'),
     children: [
       {

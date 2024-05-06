@@ -3,16 +3,22 @@
   <div class="auth flex flex-center">
     <div class="signin-container">
       <div class="login-header">Login</div>
-      <div class="login-body-form">
+      <div class="">
         <TextField
           label=""
-          icon-left="home"
+          icon-left="person"
           placeholder="Id"
           :error="error"
           :iconRight="error ? 'warning' : ''"
+          :borderRadius="'16px 16px 0px 0px'"
         />
-        <hr v-if="!error" class="h-line" />
-        <TextField label="" icon-left="key" placeholder="***********" />
+        <TextField
+          label=""
+          icon-left="key"
+          :type="'password'"
+          placeholder="***********"
+          :borderRadius="'0px 0px 16px 16px'"
+        />
       </div>
       <div v-if="error" class="verification-code-container">
         <q-input
@@ -60,9 +66,11 @@
         />
       </div>
       <div class="login-footer">
-        <div @click="navigateTo('/signup')" class="cursor-pointer">Sign up</div>
+        <div @click="navigateTo('/signup')" class="login-footer-text">
+          Sign up
+        </div>
         <div class="login-slash">/</div>
-        <div @click="navigateTo('/reset-password')" class="cursor-pointer">
+        <div @click="navigateTo('/reset-password')" class="login-footer-text">
           Reset password
         </div>
       </div>
@@ -87,10 +95,14 @@ const emits = defineEmits(['nextStep'])
 
 // Method to emit the 'clicked' event
 const login = () => {
-  error.value = !error.value
+  if (error.value) {
+    router.push({ path: '/showcase' })
+  } else {
+    error.value = true
+  }
 }
 const navigateTo = (routeName) => {
-  router.push({ name: routeName })
+  router.push({ path: routeName })
 }
 </script>
 

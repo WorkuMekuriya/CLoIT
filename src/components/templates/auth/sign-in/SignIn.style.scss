@@ -21,7 +21,7 @@ $loginFooterPadding: 20%;
 $verificationCodeContainerHeight: 52px;
 $verificationCodeContainerBorderRadius: 16px;
 $verificationCodeContainerBorderColor: #ff2323;
-$verificationCodeContainerBorderWidth: 0.1px;
+$verificationCodeContainerBorderWidth: 1px;
 $verificationCodeContainerDisplay: flex;
 $verificationCodeContainerAlignItems: center;
 $verificationCodeContainerJustifyContent: center;
@@ -70,12 +70,16 @@ $rememberMeFieldMarginTop: 12px;
   @extend .text-arcticblue-600;
   font-weight: 500;
   font-size: 14px;
-  text-decoration: underline;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding-right: $loginFooterPadding;
   padding-left: $loginFooterPadding;
+}
+
+.login-footer-text {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 // Verification code container styles

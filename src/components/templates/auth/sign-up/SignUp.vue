@@ -18,14 +18,15 @@
           >
             <SelectDropdown
               v-if="field.type === 'selectDropdown'"
-              :label=field.label
+              :label="field.label"
               :options="field.options"
+              :error="error"
             />
             <TextField
               v-else
               class="textfield"
               :error="error"
-              :bottomLeftDescription="error && field.errorDescription"
+              :bottomLeftDescription="error && (field.errorDescription || 'This is a required field.')"
               :label="field.label"
               :placeholder="field.placeholder || field.label"
               :iconRight="field.rightIcon"
@@ -62,7 +63,7 @@ import AuthHeader from 'components/organisms/auth-header/AuthHeader.vue'
 import TextField from 'components/molecules/form-components/fields/textfield/TextField.vue'
 import CircularButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
 import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
-import ConfirmMessage from '../confirm-message/ConfirmMessage.vue'
+import ConfirmMessage from 'components/templates/auth/message/confirm-message/EmailConfirmMessage.vue'
 import RoundedButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 
 const router = useRouter()
@@ -115,10 +116,6 @@ const signupForm = [
 const error = ref(false)
 
 const showValidation = () => {
-  // Dialog Component
-  const dialogStore = useDialogStore()
-  const innerComponent = markRaw(ConfirmMessage)
-  // const leftIcon = markRaw(ResetPasswordIcon)
   if (error.value) {
     navigateTo('/account-verification')
   } else {

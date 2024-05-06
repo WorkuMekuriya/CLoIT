@@ -30,5 +30,5 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-@import 'ConfirmMessage.style.scss';
+@import 'Message.style';
 </style>

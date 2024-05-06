@@ -79,8 +79,8 @@ import DialogComponent from 'components/molecules/dialog/DialogComponent.vue'
 import { markRaw } from 'vue'
 import ResetPasswordIcon from 'components/atoms/Icons/my-page-icons/ResetPasswordIcon.vue'
 import { useDialogStore } from 'stores/dialog-store'
-import ConfirmMessage from 'components/templates/auth/confirm-message/ConfirmMessage.vue'
 import RoundedButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
+import ResetPasswordMessage from 'components/templates/auth/message/confirm-message/ResetPasswordMessage.vue'
 
 const props = defineProps({})
 const emits = defineEmits(['nextStep'])
@@ -99,7 +99,7 @@ const resetPasswordForm = [
 ]
 // Dialog Component
 const dialogStore = useDialogStore()
-const innerComponent = markRaw(ConfirmMessage)
+const innerComponent = markRaw(ResetPasswordMessage)
 const leftIcon = markRaw(ResetPasswordIcon)
 
 const resetPassword = () => {

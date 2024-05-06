@@ -13,7 +13,7 @@
     :options="filteredOptions"
     @filter="filterFn"
     :input="onOptionSelect"
-    class="select-container"
+    :class="['select-container', error && 'select-container-error']"
     :dropdown-icon="'keyboard_arrow_down'"
   >
     <template v-slot:no-option>
@@ -51,6 +51,10 @@ const props = defineProps({
       { value: 'line', label: 'Preview' },
       { value: 'rectangle', label: '레포트' },
     ],
+  },
+  error: {
+    type: Boolean,
+    default: false,
   },
 })
 
