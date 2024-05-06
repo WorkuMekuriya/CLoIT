@@ -47,11 +47,9 @@
             placeholder="Email Verification Code"
             bottomLeftDescription=""
           />
-          <StandardButton
+          <RoundedButton
             :type="'Secondary'"
             :label="'Resend'"
-            leftIcon=""
-            :rightIcon="''"
             :buttonDisabled="false"
             :button-width="'114px'"
           />
@@ -66,12 +64,9 @@
           :icon="'west'"
           @clicked="navigateTo('/')"
         />
-        <StandardButton
-          :type="'Primary'"
-          :outlined="false"
+        <RoundedButton
+          type="Primary"
           :label="'Confirm'"
-          :leftIcon="''"
-          :rightIcon="'home'"
           :button-width="'302px'"
           @click="resetPassword"
         />
@@ -91,7 +86,7 @@ import AuthHeader from 'components/organisms/auth-header/AuthHeader.vue'
 import ResetPasswordPlaceholder from 'components/atoms/Icons/my-page-icons/ResetPasswordPlaceholder.vue'
 import TextField from 'components/molecules/form-components/fields/textfield/TextField.vue'
 import CircularButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
-import StandardButton from 'components/molecules/buttons/standard-buttons/StandardButtons.vue'
+import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue';
 import DialogComponent from 'components/molecules/dialog/DialogComponent.vue'
 import { markRaw } from 'vue'
 import ConfirmMessage from '../confirm-message/ConfirmMessage.vue'

@@ -1,16 +1,16 @@
 <template>
-  <q-header class="service-application-header flex items-center">
+  <q-header class="service-application-header flex items-center justify-between">
     <p class="Logo label-lg-bold">LOGO</p>
-    <q-space />
-    <q-icon
+    <div class="flex no-wrap">
+      <q-icon
       class="notification-icon nav-icons"
       name="notifications_none"
     ></q-icon>
     <DropDown
       class="dropdown-icon"
       iconLeft="language"
-      maxWidth="133px"
       height="52px"
+      maxWidth="133px"
       label="DropDown"
       :options="options"
     />
@@ -22,6 +22,7 @@
       class="standard-button"
     />
     <q-icon class="logout-icon nav-icons" name="logout"></q-icon>
+    </div>
   </q-header>
 </template>
 <script setup>

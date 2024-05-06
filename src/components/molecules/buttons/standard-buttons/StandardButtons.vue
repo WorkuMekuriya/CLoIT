@@ -21,7 +21,6 @@
       </template>
       <template v-else>
         <ArcticBlueIcon v-if="type == 'ArcticBlue'" class="arrow-icon" />
-
         <LimeGreenIcon v-if="type == 'LimeGreen'" class="arrow-icon" />
         <BlueGrayIcon v-if="type == 'BlueGray'" class="arrow-icon" />
       </template>
@@ -54,7 +53,7 @@ const props = defineProps({
   arrowDirection: {
     type: String,
     validator: (value) => ['Left', 'Right'].includes(value),
-    default: 'Right',
+    default: 'Left',
   },
   buttonDisabled: {
     type: Boolean,

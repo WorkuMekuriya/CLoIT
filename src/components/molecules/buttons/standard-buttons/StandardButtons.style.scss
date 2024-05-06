@@ -11,7 +11,7 @@ $right-icon-margin-right: -30px;
 
 .standard-button {
   @extend .label-sm-bold;
-  width: $standard-button-width;
+  width: 100%;
   height: $standard-button_height;
   border-radius: 48px;
   position: relative;
@@ -53,7 +53,17 @@ $right-icon-margin-right: -30px;
     display: none;
   }
 }
-
+:deep(.q-btn_content){
+  position: relative;
+}
+:deep(.q-icon.on-left){
+  position: absolute;
+  left: 16px;
+}
+:deep(.q-icon.on-right){
+  position: absolute;
+  right: 16px;
+}
 // Define shared property pattern mixin
 @mixin tag-property($property-name) {
   @if $property-name == 'button-arcticblue' {

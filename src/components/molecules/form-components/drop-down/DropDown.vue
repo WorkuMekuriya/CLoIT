@@ -6,9 +6,9 @@
     dense
     :options="filteredOptions"
     :input="onOptionSelect"
-    class="select-container"
+    class="dropdown-container"
     :dropdown-icon="'keyboard_arrow_down'"
-    :style="{ maxWidth: maxWidth, height: height }"
+    :style="{ width: maxWidth, height: height }"
   >
     <template v-slot:prepend>
       <q-icon :name="iconLeft" class="prepend-icon" />

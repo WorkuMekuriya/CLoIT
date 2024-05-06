@@ -29,15 +29,18 @@ $textfield-height: 52px;
 }
 .textfield-label {
   @extend .label-sm, .text-bluegray-500;
+  margin-bottom: 9px;
 }
 
 .textfield-description {
   @extend .label-sm, .text-bluegray-500;
   margin-top: 11px;
 }
-
+.textfield-description.set-error-properties {
+  @extend .label-sm, .text-red-500;
+  margin-top: 11px;
+}
 .textfield-primary {
-  margin-top: 9px;
   border-radius: $textfield-border-radius;
   padding: $textfield-padding;
   height: $textfield-height;
