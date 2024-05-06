@@ -1,0 +1,90 @@
+@import '../../../css/app.scss';
+
+// Define global variables
+$border-radius-small: 16px;
+$border-radius-large: 24px;
+$padding-large: 30px 32px;
+$padding-medium: 12px;
+$padding-small: 8px;
+$footer-width: 208px;
+$footer-height: 120px;
+$footer-margin: auto 16px 16px;
+
+.sidebar-container {
+  @extend .bg-bluegray-900;
+  border-top-right-radius: $border-radius-large;
+  border-bottom-right-radius: $border-radius-large;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  width: fit-content;
+  height: 100vh;
+}
+
+.responsive-icon {
+  cursor: pointer;
+}
+
+.sidebar-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-large;
+}
+
+.sidebar-menu-container {
+  padding-left: $padding-small;
+  padding-right: $padding-small;
+}
+
+.sidebar-menu-items {
+  padding: 2px;
+  display: block;
+
+  .sidebar-parent-menu-items {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: $padding-medium;
+    border-radius: $border-radius-small;
+  }
+}
+
+.sidebar-menu-group-text {
+  @extend .text-bluegray-500, .label-sm-bold;
+  margin-left: $padding-small;
+  margin-right: $padding-small;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.child-menu-container {
+  padding-top: $padding-small;
+  padding-bottom: $padding-small;
+  border-radius: $border-radius-small;
+}
+
+.sidebar-footer-container {
+  background-color: #9ff443;
+  width: $footer-width;
+  margin: $footer-margin;
+  height: $footer-height;
+  border-radius: $border-radius-large;
+
+  .sidebar-footer-item {
+    margin: 4px;
+  }
+
+  .sidebar-footer-text {
+    margin-left: 19px;
+
+    .footer-title {
+      @extend .label-lg-bold, .text-bluegray-900;
+    }
+
+    .footer-subtitle {
+      @extend .label-xs, .text-bluegray-700;
+      margin-top: 8px;
+      margin-bottom: 117px;
+    }
+  }
+}

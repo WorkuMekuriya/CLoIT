@@ -10,6 +10,7 @@
     <OtherStuffShowcase />
     <FilePickerShowcase />
     <SelectedServiceShowcase />
+    <SideBarsShowcase />
   </q-page>
 </template>
 
@@ -25,6 +26,7 @@ import OtherStuffShowcase from 'src/components/organisms/molecules-showcase/Othe
 import SelectedServiceShowcase from '../../organisms/molecules-showcase/SelectedServiceShowcase.vue'
 import FilePickerShowcase from 'src/components/organisms/molecules-showcase/FilePickerShowcase.vue'
 import { ref } from 'vue'
+import SideBarsShowcase from 'components/organisms/molecules-showcase/SideBarsShowcase.vue'
 
 const showAlert = ref(true)
 </script>
