@@ -15,6 +15,7 @@
       :disable="disable"
       :placeholder="placeholder"
       @input="emitInput"
+      :style="{ borderRadius: borderRadius }"
     >
       <template v-slot:prepend>
         <q-icon v-if="iconLeft" :name="iconLeft" size="sm" />
@@ -92,6 +93,10 @@ const props = defineProps({
   iconRight: {
     type: String,
     default: '',
+  },
+  borderRadius: {
+    Type: String,
+    default: '16px',
   },
 })
 const textFieldClass = computed(() => {

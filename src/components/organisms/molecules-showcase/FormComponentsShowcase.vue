@@ -88,8 +88,8 @@
           <TextField
             class="textfield"
             :disable="true"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            bottomLeftDescription="Description"
+            bottomRightDescription="Description"
             iconLeft="home"
             iconRight="east"
           />
