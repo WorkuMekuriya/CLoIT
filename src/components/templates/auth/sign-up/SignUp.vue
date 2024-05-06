@@ -18,7 +18,7 @@
           >
             <SelectDropdown
               v-if="field.type === 'selectDropdown'"
-              :label="field.label"
+              :label=field.label
               :options="field.options"
             />
             <TextField
@@ -43,12 +43,10 @@
           :icon="'west'"
           @clicked="navigateTo('/')"
         />
-        <StandardButton
+        <RoundedButton
           :type="'Primary'"
           :outlined="false"
           :label="'Sign up'"
-          :leftIcon="''"
-          :rightIcon="'home'"
           :button-width="'689px'"
           @click="showValidation"
         />
@@ -62,11 +60,10 @@ import { useRouter } from 'vue-router'
 import { useDialogStore } from 'stores/dialog-store'
 import AuthHeader from 'components/organisms/auth-header/AuthHeader.vue'
 import TextField from 'components/molecules/form-components/fields/textfield/TextField.vue'
-import StandardButton from 'components/molecules/buttons/standard-buttons/StandardButtons.vue'
 import CircularButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
 import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
 import ConfirmMessage from '../confirm-message/ConfirmMessage.vue'
-import ResetPasswordIcon from 'components/atoms/Icons/my-page-icons/ResetPasswordIcon.vue'
+import RoundedButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 
 const router = useRouter()
 const navigateTo = (routeName) => {
@@ -93,7 +90,7 @@ const signupForm = [
   },
   { label: 'Phone Number', placeholder: 'Phone Number' },
   {
-    name: 'Nationality',
+    label: 'Nationality',
     description: '',
     type: 'selectDropdown',
     options: [

@@ -52,12 +52,10 @@
           :icon="'west'"
           @clicked="navigateTo('/')"
         />
-        <StandardButton
+        <RoundedButton
           :type="'Primary'"
           :outlined="false"
           :label="'Reset Password'"
-          :leftIcon="''"
-          :rightIcon="'home'"
           :button-width="'302px'"
           @click="resetPassword"
         />
@@ -77,12 +75,12 @@ import AuthHeader from 'components/organisms/auth-header/AuthHeader.vue'
 import ResetPasswordPlaceholder from 'components/atoms/Icons/my-page-icons/ResetPasswordPlaceholder.vue'
 import TextField from 'components/molecules/form-components/fields/textfield/TextField.vue'
 import CircularButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
-import StandardButton from 'components/molecules/buttons/standard-buttons/StandardButtons.vue'
 import DialogComponent from 'components/molecules/dialog/DialogComponent.vue'
 import { markRaw } from 'vue'
 import ResetPasswordIcon from 'components/atoms/Icons/my-page-icons/ResetPasswordIcon.vue'
 import { useDialogStore } from 'stores/dialog-store'
 import ConfirmMessage from 'components/templates/auth/confirm-message/ConfirmMessage.vue'
+import RoundedButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 
 const props = defineProps({})
 const emits = defineEmits(['nextStep'])

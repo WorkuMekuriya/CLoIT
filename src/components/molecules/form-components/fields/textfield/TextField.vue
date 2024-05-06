@@ -23,11 +23,19 @@
         <q-icon v-if="iconRight" :name="iconRight" size="sm" />
       </template>
     </q-input>
-    <div class="flex" :class="[bottomRightDescriptionPosition] ">
-      <p v-if="bottomLeftDescription" class="textfield-description" :class="isError">
+    <div class="flex" :class="[bottomRightDescriptionPosition]">
+      <p
+        v-if="bottomLeftDescription"
+        class="textfield-description"
+        :class="isError"
+      >
         {{ bottomLeftDescription }}
       </p>
-      <p v-if="bottomRightDescription" class="textfield-description" :class="isError">
+      <p
+        v-if="bottomRightDescription"
+        class="textfield-description"
+        :class="isError"
+      >
         {{ bottomRightDescription }}
       </p>
     </div>
@@ -101,8 +109,8 @@ const setDestructive = computed(() => {
   if (!props.disable) return props.error ? 'textfield-destructive' : ''
   else return ''
 })
-const isError = computed(()=>{
-  if(props.error) return 'set-error-properties'
+const isError = computed(() => {
+  if (props.error) return 'set-error-properties'
   else return ''
 })
 const setDisable = computed(() => {

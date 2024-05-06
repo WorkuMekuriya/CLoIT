@@ -1,27 +1,29 @@
 <template>
-  <q-header class="service-application-header flex items-center justify-between">
+  <q-header
+    class="service-application-header flex items-center justify-between"
+  >
     <p class="Logo label-lg-bold">LOGO</p>
     <div class="flex no-wrap">
       <q-icon
-      class="notification-icon nav-icons"
-      name="notifications_none"
-    ></q-icon>
-    <DropDown
-      class="dropdown-icon"
-      iconLeft="language"
-      height="52px"
-      maxWidth="133px"
-      label="DropDown"
-      :options="options"
-    />
-    <StandardButton
-      :type="ctaButton.type"
-      :label="ctaButton.label"
-      :outlined="ctaButton.outlined"
-      buttonWidth="200px"
-      class="standard-button"
-    />
-    <q-icon class="logout-icon nav-icons" name="logout"></q-icon>
+        class="notification-icon nav-icons"
+        name="notifications_none"
+      ></q-icon>
+      <DropDown
+        class="dropdown-icon"
+        iconLeft="language"
+        height="52px"
+        maxWidth="133px"
+        label="DropDown"
+        :options="options"
+      />
+      <StandardButton
+        :type="ctaButton.type"
+        :label="ctaButton.label"
+        :outlined="ctaButton.outlined"
+        buttonWidth="200px"
+        class="standard-button"
+      />
+      <q-icon class="logout-icon nav-icons" name="logout"></q-icon>
     </div>
   </q-header>
 </template>

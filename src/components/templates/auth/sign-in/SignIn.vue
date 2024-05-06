@@ -45,7 +45,7 @@
       <CheckboxButton
         :value="false"
         label="Remember me"
-        class="remeber-me-field"
+        class="remember-me-field"
       />
       <div style="margin-top: 36px; margin-bottom: 60px">
         <StandardButton

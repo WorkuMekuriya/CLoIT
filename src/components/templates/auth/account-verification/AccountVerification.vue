@@ -86,7 +86,7 @@ import AuthHeader from 'components/organisms/auth-header/AuthHeader.vue'
 import ResetPasswordPlaceholder from 'components/atoms/Icons/my-page-icons/ResetPasswordPlaceholder.vue'
 import TextField from 'components/molecules/form-components/fields/textfield/TextField.vue'
 import CircularButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
-import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue';
+import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import DialogComponent from 'components/molecules/dialog/DialogComponent.vue'
 import { markRaw } from 'vue'
 import ConfirmMessage from '../confirm-message/ConfirmMessage.vue'

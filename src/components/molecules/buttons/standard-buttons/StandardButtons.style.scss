@@ -53,14 +53,14 @@ $right-icon-margin-right: -30px;
     display: none;
   }
 }
-:deep(.q-btn_content){
+:deep(.q-btn_content) {
   position: relative;
 }
-:deep(.q-icon.on-left){
+:deep(.q-icon.on-left) {
   position: absolute;
   left: 16px;
 }
-:deep(.q-icon.on-right){
+:deep(.q-icon.on-right) {
   position: absolute;
   right: 16px;
 }
