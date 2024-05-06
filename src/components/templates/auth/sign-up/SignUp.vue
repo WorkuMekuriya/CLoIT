@@ -26,7 +26,9 @@
               v-else
               class="textfield"
               :error="error"
-              :bottomLeftDescription="error && (field.errorDescription || 'This is a required field.')"
+              :bottomLeftDescription="
+                error && (field.errorDescription || 'This is a required field.')
+              "
               :label="field.label"
               :placeholder="field.placeholder || field.label"
               :iconRight="field.rightIcon"

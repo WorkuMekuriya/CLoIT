@@ -24,7 +24,8 @@ defineProps({
   },
   description: {
     type: String,
-    default: 'Already registered Email. Please verify your Email Address and activate your account.',
+    default:
+      'Already registered Email. Please verify your Email Address and activate your account.',
   },
 })
 </script>
