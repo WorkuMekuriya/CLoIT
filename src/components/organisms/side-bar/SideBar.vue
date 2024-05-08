@@ -11,58 +11,184 @@
           @click="toggleMenu"
         />
       </div>
-      <div
-        v-for="(parentMenu, index) in menus"
-        :key="index"
-        class="sidebar-menu-container"
-      >
-        <div class="sidebar-menu-items">
-          <div
-            v-if="parentMenu.children.length === 0 || !isMobileView"
-            class="sidebar-parent-menu-items"
-            :style="{
-              backgroundColor: isSelectedParent(parentMenu) ? '#9FF443' : '',
-            }"
-            @click="selectMenu(parentMenu)"
-          >
-            <q-icon
-              :name="parentMenu.parentIcon"
-              size="24px"
-              :color="isSelectedParent(parentMenu) ? 'black' : 'white'"
-            />
+      <div class="sidebar-menu">
+        <div
+          v-for="(parentMenu, index) in menus"
+          :key="index"
+          class="sidebar-menu-container"
+        >
+          <div class="sidebar-menu-items">
             <div
-              v-if="!isMobileView"
-              class="sidebar-menu-group-text"
-              :style="{ color: isSelectedParent(parentMenu) ? '#000' : '' }"
-            >
-              {{ parentMenu.parentLabel }}
-            </div>
-          </div>
-          <div
-            v-if="parentMenu.children.length > 0"
-            class="child-menu-container"
-            :style="{ backgroundColor: parentMenu.background }"
-          >
-            <div
-              v-for="(childMenu, childIndex) in parentMenu.children"
-              :key="childIndex"
+              v-if="
+                !isSelectedParent(parentMenu) && parentMenu.parentLabel !== ''
+              "
               class="sidebar-parent-menu-items"
               :style="{
-                backgroundColor: isSelectedMenu(childMenu) ? '#9FF443' : '',
+                justifyContent: isMobileView ? 'center' : '',
               }"
-              @click="selectMenu(parentMenu, childMenu)"
+              @click="selectMenu(parentMenu)"
             >
               <q-icon
-                :name="childMenu.icon"
+                v-if="parentMenu.parentIcon"
+                :name="parentMenu.parentIcon"
                 size="24px"
-                :color="isSelectedMenu(childMenu) ? 'black' : 'white'"
+                :color="'white'"
               />
+              <svg
+                v-else
+                width="24"
+                height="24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22 19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H9L11 6H20C20.5304 6 21.0391 6.21071 21.4142 6.58579C21.7893 6.96086 22 7.46957 22 8V19Z"
+                  stroke="#667085"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
               <div
                 v-if="!isMobileView"
                 class="sidebar-menu-group-text"
-                :style="{ color: isSelectedMenu(childMenu) ? '#000' : '' }"
+                :style="{ color: isSelectedParent(parentMenu) ? 'white' : '' }"
               >
-                {{ childMenu.label }}
+                {{ parentMenu.parentLabel }}
+              </div>
+            </div>
+            <div
+              v-if="isSelectedParent(parentMenu)"
+              class="child-menu-container"
+              :style="{ backgroundColor: parentMenu.background }"
+            >
+              <div class="sidebar-parent-menu-items">
+                <q-icon
+                  v-if="parentMenu.parentIcon"
+                  :name="parentMenu.parentIcon"
+                  size="24px"
+                  :color="'white'"
+                />
+                <svg
+                  v-else
+                  width="24"
+                  height="24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V5C2 4.46957 2.21071 3.96086 2.58579 3.58579C2.96086 3.21071 3.46957 3 4 3H9L11 6H20C20.5304 6 21.0391 6.21071 21.4142 6.58579C21.7893 6.96086 22 7.46957 22 8V19Z"
+                    fill="white"
+                  />
+                </svg>
+
+                <div v-if="!isMobileView" class="sidebar-menu-group-text">
+                  {{ parentMenu.parentLabel }}
+                </div>
+              </div>
+              <div
+                v-for="(childMenu, childIndex) in parentMenu.children"
+                :key="childIndex"
+                class="sidebar-parent-menu-items"
+                :style="{
+                  backgroundColor: isSelectedMenu(childMenu) ? '#9FF443' : '',
+                  justifyContent: isMobileView ? 'center' : '',
+                }"
+                @click="selectMenu(parentMenu, childMenu)"
+              >
+                <q-icon
+                  v-if="childMenu.icon"
+                  :name="childMenu.icon"
+                  size="24px"
+                  :color="isSelectedMenu(childMenu) ? 'black' : 'white'"
+                />
+                <div v-else class="items-center">
+                  <svg
+                    v-if="isSelectedMenu(childMenu)"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="3.65625"
+                      y="3.66992"
+                      width="6.69214"
+                      height="6.69336"
+                      rx="1"
+                      fill="#101828"
+                    />
+                    <rect
+                      x="3.65625"
+                      y="13.6523"
+                      width="6.69214"
+                      height="6.69336"
+                      rx="1"
+                      fill="#101828"
+                    />
+                    <rect
+                      x="13.6543"
+                      y="13.6523"
+                      width="6.69214"
+                      height="6.69336"
+                      rx="1"
+                      fill="#101828"
+                    />
+                    <circle
+                      cx="16.9875"
+                      cy="7.04102"
+                      r="3.69067"
+                      fill="#101828"
+                    />
+                  </svg>
+                  <svg
+                    v-else
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="3.65625"
+                      y="3.66992"
+                      width="6.69214"
+                      height="6.69336"
+                      rx="1"
+                      stroke="#667085"
+                    />
+                    <rect
+                      x="3.65625"
+                      y="13.6523"
+                      width="6.69214"
+                      height="6.69336"
+                      rx="1"
+                      stroke="#667085"
+                    />
+                    <rect
+                      x="13.6543"
+                      y="13.6523"
+                      width="6.69214"
+                      height="6.69336"
+                      rx="1"
+                      stroke="#667085"
+                    />
+                    <circle
+                      cx="16.9875"
+                      cy="7.04102"
+                      r="3.69067"
+                      stroke="#667085"
+                    />
+                  </svg>
+                </div>
+                <div
+                  v-if="!isMobileView"
+                  class="sidebar-menu-group-text"
+                  :style="{ color: isSelectedMenu(childMenu) ? '#000' : '' }"
+                >
+                  {{ childMenu.label }}
+                </div>
               </div>
             </div>
           </div>
@@ -113,7 +239,7 @@
 </template>
 
 <script setup>
-import CLoITLogo from 'components/atoms/Icons/alert-icons/CLoITLogo.vue'
+import CLoITLogo from 'components/atoms/Icons/CLoITLogo.vue'
 import { ref, defineProps, defineEmits } from 'vue'
 
 const isMobileView = ref(false)
@@ -139,7 +265,7 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmits(['menu'])
+const emit = defineEmits(['selectedMenu'])
 
 const toggleMenu = () => {
   isMobileView.value = !isMobileView.value
@@ -152,13 +278,13 @@ const selectMenu = (parentMenu, childMenu = null) => {
     selectedChildMenu.value = childMenu
     selectedParentMenu.value = parentMenu // Update the parent menu as well
     // Emit the menu event with the selected child menu
-    emit('menu', childMenu)
+    emit('selectedMenu', childMenu)
   } else {
     // If no child menu is provided, select the parent menu
     selectedParentMenu.value = parentMenu
-    selectedChildMenu.value = null // Clear any selected child menu
+    selectedChildMenu.value = parentMenu.children[0] // Clear any selected child menu
     // Emit the menu event with the selected parent menu
-    emit('menu', parentMenu)
+    emit('selectedMenu', parentMenu.children[0] || parentMenu)
   }
 }
 
@@ -166,11 +292,7 @@ const selectMenu = (parentMenu, childMenu = null) => {
 const isSelectedMenu = (childMenu) => selectedChildMenu.value === childMenu
 
 // Function to check if a parent menu is the selected one
-const isSelectedParent = (parentMenu) => {
-  if (parentMenu.children.length === 0) {
-    return selectedParentMenu.value === parentMenu
-  }
-}
+const isSelectedParent = (parentMenu) => selectedParentMenu.value === parentMenu
 
 const svgCode = `
 <svg width="208" height="120" viewBox="0 0 208 120" fill="none" xmlns="http://www.w3.org/2000/svg">

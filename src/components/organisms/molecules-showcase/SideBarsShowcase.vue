@@ -2,14 +2,13 @@
   <div class="q-mb-xl">
     <h1 class="heading-3 text-limegreen-900 text-center">SideBars</h1>
     <div class="q-mt-xl flex justify-between">
-      <SideBar />
       <SideBar isFooterVisible />
       <SideBar
         isFooterVisible
         footerTitle="Everything you need"
         footerSubTitle="클로잇의 상품을 둘러보세요."
       />
-      <SideBar isFooterVisible :menus="parentOnluMenus" />
+      <SideBar :menus="parentOnluMenus" />
       <SideBar isFooterVisible :menus="menus" />
     </div>
   </div>
@@ -17,7 +16,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import SideBar from 'components/organisms/side-bar/SideBar.vue'
+import SideBar from 'src/components/organisms/side-bar/SideBar.vue'
 
 const parentOnluMenus = ref([
   {
@@ -41,45 +40,42 @@ const parentOnluMenus = ref([
 ])
 const menus = ref([
   {
-    parentIcon: 'folder',
     parentLabel: 'Systems',
     background: '#1D2939',
     children: [],
   },
   {
-    parentIcon: 'folder',
     parentLabel: 'Systems',
     background: '#1D2939',
     children: [
       {
-        icon: 'help',
+        icon: '',
         label: 'Help',
       },
       {
-        icon: 'folder',
+        icon: '',
         label: 'System Code',
       },
       {
-        icon: 'help',
+        icon: '',
         label: 'Properties',
       },
       {
-        icon: 'folder',
+        icon: '',
         label: 'Menus',
       },
       {
-        icon: 'folder',
+        icon: '',
         label: 'APIList',
       },
     ],
   },
   {
-    parentIcon: 'people',
     parentLabel: 'Users & Group',
     background: '',
     children: [
       {
-        icon: 'help',
+        icon: '',
         label: 'Help',
       },
       {
