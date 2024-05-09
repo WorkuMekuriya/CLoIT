@@ -59,8 +59,7 @@
           :outlined="false"
           :arrowDirection="'Right'"
           :label="'Sign in'"
-          :leftIcon="''"
-          :rightIcon="'home'"
+          :leftIcon="'login'"
           :button-width="'350px'"
           @click="login"
         />

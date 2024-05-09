@@ -7,23 +7,78 @@
     </div>
     <div class="title">Edit Profile</div>
     <div class="grid-container">
-      <div
-        v-for="(field, index) in profileFields"
-        :key="index"
-        class="grid-item"
-      >
-        <SelectDropdown
-          v-if="field.type === 'selectDropdown'"
-          :label="field.name"
-          :options="field.options"
-        />
+      <div class="grid-item">
         <TextField
-          v-else
           class="textfield"
-          :label="field.name"
-          :placeholder="field.placeholder || field.name"
-          :bottomLeftDescription="field.description"
-          :iconRight="field.rightIcon"
+          label="First Name"
+          placeholder="First Name"
+          bottomLeftDescription=""
+        />
+      </div>
+
+      <div class="grid-item">
+        <TextField
+          class="textfield"
+          label="Last Name"
+          placeholder="Last Name"
+          bottomLeftDescription=""
+        />
+      </div>
+
+      <div class="grid-item">
+        <TextField
+          class="textfield"
+          label="Phone Number"
+          placeholder="Phone Number"
+          bottomLeftDescription=""
+        />
+      </div>
+
+      <div class="grid-item">
+        <TextField
+          class="textfield"
+          label="Email"
+          placeholder="Email"
+          bottomLeftDescription=""
+        />
+      </div>
+
+      <div class="grid-item">
+        <SelectDropdown
+          label="Nationality"
+          :options="[
+            { label: 'South Korean', value: 'south_korean' },
+            { label: 'Ethiopian', value: 'ethiopian' },
+            { label: 'American', value: 'american' },
+          ]"
+        />
+      </div>
+
+      <div class="grid-item">
+        <TextField
+          class="textfield"
+          label="Organization"
+          placeholder="Organization"
+          bottomLeftDescription=""
+          iconRight="search"
+        />
+      </div>
+
+      <div class="grid-item">
+        <TextField
+          class="textfield"
+          label="Department"
+          placeholder="Department"
+          bottomLeftDescription=""
+        />
+      </div>
+
+      <div class="grid-item">
+        <TextField
+          class="textfield"
+          label="Preferred Language"
+          placeholder="Preferred Language"
+          bottomLeftDescription=""
         />
       </div>
     </div>
@@ -44,40 +99,6 @@ import { ref } from 'vue'
 import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
 import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
-
-const profileFields = ref([
-  { name: 'First Name', placeholder: '', description: '' },
-  { name: 'Last Name', placeholder: '', description: '' },
-  { name: 'Phone Number', placeholder: '', description: '' },
-  { name: 'Email', placeholder: '', description: '' },
-  {
-    name: 'Nationality',
-    description: '',
-    type: 'selectDropdown',
-    options: [
-      {
-        label: 'South Korean',
-        value: 'south_korean',
-      },
-      {
-        label: 'Ethiopian',
-        value: 'ethiopian',
-      },
-      {
-        label: 'American',
-        value: 'american',
-      },
-    ],
-  },
-  {
-    name: 'Organization',
-    placeholder: '',
-    description: '',
-    rightIcon: 'search',
-  },
-  { name: 'Department', placeholder: '', description: '' },
-  { name: 'Preferred Language', placeholder: '', description: '' },
-])
 
 // Define the 'nextStep' event
 const emits = defineEmits(['nextStep'])

@@ -11,29 +11,90 @@
           :bottomLeftDescription="error && '이메일 형식이 잘못되었습니다.'"
         />
         <div class="grid-container">
-          <div
-            v-for="(field, index) in signupForm"
-            :key="index"
-            class="grid-item"
-          >
-            <SelectDropdown
-              v-if="field.type === 'selectDropdown'"
-              :label="field.label"
-              :options="field.options"
-              :error="error"
-            />
+          <div class="grid-item">
             <TextField
-              v-else
               class="textfield"
               :error="error"
               :bottomLeftDescription="
-                error && (field.errorDescription || 'This is a required field.')
+                error &&
+                'At least 8 digits, including at least 3 of uppercase letters, lowercase letters, numbers, and special letters (~`!@#$%^&amp;*()_-+=?)'
               "
-              :label="field.label"
-              :placeholder="field.placeholder || field.label"
-              :iconRight="field.rightIcon"
+              label="Password"
+              placeholder="Password"
             />
-            <div v-if="index < 2" class="form-container" />
+          </div>
+          <div class="grid-item form-container">
+            <TextField
+              class="textfield"
+              :error="error"
+              :bottomLeftDescription="
+                error && 'New password and Confirm password do not match.'
+              "
+              label="Confirm Password"
+              placeholder="Confirm Password"
+            />
+          </div>
+          <div class="grid-item">
+            <TextField
+              class="textfield"
+              :error="error"
+              bottomLeftDescription=""
+              label="Family Name"
+              placeholder="Family Name"
+            />
+          </div>
+          <div class="grid-item">
+            <TextField
+              class="textfield"
+              :error="error"
+              :bottomLeftDescription="error && 'This is a required field.'"
+              label="Given Name"
+              placeholder="Given Name"
+            />
+          </div>
+          <div class="grid-item">
+            <TextField
+              class="textfield"
+              :error="error"
+              bottomLeftDescription=""
+              label="Phone Number"
+              placeholder="Phone Number"
+            />
+          </div>
+          <div class="grid-item">
+            <SelectDropdown
+              label="Nationality"
+              :options="[
+                { label: 'South Korean', value: 'south_korean' },
+                {
+                  label: 'Ethiopian',
+                  value: 'ethiopian',
+                },
+                {
+                  label: 'American',
+                  value: 'american',
+                },
+              ]"
+              :error="error"
+            />
+          </div>
+          <div class="grid-item">
+            <TextField
+              class="textfield"
+              :error="error"
+              bottomLeftDescription=""
+              label="Department"
+              placeholder="Department"
+            />
+          </div>
+          <div class="grid-item">
+            <TextField
+              class="textfield"
+              :error="error"
+              bottomLeftDescription=""
+              label="Organization"
+              placeholder="Organization"
+            />
           </div>
         </div>
       </div>
@@ -72,48 +133,6 @@ const router = useRouter()
 const navigateTo = (routeName) => {
   router.push({ name: routeName })
 }
-
-const signupForm = [
-  {
-    label: 'Password',
-    placeholder: 'Password',
-    errorDescription:
-      'At least 8 digits, including at least 3 of uppercase letters, lowercase letters, numbers, and special letters (~`!@#$%^&amp;*()_-+=?)',
-  },
-  {
-    label: 'Confirm Password',
-    placeholder: 'Confirm Password',
-    errorDescription: 'New password and Confirm password do not match.',
-  },
-  { label: 'Family Name', placeholder: 'Family Name' },
-  {
-    label: 'Given Name',
-    placeholder: 'Given Name',
-    errorDescription: 'This is a required field.',
-  },
-  { label: 'Phone Number', placeholder: 'Phone Number' },
-  {
-    label: 'Nationality',
-    description: '',
-    type: 'selectDropdown',
-    options: [
-      {
-        label: 'South Korean',
-        value: 'south_korean',
-      },
-      {
-        label: 'Ethiopian',
-        value: 'ethiopian',
-      },
-      {
-        label: 'American',
-        value: 'american',
-      },
-    ],
-  },
-  { label: 'Department', placeholder: 'Department' },
-  { label: 'Organization', placeholder: 'Organization' },
-]
 
 const error = ref(false)
 

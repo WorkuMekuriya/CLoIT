@@ -4,16 +4,18 @@
     <div class="reset-container">
       <div class="reset-header">Reset Password</div>
       <div class="form-container">
-        <div
-          v-for="(field, index) in resetPasswordForm"
-          :key="index"
-          class="grid-item"
-        >
+        <div class="grid-item">
           <TextField
             class="textfield"
-            :label="field.label"
-            :placeholder="field.placeholder || field.label"
-            :bottomLeftDescription="field.description"
+            label="Email"
+            placeholder="Email"
+            bottomLeftDescription=""
+          />
+          <TextField
+            class="textfield"
+            label="Email Verification Code"
+            placeholder="Email Verification Code"
+            bottomLeftDescription=""
           />
         </div>
         <div class="verification-code-label">Verification Code</div>
@@ -89,14 +91,6 @@ const navigateTo = (routeName) => {
   router.push({ name: routeName })
 }
 
-// Method to emit the 'clicked' event
-const moveTo = () => {
-  emits('nextStep', 1)
-}
-const resetPasswordForm = [
-  { label: 'Email', description: '' },
-  { label: 'Email Verification Code', description: '' },
-]
 // Dialog Component
 const dialogStore = useDialogStore()
 const innerComponent = markRaw(ResetPasswordMessage)

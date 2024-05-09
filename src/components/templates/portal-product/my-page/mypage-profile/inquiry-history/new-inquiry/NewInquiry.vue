@@ -10,32 +10,37 @@
     <div class="profile-title">Inquiry</div>
   </div>
   <div class="form-container">
-    <div v-for="(field, index) in inquiryFields" :key="index">
+    <div>
       <SelectDropdown
-        v-if="field.type === 'selectDropdown'"
-        :label="field.name"
-        :options="field.options"
+        label="문의 원하는 서비스"
+        :options="[{ label: 'Service 1', value: 'service_1' }]"
       />
-      <br v-if="field.type === 'selectDropdown'" />
-      <FilePicker
-        v-if="field.type == 'filePicker'"
-        :label="field.name"
-        :description="field.description"
-        type="lg"
-      />
-      <TextArea
-        v-if="field.type == 'textarea'"
-        class="textfield"
-        :label="field.name"
-        :placeholder="field.placeholder || field.name"
-        :height="field.height"
-      />
+      <br />
+    </div>
+
+    <div>
       <TextField
-        v-if="field.type == 'textfield'"
         class="textfield"
-        :label="field.name"
-        :placeholder="field.placeholder || field.name"
-        :bottomLeftDescription="field.description"
+        label="Title"
+        placeholder="Title"
+        bottomLeftDescription=""
+      />
+    </div>
+
+    <div>
+      <TextArea
+        class="textfield"
+        label="Content"
+        placeholder="자세히 적어주실 수록 빠르고 정확한 도움을 받으실 수 있습니다."
+        height="338px"
+      />
+    </div>
+
+    <div>
+      <FilePicker
+        label="Attach files"
+        description="{File 크기나 확장자 제한에 대한 안내}"
+        type="lg"
       />
     </div>
   </div>
@@ -51,44 +56,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
 import TextArea from 'src/components/molecules/form-components/fields/textarea/TextArea.vue'
 import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import FilePicker from 'src/components/molecules/form-components/file-picker/FilePicker.vue'
 import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
 
-const inquiryFields = ref([
-  {
-    name: '문의 원하는 서비스',
-    placeholder: '{Service name list}',
-    description: '',
-    type: 'selectDropdown',
-    options: [{ label: 'Service 1', value: 'service_1' }],
-  },
-  { name: 'Title', placeholder: '', description: '', type: 'textfield' },
-  {
-    name: 'Content',
-    placeholder:
-      '자세히 적어주실 수록 빠르고 정확한 도움을 받으실 수 있습니다.',
-    description: '',
-    type: 'textarea',
-    height: '338px',
-  },
-  {
-    name: 'Attach files',
-    placeholder: 'Drag and drop files',
-    description: '{File 크기나 확장자 제한에 대한 안내}',
-    type: 'filePicker',
-  },
-])
-const emits = defineEmits(['nextInquiry']) // Define the 'clicked' event
-
-// Method to emit the 'clicked' event
-const nextInquiry = () => {
-  emits('nextInquiry', 4)
-}
-
+const emits = defineEmits(['nextInquiry'])
 const backInquiry = () => {
   emits('nextStep', 0)
 }

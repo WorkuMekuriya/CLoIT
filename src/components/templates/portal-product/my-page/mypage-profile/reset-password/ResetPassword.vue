@@ -9,18 +9,24 @@
     </div>
     <div class="header-title">Resetpassword</div>
     <div class="form-container">
-      <div
-        v-for="(field, index) in resetPasswordForm"
-        :key="index"
-        class="grid-item"
-      >
+      <div class="grid-item">
         <TextField
           class="textfield"
-          :label="field.label"
-          :placeholder="field.placeholder || field.label"
-          :bottomLeftDescription="field.description"
+          label="Email"
+          placeholder="Email"
+          bottomLeftDescription=""
         />
       </div>
+
+      <div class="grid-item">
+        <TextField
+          class="textfield"
+          label="Email Verification Code"
+          placeholder="Email Verification Code"
+          bottomLeftDescription=""
+        />
+      </div>
+
       <div class="verification-code-label">Verification Code</div>
       <div class="verification-code-container">
         <q-input
@@ -72,17 +78,6 @@ import DialogComponent from 'src/components/molecules/dialog/DialogComponent.vue
 import ConfirmMessage from './confirm-message/ConfirmMessage.vue'
 import ResetPasswordIcon from 'src/components/atoms/Icons/my-page-icons/ResetPasswordIcon.vue'
 import ResetPasswordPlaceholder from 'src/components/atoms/Icons/my-page-icons/ResetPasswordPlaceholder.vue'
-
-const resetPasswordForm = [
-  { label: 'Email', description: '' },
-  { label: 'Email Verification Code', description: '' },
-]
-
-const emits = defineEmits(['nextStep'])
-
-const backStep = () => {
-  emits('nextStep', 0)
-}
 
 // Dialog Component
 const dialogStore = useDialogStore()

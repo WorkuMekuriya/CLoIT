@@ -1,6 +1,6 @@
 <template>
   <q-page>
-      <component @nextStep="handleNextStep" :is="getStepComponent" />
+    <component @nextStep="handleNextStep" :is="getStepComponent" />
   </q-page>
 </template>
 <script setup>
