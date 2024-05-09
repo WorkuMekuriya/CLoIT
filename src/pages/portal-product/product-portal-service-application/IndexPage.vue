@@ -1,7 +1,7 @@
 <template>
-  <q-layout view="lhr lpr lfr">
+  <q-page view="lhr lpr lfr">
     <IndexTemplate />
-  </q-layout>
+  </q-page>
 </template>
 <script setup>
 import IndexTemplate from '../../../components/templates/portal-product/portal-product-service-application/index/IndexTemplate.vue'

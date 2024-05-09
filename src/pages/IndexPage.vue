@@ -1,5 +1,7 @@
 <template>
-  <component @nextStep="handleNextStep" :is="getStepComponent" />
+  <q-page>
+      <component @nextStep="handleNextStep" :is="getStepComponent" />
+  </q-page>
 </template>
 <script setup>
 import SignIn from 'components/templates/auth/sign-in/SignIn.vue'
