@@ -100,14 +100,6 @@ const navigateTo = (routeName) => {
   router.push({ path: routeName })
 }
 
-// Method to emit the 'clicked' event
-const moveTo = () => {
-  emits('nextStep', 1)
-}
-const resetPasswordForm = [
-  { label: 'Email', description: '' },
-  { label: 'Email Verification Code', description: '' },
-]
 // Dialog Component
 const dialogStore = useDialogStore()
 const innerComponent = markRaw(ConfirmMessage)

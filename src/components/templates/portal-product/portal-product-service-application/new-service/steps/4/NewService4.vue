@@ -24,83 +24,208 @@
           </div>
 
           <div v-if="selectedIndex == 'Individual'" class="grid-container">
-            <div
-              v-for="(form, index) in informationForm"
-              :key="index"
-              class="grid-item"
-            >
-              <br v-if="form.type === 'selectDropdown'" />
-              <SelectDropdown
-                v-if="form.type === 'selectDropdown'"
-                :label="form.name"
-                :options="form.options"
-              />
+            <!-- Manually define each informationForm field -->
+            <div class="grid-item">
               <TextField
-                v-else
                 class="textfield"
-                :label="form.name"
-                :placeholder="form.name"
-                :bottomLeftDescription="form.description"
+                label="First Name"
+                placeholder="First Name"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Last Name"
+                placeholder="Last Name"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Email"
+                placeholder="Email"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Phone Number"
+                placeholder="Phone Number"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <br />
+              <SelectDropdown
+                label="Nationality"
+                :options="[
+                  { label: 'South Korean', value: 'south_korean' },
+                  { label: 'Ethiopian', value: 'ethiopian' },
+                  { label: 'American', value: 'american' },
+                ]"
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Department"
+                placeholder="Department"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Preferred Language"
+                placeholder="Preferred Language"
+                bottomLeftDescription="기본적으로 영어, 한국어, 프랑스어, 독일어, 스페인어가 제공됩니다. 이외 원하는 언어가 있는 경우 적어주세요."
                 bottomRightDescription=""
               />
             </div>
           </div>
 
           <div v-if="selectedIndex == 'Organization'" class="grid-container">
-            <div
-              v-for="(form, index) in organizationInfo"
-              :key="index"
-              class="grid-item"
-            >
-              <br v-if="form.type === 'selectDropdown'" />
-              <SelectDropdown
-                v-if="form.type === 'selectDropdown'"
-                :label="form.name"
-                :options="form.options"
-              />
+            <!-- Manually define each organizationInfo field -->
+            <div class="grid-item">
               <TextField
-                v-else
                 class="textfield"
-                :label="form.name"
-                :placeholder="form.placeholder || form.name"
-                :bottomLeftDescription="form.description"
+                label="Organization registration number"
+                placeholder="Organization registration number"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Organization name"
+                placeholder="Organization name"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <br />
+              <SelectDropdown
+                label="Country"
+                :options="[
+                  { label: 'South Korea', value: 'south_korean' },
+                  { label: 'United States', value: 'united_states' },
+                  { label: 'Ethiopia', value: 'ethiopia' },
+                  { label: 'Brazil', value: 'brazil' },
+                ]"
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Owner"
+                placeholder="Owner"
+                bottomLeftDescription=""
                 bottomRightDescription=""
               />
             </div>
           </div>
+
           <div v-if="selectedIndex == 'Organization'">
-            <div
-              v-for="(form, index) in organizationInfo_2"
-              :key="index"
-              class="grid-item"
-            >
+            <!-- Manually define each organizationInfo_2 field -->
+            <div class="grid-item">
               <TextField
                 class="textfield"
-                :label="form.name"
-                :placeholder="form.placeholder || form.name"
-                :bottomLeftDescription="form.description"
+                label="Location"
+                placeholder="Street, Building Number (Optional)"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label=""
+                placeholder="More Address Information (Optional)"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label=""
+                placeholder="City / District (Optional)"
+                bottomLeftDescription=""
                 bottomRightDescription=""
               />
             </div>
           </div>
+
           <div v-if="selectedIndex == 'Organization'" class="grid-container">
-            <div
-              v-for="(form, index) in organizationInfo_3"
-              :key="index"
-              class="grid-item"
-            >
-              <br v-if="form.type === 'selectDropdown'" />
+            <!-- Manually define each organizationInfo_3 field -->
+            <div class="grid-item">
+              <br />
               <SelectDropdown
-                v-if="form.type === 'selectDropdown'"
-                :label="form.name"
-                :options="form.options"
+                label="Province"
+                :options="[
+                  { value: 'province', label: 'Province' },
+                  { value: 'province_2', label: 'Province 2' },
+                ]"
               />
+            </div>
+
+            <div class="grid-item">
               <TextField
-                v-else
                 class="textfield"
-                :label="form.name"
-                :placeholder="form.placeholder || form.name"
-                :bottomLeftDescription="form.description"
+                label="Postal or ZIP Code"
+                placeholder="Postal or ZIP Code"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Contact"
+                placeholder="Contact"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Certificate for business registration"
+                placeholder="Certificate for business registration"
+                bottomLeftDescription=""
+                bottomRightDescription=""
+              />
+            </div>
+
+            <div class="grid-item">
+              <TextField
+                class="textfield"
+                label="Preferred Language"
+                placeholder="Preferred Language"
+                bottomLeftDescription="기본적으로 영어, 한국어, 프랑스어, 독일어, 스페인어가 제공됩니다. 이외 원하는 언어가 있는 경우 적어주세요."
                 bottomRightDescription=""
               />
             </div>
@@ -132,15 +257,41 @@
       <section class="section-container">
         <div class="section-title">환급계좌정보</div>
         <div class="grid-container">
-          <div
-            v-for="(account, index) in refundAccountInfo"
-            :key="index"
-            class="grid-item"
-          >
+          <div class="grid-item">
             <TextField
               class="textfield"
-              :label="account.name"
-              :placeholder="account.name"
+              label="Account Name"
+              placeholder="Account Name"
+              bottomLeftDescription=""
+              bottomRightDescription=""
+            />
+          </div>
+
+          <div class="grid-item">
+            <TextField
+              class="textfield"
+              label="Bank"
+              placeholder="Bank"
+              bottomLeftDescription=""
+              bottomRightDescription=""
+            />
+          </div>
+
+          <div class="grid-item">
+            <TextField
+              class="textfield"
+              label="Account Number"
+              placeholder="Account Number"
+              bottomLeftDescription=""
+              bottomRightDescription=""
+            />
+          </div>
+
+          <div class="grid-item">
+            <TextField
+              class="textfield"
+              label="Bank Swift"
+              placeholder="Bank Swift"
               bottomLeftDescription=""
               bottomRightDescription=""
             />
@@ -212,112 +363,6 @@ const options = ref([
   { label: 'Portal & Help Desk', price: '+${}' },
 ])
 
-const informationForm = ref([
-  { name: 'First Name', description: '' },
-  { name: 'Last Name', description: '' },
-  { name: 'Email', description: '' },
-  { name: 'Phone Number', description: '' },
-  {
-    name: 'Nationality',
-    description: '',
-    type: 'selectDropdown',
-    options: [
-      {
-        label: 'South Korean',
-        value: 'south_korean',
-      },
-      {
-        label: 'Ethiopian',
-        value: 'ethiopian',
-      },
-      {
-        label: 'American',
-        value: 'american',
-      },
-    ],
-  },
-  { name: 'Department', description: '' },
-  {
-    name: 'Preferred Language',
-    description:
-      '기본적으로 영어, 한국어, 프랑스어, 독일어, 스페인어가 제공됩니다. 이외 원하는 언어가 있는 경우 적어주세요.',
-  },
-])
-
-const refundAccountInfo = ref([
-  { name: 'Account Name', description: '' },
-  { name: 'Bank', description: '' },
-  { name: 'Account Number', description: '' },
-  { name: 'Bank Swift', description: '' },
-])
-
-const organizationInfo = ref([
-  { name: 'Organization registration number', description: '' },
-  { name: 'Organization name', description: '' },
-  {
-    name: 'Country',
-    description: '',
-    type: 'selectDropdown',
-    options: [
-      {
-        label: 'South Korea',
-        value: 'south_korea',
-      },
-      {
-        label: 'United States',
-        value: 'united_states',
-      },
-      {
-        label: 'Ethiopia',
-        value: 'ethiopia',
-      },
-      {
-        label: 'Brazil',
-        value: 'brazil',
-      },
-    ],
-  },
-  { name: 'Owner', description: '' },
-])
-
-const organizationInfo_2 = ref([
-  {
-    name: 'Location',
-    placeholder: 'Street, Building Number (Optional)',
-    description: '',
-  },
-  {
-    name: '',
-    placeholder: 'More Address Information (Optional)',
-    description: '',
-  },
-  { name: '', placeholder: 'City / District (Optional)', description: '' },
-])
-
-const organizationInfo_3 = ref([
-  {
-    name: 'Province',
-    description: '',
-    type: 'selectDropdown',
-    options: [
-      { value: 'province', label: 'Province' },
-      { value: 'province 2', label: 'Province 2' },
-    ],
-  },
-  {
-    name: 'Postal or ZIP Code',
-    placeholder: 'Postal or ZIP Code',
-    description: '',
-  },
-  { name: 'Contact', description: '' },
-  { name: 'Certificate for business registration', description: '' },
-  {
-    name: 'Preferred Language',
-    description:
-      '기본적으로 영어, 한국어, 프랑스어, 독일어, 스페인어가 제공됩니다. 이외 원하는 언어가 있는 경우 적어주세요.',
-  },
-])
-
 const infoCard = ref([
   {
     title: 'Individual',
@@ -351,7 +396,7 @@ const toggleSelectInfo = (index) => {
   selectedInfoIndex.value = index[0].title
 }
 
-const emits = defineEmits(['nextStep']) // Define the 'clicked' event
+const emits = defineEmits(['nextStep']) // Define the 'nextStep' event
 
 const moveToStep5 = () => {
   emits('nextStep', 5)
