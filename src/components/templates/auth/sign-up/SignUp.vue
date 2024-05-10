@@ -1,132 +1,139 @@
 <template>
-  <AuthHeader />
-  <div class="auth flex flex-center">
-    <div class="signup-container">
-      <div class="signup-header">Sign Up</div>
-      <div class="form-container">
-        <TextField
-          label="Email"
-          placeholder="Email"
-          :error="error"
-          :bottomLeftDescription="error && '이메일 형식이 잘못되었습니다.'"
-        />
-        <div class="grid-container">
-          <div class="grid-item">
+  <q-layout view="lHh Lpr lFf">
+    <q-page-container>
+      <AuthHeader />
+      <div class="auth flex flex-center">
+        <div class="signup-container">
+          <div class="signup-header">Sign Up</div>
+          <div class="form-container">
             <TextField
-              class="textfield"
+              label="Email"
+              placeholder="Email"
               :error="error"
-              :bottomLeftDescription="
-                error &&
-                'At least 8 digits, including at least 3 of uppercase letters, lowercase letters, numbers, and special letters (~`!@#$%^&amp;*()_-+=?)'
-              "
-              label="Password"
-              placeholder="Password"
+              :bottomLeftDescription="error && '이메일 형식이 잘못되었습니다.'"
             />
+            <div class="grid-container">
+              <div class="grid-item">
+                <TextField
+                  class="textfield"
+                  :error="error"
+                  :bottomLeftDescription="
+                    error &&
+                    'At least 8 digits, including at least 3 of uppercase letters, lowercase letters, numbers, and special letters (~`!@#$%^&amp;*()_-+=?)'
+                  "
+                  label="Password"
+                  inputType="password"
+                  iconRight="o_visibility"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="grid-item form-container">
+                <TextField
+                  class="textfield"
+                  :error="error"
+                  :bottomLeftDescription="
+                    error && 'New password and Confirm password do not match.'
+                  "
+                  label="Confirm Password"
+                  inputType="password"
+                  iconRight="o_visibility"
+                  placeholder="Confirm Password"
+                />
+              </div>
+              <div class="grid-item">
+                <TextField
+                  class="textfield"
+                  :error="error"
+                  bottomLeftDescription=""
+                  label="Family Name"
+                  placeholder="Family Name"
+                />
+              </div>
+              <div class="grid-item">
+                <TextField
+                  class="textfield"
+                  :error="error"
+                  :bottomLeftDescription="error && 'This is a required field.'"
+                  label="Given Name"
+                  placeholder="Given Name"
+                />
+              </div>
+              <div class="grid-item">
+                <TextField
+                  class="textfield"
+                  :error="error"
+                  bottomLeftDescription=""
+                  label="Phone Number"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div class="grid-item">
+                <SelectDropdown
+                  label="Nationality"
+                  :options="[
+                    { label: 'South Korean', value: 'south_korean' },
+                    {
+                      label: 'Ethiopian',
+                      value: 'ethiopian',
+                    },
+                    {
+                      label: 'American',
+                      value: 'american',
+                    },
+                  ]"
+                  :error="error"
+                />
+              </div>
+              <div class="grid-item">
+                <TextField
+                  class="textfield"
+                  :error="error"
+                  bottomLeftDescription=""
+                  label="Department"
+                  placeholder="Department"
+                />
+              </div>
+              <div class="grid-item">
+                <TextField
+                  class="textfield"
+                  :error="error"
+                  bottomLeftDescription=""
+                  label="Organization"
+                  placeholder="Organization"
+                  iconRight="search"
+                />
+              </div>
+            </div>
           </div>
-          <div class="grid-item form-container">
-            <TextField
-              class="textfield"
-              :error="error"
-              :bottomLeftDescription="
-                error && 'New password and Confirm password do not match.'
-              "
-              label="Confirm Password"
-              placeholder="Confirm Password"
+
+          <div class="footer-buttons flex justify-between">
+            <CircularButton
+              :type="'TertiaryLined'"
+              :isLoading="false"
+              :buttonDisabled="false"
+              :icon="'west'"
+              @clicked="navigateTo('/')"
             />
-          </div>
-          <div class="grid-item">
-            <TextField
-              class="textfield"
-              :error="error"
-              bottomLeftDescription=""
-              label="Family Name"
-              placeholder="Family Name"
-            />
-          </div>
-          <div class="grid-item">
-            <TextField
-              class="textfield"
-              :error="error"
-              :bottomLeftDescription="error && 'This is a required field.'"
-              label="Given Name"
-              placeholder="Given Name"
-            />
-          </div>
-          <div class="grid-item">
-            <TextField
-              class="textfield"
-              :error="error"
-              bottomLeftDescription=""
-              label="Phone Number"
-              placeholder="Phone Number"
-            />
-          </div>
-          <div class="grid-item">
-            <SelectDropdown
-              label="Nationality"
-              :options="[
-                { label: 'South Korean', value: 'south_korean' },
-                {
-                  label: 'Ethiopian',
-                  value: 'ethiopian',
-                },
-                {
-                  label: 'American',
-                  value: 'american',
-                },
-              ]"
-              :error="error"
-            />
-          </div>
-          <div class="grid-item">
-            <TextField
-              class="textfield"
-              :error="error"
-              bottomLeftDescription=""
-              label="Department"
-              placeholder="Department"
-            />
-          </div>
-          <div class="grid-item">
-            <TextField
-              class="textfield"
-              :error="error"
-              bottomLeftDescription=""
-              label="Organization"
-              placeholder="Organization"
+            <RoundedButton
+              :type="'Primary'"
+              :outlined="false"
+              :label="'Sign up'"
+              :button-width="'689px'"
+              @click="showValidation"
             />
           </div>
         </div>
       </div>
-
-      <div class="footer-buttons flex justify-between">
-        <CircularButton
-          :type="'TertiaryLined'"
-          :isLoading="false"
-          :buttonDisabled="false"
-          :icon="'west'"
-          @clicked="navigateTo('/')"
-        />
-        <RoundedButton
-          :type="'Primary'"
-          :outlined="false"
-          :label="'Sign up'"
-          :button-width="'689px'"
-          @click="showValidation"
-        />
-      </div>
-    </div>
-  </div>
+    </q-page-container>
+  </q-layout>
 </template>
 <script setup>
-import { markRaw, ref } from 'vue'
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { useDialogStore } from 'stores/dialog-store'
 import AuthHeader from 'components/organisms/auth-header/AuthHeader.vue'
 import TextField from 'components/molecules/form-components/fields/textfield/TextField.vue'
 import CircularButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
 import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
-import ConfirmMessage from 'components/templates/auth/message/confirm-message/EmailConfirmMessage.vue'
 import RoundedButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 
 const router = useRouter()
