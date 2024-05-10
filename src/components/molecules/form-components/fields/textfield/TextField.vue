@@ -11,6 +11,7 @@
       class="textfield-primary"
       :class="[textFieldClass, setDestructive, setDisable, removeIconSpace]"
       borderless
+      :type="inputType"
       no-error-icon
       :disable="disable"
       :placeholder="placeholder"
@@ -57,6 +58,10 @@ const props = defineProps({
   type: {
     type: String,
     default: 'Primary',
+  },
+  inputType: {
+    type: String,
+    default: 'type'
   },
   label: {
     type: String,

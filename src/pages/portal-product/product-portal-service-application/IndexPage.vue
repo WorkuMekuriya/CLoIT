@@ -1,5 +1,5 @@
 <template>
-  <q-page view="lhr lpr lfr">
+  <q-page>
     <IndexTemplate />
   </q-page>
 </template>
