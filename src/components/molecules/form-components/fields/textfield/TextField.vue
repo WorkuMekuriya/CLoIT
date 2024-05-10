@@ -22,7 +22,12 @@
         <q-icon :color="iconColor" v-if="iconLeft" :name="iconLeft" size="sm" />
       </template>
       <template v-slot:append>
-        <q-icon :color="iconColor"  v-if="iconRight" :name="iconRight" size="sm" />
+        <q-icon
+          :color="iconColor"
+          v-if="iconRight"
+          :name="iconRight"
+          size="sm"
+        />
       </template>
     </q-input>
     <div class="flex" :class="[bottomRightDescriptionPosition]">
@@ -61,11 +66,11 @@ const props = defineProps({
   },
   inputType: {
     type: String,
-    default: 'type'
+    default: 'type',
   },
   iconColor: {
     type: String,
-    default: ''
+    default: '',
   },
   label: {
     type: String,
