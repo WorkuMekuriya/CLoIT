@@ -1,8 +1,9 @@
 <template>
   <div class="textarea-container">
-    <p v-if="label" class="textarea-label">{{ label }}</p>
+    <p v-if="label" class="textarea-label" :class="labelColor">{{ label }}</p>
     <div class="q-input-wrapper">
       <q-input
+        :ref="reference"
         v-model="inputValue"
         class="textarea-primary"
         :class="[textareaClass, setDestructive, setDisable]"
@@ -12,6 +13,7 @@
         :placeholder="placeholder"
         autogrow
         type="textarea"
+        :maxLength="maxCharacters"
         @input="emitInput"
         :style="{ height: height }"
       >
@@ -37,9 +39,7 @@ import { ref, computed } from 'vue'
 const textareaClasses = {
   Primary: 'textarea-primary-bg',
   WhiteBg: 'textarea-white-bg',
-}
-
-const maxCharacters = 500 // Set your maximum character limit here
+} // Set your maximum character limit here
 
 const inputValue = ref('')
 
@@ -48,9 +48,21 @@ const props = defineProps({
     type: String,
     default: 'Primary',
   },
+  reference: {
+    type: String,
+    default: '',
+  },
   label: {
     type: String,
     default: 'Label',
+  },
+  maxCharacters: {
+    type: Number,
+    default: 500,
+  },
+  labelColor: {
+    type: String,
+    default: 'text-bluegray-500',
   },
   placeholder: {
     type: String,
@@ -78,11 +90,10 @@ const props = defineProps({
   },
 })
 
+const { emit } = defineEmits(['input'])
 const emitInput = () => {
   emit('input', inputValue.value)
 }
-
-const { emit } = defineEmits(['input'])
 
 const textareaClass = computed(() => {
   if (!props.destructive && !props.disable) {

@@ -3,10 +3,11 @@
 </style>
 <template>
   <div>
-    <p v-if="label" class="textfield-label">
+    <p v-if="label" class="textfield-label" :class="labelColor">
       {{ label }}<span class="text-red-500" v-if="required"> *</span>
     </p>
     <q-input
+      :ref="reference"
       v-model="inputValue"
       class="textfield-primary"
       :class="[textFieldClass, setDestructive, setDisable, removeIconSpace]"
@@ -17,6 +18,8 @@
       :placeholder="placeholder"
       @input="emitInput"
       :style="{ borderRadius: borderRadius }"
+      :rules="rules"
+
     >
       <template v-slot:prepend>
         <q-icon :color="iconColor" v-if="iconLeft" :name="iconLeft" size="sm" />
@@ -64,6 +67,10 @@ const props = defineProps({
     type: String,
     default: 'Primary',
   },
+  reference: {
+    type: String,
+    default: ''
+  },
   inputType: {
     type: String,
     default: 'type',
@@ -76,6 +83,10 @@ const props = defineProps({
     type: String,
     default: 'Label',
   },
+  labelColor: {
+    type: String,
+    default: 'text-bluegray-500',
+  },
   placeholder: {
     type: String,
     default: 'Placeholder Text',
@@ -83,6 +94,10 @@ const props = defineProps({
   required: {
     type: Boolean,
     default: true,
+  },
+  rules: {
+    type: Array,
+    default: () => [],
   },
   bottomLeftDescription: {
     type: String,
