@@ -19,10 +19,10 @@
       :style="{ borderRadius: borderRadius }"
     >
       <template v-slot:prepend>
-        <q-icon v-if="iconLeft" :name="iconLeft" size="sm" />
+        <q-icon :color="iconColor" v-if="iconLeft" :name="iconLeft" size="sm" />
       </template>
       <template v-slot:append>
-        <q-icon v-if="iconRight" :name="iconRight" size="sm" />
+        <q-icon :color="iconColor"  v-if="iconRight" :name="iconRight" size="sm" />
       </template>
     </q-input>
     <div class="flex" :class="[bottomRightDescriptionPosition]">
@@ -62,6 +62,10 @@ const props = defineProps({
   inputType: {
     type: String,
     default: 'type'
+  },
+  iconColor: {
+    type: String,
+    default: ''
   },
   label: {
     type: String,
