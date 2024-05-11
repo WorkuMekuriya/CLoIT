@@ -19,7 +19,6 @@
       @input="emitInput"
       :style="{ borderRadius: borderRadius }"
       :rules="rules"
-
     >
       <template v-slot:prepend>
         <q-icon :color="iconColor" v-if="iconLeft" :name="iconLeft" size="sm" />
@@ -69,7 +68,7 @@ const props = defineProps({
   },
   reference: {
     type: String,
-    default: ''
+    default: '',
   },
   inputType: {
     type: String,

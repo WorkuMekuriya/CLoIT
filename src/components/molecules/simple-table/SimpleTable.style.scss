@@ -1,0 +1,35 @@
+@import '/src/css/app.scss';
+
+.simple-table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: none;
+
+  th {
+    @extend .label-sm-bold;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid $bluegray-200;
+    padding: 29px 16px;
+  }
+
+  tr,
+  th {
+    padding: 29px 16px;
+    text-align: left;
+  }
+
+  th:first-child,
+  td:first-child {
+    @extend .label-sm-bold;
+    border-left: none;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: none;
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center text-center">
+  <div class="">
     <q-chip
       :disable="type.includes('Disabled')"
       :class="['q-chip', typeClass, sizeClass]"

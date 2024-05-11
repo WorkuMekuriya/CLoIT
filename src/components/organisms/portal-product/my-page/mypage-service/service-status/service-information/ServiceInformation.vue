@@ -1,26 +1,12 @@
 <template>
   <div class="service-information">
     <p class="header-text">서비스정보</p>
-    <table>
-      <thead>
-        <tr>
-          <th>신청상품명</th>
-          <th>Duration</th>
-          <th>사용개시일</th>
-          <th>종료일</th>
-          <th>신청일</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(row, index) in data" :key="index">
-          <td>{{ row.product }}</td>
-          <td>{{ row.duration }}</td>
-          <td>{{ row.startDate }}</td>
-          <td>{{ row.endDate }}</td>
-          <td>{{ row.applicationDate }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <SimpleTable
+      :columns="tableProps.columns"
+      :tableData="tableProps.tableData"
+      :tableStyles="tableProps.tableStyles"
+      :columnStyles="tableProps.columnStyles"
+    />
     <div class="row date-container">
       <div class="col-6">
         <p class="date-title">규모</p>
@@ -53,25 +39,14 @@
 
 <script setup>
 import LinkButton from '../../../../../../molecules/buttons/link-button/LinkButton.vue'
+import SimpleTable from 'components/molecules/simple-table/SimpleTable.vue'
+import { defineProps } from 'vue'
+
 const props = defineProps({
-  data: {
-    type: Array,
-    default: () => [
-      {
-        product: 'Portal & Help Desk',
-        duration: '3 Months',
-        startDate: '2024-03-12',
-        endDate: '2024-06-12',
-        applicationDate: '2024-02-11',
-      },
-      {
-        product: 'Accreditation',
-        duration: '3 Months',
-        startDate: '2024-03-12',
-        endDate: '2024-06-12',
-        applicationDate: '2024-02-11',
-      },
-    ],
+  tableProps: {
+    type: Object,
+    required: true,
+    default: () => ({}),
   },
   scale: {
     type: String,
