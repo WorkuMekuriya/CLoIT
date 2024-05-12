@@ -26,7 +26,7 @@
       />
     </div>
     <div v-if="currentTab == '대회관리'">
-      <div class="flex card-container">
+      <div class="flex card-container justify-center">
         <Card
           :cardList="productsCard"
           :isSingleSelect="false"
@@ -41,7 +41,7 @@
         <div class="link-button">
           <LinkButton
             labelTypology="subH-md-med"
-            backgroundColor="bg-bluegray-100"
+            backgroundColor="bg-bluegray-50"
           />
         </div>
       </div>
@@ -57,7 +57,7 @@
         <div class="link-button">
           <LinkButton
             labelTypology="subH-md-med"
-            backgroundColor="bg-bluegray-100"
+            backgroundColor="bg-bluegray-50"
           />
         </div>
       </div>
@@ -82,6 +82,8 @@ const productsCard = [
     description: '{Description}',
     price: '1',
     size: 'md',
+    width: '288px',
+    height: '228px',
   },
   {
     title: 'Accreditation',
@@ -89,6 +91,8 @@ const productsCard = [
     price: '2',
     subscription: 'USD/mo',
     size: 'md',
+    width: '288px',
+    height: '228px',
   },
   {
     title: 'Sports Entries',

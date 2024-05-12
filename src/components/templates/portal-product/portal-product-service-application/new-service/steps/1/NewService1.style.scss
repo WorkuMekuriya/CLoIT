@@ -1,6 +1,13 @@
 @import '../../../../../../../css/app.scss';
 
 .new-service-1 {
+  .heading{
+    @extend .heading-3;
+    line-height: 2.8rem;
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
   .header-text {
     margin-top: 20px;
     margin-bottom: 40px;

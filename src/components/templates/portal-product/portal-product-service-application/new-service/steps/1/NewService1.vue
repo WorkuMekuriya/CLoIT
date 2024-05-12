@@ -1,6 +1,6 @@
 <template>
   <div class="new-service-1">
-    <p class="heading-3 text-center header-text">Terms & Conditions</p>
+    <p class="heading text-center header-text">Terms & Conditions</p>
     <div class="flex justify-center">
       <TermsAndConditions />
     </div>

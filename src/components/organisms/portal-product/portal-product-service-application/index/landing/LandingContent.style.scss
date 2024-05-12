@@ -31,14 +31,26 @@
     @extend .heading-3;
     margin-top: 60px;
     margin-bottom: 16px;
+    line-height: 2.8rem;
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: 28px;
+    }
   }
 
   .sub-title {
     @extend .p-lg;
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: 16px;
+    }
   }
 
   .products-card {
     margin-top: 17px;
+  }
+  
+
+  :deep(.q-card) {
+    @extend .bg-bluegray-50;
   }
 }
 .link-button {

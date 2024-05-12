@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lhr lpr lfr">
     <HeaderBar />
-    <q-page-container>
+    <q-page-container style="padding: 0px">
       <Landing />
     </q-page-container>
     <FooterBar />
