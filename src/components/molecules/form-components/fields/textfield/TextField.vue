@@ -19,6 +19,7 @@
       @input="emitInput"
       :style="{ borderRadius: borderRadius }"
       :rules="rules"
+      autocomplete="new-password"
     >
       <template v-slot:prepend>
         <q-icon :color="iconColor" v-if="iconLeft" :name="iconLeft" size="sm" />

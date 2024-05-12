@@ -29,10 +29,12 @@
     </div>
   </div>
 </template>
+
 <script setup>
-import Tag from 'components/molecules/form-components/tag-component/TagComponent.vue'
 import { useRouter } from 'vue-router'
+import Tag from 'components/molecules/form-components/tag-component/TagComponent.vue'
 const router = useRouter()
+
 defineProps({
   serviceText: {
     type: String,
@@ -67,11 +69,15 @@ defineProps({
     default: '',
   },
 })
-const navigateToPage = (routeName) => {
-  console.log(routeName)
-  router.push({ name: routeName })
+
+const navigateToPage = (to) => {
+  router.push({
+    name: 'portal-products-my-page-services-detail',
+    query: { status: to },
+  })
 }
 </script>
+
 <style lang="scss" scoped>
 @import 'ServiceCard.style.scss';
 </style>

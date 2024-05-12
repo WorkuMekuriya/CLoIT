@@ -52,7 +52,12 @@
         <div class="title-text-container flex items-center">
           <p class="title-text">{{ content.name }}</p>
           <div></div>
-          <Tag size="md" :label="'Required'" class="tag" v-if="content.required" />
+          <Tag
+            size="md"
+            :label="'Required'"
+            class="tag"
+            v-if="content.required"
+          />
         </div>
         <div class="flex items-center">
           <p class="read cursor-pointer" @click="readPolicy">Read</p>

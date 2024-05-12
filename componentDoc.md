@@ -16,7 +16,7 @@ The rounded button component is designed for general-purpose use cases where a r
 <template>
   <RoundedButton
     type="Primary"
-    label="Primary Button"
+    :label="'Primary Button'"
     :isLoading="isLoading"
     :buttonDisabled="buttonDisabled"
   />
@@ -126,7 +126,7 @@ This component is a customizable text field that allows users to input text. It 
   <text-field
     v-model="inputValue"
     type="Primary"
-    label="Username"
+    :label="'Username'"
     placeholder="Enter your username"
     :error="isError"
     :disable="isDisabled"
@@ -185,7 +185,7 @@ The Text Area component allows users to input and display multi-line text. It pr
   <text-area
     v-model="inputValue"
     type="Primary"
-    label="Description"
+    :label="'Description'"
     placeholder="Enter your description"
     :destructive="hasError"
     :disable="isDisabled"
@@ -232,7 +232,7 @@ The Check Box component allows users to select or deselect options. It provides 
 <template>
   <check-box
     v-model="isChecked"
-    label="Enable Feature"
+    :label="'Enable Feature'"
     :destructive="isDestructive"
     :disable="isDisabled"
     @update:modelValue="handleUpdate"
@@ -276,7 +276,7 @@ The Toggle Button component allows users to switch between two states, typically
 <template>
   <toggle-button
     v-model="isEnabled"
-    label="Enable Feature"
+    :label="'Enable Feature'"
     :disable="isDisabled"
     @update:toggleValue="handleToggleChange"
   />

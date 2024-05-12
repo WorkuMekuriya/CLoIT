@@ -156,35 +156,11 @@ const routes = [
               ),
           },
           {
-            name: 'portal-products-my-page-services-active',
-            path: 'active',
+            path: 'detail',
+            name: 'portal-products-my-page-services-detail',
             component: () =>
               import(
-                'components/templates/portal-product/my-page/mypage-services/services-active/ServiceActive.vue'
-              ),
-          },
-          {
-            name: 'portal-products-my-page-services-inactive',
-            path: 'inactive',
-            component: () =>
-              import(
-                'components/templates/portal-product/my-page/mypage-services/services-inactive/ServiceInactive.vue'
-              ),
-          },
-          {
-            name: 'portal-products-my-page-services-pending',
-            path: 'pending',
-            component: () =>
-              import(
-                'components/templates/portal-product/my-page/mypage-services/services-pending/ServicePending.vue'
-              ),
-          },
-          {
-            name: 'portal-products-my-page-services-inactive-full',
-            path: 'inactive-full',
-            component: () =>
-              import(
-                'components/templates/portal-product/my-page/mypage-services/services-inactive-full/ServiceInactiveFull.vue'
+                'components/templates/portal-product/my-page/mypage-services/service-detail/ServiceDetail.vue'
               ),
           },
         ],

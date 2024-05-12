@@ -1,6 +1,7 @@
 @import '../../../../../../css/app.scss';
 $horizontal-divider-border-bottom: 1px solid $bluegray-200;
-.mypage-services-active {
+
+.mypage-services {
   @extend .text-bluegray-900;
 
   .inditcator-text {

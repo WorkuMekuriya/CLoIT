@@ -15,7 +15,7 @@
       :tagType="service.tagType"
       :startDate="service.startDate"
       :endDate="service.endDate"
-      :to="service.to"
+      :to="service.status"
     />
   </div>
 </template>
@@ -31,7 +31,7 @@ const services = [
     tagType: 'TagSkeletonTonal',
     startDate: '24-03-25',
     endDate: '2024-06-25',
-    to: 'portal-products-my-page-services-pending',
+    status: 'pending',
   },
   {
     name: 'services',
@@ -42,7 +42,7 @@ const services = [
     tagType: 'TagBlue',
     startDate: '24-03-25',
     endDate: '2024-06-25',
-    to: '',
+    status: 'active',
   },
   {
     name: 'services',
@@ -53,7 +53,7 @@ const services = [
     tagType: 'TagRedTonal',
     startDate: '24-03-25',
     endDate: '2024-06-25',
-    to: '',
+    status: 'inactive-full',
   },
   {
     name: 'services',
@@ -64,7 +64,7 @@ const services = [
     tagType: 'TagSkeletonTonal',
     startDate: '24-03-25',
     endDate: '2024-06-25',
-    to: '',
+    status: 'pending',
   },
 ]
 </script>
