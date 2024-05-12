@@ -53,14 +53,22 @@ const pages = [
 const navigateToPage = (routeName) => {
   router.push({ name: routeName })
 }
-const setActiveRoutes = () => {
-  const currentRouteName = router.currentRoute.value.name
 
-  pages.forEach((page) => {
-    page.active.value =
-      currentRouteName === page.to || currentRouteName.startsWith(page.to)
-  })
+const setActiveRoutes = () => {
+  const currentRouteName = router.currentRoute.value.name;
+
+  if (currentRouteName === undefined) {
+    const firstPage = pages[0];
+    router.push({ name: 'portal-products-my-page-services' });
+    pages.forEach(page => page.active.value = page === firstPage);
+  } else {
+    pages.forEach(page => {
+      const isActive = currentRouteName === page.to || currentRouteName.startsWith(page.to);
+      page.active.value = isActive;
+    });
+  }
 }
+
 onMounted(() => {
   setActiveRoutes()
 })
