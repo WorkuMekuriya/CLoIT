@@ -12,8 +12,8 @@
         <div class="flex justify-center q-mb-md">
           <TextField
             class="textfield"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
         <div class="flex justify-center q-mb-md">
@@ -22,8 +22,8 @@
         <div class="flex justify-center q-mb-md">
           <TextField
             class="textfield"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
             iconLeft="home"
             iconRight="east"
           />
@@ -38,8 +38,8 @@
           <TextField
             class="textfield"
             :error="true"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
         <div class="flex justify-center q-mb-md">
@@ -55,8 +55,8 @@
           <TextField
             class="textfield"
             :error="true"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
             iconLeft="home"
             iconRight="east"
           />
@@ -71,8 +71,8 @@
           <TextField
             class="textfield"
             :disable="true"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
         <div class="flex justify-center q-mb-md">

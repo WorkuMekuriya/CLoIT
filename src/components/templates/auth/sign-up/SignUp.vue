@@ -7,8 +7,8 @@
           <div class="signup-header">Sign Up</div>
           <div class="form-container">
             <TextField
-              label="Email"
-              placeholder="Email"
+              :label="'Email'"
+              :placeholder="'Email'"
               :error="error"
               :bottomLeftDescription="error && '이메일 형식이 잘못되었습니다.'"
             />
@@ -21,7 +21,7 @@
                     error &&
                     'At least 8 digits, including at least 3 of uppercase letters, lowercase letters, numbers, and special letters (~`!@#$%^&amp;*()_-+=?)'
                   "
-                  label="Password"
+                  :label="'Password'"
                   inputType="password"
                   iconRight="o_visibility"
                   placeholder="Password"
@@ -34,19 +34,19 @@
                   :bottomLeftDescription="
                     error && 'New password and Confirm password do not match.'
                   "
-                  label="Confirm Password"
+                  :label="'Confirm Password'"
                   inputType="password"
                   iconRight="o_visibility"
-                  placeholder="Confirm Password"
+                  :placeholder="'Confirm Password'"
                 />
               </div>
               <div class="grid-item">
                 <TextField
                   class="textfield"
                   :error="error"
-                  bottomLeftDescription=""
-                  label="Family Name"
-                  placeholder="Family Name"
+                  :bottomLeftDescription="''"
+                  :label="'Family Name'"
+                  :placeholder="'Family Name'"
                 />
               </div>
               <div class="grid-item">
@@ -54,22 +54,22 @@
                   class="textfield"
                   :error="error"
                   :bottomLeftDescription="error && 'This is a required field.'"
-                  label="Given Name"
-                  placeholder="Given Name"
+                  :label="'Given Name'"
+                  :placeholder="'Given Name'"
                 />
               </div>
               <div class="grid-item">
                 <TextField
                   class="textfield"
                   :error="error"
-                  bottomLeftDescription=""
-                  label="Phone Number"
-                  placeholder="Phone Number"
+                  :bottomLeftDescription="''"
+                  :label="'Phone Number'"
+                  :placeholder="'Phone Number'"
                 />
               </div>
               <div class="grid-item">
                 <SelectDropdown
-                  label="Nationality"
+                  :label="'Nationality'"
                   :options="[
                     { label: 'South Korean', value: 'south_korean' },
                     {
@@ -88,18 +88,18 @@
                 <TextField
                   class="textfield"
                   :error="error"
-                  bottomLeftDescription=""
-                  label="Department"
-                  placeholder="Department"
+                  :bottomLeftDescription="''"
+                  :label="'Department'"
+                  :placeholder="'Department'"
                 />
               </div>
               <div class="grid-item">
                 <TextField
                   class="textfield"
                   :error="error"
-                  bottomLeftDescription=""
-                  label="Organization"
-                  placeholder="Organization"
+                  :bottomLeftDescription="''"
+                  :label="'Organization'"
+                  :placeholder="'Organization'"
                   iconRight="search"
                 />
               </div>

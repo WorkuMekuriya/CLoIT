@@ -22,74 +22,74 @@
 
           <!-- Manually define each product -->
           <LiItem
-            label="Portal & Help Desk"
-            price="$ {}"
+            :label="'Portal & Help Desk'"
+            :price="'$ {}'"
             :showLeftButton="true"
             :showRightButton="false"
           />
           <LiItem
-            label="Base"
-            price="$ {}"
+            :label="'Base'"
+            :price="'$ {}'"
             :showLeftButton="false"
             :showRightButton="false"
           />
           <LiItem
-            label="Option 적용"
-            price="$ {}"
+            :label="'Option 적용'"
+            :price="'$ {}'"
             :showLeftButton="false"
             :showRightButton="false"
           />
           <LiItem
-            label="Discount"
-            price="$ {}"
+            :label="'Discount'"
+            :price="'$ {}'"
             :showLeftButton="false"
             :showRightButton="false"
           />
           <LiItem
-            label="Accreditation"
-            price="$ {}"
+            :label="'Accreditation'"
+            :price="'$ {}'"
             :showLeftButton="true"
             :showRightButton="false"
           />
           <LiItem
-            label="Base"
-            price="$ {}"
+            :label="'Base'"
+            :price="'$ {}'"
             :showLeftButton="false"
             :showRightButton="false"
           />
           <LiItem
-            label="Option 적용"
-            price="$ {}"
+            :label="'Option 적용'"
+            :price="'$ {}'"
             :showLeftButton="false"
             :showRightButton="false"
           />
           <LiItem
-            label="Discount"
-            price="$ {}"
+            :label="'Discount'"
+            :price="'$ {}'"
             :showLeftButton="false"
             :showRightButton="false"
           />
           <LiItem
-            label="Sports Entries"
-            price="$ {}"
+            :label="'Sports Entries'"
+            :price="'$ {}'"
             :showLeftButton="true"
             :showRightButton="false"
           />
           <LiItem
-            label="Base"
-            price="$ {}"
+            :label="'Base'"
+            :price="'$ {}'"
             :showLeftButton="false"
             :showRightButton="false"
           />
           <LiItem
-            label="Option 적용"
-            price="$ {}"
+            :label="'Option 적용'"
+            :price="'$ {}'"
             :showLeftButton="false"
             :showRightButton="false"
           />
           <LiItem
-            label="Discount"
-            price="$ {}"
+            :label="'Discount'"
+            :price="'$ {}'"
             :showLeftButton="false"
             :showRightButton="false"
           />
@@ -104,20 +104,20 @@
 
           <!-- Manually define each option -->
           <LiItem
-            label="3 Months"
-            price="+${}"
+            :label="'3 Months'"
+            :price="'+${}'"
             :showLeftButton="true"
             :showRightButton="false"
           />
           <LiItem
-            label="50 People"
-            price="+${}"
+            :label="'50 People'"
+            :price="'+${}'"
             :showLeftButton="true"
             :showRightButton="false"
           />
           <LiItem
-            label="3 Games"
-            price="+${}"
+            :label="'3 Games'"
+            :price="'+${}'"
             :showLeftButton="true"
             :showRightButton="false"
           />
@@ -131,8 +131,8 @@
           <div class="header-text">+$ {{ optionsTotal }}</div>
         </div>
         <LiItem
-          label="{}"
-          price="+${}"
+          :label="'{}'"
+          :price="'+${}'"
           :showLeftButton="true"
           :showRightButton="false"
         />
@@ -148,7 +148,7 @@
           <div style="display: flex">
             <TagComponent
               type="TagGreen"
-              label="USD/mo"
+              :label="'USD/mo'"
               :dot="false"
               size="sm"
             />
@@ -162,7 +162,7 @@
       <!-- Rounded Button -->
       <RoundedButton
         type="Primary"
-        label="이대로 신청"
+        :label="'이대로 신청'"
         :buttonDisabled="false"
         size="xl"
         buttonWidth="228px"

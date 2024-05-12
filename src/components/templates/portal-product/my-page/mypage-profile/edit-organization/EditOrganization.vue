@@ -13,26 +13,26 @@
         <div class="grid-item">
           <TextField
             class="textfield"
-            label="Organization registration number"
-            placeholder="Organization registration number"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :label="'Organization registration number'"
+            :placeholder="'Organization registration number'"
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
 
         <div class="grid-item">
           <TextField
             class="textfield"
-            label="Organization name"
-            placeholder="Organization name"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :label="'Organization name'"
+            :placeholder="'Organization name'"
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
 
         <div class="grid-item">
           <SelectDropdown
-            label="Country"
+            :label="'Country'"
             :options="[
               { label: 'South Korea', value: 'south_korea' },
               { label: 'United States', value: 'united_states' },
@@ -45,10 +45,10 @@
         <div class="grid-item">
           <TextField
             class="textfield"
-            label="Owner"
-            placeholder="Owner"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :label="'Owner'"
+            :placeholder="'Owner'"
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
       </div>
@@ -56,37 +56,37 @@
         <div class="grid-item q-mb-lg">
           <TextField
             class="textfield"
-            label="Location"
-            placeholder="Street, Building Number (Optional)"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :label="'Location'"
+            :placeholder="'Street, Building Number (Optional)'"
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
 
         <div class="grid-item q-mb-lg">
           <TextField
             class="textfield"
-            label=""
+            :label="''"
             placeholder="More Address Information (Optional)"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
 
         <div class="grid-item">
           <TextField
             class="textfield"
-            label=""
+            :label="''"
             placeholder="City / District (Optional)"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
       </div>
       <div class="grid-container">
         <div class="grid-item">
           <SelectDropdown
-            label="Province"
+            :label="'Province'"
             :options="[
               { value: 'province', label: 'Province' },
               { value: 'province_2', label: 'Province 2' },
@@ -97,20 +97,20 @@
         <div class="grid-item">
           <TextField
             class="textfield"
-            label="Postal or ZIP Code"
-            placeholder="Postal or ZIP Code"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :label="'Postal or ZIP Code'"
+            :placeholder="'Postal or ZIP Code'"
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
 
         <div class="grid-item">
           <TextField
             class="textfield"
-            label="Contact"
-            placeholder="Contact"
-            bottomLeftDescription=""
-            bottomRightDescription=""
+            :label="'Contact'"
+            :placeholder="'Contact'"
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
           />
         </div>
 
@@ -123,7 +123,7 @@
       <RoundedButton
         type="Primary"
         :isLoading="false"
-        label="Save"
+        :label="'Save'"
         leftIcon=""
         :rightIcon="false"
         :buttonDisabled="false"

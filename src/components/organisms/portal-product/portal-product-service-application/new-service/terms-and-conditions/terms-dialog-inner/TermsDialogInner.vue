@@ -9,7 +9,7 @@
     <div class="action flex justify-center items-center">
       <ConditionalStyleRoundedButton
         type="Primary"
-        label="Agree"
+        :label="'Agree'"
         buttonWidth="520px"
       />
     </div>

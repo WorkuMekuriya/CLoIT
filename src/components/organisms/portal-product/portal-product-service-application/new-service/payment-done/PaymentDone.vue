@@ -42,12 +42,12 @@
       <LinkButton
         class="q-mt-lg"
         v-if="type == 'Full'"
-        label="Dashboard"
+        :label="'Dashboard'"
         iconTextColor="text-white"
         iconBackgroundColor="bg-arcticblue-600"
         iconColor="text-white"
       />
-      <LinkButton class="q-mt-md" label="Help Center" />
+      <LinkButton class="q-mt-md" :label="'Help Center'" />
     </div>
   </div>
 </template>

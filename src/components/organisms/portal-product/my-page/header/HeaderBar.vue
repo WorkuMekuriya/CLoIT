@@ -13,7 +13,7 @@
         iconLeft="language"
         height="52px"
         maxWidth="133px"
-        label="DropDown"
+        :label="'DropDown'"
         :options="options"
       />
       <StandardButton
