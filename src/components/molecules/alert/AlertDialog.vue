@@ -1,7 +1,7 @@
 <template>
   <q-dialog
     class="alert-dialog"
-    v-model="getShowAlert"
+    v-model="showAlert"
     seamless
     :position="position"
   >
@@ -9,8 +9,8 @@
       class="alert-dialog-card flex items-center"
       :style="{
         width: setWidth,
-        height: setheight,
-        bottom: position == 'bottom' ? '10px' : '',
+        height: setHeight,
+        bottom: position === 'bottom' ? '10px' : '',
       }"
     >
       <component class="left-icon" :is="getAlertIconComponent" />
@@ -19,13 +19,13 @@
         <p class="description-text">{{ description }}</p>
       </div>
       <q-space />
-      <AlertCloseIcon class="close-icon" @click="$emit('close')" />
+      <AlertCloseIcon class="close-icon" @click="closeAlert" />
     </q-card>
   </q-dialog>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import AlertErrorIcon from '../../atoms/Icons/alert-icons/AlertErrorIcon.vue'
 import AlertStandardIcon from '../../atoms/Icons/alert-icons/AlertStandardIcon.vue'
 import AlertSuccessIcon from '../../atoms/Icons/alert-icons/AlertSuccessIcon.vue'
@@ -47,7 +47,7 @@ const props = defineProps({
     type: String,
     default: '361px',
   },
-  setheight: {
+  setHeight: {
     type: String,
     default: '56px',
   },
@@ -64,9 +64,13 @@ const props = defineProps({
     default: 'bottom',
     validator: (value) => ['top', 'bottom', 'left', 'right'].includes(value),
   },
+  timeout: {
+    type: Number,
+    default: 0, // If 0, the alert won't close automatically
+  },
 })
 
-const getShowAlert = computed(() => props.showAlert)
+const showAlert = ref(props.showAlert)
 
 // Dynamically determine the icon component based on the type prop
 const getAlertIconComponent = computed(() => {
@@ -79,6 +83,20 @@ const getAlertIconComponent = computed(() => {
       return AlertSuccessIcon
     default:
       return AlertErrorIcon
+  }
+})
+
+// Close the alert
+const closeAlert = () => {
+  showAlert.value = false
+}
+
+// Close the alert after the specified timeout
+onMounted(() => {
+  if (props.timeout > 0) {
+    setTimeout(() => {
+      closeAlert()
+    }, props.timeout)
   }
 })
 </script>
