@@ -9,7 +9,7 @@
         @click="movetoStep2(2)"
         type="ArcticBlue"
         :outlined="true"
-        label="Next : Select Service"
+        :label="'Next : Select Service'"
         buttonWidth="288px"
         leftIcon="panorama_fish_eye"
         rightIcon="panorama_fish_eye"

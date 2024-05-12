@@ -35,7 +35,7 @@
         />
       </div>
       <div class="flex justify-center card-button">
-        <ConditionalStyleRoundedButton type="Primary" label="신청하기" />
+        <ConditionalStyleRoundedButton type="Primary" :label="'신청하기'" />
       </div>
       <div class="flex justify-center">
         <div class="link-button">
@@ -51,7 +51,7 @@
         <EmptyCard />
       </div>
       <div class="flex justify-center card-button">
-        <ConditionalStyleRoundedButton type="Secondary" label="신청하기" />
+        <ConditionalStyleRoundedButton type="Secondary" :label="'신청하기'" />
       </div>
       <div class="flex justify-center">
         <div class="link-button">

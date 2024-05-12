@@ -5,7 +5,7 @@
       <CheckBox
         class="checkbox"
         :disable="true"
-        label="가입자와 정보가 동일합니다."
+        :label="'가입자와 정보가 동일합니다.'"
       />
     </div>
     <div class="row">

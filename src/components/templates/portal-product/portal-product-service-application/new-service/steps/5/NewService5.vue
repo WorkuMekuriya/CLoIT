@@ -47,7 +47,7 @@
           <div class="header-text">+$ {{ optionsTotal }}</div>
         </div>
         <LiItem
-          label="{}"
+          :label="'{}'"
           price="+${}"
           :showRightButton="false"
           :showLeftButton="true"
@@ -63,7 +63,7 @@
           <div style="display: flex">
             <TagComponent
               type="TagGreen"
-              label="USD/mo"
+              :label="'USD/mo'"
               :dot="false"
               size="sm"
             />
@@ -90,17 +90,17 @@
         </div>
         <TextField
           class="textfield"
-          label="분납방법"
-          placeholder="분납방법"
-          bottomLeftDescription="적어주신 내용 확인 후 계약을 위해 연락드리도록 하겠습니다."
-          bottomRightDescription=""
+          :label="'분납방법'"
+          :placeholder="'분납방법'"
+          :bottomLeftDescription="'적어주신 내용 확인 후 계약을 위해 연락드리도록 하겠습니다."
+          :bottomRightDescription="''"
         />
       </section>
     </div>
   </div>
   <RoundedButton
     type="Primary"
-    label="이대로 신청"
+    :label="'이대로 신청'"
     :buttonDisabled="false"
     size="xl"
     buttonWidth="228px"

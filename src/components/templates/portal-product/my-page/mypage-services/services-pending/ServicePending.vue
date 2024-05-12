@@ -11,7 +11,7 @@
           <p class="title-text">Service 2</p>
           <Tag
             class="service-tag"
-            label="사용중"
+            :label="'사용중'"
             type="TagSkeletonTonal"
             size="md"
           />

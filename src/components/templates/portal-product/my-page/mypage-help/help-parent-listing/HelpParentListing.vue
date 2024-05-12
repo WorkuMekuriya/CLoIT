@@ -10,11 +10,11 @@
       <div>
         <TextField
           class="textfield"
-          bottomLeftDescription=""
+          :bottomLeftDescription="''"
           placeholder="Search..."
-          bottomRightDescription=""
+          :bottomRightDescription="''"
           iconLeft="search"
-          label=""
+          :label="''"
           iconRight=""
           style="width: 321px"
         />

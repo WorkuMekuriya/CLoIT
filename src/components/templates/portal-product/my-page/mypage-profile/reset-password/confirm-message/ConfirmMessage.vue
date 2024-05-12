@@ -7,7 +7,7 @@
   <div class="bottom-button">
     <ConditionalStyleRoundedButton
       type="Primary"
-      label="Ok"
+      :label="'Ok'"
       buttonWidth="328px"
     />
   </div>

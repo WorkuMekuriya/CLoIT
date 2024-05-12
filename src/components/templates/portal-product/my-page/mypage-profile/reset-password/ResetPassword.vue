@@ -12,18 +12,18 @@
       <div class="grid-item">
         <TextField
           class="textfield"
-          label="Email"
-          placeholder="Email"
-          bottomLeftDescription=""
+          :label="'Email'"
+          :placeholder="'Email'"
+          :bottomLeftDescription="''"
         />
       </div>
 
       <div class="grid-item">
         <TextField
           class="textfield"
-          label="Email Verification Code"
-          placeholder="Email Verification Code"
-          bottomLeftDescription=""
+          :label="'Email Verification Code'"
+          :placeholder="'Email Verification Code'"
+          :bottomLeftDescription="''"
         />
       </div>
 
@@ -58,7 +58,7 @@
       <RoundedButton
         type="Primary"
         :isLoading="false"
-        label="Reset password"
+        :label="'Reset password'"
         leftIcon=""
         :rightIcon="false"
         buttonWidth="186px"

@@ -9,7 +9,7 @@
       <div class="flex justify-between items-center service-text">
         <div class="flex items-center">
           <p class="title-text">Service 2</p>
-          <Tag class="service-tag" label="사용중" type="TagBlue" size="md" />
+          <Tag class="service-tag" :label="'사용중'" type="TagBlue" size="md" />
         </div>
         <DownloadIcon />
       </div>

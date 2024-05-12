@@ -5,7 +5,7 @@
     <div class="save-button flex justify-center items-center">
       <ConditionalStyleRoundedButton
         type="Primary"
-        label="Go to Stripe"
+        :label="'Go to Stripe'"
         buttonWidth="328px"
       />
     </div>

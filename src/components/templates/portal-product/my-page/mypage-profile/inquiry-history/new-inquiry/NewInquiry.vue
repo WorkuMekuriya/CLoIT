@@ -12,7 +12,7 @@
   <div class="form-container">
     <div>
       <SelectDropdown
-        label="문의 원하는 서비스"
+        :label="'문의 원하는 서비스'"
         :options="[{ label: 'Service 1', value: 'service_1' }]"
       />
       <br />
@@ -21,25 +21,25 @@
     <div>
       <TextField
         class="textfield"
-        label="Title"
-        placeholder="Title"
-        bottomLeftDescription=""
+        :label="'Title'"
+        :placeholder="'Title'"
+        :bottomLeftDescription="''"
       />
     </div>
 
     <div>
       <TextArea
         class="textfield"
-        label="Content"
-        placeholder="자세히 적어주실 수록 빠르고 정확한 도움을 받으실 수 있습니다."
+        :label="'Content'"
+        :placeholder="'자세히 적어주실 수록 빠르고 정확한 도움을 받으실 수 있습니다.'"
         height="338px"
       />
     </div>
 
     <div>
       <FilePicker
-        label="Attach files"
-        description="{File 크기나 확장자 제한에 대한 안내}"
+        :label="'Attach files'"
+        :description="'{File 크기나 확장자 제한에 대한 안내}'"
         type="lg"
       />
     </div>
@@ -48,7 +48,7 @@
     <RoundedButton
       type="Primary"
       :isLoading="false"
-      label="Submit"
+      :label="'Submit'"
       :buttonWidth="'186px'"
       @click="backInquiry"
     />

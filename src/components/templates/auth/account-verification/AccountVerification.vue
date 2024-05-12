@@ -8,9 +8,9 @@
           <div class="form-container">
             <TextField
               class="textfield"
-              label="Email"
-              placeholder="Email"
-              bottomLeftDescription=""
+              :label="'Email'"
+              :placeholder="'Email'"
+              :bottomLeftDescription="''"
             />
             <div>
               <div class="verification-code-label">
@@ -45,9 +45,9 @@
             <div class="verify-row">
               <TextField
                 class="textfield"
-                label="Email Verification Code"
-                placeholder="Email Verification Code"
-                bottomLeftDescription=""
+                :label="'Email Verification Code'"
+                :placeholder="'Email Verification Code'"
+                :bottomLeftDescription="''"
               />
               <RoundedButton
                 :type="'Secondary'"

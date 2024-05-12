@@ -45,10 +45,10 @@
           <SelectedService
             :products="products"
             :options="options"
-            options-total="{}"
-            product-total="{}"
-            total="{}"
-            label="Next : Your Information"
+            :options-total="'{}'"
+            :product-total="'{}'"
+            :total="'{}'"
+            :label="'Next : Your Information'"
             @emitButtonClick="moveToStep4"
           />
         </div>

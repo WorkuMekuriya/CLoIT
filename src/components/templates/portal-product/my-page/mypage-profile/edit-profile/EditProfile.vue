@@ -10,42 +10,42 @@
       <div class="grid-item">
         <TextField
           class="textfield"
-          label="First Name"
-          placeholder="First Name"
-          bottomLeftDescription=""
+          :label="'First Name'"
+          :placeholder="'First Name'"
+          :bottomLeftDescription="''"
         />
       </div>
 
       <div class="grid-item">
         <TextField
           class="textfield"
-          label="Last Name"
-          placeholder="Last Name"
-          bottomLeftDescription=""
+          :label="'Last Name'"
+          :placeholder="'Last Name'"
+          :bottomLeftDescription="''"
         />
       </div>
 
       <div class="grid-item">
         <TextField
           class="textfield"
-          label="Phone Number"
-          placeholder="Phone Number"
-          bottomLeftDescription=""
+          :label="'Phone Number'"
+          :placeholder="'Phone Number'"
+          :bottomLeftDescription="''"
         />
       </div>
 
       <div class="grid-item">
         <TextField
           class="textfield"
-          label="Email"
-          placeholder="Email"
-          bottomLeftDescription=""
+          :label="'Email'"
+          :placeholder="'Email'"
+          :bottomLeftDescription="''"
         />
       </div>
 
       <div class="grid-item">
         <SelectDropdown
-          label="Nationality"
+          :label="'Nationality'"
           :options="[
             { label: 'South Korean', value: 'south_korean' },
             { label: 'Ethiopian', value: 'ethiopian' },
@@ -57,9 +57,9 @@
       <div class="grid-item">
         <TextField
           class="textfield"
-          label="Organization"
-          placeholder="Organization"
-          bottomLeftDescription=""
+          :label="'Organization'"
+          :placeholder="'Organization'"
+          :bottomLeftDescription="''"
           iconRight="search"
         />
       </div>
@@ -67,18 +67,18 @@
       <div class="grid-item">
         <TextField
           class="textfield"
-          label="Department"
-          placeholder="Department"
-          bottomLeftDescription=""
+          :label="'Department'"
+          :placeholder="'Department'"
+          :bottomLeftDescription="''"
         />
       </div>
 
       <div class="grid-item">
         <TextField
           class="textfield"
-          label="Preferred Language"
-          placeholder="Preferred Language"
-          bottomLeftDescription=""
+          :label="'Preferred Language'"
+          :placeholder="'Preferred Language'"
+          :bottomLeftDescription="''"
         />
       </div>
     </div>
@@ -86,7 +86,7 @@
       <RoundedButton
         type="Primary"
         :isLoading="false"
-        label="Save"
+        :label="'Save'"
         :buttonWidth="'186px'"
         @click="handleSaveClick"
       />

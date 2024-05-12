@@ -30,7 +30,7 @@
           <div v-if="!isCheckout" class="tag-container">
             <TagComponent
               type="TagGreen"
-              label="USD/mo"
+              :label="'USD/mo'"
               :dot="false"
               size="sm"
             />

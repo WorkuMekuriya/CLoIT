@@ -7,17 +7,16 @@
           <div class="login-header">Login</div>
           <div class="">
             <TextField
-              label=""
+              :label="''"
               icon-left="person"
-              placeholder="Id"
+              :placeholder="'Id'"
               :error="error"
               :iconRight="error ? 'warning' : ''"
               :borderRadius="'16px 16px 0px 0px'"
             />
             <TextField
-              label=""
+              :label="''"
               icon-left="key"
-              :type="'password'"
               placeholder="***********"
               inputType="password"
               :borderRadius="'0px 0px 16px 16px'"
@@ -25,7 +24,7 @@
           </div>
           <CheckboxButton
             :value="false"
-            label="Remember me"
+            :label="'Remember me'"
             class="remember-me-field"
           />
           <div style="margin-top: 36px; margin-bottom: 60px">
