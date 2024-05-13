@@ -16,7 +16,7 @@
 import { defineComponent } from 'vue'
 // Declared in App.vue, Used Globally
 import { showLoading } from 'src/util/loadingService.js'
-import { showLNotification } from 'src/util/notificationService.js'
+// import { showLNotification } from 'src/util/notificationService.js'
 import AlertNotification from 'src/components/molecules/alert/AlertDialog.vue'
 export default defineComponent({
   name: 'App',
