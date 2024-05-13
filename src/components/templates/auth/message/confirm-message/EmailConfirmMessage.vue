@@ -6,9 +6,9 @@
   <q-space />
   <div class="bottom-button">
     <ConditionalStyleRoundedButton
-      type="Primary"
+      type="Secondary"
       :label="'Ok'"
-      buttonWidth="328px"
+      buttonWidth="100%"
     />
   </div>
 </template>

@@ -12,7 +12,7 @@ $buttonMarginTop: 60px;
 $verificationContainerHeight: 52px;
 $verificationContainerBorderRadius: 16px;
 $authBackgroundColor: #f9fafb;
-$authHeight: 100vh;
+$authHeight: calc(100vh - 184px);
 $resetContainerWidth: 481px;
 $resetContainerHeight: 602px;
 $resetContainerPadding: 60px;
@@ -35,11 +35,15 @@ $footerButtonMarginTop: $buttonMarginTop;
 // Reset container styles
 .reset-container {
   @extend .bg-white;
-  width: $resetContainerWidth;
+  max-width: $resetContainerWidth;
+  width: 100%;
   height: $resetContainerHeight;
   border-radius: $resetContainerBorderRadius;
   padding: $resetContainerPadding;
   margin-bottom: $resetContainerMarginBottom;
+  @media screen and (max-width: $breakpoint-xs) {
+    padding: 24px;
+  }
 }
 
 // Reset header styles
@@ -53,8 +57,12 @@ $footerButtonMarginTop: $buttonMarginTop;
 
 // Auth container styles
 .auth {
-  height: $authHeight;
+  min-height: $authHeight;
   background-color: $authBackgroundColor;
+  padding: 24px 0px;
+  @media screen and (max-width: $breakpoint-xs) {
+    min-height: calc(100vh - 116px);
+  }
 }
 
 // Verification code text styles
@@ -65,7 +73,6 @@ $footerButtonMarginTop: $buttonMarginTop;
 
 // Form container styles
 .form-container {
-  width: $containerWidth;
   margin-top: $containerMarginTop;
 }
 
@@ -79,7 +86,6 @@ $footerButtonMarginTop: $buttonMarginTop;
 
 // Verification code container styles
 .verification-code-container {
-  width: $containerWidth;
   height: $verificationContainerHeight;
   background-color: $authBackgroundColor;
   border-radius: $verificationContainerBorderRadius;
@@ -87,11 +93,15 @@ $footerButtonMarginTop: $buttonMarginTop;
   display: flex;
   justify-content: center;
   align-items: center;
+  svg{
+    margin-left: 8px;
+  }
 }
 
 // Verification code input styles
 .verification-code-input {
-  width: $verificationInputWidth;
+  width: 100% ;
+  font-size: 16px;
 }
 
 // Verification code icon styles
@@ -110,4 +120,21 @@ $footerButtonMarginTop: $buttonMarginTop;
   display: flex;
   justify-content: space-between;
   align-items: end;
+  gap: 8px;
+}
+
+.q-page-container {
+  background-color: $bluegray-50;
+}
+
+.footer-buttons {
+  margin-top: 60px;
+  gap: 8px;
+  .flex-grow {
+    flex-grow: 1;
+    justify-content: stretch;
+    :deep(.flex) {
+      width: 100%;
+    }
+  }
 }
