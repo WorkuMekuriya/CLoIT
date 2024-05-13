@@ -1,14 +1,18 @@
 <template>
-  <div class="service-application-footer flex items-center">
-    <p class="Logo label-sm-bold">Logo</p>
-    <p class="copyright-text label-sm">{{ copyRightText }}</p>
+  <div class="service-application-footer">
+    <div class="application-content-block">
+      <p class="Logo label-sm-bold">Logo</p>
+      <p class="copyright-text label-sm">{{ copyRightText }}</p>
+    </div>
     <q-space />
-    <q-icon
-      v-for="(icon, index) in footerIconComponentNames"
-      :key="index"
-      :name="icon"
-      class="footer-icon bg-bluegray-200 text-bluegray-900"
-    ></q-icon>
+    <div class="footer-icon-block">
+      <q-icon
+        v-for="(icon, index) in footerIconComponentNames"
+        :key="index"
+        :name="icon"
+        class="footer-icon bg-bluegray-200 text-bluegray-900"
+      ></q-icon>
+    </div>
   </div>
 </template>
 <script setup>

@@ -27,7 +27,6 @@ $check-box-container: 52px;
   cursor: pointer;
   box-shadow: none;
   border: 0.5px solid lightgray;
-  margin-right: 16px;
 }
 
 .card-header,
@@ -142,10 +141,12 @@ $check-box-container: 52px;
 
 .card-title {
   @extend .heading-6, .text-bluegray-800;
+  line-height: 1.875rem;
 }
 
 .card-description {
   @extend .label-md, .text-black;
+  line-height: 1.5rem;
 }
 
 .card-price {

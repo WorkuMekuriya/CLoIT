@@ -5,11 +5,13 @@ $containerWidth: 361px;
 $containerPadding: 14px 16px;
 $verificationLabelColor: #475467;
 $verificationLabelFontSize: 14px;
-$authHeight: 100vh;
+$authHeight: calc( 100vh - 184px );
+$authMobileHeight: calc( 100vh - 116px );
 $authBackgroundColor: #f9fafb;
 $signinWidth: 470px;
 $signinBorderRadius: 24px;
 $signinPadding: 60px;
+$signinMobilePadding: 24px;
 $signinMarginBottom: 28px;
 $loginHeaderFontFamily: 'Plus Jakarta', sans-serif;
 $loginHeaderFontSize: 32px;
@@ -31,17 +33,24 @@ $rememberMeFieldMarginTop: 12px;
 
 // Auth container styles
 .auth {
-  height: $authHeight;
+  min-height: $authHeight;
   background-color: $authBackgroundColor;
+  padding: 24px 0px;
+  @media screen and (max-width: $breakpoint-xs) {
+    min-height: $authMobileHeight;
+  }
 }
 
 // Sign-in container styles
 .signin-container {
   @extend .bg-white;
-  width: $signinWidth;
+  max-width: $signinWidth;
+  width: 100%;
   border-radius: $signinBorderRadius;
   padding: $signinPadding;
-  margin-bottom: $signinMarginBottom;
+  @media screen and (max-width: $breakpoint-xs) {
+    padding: $signinPadding $signinMobilePadding;
+  }
 }
 
 // Login header styles
@@ -51,6 +60,14 @@ $rememberMeFieldMarginTop: 12px;
   font-weight: $loginHeaderFontWeight;
   text-align: $loginHeaderTextAlign;
   margin-bottom: $loginHeaderMarginBottom;
+}
+
+.login-form-items{
+  :deep(> div) {
+    &:first-child{
+      border-bottom: 1px solid $bluegray-200;
+    }
+  }
 }
 
 // Login body form styles
@@ -71,10 +88,11 @@ $rememberMeFieldMarginTop: 12px;
   font-weight: 500;
   font-size: 14px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding-right: $loginFooterPadding;
   padding-left: $loginFooterPadding;
+  white-space: nowrap;
 }
 
 .login-footer-text {
@@ -111,4 +129,8 @@ $rememberMeFieldMarginTop: 12px;
 // Remember-me field styles
 .remember-me-field {
   margin-top: $rememberMeFieldMarginTop;
+}
+
+.q-page-container{
+  background-color: $bluegray-50;
 }

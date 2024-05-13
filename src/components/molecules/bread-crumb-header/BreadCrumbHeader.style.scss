@@ -2,11 +2,9 @@
 
 .bread-crumb {
   @extend .bg-bluegray-50, .label-md;
-  height: 52px;
+  min-height: 52px;
   width: fit-content;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 15px;
+  padding: 14px 36px 14px 36px;
   border-radius: 36px;
   .hide-icon-on-the-first {
     :deep(.q-breadcrumbs__el-icon) {
@@ -18,6 +16,7 @@
   }
   .active-step {
     @extend .text-arcticblue-500, .label-md-bold;
+    line-height: 24px;
 
     :deep(.q-icon .q-breadcrumbs__el) {
       @extend .text-bluegray-500;
@@ -39,5 +38,8 @@
   }
   .non-active-step {
     @extend .text-bluegray-500;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
   }
 }

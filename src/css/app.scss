@@ -12,3 +12,11 @@ body {
 body.desktop .q-focus-helper {
   opacity: 0 !important;
 }
+
+.app-container {
+  max-width: 1248px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 24px;
+}

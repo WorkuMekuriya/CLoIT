@@ -10,7 +10,7 @@
       <ConditionalStyleRoundedButton
         type="Primary"
         :label="'Agree'"
-        buttonWidth="520px"
+        buttonWidth="100%"
       />
     </div>
   </div>

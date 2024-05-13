@@ -64,6 +64,11 @@ $right-icon-margin-right: -30px;
   position: absolute;
   right: 16px;
 }
+:deep(span.block){
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 // Define shared property pattern mixin
 @mixin tag-property($property-name) {
   @if $property-name == 'button-arcticblue' {

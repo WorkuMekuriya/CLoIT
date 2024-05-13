@@ -1,9 +1,10 @@
 <template>
-  <q-header class="service-application-header flex items-center container">
+  <q-header class="service-application-header flex items-center">
     <p class="Logo label-lg-bold">LOGO</p>
     <q-space />
     <template v-if="showMiddleNavigation">
       <ConditionalStyleRoundedButton
+        class="menu-navigation"
         v-for="(navigationList, index) in middleNavigationList"
         :key="index"
         :width="navigationList.width"
@@ -29,6 +30,7 @@ const props = defineProps({
     default: () => [
       { label: 'Introduction', width: '147px', type: 'TertiaryTonal' },
       { label: 'Products', width: '125px', type: 'Secondary' },
+      { label: 'Pricing', width: '125px', type: 'TertiaryTonal' },
       { label: '도입문의', width: '125px', type: 'TertiaryTonal' },
       { label: 'Help Center', width: '143px', type: 'TertiaryTonal' },
       { label: 'About Cloit', width: '140px', type: 'TertiaryTonal' },

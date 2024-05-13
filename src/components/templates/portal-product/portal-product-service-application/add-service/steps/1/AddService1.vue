@@ -1,7 +1,7 @@
 <template>
   <div class="select-service">
     <div class="row">
-      <div class="col-8">
+      <div class="col-md-8">
         <div class="select-service">
           <div class="header-text-container">
             <div class="header-title">서비스 추가 및 옵션변경</div>
@@ -40,7 +40,7 @@
           />
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-md-4">
         <div class="selected-service">
           <p class="selected-text">Selected Service</p>
           <SelectedService

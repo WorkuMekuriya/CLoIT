@@ -46,7 +46,7 @@
       :key="index"
     >
       <div
-        class="flex justify-between items-center terms-and-conditions-content-main"
+        class="flex no-wrap justify-between items-center terms-and-conditions-content-main"
         :class="{ 'last-content': index === contents.length - 1 }"
       >
         <div class="title-text-container flex items-center">
@@ -59,7 +59,7 @@
             v-if="content.required"
           />
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center no-wrap">
           <p class="read cursor-pointer" @click="readPolicy">Read</p>
           <div
             @click="toggleCheckbox(index)"

@@ -26,5 +26,12 @@
   justify-content: center;
   align-items: center;
   margin-top: 36px;
+  padding: 0px 24px;
   margin-bottom: 36px;
+  :deep(.flex){
+    width: 100%;
+    .flex{
+      width: 100%;
+    }
+  }
 }

@@ -1,6 +1,8 @@
 <template>
   <div class="header cursor-pointer" @click="navigateTo('/')">
-    <CLoITLogo />
+    <div class="app-container">
+      <CLoITLogo />
+    </div>
   </div>
 </template>
 <script setup>
@@ -11,11 +13,14 @@ const navigateTo = (routeName) => {
   router.push({ name: routeName })
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 .header {
-  position: absolute;
-  padding-left: 120px;
-  padding-top: 54px;
   background-color: #f9fafb;
+  height: 136px;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 600px) {
+    height: 68px;
+  }
 }
 </style>

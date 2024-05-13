@@ -58,9 +58,6 @@ $small-screen-max-width: 768px;
     max-height: $rounded-icon-left-max-size;
   }
 
-  @media screen and (max-width: $small-screen-max-width) {
-    height: $rounded-button-height-small-screen;
-  }
 }
 
 .rounded-button.small-size-button {
@@ -79,11 +76,6 @@ $small-screen-max-width: 768px;
   border-radius: $circular-button-border-radius;
   width: $circular-button-width;
   height: $circular-button-height;
-
-  @media screen and (max-width: $small-screen-max-width) {
-    width: $circular-button-width-small-screen;
-    height: $circular-button-height-small-screen;
-  }
 
   :deep(.q-btn.btn--no-hover .q-focus-helper) {
     display: none;

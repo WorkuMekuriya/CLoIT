@@ -5,13 +5,15 @@ $gap-medium: 24px;
 $margin-bottom-medium: 24px;
 $signupContainerWidth: 868px;
 $signupContainerPadding: 60px;
+$signupMobileContainerPadding: 24px;
 $signupContainerBorderRadius: 24px;
 $signupHeaderFontFamily: 'Plus Jakarta', sans-serif;
 $signupHeaderFontSize: 32px;
 $signupHeaderFontWeight: 700;
 $signupHeaderTextAlign: center;
 $signupHeaderMarginBottom: 60px;
-$authHeight: 100vh;
+$authHeight: calc(100vh - 184px);
+$authMobileHeight: calc(100vh - 116px);
 $authBackgroundColor: #f9fafb;
 $gridContainerColumns: repeat(2, 1fr);
 $gridContainerSingleColumn: repeat(1, 1fr);
@@ -19,10 +21,14 @@ $gridContainerSingleColumn: repeat(1, 1fr);
 // Sign-up container styles
 .signup-container {
   @extend .bg-white;
-  width: $signupContainerWidth;
+  max-width: $signupContainerWidth;
+  width: 100%;
   border-radius: $signupContainerBorderRadius;
   padding: $signupContainerPadding;
   margin-bottom: $margin-bottom-medium;
+  @media screen and (max-width: $breakpoint-xs) {
+    padding: $signupMobileContainerPadding;
+  }
 }
 
 // Sign-up header styles
@@ -41,8 +47,12 @@ $gridContainerSingleColumn: repeat(1, 1fr);
 
 // Authentication container styles
 .auth {
-  height: $authHeight;
+  min-height: $authHeight;
   background-color: $authBackgroundColor;
+  padding: 24px 0px;
+  @media screen and (max-width: $breakpoint-xs) {
+    min-height: $authMobileHeight;
+  }
 }
 
 // Grid container styles
@@ -58,5 +68,20 @@ $gridContainerSingleColumn: repeat(1, 1fr);
 @media (max-width: 1023px) {
   .grid-container {
     grid-template-columns: $gridContainerSingleColumn;
+  }
+}
+
+.q-page-container {
+  background-color: $bluegray-50;
+}
+
+.footer-buttons {
+  gap: 8px;
+  .flex-grow {
+    flex-grow: 1;
+    justify-content: stretch;
+    :deep(.flex) {
+      width: 100%;
+    }
   }
 }
