@@ -9,12 +9,15 @@
     class="dropdown-container"
     :dropdown-icon="'keyboard_arrow_down'"
     :style="{ width: maxWidth, height: height }"
+    bottom-slots
   >
     <template v-slot:prepend>
       <q-icon :name="iconLeft" class="prepend-icon" />
     </template>
+    <template v-slot:hint>
+      <div v-if="description" class="select-description">{{ description }}</div>
+    </template>
   </q-select>
-  <div v-if="description" class="select-description">{{ description }}</div>
 </template>
 <script setup>
 import { ref, computed, defineProps, defineEmits } from 'vue'

@@ -1,33 +1,31 @@
 <template>
-  <div class="">
-    <q-chip
-      :disable="type.includes('Disabled')"
-      :class="['q-chip', typeClass, sizeClass]"
-      @click="handleClick"
-    >
-      <!-- Display dot icon before the label if the dot prop is true -->
-      <span v-if="dot" class="dot-icon q-ml-xs">&#8226;</span>
+  <q-chip
+    :disable="type.includes('Disabled')"
+    :class="['q-chip', typeClass, sizeClass]"
+    @click="handleClick"
+  >
+    <!-- Display dot icon before the label if the dot prop is true -->
+    <span v-if="dot" class="dot-icon q-ml-xs">&#8226;</span>
 
-      <!-- Display icon on the left side if iconPosition is left -->
-      <q-icon
-        v-if="icon && iconPosition === 'left'"
-        :name="icon"
-        :class="iconClass"
-        class="q-mr-xs"
-      />
+    <!-- Display icon on the left side if iconPosition is left -->
+    <q-icon
+      v-if="icon && iconPosition === 'left'"
+      :name="icon"
+      :class="iconClass"
+      class="q-mr-xs"
+    />
 
-      <!-- Label text -->
-      <slot>{{ label }}</slot>
+    <!-- Label text -->
+    <slot>{{ label }}</slot>
 
-      <!-- Display icon on the right side if iconPosition is right -->
-      <q-icon
-        v-if="icon && iconPosition === 'right'"
-        :name="icon"
-        :class="iconClass"
-        class="q-ml-xs right-icon"
-      />
-    </q-chip>
-  </div>
+    <!-- Display icon on the right side if iconPosition is right -->
+    <q-icon
+      v-if="icon && iconPosition === 'right'"
+      :name="icon"
+      :class="iconClass"
+      class="q-ml-xs right-icon"
+    />
+  </q-chip>
 </template>
 
 <script>

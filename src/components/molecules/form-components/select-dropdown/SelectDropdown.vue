@@ -1,7 +1,7 @@
 <template>
-  <div v-if="label" class="select-label">
+  <!-- <div v-if="label" class="select-label">
     {{ label }} <span class="text-red-500" v-if="required"> *</span>
-  </div>
+  </div> -->
   <q-select
     ref="select"
     v-model="model"
@@ -21,8 +21,10 @@
         <q-item-section class="text-grey"> No results </q-item-section>
       </q-item>
     </template>
+    <template v-slot:hint>
+      <div v-if="description" class="select-description">{{ description }}</div>
+    </template>
   </q-select>
-  <div v-if="description" class="select-description">{{ description }}</div>
 </template>
 <script setup>
 import { ref, computed, defineProps, defineEmits } from 'vue'
