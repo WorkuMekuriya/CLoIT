@@ -1,6 +1,3 @@
-<style lang="scss" scoped>
-@import 'TextField.style.scss';
-</style>
 <template>
   <div>
     <p v-if="label" class="textfield-label" :class="labelColor">

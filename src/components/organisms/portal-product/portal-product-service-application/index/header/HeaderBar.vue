@@ -17,6 +17,7 @@
       :type="ctaButton.type"
       :label="ctaButton.label"
       :outlined="ctaButton.outlined"
+      buttonWidth="200px"
     />
   </q-header>
 </template>

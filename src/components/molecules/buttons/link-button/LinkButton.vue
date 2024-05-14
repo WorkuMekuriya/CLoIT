@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <div
-      :style="{ height: buttonHeight }"
-      :class="[backgroundColor]"
-      class="profile-action-button"
-    >
-      <div :class="[textColor, labelTypology]">{{ label }}</div>
-      <q-icon
-        class="link-icon cursor-pointer"
-        :name="iconName"
-        :class="[iconColor, iconBackgroundColor]"
-        :style="{ height: iconHeight, width: iconWidth }"
-      />
-    </div>
+  <div
+    :style="{ height: buttonHeight }"
+    :class="[backgroundColor]"
+    class="profile-action-button"
+  >
+    <div :class="[textColor, labelTypology]">{{ label }}</div>
+    <q-icon
+      class="link-icon cursor-pointer"
+      :name="iconName"
+      :class="[iconColor, iconBackgroundColor]"
+      :style="{ height: iconHeight, width: iconWidth }"
+    />
   </div>
 </template>
 <script setup>

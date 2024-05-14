@@ -68,7 +68,7 @@ const props = defineProps({
   },
   buttonWidth: {
     type: String,
-    default: '100px',
+    default: null,
   },
 })
 
