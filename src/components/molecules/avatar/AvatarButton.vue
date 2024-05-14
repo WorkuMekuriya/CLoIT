@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <q-avatar class="avatar-button" :size="avatarSize">
-      <!-- Render content based on the type prop -->
-      <template v-if="type === 'image'">
-        <img :src="imageSrc" />
-      </template>
-      <template v-else-if="type === 'icon'">
-        <PersonIcon :size="size" />
-      </template>
-      <template v-else>
-        <span>{{ initials }}</span>
-      </template>
-    </q-avatar>
-  </div>
+  <q-avatar class="avatar-button" :size="avatarSize">
+    <!-- Render content based on the type prop -->
+    <template v-if="type === 'image'">
+      <img :src="imageSrc" />
+    </template>
+    <template v-else-if="type === 'icon'">
+      <PersonIcon :size="size" />
+    </template>
+    <template v-else>
+      <span>{{ initials }}</span>
+    </template>
+  </q-avatar>
 </template>
 
 <script setup>

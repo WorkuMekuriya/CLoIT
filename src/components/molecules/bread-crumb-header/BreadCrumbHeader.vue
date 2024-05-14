@@ -1,15 +1,13 @@
 <template>
-  <div class="">
-    <q-breadcrumbs class="bread-crumb">
-      <q-breadcrumbs-el
-        v-for="(component, index) in components"
-        :key="index"
-        :label="component.label"
-        :class="[hasStep(index), hideIconOnFirstStep(index)]"
-        :icon="component.icon"
-      ></q-breadcrumbs-el>
-    </q-breadcrumbs>
-  </div>
+  <q-breadcrumbs class="bread-crumb">
+    <q-breadcrumbs-el
+      v-for="(component, index) in components"
+      :key="index"
+      :label="component.label"
+      :class="[hasStep(index), hideIconOnFirstStep(index)]"
+      :icon="component.icon"
+    ></q-breadcrumbs-el>
+  </q-breadcrumbs>
 </template>
 <script setup>
 const props = defineProps({

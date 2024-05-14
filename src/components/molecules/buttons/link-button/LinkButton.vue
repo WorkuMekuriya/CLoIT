@@ -11,7 +11,7 @@
       :class="[iconColor, iconBackgroundColor]"
       :style="{ height: iconHeight, width: iconWidth }"
     />
-</q-button>
+  </q-button>
 </template>
 <script setup>
 const props = defineProps({
