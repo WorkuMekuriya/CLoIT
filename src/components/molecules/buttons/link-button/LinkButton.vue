@@ -1,5 +1,5 @@
 <template>
-  <div
+  <q-button
     :style="{ height: buttonHeight }"
     :class="[backgroundColor]"
     class="profile-action-button"
@@ -11,7 +11,7 @@
       :class="[iconColor, iconBackgroundColor]"
       :style="{ height: iconHeight, width: iconWidth }"
     />
-  </div>
+</q-button>
 </template>
 <script setup>
 const props = defineProps({
