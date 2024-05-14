@@ -15,13 +15,13 @@ $footer-border-radius: 36px;
   padding: 12px 12px 12px 36px;
   border-radius: $footer-border-radius;
 
-  .application-content-block{
+  .application-content-block {
     display: flex;
     flex-wrap: wrap;
-    gap:16px;
+    gap: 16px;
   }
 
-  .footer-icon-block{
+  .footer-icon-block {
     display: flex;
     gap: 8px;
     .footer-icon {

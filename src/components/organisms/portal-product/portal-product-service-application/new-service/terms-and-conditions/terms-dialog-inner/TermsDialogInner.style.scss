@@ -12,12 +12,12 @@
   .action {
     height: 85px;
     width: 100%;
-    :deep(.flex){
+    :deep(.flex) {
       width: 100%;
     }
   }
-  :deep(.q-btn){
-   height: 52px !important;
-   margin: 0px 24px;
+  :deep(.q-btn) {
+    height: 52px !important;
+    margin: 0px 24px;
   }
 }

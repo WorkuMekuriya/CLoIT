@@ -63,7 +63,7 @@ $checkbox-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
   }
 }
 
-.checkbox-button .checkbox-destructive {
+.checkbox-button.checkbox-destructive {
   :deep(.q-checkbox__label) {
     @extend .text-bluegray-600, .label-sm-bold;
     margin-top: 12px;
@@ -100,7 +100,7 @@ $checkbox-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
   }
 }
 
-.checkbox-button .disabled {
+.checkbox-button.disabled {
   :deep(.q-checkbox__label) {
     @extend .text-bluegray-600, .label-sm-bold;
     margin-top: 12px;

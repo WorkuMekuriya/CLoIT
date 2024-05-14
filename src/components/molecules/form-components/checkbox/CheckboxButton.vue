@@ -1,15 +1,14 @@
 <template>
-  <div class="checkbox-button">
-    <q-checkbox
-      :class="checkboxClass"
-      toggle-indeterminate
-      size="24px"
-      v-model="checked"
-      :label="label"
-      :disable="disable"
-      @update:modelValue="emitUpdate"
-    />
-  </div>
+  <q-checkbox
+    :class="checkboxClass"
+    class="checkbox-button"
+    toggle-indeterminate
+    size="24px"
+    v-model="checked"
+    :label="label"
+    :disable="disable"
+    @update:modelValue="emitUpdate"
+  />
 </template>
 
 <script setup>

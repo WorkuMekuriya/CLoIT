@@ -1,15 +1,14 @@
 <template>
-  <div class="radio-button">
-    <q-option-group
-      :class="[radioClass, radioDisableClass]"
-      :options="options"
-      type="radio"
-      v-model="selected"
-      :disable="disable"
-      emit-value
-      @update:modelValue="emitRadioChange"
-    />
-  </div>
+  <q-option-group
+    class="radio-button"
+    :class="[radioClass, radioDisableClass]"
+    :options="options"
+    type="radio"
+    v-model="selected"
+    :disable="disable"
+    emit-value
+    @update:modelValue="emitRadioChange"
+  />
 </template>
 
 <script setup>
