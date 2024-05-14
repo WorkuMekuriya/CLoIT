@@ -1,13 +1,11 @@
 <template>
-  <div class="">
-    <q-toggle
-      :disable="disable"
-      class="toggle-button"
-      v-model="selected"
-      :label="label"
-      @update:model-value="emitToggleChange"
-    />
-  </div>
+  <q-toggle
+    :disable="disable"
+    class="toggle-button"
+    v-model="selected"
+    :label="label"
+    @update:model-value="emitToggleChange"
+  />
 </template>
 
 <script setup>
