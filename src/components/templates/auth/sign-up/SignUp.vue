@@ -36,7 +36,8 @@
                       class="textfield"
                       :error="error"
                       :bottomLeftDescription="
-                        error && 'New password and Confirm password do not match.'
+                        error &&
+                        'New password and Confirm password do not match.'
                       "
                       :label="'Confirm Password'"
                       inputType="password"

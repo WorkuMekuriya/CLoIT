@@ -1,43 +1,39 @@
 <template>
-  <div>
-    <div :style="{ maxWidth: maxWidth }">
-      <q-tabs
-        class="tab-component"
-        :ripple="false"
-        v-model="tab"
-        narrow-indicator
-        inline-label
-        dense
-        align="justify"
-        :class="tabClass"
-        :style="{ height: containerHeight }"
-      >
-        <q-tab
-          :ripple="false"
-          class="single-tab"
-          v-for="tabItem in tabs"
-          :key="tabItem.label"
-          :name="tabItem.label"
-          :label="tabItem.label"
-          :icon="
-            props.type === 'circular' || 'circular-with-background'
-              ? tabItem.icon
-              : undefined
-          "
-          :class="[
-            hasIcon(tabItem.icon),
-            changeActiveTabColor(tabItem.tabColor),
-          ]"
-          :style="{ height: innerTabHeight }"
-          @click="emitTabChange(tabItem.label)"
-        >
-          <template #icon>
-            <q-icon :name="tabItem.icon" v-if="props.type === 'circular'" />
-          </template>
-        </q-tab>
-      </q-tabs>
-    </div>
-  </div>
+  <q-tabs
+    class="tab-component"
+    :ripple="false"
+    v-model="tab"
+    narrow-indicator
+    inline-label
+    dense
+    align="justify"
+    :class="tabClass"
+    :style="{ height: containerHeight,  maxWidth: maxWidth }"
+  >
+    <q-tab
+      :ripple="false"
+      class="single-tab"
+      v-for="tabItem in tabs"
+      :key="tabItem.label"
+      :name="tabItem.label"
+      :label="tabItem.label"
+      :icon="
+        props.type === 'circular' || 'circular-with-background'
+          ? tabItem.icon
+          : undefined
+      "
+      :class="[
+        hasIcon(tabItem.icon),
+        changeActiveTabColor(tabItem.tabColor),
+      ]"
+      :style="{ height: innerTabHeight }"
+      @click="emitTabChange(tabItem.label)"
+    >
+      <template #icon>
+        <q-icon :name="tabItem.icon" v-if="props.type === 'circular'" />
+      </template>
+    </q-tab>
+  </q-tabs>
 </template>
 
 <script setup>

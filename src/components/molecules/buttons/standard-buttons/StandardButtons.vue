@@ -1,31 +1,26 @@
 <template>
-  <div>
-    <q-btn
-      :ripple="false"
-      class="standard-button"
-      :class="buttonClass"
-      unelevated
-      :icon="leftIcon"
-      :icon-right="rightIcon"
-      :label="label"
-      no-caps
-      :style="{ width: buttonWidth }"
-    >
-      <template v-if="outlined">
-        <LimeGreenOutlinedIcon v-if="type == 'LimeGreen'" class="arrow-icon" />
-        <ArcticBlueOutlinedIcon
-          v-if="type == 'ArcticBlue'"
-          class="arrow-icon"
-        />
-        <BlueGrayOutlinedIcon v-if="type == 'BlueGray'" class="arrow-icon" />
-      </template>
-      <template v-else>
-        <ArcticBlueIcon v-if="type == 'ArcticBlue'" class="arrow-icon" />
-        <LimeGreenIcon v-if="type == 'LimeGreen'" class="arrow-icon" />
-        <BlueGrayIcon v-if="type == 'BlueGray'" class="arrow-icon" />
-      </template>
-    </q-btn>
-  </div>
+  <q-btn
+    :ripple="false"
+    class="standard-button"
+    :class="buttonClass"
+    unelevated
+    :icon="leftIcon"
+    :icon-right="rightIcon"
+    :label="label"
+    no-caps
+    :style="{ width: buttonWidth }"
+  >
+    <template v-if="outlined">
+      <LimeGreenOutlinedIcon v-if="type == 'LimeGreen'" class="arrow-icon" />
+      <ArcticBlueOutlinedIcon v-if="type == 'ArcticBlue'" class="arrow-icon" />
+      <BlueGrayOutlinedIcon v-if="type == 'BlueGray'" class="arrow-icon" />
+    </template>
+    <template v-else>
+      <ArcticBlueIcon v-if="type == 'ArcticBlue'" class="arrow-icon" />
+      <LimeGreenIcon v-if="type == 'LimeGreen'" class="arrow-icon" />
+      <BlueGrayIcon v-if="type == 'BlueGray'" class="arrow-icon" />
+    </template>
+  </q-btn>
 </template>
 
 <script setup>
@@ -73,7 +68,7 @@ const props = defineProps({
   },
   buttonWidth: {
     type: String,
-    default: '',
+    default: null,
   },
 })
 

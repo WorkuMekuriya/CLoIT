@@ -1,16 +1,14 @@
 <template>
-  <div class="flex justify-center">
-    <q-btn
-      :disable="buttonDisabled"
-      :ripple="false"
-      class="circular-button"
-      :class="buttonClass"
-      :icon="icon"
-      unelevated
-      @click="emitClicked"
-    >
-    </q-btn>
-  </div>
+  <q-btn
+    :disable="buttonDisabled"
+    :ripple="false"
+    class="circular-button"
+    :class="buttonClass"
+    :icon="icon"
+    unelevated
+    @click="emitClicked"
+  >
+  </q-btn>
 </template>
 
 <script setup>

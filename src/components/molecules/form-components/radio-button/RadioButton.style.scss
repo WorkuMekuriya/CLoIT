@@ -46,7 +46,7 @@ $radio-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
     }
   }
 }
-.radio-button .radio-destructive {
+.radio-button.radio-destructive {
   :deep(.q-radio__bg) {
     @extend .text-red-500;
     border-radius: 50%;
@@ -85,7 +85,7 @@ $radio-shadow: 0 0 0 4px rgba(37, 59, 255, 0.2);
     }
   }
 }
-.radio-button .radio-disabled {
+.radio-button.radio-disabled {
   :deep(.q-radio__bg) {
     @extend .text-bluegray-500, .bg-bluegray-200;
     border-radius: 50%;
