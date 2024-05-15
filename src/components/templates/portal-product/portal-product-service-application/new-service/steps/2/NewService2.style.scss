@@ -2,15 +2,24 @@
 .select-service {
   .select-text {
     @extend .heading-6;
+    display: flex;
+    @media screen and (max-width: $breakpoint-sm) {
+      span{
+        margin: 0 auto;
+      }
+    }
+    :deep(.q-icon){
+      @media screen and (min-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
   }
   .selected-text {
     @extend .heading-6;
-    padding-left: 36px;
   }
 
   .card-container {
     margin-top: 16px;
-    gap: 16px;
   }
   .card-spacing {
     margin: 40px;
@@ -21,8 +30,25 @@
   .link-button {
     margin-top: 24px;
     max-width: 390px;
+    @media screen and (max-width: $breakpoint-xs) {
+      max-width: 100%;
+    }
+  }
+  .centered{
+    @media screen and (max-width: $breakpoint-sm) {
+      justify-content: center;
+      display: flex;
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+      width: 100%;
+      display: block;
+    }
   }
   .tab-component {
     margin-top: 28px;
+    @media screen and (max-width: $breakpoint-sm) {
+      justify-content: center;
+      display: flex;
+    }
   }
 }

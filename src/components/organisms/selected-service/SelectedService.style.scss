@@ -26,7 +26,7 @@ $next-button-container-padding-top: 16px;
   @extend .bg-bluegray-50, .text-black;
   border-radius: $service-section-border-radius;
   margin-top: $service-section-margin-top;
-  min-width: 389px;
+  width: 100%;
 }
 
 .options-section {

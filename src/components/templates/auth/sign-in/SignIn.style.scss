@@ -5,8 +5,8 @@ $containerWidth: 361px;
 $containerPadding: 14px 16px;
 $verificationLabelColor: #475467;
 $verificationLabelFontSize: 14px;
-$authHeight: calc( 100vh - 184px );
-$authMobileHeight: calc( 100vh - 116px );
+$authHeight: calc(100vh - 184px);
+$authMobileHeight: calc(100vh - 116px);
 $authBackgroundColor: #f9fafb;
 $signinWidth: 470px;
 $signinBorderRadius: 24px;
@@ -62,9 +62,9 @@ $rememberMeFieldMarginTop: 12px;
   margin-bottom: $loginHeaderMarginBottom;
 }
 
-.login-form-items{
+.login-form-items {
   :deep(> div) {
-    &:first-child{
+    &:first-child {
       border-bottom: 1px solid $bluegray-200;
     }
   }
@@ -131,6 +131,14 @@ $rememberMeFieldMarginTop: 12px;
   margin-top: $rememberMeFieldMarginTop;
 }
 
-.q-page-container{
+.q-page-container {
   background-color: $bluegray-50;
+}
+
+:deep(.q-btn) {
+  span.block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

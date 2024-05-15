@@ -1,7 +1,7 @@
 <template>
-  <div class="flex justify-around">
-    <div class="">
-      <div class="selected-service-header-text">{{ headerText }}</div>
+  <div class="flex w-full">
+    <div class=" w-full">
+      <div class="selected-service-header-text ">{{ headerText }}</div>
       <div class="service-section">
         <div class="service-section-container" :style="{ width: cardWidth }">
           <div class="service-header">
@@ -52,7 +52,7 @@
           :label="label"
           :buttonDisabled="false"
           size="xl"
-          buttonWidth="389px"
+          buttonWidth="100%"
         />
       </div>
     </div>

@@ -1,9 +1,9 @@
 <template>
   <div class="select-service">
-    <div class="row">
-      <div class="col-8">
+    <div class="row q-gutter-y-xl row-margin-8">
+      <div class="col-12 col-md-8 q-pa-sm">
         <div class="select-service">
-          <p class="select-text">Select Service</p>
+          <p class="select-text"><q-icon name="chevron_left" size="sm" /> <span>Select Service</span></p>
           <div class="tab-component">
             <TabComponent
               :tabs="tabSelection"
@@ -15,11 +15,11 @@
             />
           </div>
           <div v-if="currentTab == '대회관리'" class="select-service-row">
-            <div class="flex card-container">
+            <div class="row card-container row-margin-8">
               <Card
                 :cardList="cards"
                 :isSingleSelect="false"
-                class="card-spacing"
+                class="card-spacing col-12 col-sm-6 q-pa-sm"
                 @card-clicked="handleCardClicked"
               />
             </div>
@@ -29,17 +29,20 @@
               <EmptyCard />
             </div>
           </div>
-          <LinkButton
-            labelTypology="subH-md-med"
-            backgroundColor="bg-bluegray-100"
-            class="link-button"
-          />
+          <div class="centered">
+            <LinkButton
+              labelTypology="subH-md-med"
+              backgroundColor="bg-bluegray-100"
+              class="link-button"
+            />
+          </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-12 col-md-4 q-pa-sm">
         <div class="selected-service">
           <p class="selected-text">Selected Service</p>
           <SelectedService
+            cardWidth="100%"
             :products="products"
             :options="options"
             options-total="{}"
@@ -66,7 +69,7 @@ const cards = [
     price: '$ {}',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -75,7 +78,7 @@ const cards = [
     price: '$ {}',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -84,7 +87,7 @@ const cards = [
     price: '$ {}',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -93,7 +96,7 @@ const cards = [
     price: '$ {}',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -102,7 +105,7 @@ const cards = [
     price: '$ {}',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -111,7 +114,7 @@ const cards = [
     price: '$ {}',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -120,7 +123,7 @@ const cards = [
     price: '$ {}',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -129,7 +132,7 @@ const cards = [
     price: '$ {}',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
 ]
@@ -170,8 +173,8 @@ const moveToStep3 = () => {
 
 // Tab Selection
 const tabSelection = [
-  { icon: '', label: '대회관리', tabColor: 'bluegray' },
-  { icon: '', label: '경기 결과', tabColor: 'bluegray' },
+  { icon: '', label: '대회관리', tabColor: 'arcticblue' },
+  { icon: '', label: '경기 결과', tabColor: 'arcticblue' },
 ]
 let currentTab = ref('대회관리')
 

@@ -51,6 +51,9 @@
 
   :deep(.q-card) {
     @extend .bg-bluegray-50;
+    &.selected-state {
+      background-color: $arctic-blue-600;
+    }
   }
 }
 .link-button {

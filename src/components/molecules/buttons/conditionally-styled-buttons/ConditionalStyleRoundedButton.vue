@@ -1,40 +1,36 @@
 <template>
-  <div class="flex justify-center">
-    <div class="flex justify-center">
-      <q-btn
-        :style="{ width: buttonWidth }"
-        :disable="buttonDisabled"
-        :ripple="false"
-        :loading="isLoading"
-        class="rounded-button"
-        :class="[
-          buttonClass,
-          { loading: isLoading },
-          { 'set-button-with-icon-width': leftIcon || rightIcon },
-        ]"
-        unelevated
-        :push="false"
-        no-caps
-        @click="emitClicked"
-      >
-        <!-- Slot for left icon -->
-        <template v-if="leftIcon">
-          <q-icon :name="leftIcon" class="button-icon left-icon" />
-        </template>
-        <!-- Default slot content -->
-        <slot>
-          {{ label }}
-        </slot>
-        <!-- Slot for right icon -->
-        <template v-if="rightIcon">
-          <q-icon name="east" class="button-icon right-icon" />
-        </template>
-        <template #loading>
-          <Spinner class="spinner" />
-        </template>
-      </q-btn>
-    </div>
-  </div>
+  <q-btn
+    :style="{ width: buttonWidth }"
+    :disable="buttonDisabled"
+    :ripple="false"
+    :loading="isLoading"
+    class="rounded-button"
+    :class="[
+      buttonClass,
+      { loading: isLoading },
+      { 'set-button-with-icon-width': leftIcon || rightIcon },
+    ]"
+    unelevated
+    :push="false"
+    no-caps
+    @click="emitClicked"
+  >
+    <!-- Slot for left icon -->
+    <template v-if="leftIcon">
+      <q-icon :name="leftIcon" class="button-icon left-icon" />
+    </template>
+    <!-- Default slot content -->
+    <slot>
+      {{ label }}
+    </slot>
+    <!-- Slot for right icon -->
+    <template v-if="rightIcon">
+      <q-icon name="east" class="button-icon right-icon" />
+    </template>
+    <template #loading>
+      <Spinner class="spinner" />
+    </template>
+  </q-btn>
 </template>
 
 <script setup>
