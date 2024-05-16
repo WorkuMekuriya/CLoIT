@@ -20,34 +20,38 @@
         사용 개시일부터 이벤트를 등록, 관리할 수 있습니다.
       </p>
     </div>
-    <div class="flex justify-between date-subdomain-container">
-      <div v-if="!isSubDomainOnly" class="data-container">
-        <p class="service-application">시스템 사용 개시일</p>
-        <div class="flex items-center value-container">
-          <p class="service-application-value">{{ serviceApplication }}</p>
-          <Tag class="service-application-label" size="md" :label="tagLabel" />
+    <div class="justify-between date-subdomain-container row row-margin-4">
+      <div v-if="!isSubDomainOnly" class="col-12 col-sm-6 q-pa-xs">
+        <div class="data-container ">
+          <p class="service-application">시스템 사용 개시일</p>
+          <div class="flex items-center value-container">
+            <p class="service-application-value">{{ serviceApplication }}</p>
+            <Tag class="service-application-label" size="md" :label="tagLabel" />
+          </div>
         </div>
       </div>
-      <div
-        class="data-container"
-        :style="{ width: isSubDomainOnly ? '568px' : '280px' }"
-      >
-        <p class="subdomain-application">Sub-Domain 주소</p>
-        <div class="flex items-center subdomain-container">
-          <p class="subdomain-value">{{ subDomain }}</p>
+      <div  class="q-pa-xs" :class="isSubDomainOnly ? 'col-12' : 'col-12 col-sm-6'">
+        <div
+          class="data-container"
+          :class="isSubDomainOnly ? 'col-12' : 'col-12 col-sm-6'"
+        >
+          <p class="subdomain-application">Sub-Domain 주소</p>
+          <div class="flex items-center subdomain-container">
+            <p class="subdomain-value">{{ subDomain }}</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="link-button-container">
       <LinkButton
-        class="q-mt-lg"
+        class="q-mt-sm"
         v-if="type == 'Full'"
         :label="'Dashboard'"
         iconTextColor="text-white"
         iconBackgroundColor="bg-arcticblue-600"
         iconColor="text-white"
       />
-      <LinkButton class="q-mt-md" :label="'Help Center'" />
+      <LinkButton class="q-mt-sm" :label="'Help Center'" />
     </div>
   </div>
 </template>

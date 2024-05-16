@@ -1,11 +1,11 @@
 <template>
-  <div class="flex justify-around">
+  <div class="checkout-page">
     <div>
       <div class="selected-service-header-text">Checkout</div>
 
       <!-- Products Section -->
       <div class="service-section">
-        <div class="service-section-container" style="width: 794px">
+        <div class="service-section-container">
           <div class="service-header">
             <div class="header-text">Products</div>
             <div class="header-text" style="display: flex">
@@ -160,14 +160,16 @@
       </div>
 
       <!-- Rounded Button -->
-      <RoundedButton
-        type="Primary"
-        :label="'이대로 신청'"
-        :buttonDisabled="false"
-        size="xl"
-        buttonWidth="228px"
-        @click="navigateToPage('payment-full-done')"
-      />
+      <div class="flex justify-center">
+        <RoundedButton
+          type="Primary"
+          :label="'이대로 신청'"
+          :buttonDisabled="false"
+          size="xl"
+          buttonWidth="228px"
+          @click="navigateToPage('payment-full-done')"
+        />
+      </div>
     </div>
   </div>
 </template>

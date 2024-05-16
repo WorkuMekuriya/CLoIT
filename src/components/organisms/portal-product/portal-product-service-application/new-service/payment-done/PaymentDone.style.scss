@@ -3,9 +3,10 @@
 .payment-done {
   @extend .bg-bluegray-50;
   margin-top: 121px;
-  width: 592px;
-  height: 608px;
+  max-width: 592px;
+  width: 100%;
   border-radius: 36px;
+  padding-bottom: 16px;
 }
 
 .installments-div {
@@ -38,7 +39,6 @@
 
   .data-container {
     @extend .bg-bluegray-100;
-    width: 280px;
     height: 166px;
     border-radius: 36px;
     padding: 24px;

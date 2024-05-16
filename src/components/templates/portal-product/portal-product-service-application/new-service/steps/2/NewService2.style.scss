@@ -3,7 +3,7 @@
   .select-text {
     @extend .heading-6;
     display: flex;
-    @media screen and (max-width: $breakpoint-sm) {
+    @media screen and (max-width: $breakpoint-xs) {
       span{
         margin: 0 auto;
       }

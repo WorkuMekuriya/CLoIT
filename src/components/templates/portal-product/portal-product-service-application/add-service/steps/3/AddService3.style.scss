@@ -20,6 +20,12 @@ $header_font_size: 20px;
 $header_font_weight: bold;
 $total_text_font_weight: 800;
 
+.checkout-page {
+  max-width: 794px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 // Use constants in style blocks
 .selected-service-header-text {
   @extend .heading-6, .text-bluegray-900;

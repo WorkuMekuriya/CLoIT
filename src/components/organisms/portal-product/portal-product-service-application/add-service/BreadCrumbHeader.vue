@@ -1,8 +1,8 @@
 <template>
-  <div class="bread-crumb-header flex items-center">
+  <div class="bread-crumb-header flex no-wrap items-center">
     <BreadCrumb :step="step" :components="components" />
     <q-space />
-    <q-icon class="close-icon" name="close" />
+    <q-icon class="close-icon q-ml-lg" name="close" />
   </div>
 </template>
 <script setup>

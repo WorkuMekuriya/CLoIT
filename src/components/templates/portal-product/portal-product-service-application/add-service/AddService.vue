@@ -12,7 +12,7 @@
 </template>
 <script setup>
 import { ref, computed } from 'vue'
-const step = ref(1)
+const step = ref(3)
 import BreadCrumbHeader from '../../../../organisms/portal-product/portal-product-service-application/add-service/BreadCrumbHeader.vue'
 import AddService1 from '../add-service/steps/1/AddService1.vue'
 import AddService2 from '../add-service/steps/2/AddService2.vue'

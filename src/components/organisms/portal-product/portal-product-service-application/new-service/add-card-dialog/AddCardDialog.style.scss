@@ -2,6 +2,9 @@
 
 .add-payment-container {
   padding: 0px 36px;
+  @media screen and (max-width: $breakpoint-sm) {
+    padding: 0px 24px;
+  }
 
   .textfield {
     margin-top: 18px;

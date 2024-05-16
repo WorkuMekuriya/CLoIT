@@ -3,15 +3,16 @@
   .select-text {
     @extend .heading-6;
     font-weight: 800;
+    @media screen and (max-width: $breakpoint-sm) {
+      text-align: center;
+    }
   }
   .selected-text {
     @extend .heading-6;
-    padding-left: 36px;
   }
 
   .card-container {
     margin-top: 16px;
-    gap: 16px;
   }
   .card-spacing {
     margin: 40px;
@@ -22,9 +23,26 @@
   .link-button {
     margin-top: 24px;
     max-width: 390px;
+    @media screen and (max-width: $breakpoint-xs) {
+      max-width: 100%;
+    }
+  }
+  .centered{
+    @media screen and (max-width: $breakpoint-sm) {
+      justify-content: center;
+      display: flex;
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+      width: 100%;
+      display: block;
+    }
   }
   .tab-component {
-    margin-top: 28px;
+    margin-top: 16px;
+    @media screen and (max-width: $breakpoint-sm) {
+      justify-content: center;
+      display: flex;
+    }
   }
 }
 
@@ -32,6 +50,21 @@
   @extend .heading-4;
   font-weight: 800;
   margin-bottom: 16px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  @media screen and (max-width: $breakpoint-sm) {
+    span{
+      margin: 0 auto;
+      line-height: 38px;
+    }
+  }
+  :deep(.q-icon){
+    margin-right: -24px;
+    @media screen and (min-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
 }
 
 .header-subtitle {
