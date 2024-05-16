@@ -7,7 +7,7 @@
 const props = defineProps({
   cardText: {
     Type: String,
-    default: "아직 준비중입니다"
+    default: '아직 준비중입니다',
   },
 })
 </script>

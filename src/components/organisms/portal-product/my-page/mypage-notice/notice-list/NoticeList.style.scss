@@ -3,6 +3,8 @@
 .notice-list {
   margin-top: 36px;
   @extend .text-bluegray-900;
+  max-height: 212px;
+  overflow: hidden;
 
   .title {
     @extend .label-lg-bold;
@@ -17,5 +19,10 @@
   .notice {
     @extend .p-md;
     padding-right: 36px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    position: relative;
   }
 }
