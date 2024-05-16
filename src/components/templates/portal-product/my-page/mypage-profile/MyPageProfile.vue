@@ -9,7 +9,6 @@ import { ref, computed } from 'vue'
 import ProfileDetail from './profile-detail/ProfileDetail.vue'
 import EditProfile from './edit-profile/EditProfile.vue'
 import EditOrganization from './edit-organization/EditOrganization.vue'
-import ResetPassword from './reset-password/ResetPassword.vue'
 import InquiryHistory from './inquiry-history/InquiryHistory.vue'
 
 // Initialize the step ref with a starting value.
@@ -24,8 +23,6 @@ const currentStepComponent = computed(() => {
     case 2:
       return EditOrganization
     case 3:
-      return ResetPassword
-    case 4:
       return InquiryHistory
     default:
       return ProfileDetail
