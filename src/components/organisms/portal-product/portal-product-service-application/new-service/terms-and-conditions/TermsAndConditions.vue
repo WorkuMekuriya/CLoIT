@@ -95,7 +95,7 @@ import DialogComponent from '../../../../../molecules/dialog/DialogComponent.vue
 import AlertStandardIcon from '../../../../../atoms/Icons/alert-icons/AlertStandardIcon.vue'
 import TermsDialogInner from '../terms-and-conditions/terms-dialog-inner/TermsDialogInner.vue'
 import { useDialogStore } from '../../../../../../stores/dialog-store.js'
-import { ref, computed, watchEffect, markRaw } from 'vue'
+import { ref, computed, watch, markRaw } from 'vue'
 
 const selectedIndexes = ref([])
 
@@ -130,6 +130,11 @@ const toggleCheckbox = (index) => {
     selectedIndexes.value = [...selectedIndexes.value, index]
   }
 }
+// Emit For Next Step
+const emit = defineEmits(['setAllSelected'])
+watch(allSelected, (value) => {
+  emit('setAllSelected', allSelected.value)
+})
 
 // Read Policy
 const dialogStore = useDialogStore()
@@ -145,18 +150,6 @@ const readPolicy = () => {
 
   dialogStore.openDialog()
 }
-
-// Emit For Next Step
-const emit = defineEmits(['clicked'])
-watchEffect(() => {
-  if (allSelected.value) {
-    console.log('emit')
-    // Emit an event to the parent component
-    // emit('all-selected')
-  } else {
-    console.log('not all selected')
-  }
-})
 </script>
 
 <style lang="scss" scoped>
