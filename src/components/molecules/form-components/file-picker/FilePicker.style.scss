@@ -137,6 +137,7 @@ $bg-bluegray-50: bg-bluegray-50;
 .content-container-lg {
   @extend .bg-bluegray-50;
   display: flex;
+  cursor: pointer;
   justify-content: space-evenly;
   align-items: center;
   height: 180px;

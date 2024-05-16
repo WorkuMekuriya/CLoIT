@@ -1,4 +1,37 @@
 <template>
+  <!-- Smaller File Picker -->
+  <div v-if="type == 'sm'" class="container-sm" @click="openFilePicker">
+    <div class="attachment-label">{{ label }}</div>
+    <div class="content-container">
+      <div class="sm-file-name">
+        {{ fileModel && fileModel.length > 0 ? fileModel.map(file => file.name).join(', ') : 'Select File' }}
+      </div>
+      <div class="sm-icon-container">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21.4403 11.0489L12.2503 20.2389C11.1244 21.3648 9.59747 21.9973 8.00529 21.9973C6.41311 21.9973 4.88613 21.3648 3.76029 20.2389C2.63445 19.1131 2.00195 17.5861 2.00195 15.9939C2.00195 14.4018 2.63445 12.8748 3.76029 11.7489L12.9503 2.55894C13.7009 1.80838 14.7188 1.38672 15.7803 1.38672C16.8417 1.38672 17.8597 1.80838 18.6103 2.55894C19.3609 3.30951 19.7825 4.32749 19.7825 5.38894C19.7825 6.4504 19.3609 7.46838 18.6103 8.21894L9.41029 17.4089C9.03501 17.7842 8.52602 17.9951 7.99529 17.9951C7.46456 17.9951 6.95557 17.7842 6.58029 17.4089C6.20501 17.0337 5.99418 16.5247 5.99418 15.9939C5.99418 15.4632 6.20501 14.9542 6.58029 14.5789L15.0703 6.09894"
+            stroke="#101828"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <q-file
+        ref="fileRef"
+        v-model="fileModel"
+        style="display: none"
+        :max-files="maxFileSize"
+        multiple
+      />
+    </div>
+  </div>
+
   <!-- Middum in height file picker -->
   <div v-if="type == 'md'" class="container">
     <div class="left-section">
@@ -25,54 +58,24 @@
       ref="fileRef"
       v-model="fileModel"
       style="display: none"
-      :max-files="maxFileSize"
     />
   </div>
 
-  <!-- Smaller File Picker -->
-  <div v-if="type == 'sm'" class="container-sm" @click="selectFile">
-    <div class="attachment-label">{{ label }}</div>
-    <div class="content-container">
-      <div class="sm-file-name">{{ fileModel?.name || 'Select File' }}</div>
-      <div class="sm-icon-container">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M21.4403 11.0489L12.2503 20.2389C11.1244 21.3648 9.59747 21.9973 8.00529 21.9973C6.41311 21.9973 4.88613 21.3648 3.76029 20.2389C2.63445 19.1131 2.00195 17.5861 2.00195 15.9939C2.00195 14.4018 2.63445 12.8748 3.76029 11.7489L12.9503 2.55894C13.7009 1.80838 14.7188 1.38672 15.7803 1.38672C16.8417 1.38672 17.8597 1.80838 18.6103 2.55894C19.3609 3.30951 19.7825 4.32749 19.7825 5.38894C19.7825 6.4504 19.3609 7.46838 18.6103 8.21894L9.41029 17.4089C9.03501 17.7842 8.52602 17.9951 7.99529 17.9951C7.46456 17.9951 6.95557 17.7842 6.58029 17.4089C6.20501 17.0337 5.99418 16.5247 5.99418 15.9939C5.99418 15.4632 6.20501 14.9542 6.58029 14.5789L15.0703 6.09894"
-            stroke="#101828"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <q-file
-        ref="fileRef"
-        v-model="fileModel"
-        style="display: none"
-        :max-files="maxFileSize"
-      />
-    </div>
-  </div>
-
   <!-- Drag and Drop -->
-  <div v-if="type == 'lg'" class="container-lg" @click="selectFile">
+  <div v-if="type == 'lg'" class="container-lg" @drop.prevent="handleDrop" @dragover.prevent>
     <div class="attachment-label">{{ label }}</div>
-    <div class="content-container-lg">
+    <div class="content-container-lg" @click="openFilePicker">
       <div class="file-name">
-        {{ fileModel?.name || 'Drag and drop files' }}
+        {{ fileModel && fileModel.length > 0 ? fileModel.map(file => file.name).join(', ') : 'Drag and drop files' }}
       </div>
-      <q-file
+      <q-uploader
         ref="fileRef"
         draggable
         drag-and-drop
         v-model="fileModel"
         style="display: none"
         :max-files="maxFileSize"
+        multiple
       />
     </div>
     <div class="attachment-label">{{ description }}</div>
@@ -86,10 +89,20 @@ import FilePickerIcon from 'src/components/atoms/Icons/FilePickerIcon.vue'
 // Define the emit function
 const emit = defineEmits(['file'])
 
+// Handle drop event
+const handleDrop = (event) => {
+  event.preventDefault();
+  const files = event.dataTransfer.files;
+  fileModel.value = Array.from(files);
+};
+const openFilePicker = () => {
+  fileRef.value.$el.click();
+};
+
 const props = defineProps({
   maxFileSize: {
     type: Number,
-    default: 1,
+    default: 10,
   },
   type: {
     type: String,

@@ -21,19 +21,19 @@
         :step="step"
       />
     </div>
-    <div class="flex justify-center q-mb-md">
+    <!-- <div class="flex justify-center q-mb-md">
       <Breadcrumb
         :primaryLable="'Terms & Conditions'"
         :secondaryLable="'Terms & Conditions'"
         :tertiaryLabel="'Terms & Conditions'"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
 import BreadCrumbHeader from 'components/molecules/bread-crumb-header/BreadCrumbHeader.vue'
-import Breadcrumb from 'components/molecules/bread-crumb/BreadCrumb.vue'
+// import Breadcrumb from 'components/molecules/bread-crumb/BreadCrumb.vue'
 import LiItem from '../../molecules/li-item/LiItem.vue'
 </script>
 
