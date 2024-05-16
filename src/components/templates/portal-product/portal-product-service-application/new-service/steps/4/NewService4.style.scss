@@ -46,22 +46,13 @@ $grid-main-column-lg: 60% 40%;
 // Checkbox container
 .checkbox-container {
   margin-bottom: $margin-medium;
+  gap: 16px;
 }
 
 // Checkbox spacing
-.checkbox-spacing {
-  margin-left: $margin-small;
-}
-
-// Grid container
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: $gap-medium;
-}
 
 // Textfield margin
-.textfield {
+.field-gap {
   margin-top: $margin-small;
 }
 
@@ -69,25 +60,4 @@ $grid-main-column-lg: 60% 40%;
 .section-title {
   @extend .heading-6;
   margin-bottom: $margin-medium;
-}
-
-// Media queries
-@media (min-width: 769px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-main-container {
-    grid-template-columns: $grid-main-column-sm;
-  }
-}
-
-@media (min-width: 1280px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-main-container {
-    grid-template-columns: $grid-main-column-lg;
-  }
 }

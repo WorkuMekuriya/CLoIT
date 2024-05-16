@@ -49,7 +49,7 @@
               </div>
             </div>
 
-            <div class="footer-buttons flex justify-between">
+            <div class="footer-buttons no-wrap flex justify-between">
               <CircularButton
                 :type="'TertiaryLined'"
                 :isLoading="false"

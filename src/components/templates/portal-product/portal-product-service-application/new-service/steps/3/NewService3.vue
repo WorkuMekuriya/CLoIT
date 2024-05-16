@@ -1,48 +1,52 @@
 <template>
   <div class="select-options">
-    <div class="row">
-      <div class="col-8">
-        <div class="row">
-          <div class="col-12">
-            <div class="select-service">
-              <p class="select-text">Duration</p>
-              <div class="select-service-row">
-                <div class="flex card-container">
-                  <Card :cardList="duration" />
-                </div>
-              </div>
+    <div class="row q-gutter-y-xl row-margin-8">
+      <div class="col-12 col-md-8 q-pa-sm">
+        <div class="select-service">
+          <p class="select-text">
+            <q-icon name="chevron_left" size="sm" /> <span>Duration</span>
+          </p>
+          <div class="select-service-row">
+            <div class="row card-container row-margin-8">
+              <Card
+                :cardList="duration"
+                class="card-spacing col-12 col-sm-6 q-pa-sm"
+              />
             </div>
           </div>
         </div>
-        <div class="row scale-row">
-          <div class="col-12">
-            <div class="select-service">
-              <p class="select-text">규모</p>
-              <div class="select-service-row">
-                <div class="flex card-container">
-                  <Card :cardList="scale" />
-                </div>
+        <div class="scale-row">
+          <div class="select-service">
+            <p class="select-text">규모</p>
+            <div class="select-service-row">
+              <div class="row card-container row-margin-8">
+                <Card
+                  :cardList="scale"
+                  class="card-spacing col-12 col-sm-6 q-pa-sm"
+                />
               </div>
             </div>
           </div>
         </div>
         <div class="row games-row">
-          <div class="col-12">
-            <div class="select-service">
-              <p class="select-text">Games</p>
-              <div class="row select-service-row">
-                <div class="flex card-container">
-                  <Card :cardList="games" />
-                </div>
+          <div class="select-service">
+            <p class="select-text">Games</p>
+            <div class="row select-service-row">
+              <div class="row card-container row-margin-8">
+                <Card
+                  :cardList="games"
+                  class="card-spacing col-12 col-sm-6 q-pa-sm"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-12 col-md-4 q-pa-sm">
         <div class="selected-service">
           <p class="selected-text">Selected Service</p>
           <SelectedService
+            cardWidth="100%"
             :products="products"
             :options="options"
             :options-total="'{}'"
@@ -66,7 +70,7 @@ const duration = [
     price: 'No Discount',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -75,7 +79,7 @@ const duration = [
     price: '10% Discount',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -84,7 +88,7 @@ const duration = [
     price: '20% Discount',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -93,7 +97,7 @@ const duration = [
     price: '별도협의',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
 ]
@@ -104,7 +108,7 @@ const scale = [
     price: 'Free',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -113,7 +117,7 @@ const scale = [
     price: '$ 10,000',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -122,7 +126,7 @@ const scale = [
     price: '$ 30,000',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -131,7 +135,7 @@ const scale = [
     price: '$ 70,000',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
 ]
@@ -142,7 +146,7 @@ const games = [
     price: 'Free',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -151,7 +155,7 @@ const games = [
     price: '$ 10,000',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -160,7 +164,7 @@ const games = [
     price: '$ 20,000',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
@@ -169,7 +173,7 @@ const games = [
     price: '$ 30,000',
     subscription: 'USD/mo',
     size: 'lg',
-    width: '389px',
+    width: '',
     height: '240px',
   },
 ]
@@ -177,32 +181,32 @@ const products = [
   {
     label: 'Portal & Help Desk',
     price: '${}/mo',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
     label: 'Portal & Help Desk',
     price: '${}/mo',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
     label: 'Portal & Help Desk',
     price: '${}/mo',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
     label: 'Portal & Help Desk',
     price: '${}/mo',
-    width: '389px',
+    width: '',
     height: '240px',
   },
   {
     label: 'Portal & Help Desk',
     price: '${}/mo',
 
-    width: '389px',
+    width: '',
     height: '240px',
   },
 ]

@@ -62,7 +62,9 @@ $check-box-container: 52px;
 
 .sm-card-header {
   height: $sm-card-header-height;
-  width: $sm-card-header-width;
+  @media screen and (max-width: $breakpoint-xs) {
+    width: 100%;
+  }
 }
 
 .md-card-container {
@@ -142,6 +144,10 @@ $check-box-container: 52px;
 .card-title {
   @extend .heading-6, .text-bluegray-800;
   line-height: 1.875rem;
+  font-size: 22px;
+  @media screen and (max-width: $breakpoint-xs) {
+    font-size: 18px;
+  }
 }
 
 .card-description {

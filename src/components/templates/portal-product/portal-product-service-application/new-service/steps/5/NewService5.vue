@@ -1,111 +1,106 @@
 <template>
-  <div class="flex justify-around">
-    <div class="">
-      <div class="selected-service-header-text">Checkout</div>
-      <div class="service-section">
-        <div class="service-section-container" style="width: 794px">
-          <div class="service-header">
-            <div class="header-text">Products</div>
-            <div class="header-text" style="display: flex">
-              +$ {{ productTotal }}
-              <div
-                class="circle-button-icon"
-                @click="collapsAccordion"
-                style="margin-left: 12px"
-              >
-                <q-icon name="expand_more" size="xs" />
-              </div>
+  <div class="checkout-page">
+    <div class="selected-service-header-text">Checkout</div>
+    <div class="service-section">
+      <div class="service-section-container">
+        <div class="service-header">
+          <div class="header-text">Products</div>
+          <div class="header-text" style="display: flex">
+            +$ {{ productTotal }}
+            <div
+              class="circle-button-icon"
+              @click="collapsAccordion"
+              style="margin-left: 12px"
+            >
+              <q-icon name="expand_more" size="xs" />
             </div>
           </div>
-          <LiItem
-            v-for="(product, index) in productList"
-            :key="index"
-            :label="product.label"
-            :price="product.price"
-            :showLeftButton="product.isLeftIconVisble"
-            :showRightButton="false"
-          />
         </div>
-        <div class="options-section">
-          <div class="service-header">
-            <div class="header-text">Options</div>
-            <div class="header-text">+$ {{ optionsTotal }}</div>
-          </div>
-          <LiItem
-            v-for="(item, index) in options"
-            :key="index"
-            :label="item.label"
-            :price="item.price"
-            :showRightButton="false"
-            :showLeftButton="true"
-          />
-        </div>
+        <LiItem
+          v-for="(product, index) in productList"
+          :key="index"
+          :label="product.label"
+          :price="product.price"
+          :showLeftButton="product.isLeftIconVisble"
+          :showRightButton="false"
+        />
       </div>
-      <div class="options-section" style="margin-top: 16px">
+      <div class="options-section">
         <div class="service-header">
-          <div class="header-text">Additional Discount</div>
+          <div class="header-text">Options</div>
           <div class="header-text">+$ {{ optionsTotal }}</div>
         </div>
         <LiItem
-          :label="'{}'"
-          price="+${}"
+          v-for="(item, index) in options"
+          :key="index"
+          :label="item.label"
+          :price="item.price"
           :showRightButton="false"
           :showLeftButton="true"
         />
       </div>
-
-      <div
-        class="options-section"
-        style="margin-top: 16px; margin-bottom: 60px"
-      >
-        <div class="total-section">
-          <div class="total-text">Total</div>
-          <div style="display: flex">
-            <TagComponent
-              type="TagGreen"
-              :label="'USD/mo'"
-              :dot="false"
-              size="sm"
-            />
-            <div class="total-text" style="margin-left: 16px">
-              $ {{ total }}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="margin-bottom: 60px">
-        <div class="section-title">결제방식</div>
-        <div style="display: flex; justify-content: space-evenly">
-          <Card
-            :card-list="paymentTypes"
-            @card-clicked="toggleSelectInfo"
-            class="card-spacing"
-          />
-        </div>
-      </div>
-      <section v-if="showPaymentInfo" class="section-container q-mt-lg">
-        <div class="section-title">정보입력</div>
-        <div class="flex q-mb-lg q-mt-md">
-          <Card :card-list="additionalInfoCard" class="card-spacing" />
-        </div>
-        <TextField
-          class="textfield"
-          :label="'분납방법'"
-          :placeholder="'분납방법'"
-          :bottomLeftDescription="'적어주신 내용 확인 후 계약을 위해 연락드리도록 하겠습니다.'"
-          :bottomRightDescription="''"
-        />
-      </section>
     </div>
+    <div class="options-section" style="margin-top: 16px">
+      <div class="service-header">
+        <div class="header-text">Additional Discount</div>
+        <div class="header-text">+$ {{ optionsTotal }}</div>
+      </div>
+      <LiItem
+        :label="'{}'"
+        price="+${}"
+        :showRightButton="false"
+        :showLeftButton="true"
+      />
+    </div>
+
+    <div class="options-section" style="margin-top: 16px; margin-bottom: 60px">
+      <div class="total-section">
+        <div class="total-text">Total</div>
+        <div style="display: flex">
+          <TagComponent
+            type="TagGreen"
+            :label="'USD/mo'"
+            :dot="false"
+            size="sm"
+          />
+          <div class="total-text" style="margin-left: 16px">$ {{ total }}</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-bottom: 60px">
+      <div class="selected-service-header-text">결제방식</div>
+      <div class="row row-margin-8">
+        <Card
+          :card-list="paymentTypes"
+          @card-clicked="toggleSelectInfo"
+          class="card-spacing col-6 col-sm-4 q-pa-sm"
+        />
+      </div>
+    </div>
+    <section v-if="showPaymentInfo" class="section-container q-mt-lg">
+      <div class="selected-service-header-text">정보입력</div>
+      <div class="row q-mb-lg q-mt-md row-margin-8">
+        <Card :card-list="additionalInfoCard" class="card-spacing col-6 col-sm-4 col-md-3 q-pa-sm" />
+      </div>
+      <TextField
+        class="textfield"
+        :label="'분납방법'"
+        :placeholder="'분납방법'"
+        :bottomLeftDescription="'적어주신 내용 확인 후 계약을 위해 연락드리도록 하겠습니다.'"
+        :bottomRightDescription="''"
+      />
+    </section>
   </div>
-  <RoundedButton
-    type="Primary"
-    :label="'이대로 신청'"
-    :buttonDisabled="false"
-    size="xl"
-    buttonWidth="228px"
-    @click="addPaymentMethod"
-  />
+  <div class="flex justify-center">
+    <RoundedButton
+      type="Primary"
+      :label="'이대로 신청'"
+      :buttonDisabled="false"
+      size="xl"
+      buttonWidth="228px"
+      @click="addPaymentMethod"
+    />
+  </div>
   <DialogComponent />
 </template>
 

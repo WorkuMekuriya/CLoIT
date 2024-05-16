@@ -9,4 +9,18 @@
     height: 52px;
     border-radius: 50%;
   }
+  :deep(.non-active-step), 
+  :deep(.passed-step) {
+    @extend .text-bluegray-500;
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+  :deep(.active-step) {
+    i{
+      @media screen and (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+  }
 }

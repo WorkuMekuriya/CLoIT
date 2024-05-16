@@ -1,14 +1,14 @@
 <template>
-  <div class="grid-main-container">
-    <div>
+  <div class="row q-gutter-y-xl row-margin-8">
+    <div class="col-12 col-md-8 q-pa-sm">
       <!-- Information Entry Section -->
       <section class="section-container">
         <div class="section-title">정보입력</div>
-        <div class="card-list-container">
+        <div class="card-list-container row row-margin-8">
           <Card
             :card-list="infoCard"
             @card-clicked="toggleSelect"
-            class="card-spacing"
+            class="card-spacing col-6 col-sm-3 q-pa-sm"
           />
         </div>
         <div>
@@ -23,11 +23,11 @@
             </div>
           </div>
 
-          <div v-if="selectedIndex == 'Individual'" class="grid-container">
+          <div v-if="selectedIndex == 'Individual'" class="row">
             <!-- Manually define each informationForm field -->
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'First Name'"
                 :placeholder="'First Name'"
                 :bottomLeftDescription="''"
@@ -35,9 +35,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Last Name'"
                 :placeholder="'Last Name'"
                 :bottomLeftDescription="''"
@@ -45,9 +45,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Email'"
                 :placeholder="'Email'"
                 :bottomLeftDescription="''"
@@ -55,9 +55,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Phone Number'"
                 :placeholder="'Phone Number'"
                 :bottomLeftDescription="''"
@@ -65,8 +65,8 @@
               />
             </div>
 
-            <div class="grid-item">
-              <br />
+            <div class="col-12 col-sm-6 q-px-sm">
+              <div class="field-gap"></div>
               <SelectDropdown
                 :label="'Nationality'"
                 :options="[
@@ -77,9 +77,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Department'"
                 :placeholder="'Department'"
                 :bottomLeftDescription="''"
@@ -87,9 +87,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Preferred Language'"
                 :placeholder="'Preferred Language'"
                 :bottomLeftDescription="'기본적으로 영어, 한국어, 프랑스어, 독일어, 스페인어가 제공됩니다. 이외 원하는 언어가 있는 경우 적어주세요.'"
@@ -98,11 +98,11 @@
             </div>
           </div>
 
-          <div v-if="selectedIndex == 'Organization'" class="grid-container">
+          <div v-if="selectedIndex == 'Organization'" class="row">
             <!-- Manually define each organizationInfo field -->
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Organization registration number'"
                 :placeholder="'Organization registration number'"
                 :bottomLeftDescription="''"
@@ -110,9 +110,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Organization name'"
                 :placeholder="'Organization name'"
                 :bottomLeftDescription="''"
@@ -120,8 +120,8 @@
               />
             </div>
 
-            <div class="grid-item">
-              <br />
+            <div class="col-12 col-sm-6 q-px-sm">
+              <div class="field-gap"></div>
               <SelectDropdown
                 :label="'Country'"
                 :options="[
@@ -133,9 +133,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Owner'"
                 :placeholder="'Owner'"
                 :bottomLeftDescription="''"
@@ -146,9 +146,9 @@
 
           <div v-if="selectedIndex == 'Organization'">
             <!-- Manually define each organizationInfo_2 field -->
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Location'"
                 :placeholder="'Street, Building Number (Optional)'"
                 :bottomLeftDescription="''"
@@ -156,9 +156,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="''"
                 :placeholder="'More Address Information (Optional)'"
                 :bottomLeftDescription="''"
@@ -166,9 +166,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="''"
                 :placeholder="'City / District (Optional)'"
                 :bottomLeftDescription="''"
@@ -177,10 +177,10 @@
             </div>
           </div>
 
-          <div v-if="selectedIndex == 'Organization'" class="grid-container">
+          <div v-if="selectedIndex == 'Organization'" class="row">
             <!-- Manually define each organizationInfo_3 field -->
-            <div class="grid-item">
-              <br />
+            <div class="col-12 col-sm-6 q-px-sm">
+              <div class="field-gap"></div>
               <SelectDropdown
                 :label="'Province'"
                 :options="[
@@ -190,9 +190,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Postal or ZIP Code'"
                 :placeholder="'Postal or ZIP Code'"
                 :bottomLeftDescription="''"
@@ -200,9 +200,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Contact'"
                 :placeholder="'Contact'"
                 :bottomLeftDescription="''"
@@ -210,9 +210,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Certificate for business registration'"
                 :placeholder="'Certificate for business registration'"
                 :bottomLeftDescription="''"
@@ -220,9 +220,9 @@
               />
             </div>
 
-            <div class="grid-item">
+            <div class="col-12 col-sm-6 q-px-sm">
               <TextField
-                class="textfield"
+                class="field-gap"
                 :label="'Preferred Language'"
                 :placeholder="'Preferred Language'"
                 :bottomLeftDescription="'기본적으로 영어, 한국어, 프랑스어, 독일어, 스페인어가 제공됩니다. 이외 원하는 언어가 있는 경우 적어주세요.'"
@@ -236,16 +236,16 @@
       <!-- Additional Information Section -->
       <section class="section-container">
         <div class="section-title">정보입력</div>
-        <div class="flex">
+        <div class="card-list-container row row-margin-8">
           <Card
             :card-list="additionalInfoCard"
             @card-clicked="toggleSelectInfo"
-            class="card-spacing"
+            class="card-spacing col-6 col-sm-3 q-pa-sm"
           />
         </div>
 
         <TextField
-          class="textfield"
+          class="field-gap"
           :label="'분납방법'"
           :placeholder="'분납방법'"
           :bottomLeftDescription="'적어주신 내용 확인 후 계약을 위해 연락드리도록 하겠습니다.'"
@@ -256,10 +256,10 @@
       <!-- Refund Account Information Section -->
       <section class="section-container">
         <div class="section-title">환급계좌정보</div>
-        <div class="grid-container">
-          <div class="grid-item">
+        <div class="row">
+          <div class="col-12 col-sm-6 q-px-sm">
             <TextField
-              class="textfield"
+              class="field-gap"
               :label="'Account Name'"
               :placeholder="'Account Name'"
               :bottomLeftDescription="''"
@@ -267,9 +267,9 @@
             />
           </div>
 
-          <div class="grid-item">
+          <div class="col-12 col-sm-6 q-px-sm">
             <TextField
-              class="textfield"
+              class="field-gap"
               :label="'Bank'"
               :placeholder="'Bank'"
               :bottomLeftDescription="''"
@@ -277,9 +277,9 @@
             />
           </div>
 
-          <div class="grid-item">
+          <div class="col-12 col-sm-6 q-px-sm">
             <TextField
-              class="textfield"
+              class="field-gap"
               :label="'Account Number'"
               :placeholder="'Account Number'"
               :bottomLeftDescription="''"
@@ -287,9 +287,9 @@
             />
           </div>
 
-          <div class="grid-item">
+          <div class="col-12 col-sm-6 q-px-sm">
             <TextField
-              class="textfield"
+              class="field-gap"
               :label="'Bank Swift'"
               :placeholder="'Bank Swift'"
               :bottomLeftDescription="''"
@@ -299,7 +299,7 @@
         </div>
 
         <TextField
-          class="textfield"
+          class="field-gap"
           :label="'시스템 사용 개시일'"
           :placeholder="'2024/04/21'"
           :bottomLeftDescription="''"
@@ -307,7 +307,7 @@
         />
 
         <TextField
-          class="textfield"
+          class="field-gap"
           :label="'원하는 Sub-Domain'"
           :placeholder="'원하는 Sub-Domain'"
           :bottomLeftDescription="''"
@@ -319,22 +319,25 @@
       <section class="section-container">
         <div class="section-title">환급계좌정보</div>
         <TextArea
-          class="textfield"
+          class="field-gap"
           :label="'Message'"
           :bottomLeftDescription="'자유롭게 하고싶은 말을 적어주세요.'"
           :bottomRightDescription="''"
         />
       </section>
     </div>
-    <SelectedService
-      :products="products"
-      :options="options"
-      :options-total="'{}'"
-      :product-total="'{}'"
-      :label="'Next : Checkout'"
-      :total="'{}'"
-      @emitButtonClick="moveToStep5"
-    />
+    <div class="col-12 col-md-4 q-pa-sm">
+      <SelectedService
+        cardWidth="100%"
+        :products="products"
+        :options="options"
+        :options-total="'{}'"
+        :product-total="'{}'"
+        :label="'Next : Checkout'"
+        :total="'{}'"
+        @emitButtonClick="moveToStep5"
+      />
+    </div>
   </div>
 </template>
 

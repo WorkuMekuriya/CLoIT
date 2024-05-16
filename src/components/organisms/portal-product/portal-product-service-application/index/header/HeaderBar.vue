@@ -1,6 +1,6 @@
 <template>
   <q-header class="service-application-header flex items-center">
-    <p class="Logo label-lg-bold">LOGO</p>
+    <CLoITLogo />
     <q-space />
     <template v-if="showMiddleNavigation">
       <ConditionalStyleRoundedButton
@@ -24,6 +24,7 @@
 <script setup>
 import StandardButton from '../../../../../molecules/buttons/standard-buttons/StandardButtons.vue'
 import ConditionalStyleRoundedButton from '../../../../../molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
+import CLoITLogo from 'components/atoms/Icons/alert-icons/CLoITLogo.vue'
 
 const props = defineProps({
   middleNavigationList: {

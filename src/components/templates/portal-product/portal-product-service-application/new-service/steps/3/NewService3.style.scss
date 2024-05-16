@@ -3,6 +3,19 @@
 .select-options {
   .select-text {
     @extend .heading-6;
+    display: flex;
+    @media screen and (max-width: $breakpoint-sm) {
+      justify-content: center;
+      span{
+        margin: 0 auto;
+      }
+    }
+    :deep(.q-icon){
+      margin-right: -24px;
+      @media screen and (min-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
   }
 
   .selected-text {
@@ -12,7 +25,6 @@
 
   .card-container {
     margin-top: 16px;
-    gap: 16px;
   }
   .select-service-row {
     margin-top: 28px;

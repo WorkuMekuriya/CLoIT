@@ -9,6 +9,7 @@
       }
     }
     :deep(.q-icon){
+      margin-right: -24px;
       @media screen and (min-width: $breakpoint-sm) {
         display: none;
       }

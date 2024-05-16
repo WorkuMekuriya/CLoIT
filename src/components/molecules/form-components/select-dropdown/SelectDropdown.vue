@@ -1,7 +1,7 @@
 <template>
-  <!-- <div v-if="label" class="select-label">
+  <div v-if="label" class="select-label">
     {{ label }} <span class="text-red-500" v-if="required"> *</span>
-  </div> -->
+  </div>
   <q-select
     ref="select"
     v-model="model"
