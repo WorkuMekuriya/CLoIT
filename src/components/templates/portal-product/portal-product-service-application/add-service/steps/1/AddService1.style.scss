@@ -27,7 +27,7 @@
       max-width: 100%;
     }
   }
-  .centered{
+  .centered {
     @media screen and (max-width: $breakpoint-sm) {
       justify-content: center;
       display: flex;
@@ -54,12 +54,12 @@
   gap: 30px;
   align-items: center;
   @media screen and (max-width: $breakpoint-sm) {
-    span{
+    span {
       margin: 0 auto;
       line-height: 38px;
     }
   }
-  :deep(.q-icon){
+  :deep(.q-icon) {
     margin-right: -24px;
     @media screen and (min-width: $breakpoint-sm) {
       display: none;

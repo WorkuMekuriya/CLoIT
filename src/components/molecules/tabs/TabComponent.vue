@@ -8,7 +8,7 @@
     dense
     align="justify"
     :class="tabClass"
-    :style="{ height: containerHeight,  maxWidth: maxWidth }"
+    :style="{ height: containerHeight, maxWidth: maxWidth }"
   >
     <q-tab
       :ripple="false"
@@ -22,10 +22,7 @@
           ? tabItem.icon
           : undefined
       "
-      :class="[
-        hasIcon(tabItem.icon),
-        changeActiveTabColor(tabItem.tabColor),
-      ]"
+      :class="[hasIcon(tabItem.icon), changeActiveTabColor(tabItem.tabColor)]"
       :style="{ height: innerTabHeight }"
       @click="emitTabChange(tabItem.label)"
     >

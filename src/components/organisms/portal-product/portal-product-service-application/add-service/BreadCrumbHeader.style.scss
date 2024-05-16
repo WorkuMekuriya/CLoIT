@@ -9,18 +9,19 @@
     height: 52px;
     border-radius: 50%;
   }
-  :deep(.q-breadcrumbs){
-      .passed-step, .non-active-step{
+  :deep(.q-breadcrumbs) {
+    .passed-step,
+    .non-active-step {
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+    .active-step {
+      i {
         @media screen and (max-width: 1024px) {
           display: none;
         }
       }
-      .active-step {
-        i{
-          @media screen and (max-width: 1024px) {
-            display: none;
-          }
-        }
-      }
+    }
   }
 }

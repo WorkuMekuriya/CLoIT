@@ -3,7 +3,9 @@
     <div class="row q-gutter-y-xl row-margin-8">
       <div class="col-12 col-md-8 q-pa-sm">
         <div class="select-service">
-          <p class="select-text"><q-icon name="chevron_left" size="sm" /> <span>Select Service</span></p>
+          <p class="select-text">
+            <q-icon name="chevron_left" size="sm" /> <span>Select Service</span>
+          </p>
           <div class="tab-component">
             <TabComponent
               :tabs="tabSelection"
