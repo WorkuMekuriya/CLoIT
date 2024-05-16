@@ -306,13 +306,22 @@
           :bottomRightDescription="''"
         />
 
-        <TextField
-          class="field-gap"
-          :label="'원하는 Sub-Domain'"
-          :placeholder="'원하는 Sub-Domain'"
-          :bottomLeftDescription="''"
-          :bottomRightDescription="''"
-        />
+        <div class="subdomain-container">
+          <TextField
+            class="field-gap subdomain-label"
+            :label="'원하는 Sub-Domain'"
+            :prependText="'cloit.com/'"
+            :placeholder="'원하는 Sub-Domain'"
+            :bottomLeftDescription="''"
+            :bottomRightDescription="''"
+          />
+          <RoundedButton
+            :type="'Secondary'"
+            :label="'중복체크'"
+            :buttonDisabled="false"
+            :button-width="'147px'"
+         />
+        </div>
       </section>
 
       <!-- Message Section -->
@@ -349,6 +358,7 @@ import TextField from '../../../../../../molecules/form-components/fields/textfi
 import TextArea from '../../../../../../molecules/form-components/fields/textarea/TextArea.vue'
 import SelectedService from '../../../../../../organisms/selected-service/SelectedService.vue'
 import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
+import RoundedButton from 'components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 
 const products = ref([
   { label: 'Portal & Help Desk', price: '${}/mo' },
