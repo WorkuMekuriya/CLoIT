@@ -5,8 +5,8 @@ $header-height: 92px;
 .service-application-header {
   @extend .bg-white, .text-bluegray-900;
   height: $header-height;
-  position: static;
-  margin-bottom: 16px;
+  position: sticky;
+  top: 0;
 
   .nav-icons {
     @extend .text-bluegray-600, .bg-bluegray-50;
@@ -26,5 +26,19 @@ $header-height: 92px;
 
   .notification-icon {
     margin-right: 8px;
+  }
+
+  .dropdown-icon,
+  .standard-button,
+  .logout-icon {
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  .menu-icon {
+    @media screen and (min-width: $breakpoint-sm) {
+      display: none;
+    }
   }
 }

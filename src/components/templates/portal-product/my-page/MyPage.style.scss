@@ -1,7 +1,23 @@
 @import '../../../../css/app.scss';
 .page-container {
+  display: grid;
+  grid-template-columns: 136px 1fr;
+  @media screen and (max-width: $breakpoint-sm) {
+    grid-template-columns: auto;
+    gap: 24px;
+  }
+  .aside {
+    @media screen and (max-width: $breakpoint-sm) {
+      position: sticky;
+      top: 92px;
+      z-index: 1;
+    }
+  }
   .side-bar {
     height: 60vh;
+    @media screen and (max-width: $breakpoint-sm) {
+      height: auto;
+    }
     .set-font-size {
       @extend .text-arcticblue-600;
       font-size: 24px;

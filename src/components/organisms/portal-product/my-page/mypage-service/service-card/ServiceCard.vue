@@ -1,8 +1,8 @@
 <template>
   <div class="service-card">
-    <div class="flex justify-between">
+    <div class="flex justify-between no-wrap">
       <div>
-        <div class="flex">
+        <div class="flex items-center service-head-content">
           <p class="service-text">{{ serviceText }}{{ serviceNumber }}</p>
           <Tag class="first-tag" size="md" :type="tagType" :label="tagLabel" />
         </div>

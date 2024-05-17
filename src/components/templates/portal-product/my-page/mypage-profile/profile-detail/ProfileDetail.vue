@@ -1,6 +1,6 @@
 <template>
   <div class="profile-container">
-    <div>My Profile</div>
+    <div class="pre-title">My Profile</div>
     <div class="title">My Profile</div>
     <div class="profile-content">
       <div class="image-holder"></div>

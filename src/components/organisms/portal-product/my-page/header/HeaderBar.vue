@@ -24,6 +24,7 @@
         class="standard-button"
       />
       <q-icon class="logout-icon nav-icons" name="logout"></q-icon>
+      <q-icon class="menu-icon nav-icons" name="more_vert"></q-icon>
     </div>
   </q-header>
 </template>
