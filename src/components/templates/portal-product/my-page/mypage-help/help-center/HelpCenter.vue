@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="help-center">Help Center</div>
+    <div class="help-center-title">Help Center</div>
     <div class="header-container">
       <div class="header-title">Help Center</div>
       <div>
