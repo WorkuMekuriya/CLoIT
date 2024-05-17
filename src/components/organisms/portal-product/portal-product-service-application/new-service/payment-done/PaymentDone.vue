@@ -22,15 +22,22 @@
     </div>
     <div class="justify-between date-subdomain-container row row-margin-4">
       <div v-if="!isSubDomainOnly" class="col-12 col-sm-6 q-pa-xs">
-        <div class="data-container ">
+        <div class="data-container">
           <p class="service-application">시스템 사용 개시일</p>
           <div class="flex items-center value-container">
             <p class="service-application-value">{{ serviceApplication }}</p>
-            <Tag class="service-application-label" size="md" :label="tagLabel" />
+            <Tag
+              class="service-application-label"
+              size="md"
+              :label="tagLabel"
+            />
           </div>
         </div>
       </div>
-      <div  class="q-pa-xs" :class="isSubDomainOnly ? 'col-12' : 'col-12 col-sm-6'">
+      <div
+        class="q-pa-xs"
+        :class="isSubDomainOnly ? 'col-12' : 'col-12 col-sm-6'"
+      >
         <div
           class="data-container"
           :class="isSubDomainOnly ? 'col-12' : 'col-12 col-sm-6'"

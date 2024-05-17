@@ -9,7 +9,7 @@
     height: 52px;
     border-radius: 50%;
   }
-  :deep(.non-active-step), 
+  :deep(.non-active-step),
   :deep(.passed-step) {
     @extend .text-bluegray-500;
     @media screen and (max-width: $breakpoint-sm) {
@@ -17,7 +17,7 @@
     }
   }
   :deep(.active-step) {
-    i{
+    i {
       @media screen and (max-width: $breakpoint-sm) {
         display: none;
       }

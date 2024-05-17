@@ -5,7 +5,9 @@
         <div class="row">
           <div class="col-12">
             <div class="select-service">
-              <p class="select-text"><q-icon name="chevron_left" size="sm" /><span>Duration</span></p>
+              <p class="select-text">
+                <q-icon name="chevron_left" size="sm" /><span>Duration</span>
+              </p>
               <div class="select-service-row">
                 <div class="row card-container row-margin-8">
                   <Card :cardList="duration" class="col-12 col-sm-6 q-pa-sm" />

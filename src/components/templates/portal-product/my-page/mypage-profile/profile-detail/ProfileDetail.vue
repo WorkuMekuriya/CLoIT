@@ -1,7 +1,7 @@
 <template>
   <div class="profile-container">
-    <div class="pre-title">My Profile</div>
-    <div class="title">My Profile</div>
+    <div>My Prof<span style="font-family: 'Plus Jakarta Sans'">i</span>le</div>
+    <div class="title">My Prof<span style="font-family: 'Plus Jakarta Sans'">i</span>le</div>
     <div class="profile-content">
       <div class="image-holder"></div>
       <div class="profile-avator">
@@ -43,12 +43,10 @@
 </template>
 
 <script setup>
-import StandardButton from 'src/components/molecules/buttons/standard-buttons/StandardButtons.vue'
 
 const profileRoutes = [
   { label: 'Edit my profile', route: '/edit-profile' },
   { label: 'Edit organization', route: '/edit-organization' },
-  { label: 'Reset password', route: '/reset-password' },
   { label: '1:1 문의내역', route: '/inquiry-list-history' },
 ]
 
@@ -58,9 +56,6 @@ const moveToStep = (index) => {
   emits('nextStep', index)
 }
 
-const navigateToPage = (routeName) => {
-  router.push({ name: routeName })
-}
 </script>
 
 <style scoped lang="scss">

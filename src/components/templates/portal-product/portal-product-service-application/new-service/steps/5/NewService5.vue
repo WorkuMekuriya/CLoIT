@@ -80,7 +80,10 @@
     <section v-if="showPaymentInfo" class="section-container q-mt-lg">
       <div class="selected-service-header-text">정보입력</div>
       <div class="row q-mb-lg q-mt-md row-margin-8">
-        <Card :card-list="additionalInfoCard" class="card-spacing col-6 col-sm-4 col-md-3 q-pa-sm" />
+        <Card
+          :card-list="additionalInfoCard"
+          class="card-spacing col-6 col-sm-4 col-md-3 q-pa-sm"
+        />
       </div>
       <TextField
         class="textfield"

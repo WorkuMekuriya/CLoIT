@@ -1,7 +1,7 @@
 <template>
   <div class="flex w-full">
-    <div class=" w-full">
-      <div class="selected-service-header-text ">{{ headerText }}</div>
+    <div class="w-full">
+      <div class="selected-service-header-text">{{ headerText }}</div>
       <div class="service-section">
         <div class="service-section-container" :style="{ width: cardWidth }">
           <div class="service-header">

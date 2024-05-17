@@ -3,7 +3,11 @@
     <p class="inditcator-text">Service</p>
     <div class="flex justify-between items-center service-text">
       <p class="title-text">Service</p>
-      <q-icon class="add-button" name="add"></q-icon>
+      <CircularButton
+        type="Secondary"
+        icon="add"
+        @click="$router.push({ path: '/portal-products/new-service' })"
+      />
     </div>
     <ServiceCard
       v-for="(service, index) in services"
@@ -21,6 +25,7 @@
 </template>
 <script setup>
 import ServiceCard from '../../../../organisms/portal-product/my-page/mypage-service/service-card/ServiceCard.vue'
+import CircularButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
 const services = [
   {
     name: 'services',

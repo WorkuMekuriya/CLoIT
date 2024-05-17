@@ -35,7 +35,7 @@ $textfield-height: 52px;
 .textfield-description {
   @extend .label-sm, .text-bluegray-500;
   margin-top: 11px;
-  line-height: 22px
+  line-height: 22px;
 }
 .textfield-description.set-error-properties {
   @extend .label-sm, .text-red-500;

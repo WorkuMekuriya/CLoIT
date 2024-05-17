@@ -1,15 +1,12 @@
 <template>
   <div>
     <div class="side-bar flex-col items-end">
-      <div
-        v-for="(page, index) in pages"
-        :key="index"
-        @click="navigateToPage(page.to)"
-      >
+      <div v-for="(page, index) in pages" :key="index">
         <component
           class="set-font-size cursor-pointer"
           :active="page.active.value"
           :is="page.icon"
+          @click="navigateToPage(page.to)"
         ></component>
       </div>
     </div>

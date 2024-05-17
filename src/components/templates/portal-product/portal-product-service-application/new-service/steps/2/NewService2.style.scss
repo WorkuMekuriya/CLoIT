@@ -4,11 +4,11 @@
     @extend .heading-6;
     display: flex;
     @media screen and (max-width: $breakpoint-xs) {
-      span{
+      span {
         margin: 0 auto;
       }
     }
-    :deep(.q-icon){
+    :deep(.q-icon) {
       margin-right: -24px;
       @media screen and (min-width: $breakpoint-sm) {
         display: none;
@@ -35,7 +35,7 @@
       max-width: 100%;
     }
   }
-  .centered{
+  .centered {
     @media screen and (max-width: $breakpoint-sm) {
       justify-content: center;
       display: flex;

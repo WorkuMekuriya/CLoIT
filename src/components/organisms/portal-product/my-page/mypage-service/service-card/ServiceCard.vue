@@ -1,6 +1,6 @@
 <template>
-  <div class="service-card">
-    <div class="flex justify-between no-wrap">
+  <q-card flat class="service-card cursor-pointer" @click="navigateToPage(to)">
+    <div class="flex justify-between">
       <div>
         <div class="flex items-center service-head-content">
           <p class="service-text">{{ serviceText }}{{ serviceNumber }}</p>
@@ -12,11 +12,7 @@
           <p class="date">{{ endDate }}</p>
         </div>
       </div>
-      <q-icon
-        class="link-icon cursor-pointer"
-        name="north_east"
-        @click="navigateToPage(to)"
-      ></q-icon>
+      <CircularButton type="TertiaryLined" icon="north_east"></CircularButton>
     </div>
     <div class="services-container flex">
       <Tag
@@ -27,12 +23,13 @@
         :key="index"
       />
     </div>
-  </div>
+  </q-card>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router'
 import Tag from 'components/molecules/form-components/tag-component/TagComponent.vue'
+import CircularButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyledCircularButton.vue'
 const router = useRouter()
 
 defineProps({

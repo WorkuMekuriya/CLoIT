@@ -3,7 +3,6 @@
 // Define variables for fixed values
 $margin-bottom-inquiry-title: 27px;
 $margin-bottom-description: 23px;
-$margin-bottom-attachment-label: 36px;
 $border-bottom-width-inquiry-item: 0.1px;
 $border-color-inquiry-item: lightgray;
 $font-weight-inquiry-title: 800;
@@ -15,9 +14,8 @@ $attachment-close-background-color: #d0d5dd;
 $attachment-close-icon-color: white;
 
 // Define dimension variables
-$attachment-width: 328px;
-$attachment-height: 34px;
-$attachment-padding: 4px 16px;
+$attachment-width: 228px;
+$attachment-padding: 10px 16px;
 $attachment-close-width: 26px;
 $attachment-close-height: 26px;
 $attachment-close-padding: 6px;
@@ -39,6 +37,7 @@ $attachment-close-margin-right: 2px;
 
 .my-profile-inquiry-container {
   display: flex;
+  margin-top: 15px;
   justify-content: space-between;
   align-items: center;
 }
@@ -48,12 +47,16 @@ $attachment-close-margin-right: 2px;
   font-size: $font-size-inquiry-title;
 }
 
-.inquiry-item {
+.inquiry-item-container {
   margin-top: 35px;
-  width: 60%;
+  margin-bottom: 35px;
   border-bottom-width: $border-bottom-width-inquiry-item;
   border-color: $border-color-inquiry-item;
   border-bottom-style: solid;
+}
+
+.inquiry-item {
+  width: 60%;
 }
 
 .inquiry-details {
@@ -66,9 +69,6 @@ $attachment-close-margin-right: 2px;
   margin-bottom: $margin-bottom-description;
 }
 
-.attachment-label {
-  margin-bottom: $margin-bottom-attachment-label;
-}
 
 .attachment-label-font {
   @extend .label-sm-bold;
@@ -82,14 +82,12 @@ $attachment-close-margin-right: 2px;
 
 /* Define styles for attachment-list container */
 .attachment-item-list {
-  display: flex;
+  @extend .label-sm-bold, .text-bluegray-900;
   width: $attachment-width;
   border-radius: $attachment-border-radius;
-  height: $attachment-height;
   background-color: $attachment-background-color;
   padding: $attachment-padding;
   margin-top: $attachment-margin-top;
-  justify-content: space-between;
 }
 
 /* Define styles for the inner div element */
@@ -121,4 +119,15 @@ $attachment-close-margin-right: 2px;
 .breadcrumb-item {
   @extend .text-bluegray-700;
   text-decoration: none !important;
+}
+
+.empty-card-container {
+  @extend .bg-bluegray-50, .subH-lg-med, .text-bluegray-400;
+  flex-direction: column;
+  display: flex;
+  height: 224px;
+  border-radius: 36px;
+  margin-top: 24px;
+  align-items: center;
+  justify-content: center;
 }

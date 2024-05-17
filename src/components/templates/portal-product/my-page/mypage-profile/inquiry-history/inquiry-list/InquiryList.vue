@@ -1,6 +1,6 @@
 <template>
   <div class="breadcrumb">
-    <div class="help-center">My Profile</div>
+    <div class="help-center">My Prof<span style="font-family: 'Plus Jakarta Sans'">i</span>le</div>
     <div class="breadcrumb-separator">〉</div>
     <span class="breadcrumb-item">Inquiry</span>
   </div>

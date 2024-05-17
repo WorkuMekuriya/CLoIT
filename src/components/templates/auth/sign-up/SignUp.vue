@@ -113,7 +113,9 @@
                 </div>
               </div>
 
-              <div class="footer-buttons no-wrap flex justify-between items-center">
+              <div
+                class="footer-buttons no-wrap flex justify-between items-center"
+              >
                 <CircularButton
                   :type="'TertiaryLined'"
                   :isLoading="false"
