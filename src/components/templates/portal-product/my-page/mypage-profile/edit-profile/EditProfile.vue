@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="breadcrumb-container">
-      <div class="breadcrumb-item">My Prof<span style="font-family: 'Plus Jakarta Sans'">i</span>le</div>
+      <div class="breadcrumb-item">My Profile</div>
       <div class="breadcrumb-separator">〉</div>
-      <span class="breadcrumb-item breadcrumb-link">Edit Prof<span style="font-family: 'Plus Jakarta Sans'">i</span>le</span>
+      <span class="breadcrumb-item breadcrumb-link">Edit Profile</span>
     </div>
-    <div class="title">Edit Prof<span style="font-family: 'Plus Jakarta Sans'">i</span>le</div>
+    <div class="title">Edit Profile</div>
     <div class="grid-container">
       <div class="grid-item">
         <TextField

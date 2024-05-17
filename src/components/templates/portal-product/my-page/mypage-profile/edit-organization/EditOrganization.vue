@@ -1,7 +1,7 @@
 <template>
   <div style="max-width: 80%">
     <div style="display: flex">
-      <div style="color: gray; text-decoration: underline">My Prof<span style="font-family: 'Plus Jakarta Sans'">i</span>le</div>
+      <div style="color: gray; text-decoration: underline">My Profile</div>
       <div style="padding-left: 5px">〉</div>
       <span style="color: black; text-decoration: none !important"
         >Edit Organization</span

@@ -1,7 +1,7 @@
 <template>
   <div class="profile-container">
-    <div class="profile-title">My Prof<span style="font-family: 'Plus Jakarta Sans'">i</span>le</div>
-    <div class="title">My Prof<span style="font-family: 'Plus Jakarta Sans'">i</span>le</div>
+    <div class="profile-title">My Profile</div>
+    <div class="title">My Profile</div>
     <div class="profile-content">
       <div class="image-holder"></div>
       <div class="profile-avator">
