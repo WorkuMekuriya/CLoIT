@@ -65,9 +65,9 @@ $right-icon-margin-right: -30px;
   right: 16px;
 }
 :deep(span.block) {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  // position: absolute;
+  // left: 50%;
+  // transform: translateX(-50%);
 }
 // Define shared property pattern mixin
 @mixin tag-property($property-name) {

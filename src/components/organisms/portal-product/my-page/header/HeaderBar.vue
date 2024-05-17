@@ -20,7 +20,8 @@
         :type="ctaButton.type"
         :label="ctaButton.label"
         :outlined="ctaButton.outlined"
-        buttonWidth="200px"
+        arrowDirection="Right"
+        buttonWidth="198px"
         class="standard-button"
       />
       <q-icon class="logout-icon nav-icons" name="logout"></q-icon>
