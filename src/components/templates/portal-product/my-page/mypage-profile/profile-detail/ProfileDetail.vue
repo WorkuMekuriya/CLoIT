@@ -43,7 +43,6 @@
 </template>
 
 <script setup>
-
 const profileRoutes = [
   { label: 'Edit my profile', route: '/edit-profile' },
   { label: 'Edit organization', route: '/edit-organization' },
@@ -55,7 +54,6 @@ const emits = defineEmits(['nextStep'])
 const moveToStep = (index) => {
   emits('nextStep', index)
 }
-
 </script>
 
 <style scoped lang="scss">

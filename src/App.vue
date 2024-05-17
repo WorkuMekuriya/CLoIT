@@ -14,10 +14,6 @@
 
 <script>
 import { defineComponent } from 'vue'
-// Declared in App.vue, Used Globally
-import { showLoading } from 'src/util/loadingService.js'
-// import { showLNotification } from 'src/util/notificationService.js'
-import AlertNotification from 'src/components/molecules/alert/AlertDialog.vue'
 export default defineComponent({
   name: 'App',
 })
@@ -38,18 +34,4 @@ const alert = ref({
 watch(alert, () => {
   showAlert.value = true
 })
-
-const handleShowAlert = (data) => {
-  alert.value = { ...data }
-}
-
-// Example Implementation
-// handleShowAlert({
-//   type: 'Success',
-//   message: 'This is a success alert!',
-//   setWidth: '361px',
-//   setHeight: '56px',
-//   position: 'bottom',
-//   timeout: 5000, // 5000 milliseconds (5 seconds)
-// });
 </script>

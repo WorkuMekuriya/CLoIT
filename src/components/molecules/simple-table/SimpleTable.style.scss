@@ -7,10 +7,10 @@
   box-shadow: none;
   overflow-x: auto;
 
-  :deep(.q-table){
+  :deep(.q-table) {
     table-layout: fixed;
   }
-  
+
   th {
     @extend .label-sm-bold;
   }

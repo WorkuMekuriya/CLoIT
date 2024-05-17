@@ -56,18 +56,18 @@
 </template>
 
 <script setup>
-import TextField from "src/components/molecules/form-components/fields/textfield/TextField.vue";
-import TextArea from "src/components/molecules/form-components/fields/textarea/TextArea.vue";
-import RoundedButton from "src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue";
-import FilePicker from "src/components/molecules/form-components/file-picker/FilePicker.vue";
-import SelectDropdown from "components/molecules/form-components/select-dropdown/SelectDropdown.vue";
+import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
+import TextArea from 'src/components/molecules/form-components/fields/textarea/TextArea.vue'
+import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
+import FilePicker from 'src/components/molecules/form-components/file-picker/FilePicker.vue'
+import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
 
-const emits = defineEmits(["nextInquiry"]);
+const emits = defineEmits(['nextInquiry'])
 const backInquiry = () => {
-  emits("nextStep", 0);
-};
+  emits('nextStep', 0)
+}
 </script>
 
 <style lang="scss" scoped>
-@import "NewInquiry.style.scss";
+@import 'NewInquiry.style.scss';
 </style>

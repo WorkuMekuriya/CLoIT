@@ -320,7 +320,7 @@
             :label="'중복체크'"
             :buttonDisabled="false"
             :button-width="'147px'"
-         />
+          />
         </div>
       </section>
 

@@ -28,7 +28,11 @@
 
       <div class="attachment-label attachment-label-font">Attached Files</div>
       <div class="attachment-list">
-        <div v-for="(attachment, index) in inquiryDetail.attachments" :key="index" class="attachment-item-list">
+        <div
+          v-for="(attachment, index) in inquiryDetail.attachments"
+          :key="index"
+          class="attachment-item-list"
+        >
           {{ attachment }}
         </div>
       </div>
@@ -42,13 +46,22 @@
     <div>답변이 달리기까지 평균 평일 기준 2~3일 소요됩니다.</div>
   </div>
 
-  <div v-else v-for="(inquiry, index) in inquiryAnswers" :key="index" class="inquiry-item">
+  <div
+    v-else
+    v-for="(inquiry, index) in inquiryAnswers"
+    :key="index"
+    class="inquiry-item"
+  >
     <div class="inquiry-title">{{ inquiry.title }}</div>
     <div class="inquiry-description">{{ inquiry.description }}</div>
 
     <div class="attachment-label attachment-label-font">Attached Files</div>
     <div class="attachment-list">
-      <div v-for="(attachment, index) in inquiry.attachments" :key="index" class="attachment-item-list">
+      <div
+        v-for="(attachment, index) in inquiry.attachments"
+        :key="index"
+        class="attachment-item-list"
+      >
         {{ attachment }}
       </div>
     </div>
@@ -59,7 +72,7 @@
 import { ref, defineEmits } from 'vue'
 
 const inquiryDetail = ref({
-  title: 'I can\'t add more product',
+  title: "I can't add more product",
   serviceName: 'Service Name',
   date: 'YYYY-MM-DD',
   description: `Lorem ipsum dolor sit amet consectetur. Leo interdum quam sit est enim. Morbi
@@ -82,7 +95,7 @@ const inquiryDetail = ref({
     'attachment_name_2.png',
     'attachment_name_3.mp4',
   ],
-  answerLabel: '고객센터로부터의 답변'
+  answerLabel: '고객센터로부터의 답변',
 })
 
 const inquiryAnswers = ref([
@@ -107,7 +120,7 @@ const inquiryAnswers = ref([
       'attachment_name_2.png',
       'attachment_name_3.mp4',
     ],
-  }
+  },
 ])
 
 const emits = defineEmits(['nextInquiry'])

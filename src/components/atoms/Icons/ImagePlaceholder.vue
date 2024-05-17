@@ -15,7 +15,7 @@
 <script setup></script>
 
 <style scoped>
-svg{
+svg {
   height: auto;
   width: 100%;
 }

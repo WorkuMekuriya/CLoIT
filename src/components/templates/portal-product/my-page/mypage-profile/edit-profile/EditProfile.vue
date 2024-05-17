@@ -95,20 +95,20 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import RoundedButton from "src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue";
-import TextField from "src/components/molecules/form-components/fields/textfield/TextField.vue";
-import SelectDropdown from "components/molecules/form-components/select-dropdown/SelectDropdown.vue";
+import { ref } from 'vue'
+import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
+import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
+import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
 
 // Define the 'nextStep' event
-const emits = defineEmits(["nextStep"]);
+const emits = defineEmits(['nextStep'])
 
 // Method to handle the save button click
 const handleSaveClick = () => {
-  emits("nextStep", 0);
-};
+  emits('nextStep', 0)
+}
 </script>
 
 <style lang="scss" scoped>
-@import "EditProfile.styles.scss";
+@import 'EditProfile.styles.scss';
 </style>

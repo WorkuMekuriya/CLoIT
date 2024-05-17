@@ -4,7 +4,11 @@
     <div class="attachment-label">{{ label }}</div>
     <div class="content-container">
       <div class="sm-file-name">
-        {{ fileModel && fileModel.length > 0 ? fileModel.map(file => file.name).join(', ') : 'Select File' }}
+        {{
+          fileModel && fileModel.length > 0
+            ? fileModel.map((file) => file.name).join(', ')
+            : 'Select File'
+        }}
       </div>
       <div class="sm-icon-container">
         <svg
@@ -54,19 +58,24 @@
         <q-icon name="delete" class="icon-color" size="sm" />
       </div>
     </div>
-    <q-file
-      ref="fileRef"
-      v-model="fileModel"
-      style="display: none"
-    />
+    <q-file ref="fileRef" v-model="fileModel" style="display: none" />
   </div>
 
   <!-- Drag and Drop -->
-  <div v-if="type == 'lg'" class="container-lg" @drop.prevent="handleDrop" @dragover.prevent>
+  <div
+    v-if="type == 'lg'"
+    class="container-lg"
+    @drop.prevent="handleDrop"
+    @dragover.prevent
+  >
     <div class="attachment-label">{{ label }}</div>
     <div class="content-container-lg" @click="openFilePicker">
       <div class="file-name">
-        {{ fileModel && fileModel.length > 0 ? fileModel.map(file => file.name).join(', ') : 'Drag and drop files' }}
+        {{
+          fileModel && fileModel.length > 0
+            ? fileModel.map((file) => file.name).join(', ')
+            : 'Drag and drop files'
+        }}
       </div>
       <q-uploader
         ref="fileRef"
@@ -91,13 +100,13 @@ const emit = defineEmits(['file'])
 
 // Handle drop event
 const handleDrop = (event) => {
-  event.preventDefault();
-  const files = event.dataTransfer.files;
-  fileModel.value = Array.from(files);
-};
+  event.preventDefault()
+  const files = event.dataTransfer.files
+  fileModel.value = Array.from(files)
+}
 const openFilePicker = () => {
-  fileRef.value.$el.click();
-};
+  fileRef.value.$el.click()
+}
 
 const props = defineProps({
   maxFileSize: {
