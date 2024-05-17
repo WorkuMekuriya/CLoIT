@@ -1,13 +1,13 @@
 <template>
   <div class="mypage-payment">
     <p class="inditcator-text">Payment</p>
-    <div class="flex justify-between items-center service-text">
+    <div class="flex no-wrap justify-between items-center service-text">
       <p class="title-text">Payment</p>
       <q-icon class="add-button" name="add"></q-icon>
     </div>
-    <div class="row q-col-gutter-md">
+    <div class="row q-gutter-y-sm row-margin-8">
       <div
-        class="col-6"
+        class="col-12 col-md-6 q-pa-sm"
         v-for="(paymentCard, index) in paymentCards"
         :key="index"
       >

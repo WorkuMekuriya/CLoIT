@@ -3,7 +3,7 @@
 .application-completed {
   @extend .bg-bluegray-50;
   width: 100%;
-  height: 344px;
+  min-height: 344px;
   border-radius: 36px;
   padding: 36px;
   .title {

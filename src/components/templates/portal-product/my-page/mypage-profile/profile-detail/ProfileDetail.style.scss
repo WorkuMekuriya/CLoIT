@@ -17,7 +17,11 @@ $profile-content-margin-top: 60px;
 
 // Adjust padding and margin values for the profile container using variables.
 .profile-container {
-  padding: 0 $profile-padding;
+
+}
+
+.profile-title {
+  font-size: 12px;
 }
 
 .profile-avator {
@@ -36,6 +40,8 @@ $profile-content-margin-top: 60px;
 // Use variables for consistent margin values in profile options.
 .profile-options {
   margin-top: $profile-margin-top;
+  max-width: 380px;
+  width: 100%;
 }
 
 // Use variables for header and title styles.
@@ -45,11 +51,20 @@ $profile-content-margin-top: 60px;
   font-size: $title-font-size;
 }
 
+.pre-title{
+  font-size: 12px;
+}
+
+.title {
+  margin-top: 8px;
+}
+
 // Consistent flex layout styles for profile content.
 .profile-content {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin-top: $profile-content-margin-top;
 }
@@ -77,6 +92,7 @@ $profile-content-margin-top: 60px;
 // Consistent margin and padding for button container using variables.
 .button-container {
   padding-bottom: $button-padding;
+  width: 100%;
 }
 
 // Use a comment to describe the purpose of justify-center and flex-center classes.
@@ -87,7 +103,7 @@ $profile-content-margin-top: 60px;
 
 .profile-action-button {
   @extend .label-md-bold;
-  width: 380px;
+  width: 100%;
   height: 68px;
   cursor: pointer;
   background-color: #f2f4f7;

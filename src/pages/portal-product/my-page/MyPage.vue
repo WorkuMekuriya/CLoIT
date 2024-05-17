@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="container">
+  <q-layout class="app-container">
     <MyPageTemplate />
   </q-layout>
 </template>

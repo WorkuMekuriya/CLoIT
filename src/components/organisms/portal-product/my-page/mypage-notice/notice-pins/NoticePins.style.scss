@@ -1,7 +1,11 @@
 @import '../../../../../../css/app.scss';
 
 .notice-pins {
-  padding: 12px 0px;
+  margin-bottom: 12px;
+  @media screen and (max-width: $breakpoint-xs) {
+    flex-direction: column;
+    gap: 12px;
+  }
   .pin {
     @extend .label-lg-bold;
     margin-right: 12px;
@@ -12,5 +16,8 @@
   }
   .date {
     @extend .label-sm;
+    @media screen and (max-width: $breakpoint-xs) {
+      padding-left: 38px;
+    }
   }
 }

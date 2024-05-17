@@ -1,12 +1,12 @@
 <template>
   <div class="notice-list cursor-pointer">
-    <div class="row">
-      <div class="col-9">
+    <div class="row q-gutter-y-xl row-margin-8">
+      <div class="col-12 col-md-8 q-pa-sm">
         <div class="title">{{ title }}</div>
         <div class="date">{{ date }}</div>
         <p class="notice" v-html="formattedNotice"></p>
       </div>
-      <div class="col-3">
+      <div class="col-12 col-md-4 q-pa-sm">
         <img v-if="imageSrc" :src="imageSrc" alt="" />
         <ImagePlaceholder v-else />
       </div>

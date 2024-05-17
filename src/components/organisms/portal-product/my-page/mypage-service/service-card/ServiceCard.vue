@@ -2,7 +2,7 @@
   <q-card flat class="service-card cursor-pointer" @click="navigateToPage(to)">
     <div class="flex justify-between">
       <div>
-        <div class="flex">
+        <div class="flex items-center service-head-content">
           <p class="service-text">{{ serviceText }}{{ serviceNumber }}</p>
           <Tag class="first-tag" size="md" :type="tagType" :label="tagLabel" />
         </div>

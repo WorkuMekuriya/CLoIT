@@ -1,12 +1,12 @@
 <template>
   <div class="payment-card">
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center no-wrap">
       <div>
         <div class="flex items-center">
           <p class="payment-text">{{ paymentMethod }}</p>
         </div>
       </div>
-      <div class="flex items-center">
+      <div class="flex items-center no-wrap q-ml-md">
         <EditIcon @click="editCard" />
         <TrashIcon class="q-ml-sm" />
       </div>
