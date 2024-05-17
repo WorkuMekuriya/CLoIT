@@ -21,6 +21,7 @@
                   icon-left="key"
                   placeholder="***********"
                   inputType="password"
+                  iconRight="o_visibility"
                   :borderRadius="'0px 0px 16px 16px'"
                 />
               </div>
