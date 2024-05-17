@@ -6,14 +6,19 @@
   width: fit-content;
   padding: 14px 36px 14px 36px;
   border-radius: 36px;
+
   .hide-icon-on-the-first {
     :deep(.q-breadcrumbs__el-icon) {
-      display: none;
+      @extend .text-arcticblue-500;
+      font-size: 18px;
+      transform: rotate(45deg);
     }
   }
+
   :deep(.q-breadcrumbs__separator) {
     display: none;
   }
+
   .active-step {
     @extend .text-arcticblue-500, .label-md-bold;
     line-height: 24px;
@@ -22,22 +27,26 @@
       @extend .text-bluegray-500;
       text-decoration: none !important;
     }
+
     :deep(.q-icon:after) {
       @extend .text-arcticblue-500;
       content: '•';
       padding-bottom: 7px;
     }
   }
+
   .passed-step {
     @extend .text-bluegray-500;
 
     :deep(i) {
       @extend .text-bluegray-500;
-      border: none !important ;
+      border: none !important;
     }
   }
+
   .non-active-step {
     @extend .text-bluegray-500;
+
     @media screen and (max-width: 1024px) {
       display: none;
     }
