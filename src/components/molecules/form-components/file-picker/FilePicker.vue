@@ -70,13 +70,6 @@
   >
     <div class="attachment-label">{{ label }}</div>
     <div class="content-container-lg" @click="openFilePicker">
-      <div class="file-name">
-        {{
-          fileModel && fileModel.length > 0
-            ? fileModel.map((file) => file.name).join(', ')
-            : 'Drag and drop files'
-        }}
-      </div>
       <q-uploader
         ref="fileRef"
         draggable
@@ -86,6 +79,15 @@
         :max-files="maxFileSize"
         multiple
       />
+      <q-spinner-ios v-if="showSpinner" size="30px" />
+      <div v-else-if="listOnUploader" class="file-name">
+        {{
+          fileModel && fileModel.length > 0
+            ? fileModel.map((file) => file.name).join(', ')
+            : 'Drag and drop files'
+        }}
+      </div>
+      <div v-else class="file-name">Drag and drop files</div>
     </div>
     <div class="attachment-label">{{ description }}</div>
   </div>
@@ -97,12 +99,18 @@ import FilePickerIcon from 'src/components/atoms/Icons/FilePickerIcon.vue'
 
 // Define the emit function
 const emit = defineEmits(['file'])
+const showSpinner = ref(false)
 
 // Handle drop event
 const handleDrop = (event) => {
   event.preventDefault()
+  showSpinner.value = true
   const files = event.dataTransfer.files
   fileModel.value = Array.from(files)
+  emit('file', fileModel.value)
+  setTimeout(() => {
+    showSpinner.value = false
+  }, 250)
 }
 const openFilePicker = () => {
   fileRef.value.$el.click()
@@ -124,6 +132,10 @@ const props = defineProps({
   description: {
     type: String,
     default: 'description',
+  },
+  listOnUploader: {
+    type: Boolean,
+    default: true,
   },
 })
 

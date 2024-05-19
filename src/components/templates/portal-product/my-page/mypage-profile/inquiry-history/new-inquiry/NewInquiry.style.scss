@@ -1,5 +1,24 @@
 @import '../../../../../../../css/app.scss';
 
+$attachment-background-color: #f2f4f7;
+$attachment-close-background-color: #d0d5dd;
+$attachment-close-icon-color: white;
+
+// Define dimension variables
+$attachment-width: 228px;
+$attachment-padding: 10px 16px;
+$attachment-close-width: 26px;
+$attachment-close-height: 26px;
+$attachment-close-padding: 6px;
+
+// Define border-radius variables
+$attachment-border-radius: 24px;
+$attachment-close-border-radius: 50%;
+
+// Define margin variables
+$attachment-margin-top: 8px;
+$attachment-close-margin-right: 2px;
+
 .textfield {
   margin-bottom: 24px;
 }
@@ -44,4 +63,35 @@
 .breadcrumb-item {
   @extend .text-bluegray-700;
   text-decoration: none !important;
+}
+
+.attachment-list {
+  margin-top: 24px;
+  margin-bottom: 36px;
+
+  .attachment-item-list {
+    @extend .label-sm-bold, .text-bluegray-900;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: $attachment-border-radius;
+    background-color: $attachment-background-color;
+    padding: $attachment-padding;
+    margin-top: $attachment-margin-top;
+  }
+
+  .attachment-close {
+    cursor: pointer;
+    width: $attachment-close-width;
+    height: $attachment-close-height;
+    background-color: $attachment-close-background-color;
+    border-radius: $attachment-close-border-radius;
+    padding: $attachment-close-padding;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $attachment-close-margin-right;
+    margin-left: 25px;
+  }
 }

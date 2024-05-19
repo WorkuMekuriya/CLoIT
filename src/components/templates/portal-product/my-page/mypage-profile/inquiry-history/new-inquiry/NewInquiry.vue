@@ -41,7 +41,22 @@
         :label="'Attach files'"
         :description="'{File 크기나 확장자 제한에 대한 안내}'"
         type="lg"
+        :listOnUploader="false"
+        @file="handleFiles"
       />
+    </div>
+  </div>
+
+  <div class="attachment-list">
+    <div
+      v-for="(attachment, index) in attachments"
+      :key="index"
+      class="attachment-item-list"
+    >
+      {{ attachment.name }}
+      <div class="attachment-close" @click="removeAttachment(index)">
+        <q-icon name="close" size="sm" color="white" />
+      </div>
     </div>
   </div>
   <div class="submit-button-container">
@@ -49,20 +64,31 @@
       type="Primary"
       :isLoading="false"
       :label="'Submit'"
-      :buttonWidth="'186px'"
       @click="backInquiry"
     />
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import TextField from 'src/components/molecules/form-components/fields/textfield/TextField.vue'
 import TextArea from 'src/components/molecules/form-components/fields/textarea/TextArea.vue'
 import RoundedButton from 'src/components/molecules/buttons/conditionally-styled-buttons/ConditionalStyleRoundedButton.vue'
 import FilePicker from 'src/components/molecules/form-components/file-picker/FilePicker.vue'
 import SelectDropdown from 'components/molecules/form-components/select-dropdown/SelectDropdown.vue'
 
-const emits = defineEmits(['nextInquiry'])
+const emits = defineEmits(['nextInquiry', 'file'])
+const attachments = ref([])
+
+const handleFiles = (files) => {
+  console.log(files)
+  attachments.value.push(...files)
+}
+
+const removeAttachment = (index) => {
+  attachments.value.splice(index, 1)
+}
+
 const backInquiry = () => {
   emits('nextStep', 0)
 }
